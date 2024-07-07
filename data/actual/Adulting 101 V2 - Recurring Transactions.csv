@@ -1,0 +1,14 @@
+RECURSION ID,PARAMETERS,REGULARITY,START,END,ARCHIVED,NOTES,TYPE,FROM ACCOUNT,TO ACCOUNT/TO CATEGORY,SUBCATEGORY,AMOUNT,TAGS
+202407080001,"May, 7",Annual,7/1/2024,12/31/2024,FALSE,Niagara Pro,Expense,EastWest CC Expenses,Software,Subscriptions,150,
+202407080002,7,Monthly (Date),7/1/2024,12/31/2024,FALSE,minimalist phone,Expense,EastWest CC Expenses,Software,Subscriptions,180,
+202407080003,14,Monthly (Date),7/1/2024,12/31/2024,FALSE,YouTube Premium,Expense,EastWest CC Expenses,Software,Subscriptions,159,
+202407080004,3,Monthly (Date),7/1/2024,12/31/2024,FALSE,GitHub Copilot,Expense,EastWest CC Expenses,Software,Subscriptions,600,
+202407080005,"1, Saturday",Monthly (Week+Day),7/1/2024,12/31/2024,FALSE,Miho Groom,Expense,Expected Expense,Pets,Grooming,600,Monthly Grooming
+202407080006,"1, Saturday",Monthly (Week+Day),7/1/2024,12/31/2024,FALSE,Diego Groom,Expense,Expected Expense,Pets,Grooming,600,Monthly Grooming
+202407080007,"1, Saturday",Monthly (Week+Day),7/1/2024,12/31/2024,FALSE,Leechou Groom,Expense,Expected Expense,Pets,Grooming,900,Monthly Grooming
+202407080008,"2, Sunday",Monthly (Week+Day),7/1/2024,12/31/2024,FALSE,Electricity,Expense,EastWest HPL Game Design Corporation,Household,Electricity,4000,
+202407080009,Sunday,Weekly,7/1/2024,12/31/2024,FALSE,Groceries,Expense,EastWest CC Expenses,Food,,1200,Weekly Resets
+202407080010,Sunday,Weekly,7/1/2024,12/31/2024,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+202407080011,Sunday,Weekly,7/1/2024,12/31/2024,FALSE,Globe Reload,Expense,GCash,Household,Mobile Plan,110,Weekly Resets
+202407080012,Sunday,Weekly,7/1/2024,12/31/2024,FALSE,Pet Groceries,Expense,Expected Expense,Pets,,400,Weekly Resets
+202407080013,"-1, Saturday",Monthly (Week+Day),7/1/2024,12/31/2024,FALSE,Spa Day,Expense,Expected Expense,Health,Services,1500,

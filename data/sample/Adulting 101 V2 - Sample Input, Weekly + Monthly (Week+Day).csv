@@ -1,0 +1,5 @@
+RECURSION ID,PARAMETERS,REGULARITY,NOTES,TYPE,FROM ACCOUNT,TO ACCOUNT/TO CATEGORY,SUBCATEGORY,AMOUNT,TAGS
+202407080005,"1, Saturday",Monthly (Week+Day),Miho Groom,Expense,Expected Expense,Pets,Grooming,600,Monthly Grooming
+202407080008,"2, Sunday",Monthly (Week+Day),Electricity,Expense,EastWest HPL Game Design Corporation,Household,Electricity,4000,
+202407080010,Sunday,Weekly,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+202407080013,"-1, Saturday",Monthly (Week+Day),Spa Day,Expense,Expected Expense,Health,Services,1500,

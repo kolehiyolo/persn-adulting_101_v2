@@ -1,0 +1,23 @@
+DATE,RECURSION ID,EXCEPTION,NOTES,TYPE,FROM ACCOUNT,TO ACCOUNT/TO CATEGORY,SUBCATEGORY,AMOUNT,TAGS
+5/4/2024,202407080005,FALSE,Miho Groom,Expense,Expected Expense,Pets,Grooming,600,Monthly Grooming
+6/1/2024,202407080005,FALSE,Miho Groom,Expense,Expected Expense,Pets,Grooming,600,Monthly Grooming
+7/6/2024,202407080005,FALSE,Miho Groom,Expense,Expected Expense,Pets,Grooming,600,Monthly Grooming
+5/12/2024,202407080008,FALSE,Electricity,Expense,EastWest HPL Game Design Corporation,Household,Electricity,4000,
+6/9/2024,202407080008,FALSE,Electricity,Expense,EastWest HPL Game Design Corporation,Household,Electricity,4000,
+7/14/2024,202407080008,FALSE,Electricity,Expense,EastWest HPL Game Design Corporation,Household,Electricity,4000,
+5/5/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+5/12/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+5/19/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+5/26/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+6/2/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+6/9/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+6/16/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+6/23/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+6/30/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+7/7/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+7/14/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+7/21/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+7/28/2024,202407080010,FALSE,Laundry,Expense,Expected Expense,Clothing,Laundry,200,Weekly Resets
+5/25/2024,202407080013,FALSE,Spa Day,Expense,Expected Expense,Health,Services,1500,
+6/29/2024,202407080013,FALSE,Spa Day,Expense,Expected Expense,Health,Services,1500,
+7/27/2024,202407080013,FALSE,Spa Day,Expense,Expected Expense,Health,Services,1500,
