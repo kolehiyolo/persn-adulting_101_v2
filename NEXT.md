@@ -1,0 +1,1 @@
+1. Create different page components per nav item

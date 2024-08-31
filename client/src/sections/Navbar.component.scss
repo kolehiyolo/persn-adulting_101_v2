@@ -1,0 +1,29 @@
+@import '../styles/utils/variables';
+
+.nav {
+  background-color: $color-bg-nav;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+
+    li {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      
+      a {
+        padding: 15px 0px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      &.active {
+        background-color: $color-bg-nav-selected;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import './utils/variables';
+
+// * Resetting default browser styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// * Default font styles
+* {
+  color: $color-txt-white;
+  font-family: "Inter", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-bg-main;
+
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
