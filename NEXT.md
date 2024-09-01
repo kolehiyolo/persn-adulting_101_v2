@@ -1,1 +1,1 @@
-1. Let's try displaying the data, but in JSON format, or better yet in property:value format
+1. Refactor the code to make it cleaner maybe
