@@ -1,1 +1,1 @@
-1. Turn BoxIcon to component
+1. Move CSV fetch to App.tsx

@@ -4,37 +4,14 @@ import { Account } from '../types';
 
 // * Components
 import DivAmount from './DivAmount.component';
+import BoxIcon from './BoxIcon.component';
 
 // * Styling 
 import './BoxAccountsItem.component.scss';
 
-// Define the type for the account prop
+// * Type definition
 interface BoxAccountsItemProps {
   account: Account;
-}
-
-// ! TURN INTO OWN COMPONENT
-function BoxIcon({ account }: BoxAccountsItemProps) {
-  // ! TO REPLACE
-  const dummyIconUrl = 'https://site-assets.fontawesome.com/releases/v6.6.0/svgs/solid/code.svg';
-
-  return (
-    <div
-      className={
-        [
-          'box-icon',
-        ].join(' ')
-      }
-      style={{
-        backgroundColor: '#' + account.color,
-      }}
-    >
-      <img
-        src={dummyIconUrl}
-        alt={account.name}
-      />
-    </div>
-  )
 }
 
 // ! ADD PROGRESS BAR FOR ACCOUNTS WITH GOALS
