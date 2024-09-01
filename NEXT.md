@@ -1,1 +1,1 @@
-1. Now turning the sub-components into their own files
+1. Turn BoxIcon to component

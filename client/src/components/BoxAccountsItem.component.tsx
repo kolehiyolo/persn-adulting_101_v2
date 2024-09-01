@@ -2,17 +2,15 @@
 import React from 'react';
 import { Account } from '../types';
 
+// * Components
+import DivAmount from './DivAmount.component';
+
 // * Styling 
 import './BoxAccountsItem.component.scss';
 
 // Define the type for the account prop
 interface BoxAccountsItemProps {
   account: Account;
-}
-
-interface DivAmountProps {
-  amount: number;
-  currency: string;
 }
 
 // ! TURN INTO OWN COMPONENT
@@ -37,50 +35,6 @@ function BoxIcon({ account }: BoxAccountsItemProps) {
       />
     </div>
   )
-}
-
-// ! TURN INTO OWN COMPONENT
-function DivAmount({ amount, currency }: DivAmountProps) {
-  return (
-    <div
-      className={
-        [
-          'div-amount',
-          amount > 0 ? 'positive' : amount < 0 ? 'negative' : 'zero',
-        ].join(' ')
-      }
-    >
-      {amount < 0 && (
-        <span
-          className={
-            [
-              'negative-sign',
-            ].join(' ')
-          }
-        >
-          -
-        </span>
-      )}
-      <span
-        className={
-          [
-            'currency',
-          ].join(' ')
-        }
-      >
-        {currency}
-      </span>
-      <span
-        className={
-          [
-            'value',
-          ].join(' ')
-        }
-      >
-        {Math.abs(amount)}
-      </span>
-    </div>
-  );
 }
 
 // ! ADD PROGRESS BAR FOR ACCOUNTS WITH GOALS

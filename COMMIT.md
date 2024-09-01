@@ -1,2 +1,2 @@
-Moved component files to components/
-1. Just moved the non-page files to components/
+Turn DivAmount to component
+1. Just moved the function into its own file as planned

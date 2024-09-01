@@ -1,0 +1,30 @@
+@import '../styles/utils/variables';
+
+.div-amount {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  & span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &.positive {
+    & span {
+      color: #00B298;
+    }
+  }
+  
+  &.negative {
+    & span {
+      color: #E8558B;
+    }
+  }
+  
+  &.zero {
+    & span {
+      color: #8e8e8e;
+    }
+  }
+}
