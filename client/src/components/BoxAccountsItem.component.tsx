@@ -5,6 +5,7 @@ import { Account } from '../types';
 // * Components
 import DivAmount from './DivAmount.component';
 import BoxIcon from './BoxIcon.component';
+import DivCircularProgress from './DivCircularProgress.component';
 
 // * Styling 
 import './BoxAccountsItem.component.scss';
@@ -14,7 +15,6 @@ interface BoxAccountsItemProps {
   account: Account;
 }
 
-// ! ADD PROGRESS BAR FOR ACCOUNTS WITH GOALS
 export default function BoxAccountsItem({ account }: BoxAccountsItemProps) {
   return (
     <li 
@@ -53,6 +53,13 @@ export default function BoxAccountsItem({ account }: BoxAccountsItemProps) {
             </p>
           )}
         </div>
+        {account.goal != 'N/A' && (
+          <DivCircularProgress
+            percentage={
+              Math.round((Number(account.balance) / Number(account.goal)) * 100)
+            }
+          />
+        )}
       </div>
     </li>
   );

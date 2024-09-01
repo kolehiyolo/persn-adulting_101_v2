@@ -1,1 +1,0 @@
-Add progress bar to accounts with goals

@@ -1,1 +1,1 @@
-1. Add progress bar to accounts with goals
+1. REST UP FOR NOW G GOOD WORK TODAY
