@@ -1,5 +1,6 @@
 @import '../styles/utils/variables';
 
 .page-accounts {
-
+  flex-grow: 1;
+  max-width: $max-width-desktop;
 }

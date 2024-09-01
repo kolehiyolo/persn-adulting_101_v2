@@ -1,1 +1,1 @@
-1. Lets do better styling for the list and the items
+1. Let's make each list item better now

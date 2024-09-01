@@ -52,7 +52,14 @@ export default function PageAccounts() {
   }, []);
 
   return (
-    <div className="page-accounts">
+    <div 
+      className={
+        [
+          `page-accounts`,
+          `page`,
+        ].join(' ')
+      }
+    >
       <DivAccountsList 
         accounts={accounts} 
         setAccounts={setAccounts}
