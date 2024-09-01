@@ -1,1 +1,1 @@
-1. Refactor the code to make it cleaner maybe
+1. The next step is to actually fetch the data from the CSV in PageAccounts()
