@@ -4,21 +4,12 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 // * Components
 import Navbar from './sections/Navbar.component';
+import PageAccounts from './pages/PageAccounts.component';
+import PageCategories from './pages/PageCategories.component';
+import PageTransactions from './pages/PageTransactions.component';
 
 // * Styling
 import './styles/App.scss';
-
-function Accounts() {
-  return <div>Accounts Content</div>;
-}
-
-function Categories() {
-  return <div>Categories Content</div>;
-}
-
-function Transactions() {
-  return <div>Transactions Content</div>;
-}
 
 function App() {
   return (
@@ -27,9 +18,9 @@ function App() {
         <main className="main">
           <Routes>
             <Route path="/" element={<Navigate to="/categories" />} />
-            <Route path="/accounts" element={<Accounts />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/accounts" element={<PageAccounts />} />
+            <Route path="/categories" element={<PageCategories />} />
+            <Route path="/transactions" element={<PageTransactions />} />
           </Routes>
         </main>
         <Navbar />

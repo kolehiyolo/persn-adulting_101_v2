@@ -1,1 +1,2 @@
-1. Create different page components per nav item
+1. Let's start with Accounts, and to start with, let's create a JSON file with the things we need to mockup the data we'll be presenting
+2. Then, present the data onto the page, even without formatting.styling it yet
