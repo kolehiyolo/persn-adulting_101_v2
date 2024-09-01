@@ -1,6 +1,5 @@
 // * Dependencies
-import React, { useEffect, useState } from 'react';
-import Papa from 'papaparse';
+import React from 'react';
 import { Account } from '../types';
 
 // * Styling
@@ -9,12 +8,11 @@ import './PageAccounts.component.scss';
 // * Components
 import BoxAccountsItem from '../components/BoxAccountsItem.component';
 
-interface DivAccountsListProps {
+interface PageAccountsProps {
   accounts: Account[];
-  setAccounts: React.Dispatch<React.SetStateAction<Account[]>>;
 }
 
-function DivAccountsList({ accounts }: DivAccountsListProps) {
+function DivAccountsList({ accounts }: PageAccountsProps) {
   return (
     <div className="accounts-list">
       <h1>Accounts:</h1>
@@ -30,27 +28,7 @@ function DivAccountsList({ accounts }: DivAccountsListProps) {
   );
 }
 
-export default function PageAccounts() {
-  const [accounts, setAccounts] = useState<Account[]>([]);
-
-  // Fetch and parse the CSV data
-  const fetchCSVData = async () => {
-    const response = await fetch('/data/sample/accounts.csv');
-    const csvText = await response.text();
-    const parsedData = Papa.parse(csvText, {
-      header: true,
-      dynamicTyping: true,
-      skipEmptyLines: true,
-    });
-    const accountsData = parsedData.data as Account[];
-
-    setAccounts(accountsData);
-  };
-
-  useEffect(() => {
-    fetchCSVData();
-  }, []);
-
+export default function PageAccounts({ accounts }: PageAccountsProps) {
   return (
     <div 
       className={
@@ -62,7 +40,6 @@ export default function PageAccounts() {
     >
       <DivAccountsList 
         accounts={accounts} 
-        setAccounts={setAccounts}
       />
     </div>
   );

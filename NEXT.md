@@ -1,1 +1,1 @@
-1. Move CSV fetch to App.tsx
+1. Add progress bar to accounts with goals

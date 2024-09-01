@@ -1,6 +1,8 @@
 // * Dependencies
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Papa from 'papaparse';
+import { Account } from './types';
 
 // * Components
 import Navbar from './sections/Navbar.component';
@@ -11,14 +13,40 @@ import PageTransactions from './pages/PageTransactions.component';
 // * Styling
 import './styles/App.scss';
 
-function App() {
+export default function App() {
+  const [accounts, setAccounts] = useState<Account[]>([]);
+
+  const fetchAccountsCSVData = async () => {
+    const response = await fetch('/data/sample/accounts.csv');
+    const csvText = await response.text();
+    const parsedData = Papa.parse(csvText, {
+      header: true,
+      dynamicTyping: true,
+      skipEmptyLines: true,
+    });
+    const accountsData = parsedData.data as Account[];
+
+    setAccounts(accountsData);
+  };
+
+  useEffect(() => {
+    fetchAccountsCSVData();
+  }, []);
+
   return (
     <Router>
       <div className="App">
         <main className="main">
           <Routes>
             <Route path="/" element={<Navigate to="/accounts" />} />
-            <Route path="/accounts" element={<PageAccounts />} />
+            <Route 
+              path="/accounts"
+              element={
+                <PageAccounts 
+                  accounts={accounts}
+                />
+              } 
+            />
             <Route path="/categories" element={<PageCategories />} />
             <Route path="/transactions" element={<PageTransactions />} />
           </Routes>
@@ -28,5 +56,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
