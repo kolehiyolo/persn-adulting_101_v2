@@ -3,4 +3,13 @@
 .page-accounts {
   flex-grow: 1;
   max-width: $max-width-desktop;
+
+  .accounts-list {
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 }

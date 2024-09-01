@@ -1,0 +1,84 @@
+@import '../styles/utils/variables';
+
+.box-accounts-item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 10px;
+  
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .box-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      
+      .name {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      
+      .div-amount {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        & span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        &.positive {
+          & span {
+            color: #00B298;
+          }
+        }
+        
+        &.negative {
+          & span {
+            color: #E8558B;
+          }
+        }
+        
+        &.zero {
+          & span {
+            color: #8e8e8e;
+          }
+        }
+      }
+
+      .description {
+        font-style: italic;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+}

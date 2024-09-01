@@ -1,1 +1,1 @@
-1. Let's make each list item better now
+1. Next step is to compartmentalize the components for reuse
