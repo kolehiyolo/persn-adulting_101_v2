@@ -7,7 +7,7 @@ import { Account } from '../types';
 import './PageAccounts.component.scss';
 
 // * Components
-import BoxAccountsItem from './BoxAccountsItem.component';
+import BoxAccountsItem from '../components/BoxAccountsItem.component';
 
 interface DivAccountsListProps {
   accounts: Account[];

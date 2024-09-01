@@ -1,1 +1,1 @@
-1. Next step is to compartmentalize the components for reuse
+1. Now turning the sub-components into their own files
