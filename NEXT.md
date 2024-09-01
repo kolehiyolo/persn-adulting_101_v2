@@ -1,1 +1,1 @@
-1. The next step is to actually fetch the data from the CSV in PageAccounts()
+1. I'm annoyed looking at all these compile warnings in bash so Imma go clean up whatever needs cleaning up, which seems to be mostly just unused declarations

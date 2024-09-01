@@ -1,8 +1,8 @@
-Compartmentalized BoxAccountsItem
-1. Alright so cool I reworked each Accounts item to be its own component
-  1.1. In the process, I realized that I also have to declare the Account type there, which I feel is too redundant, knowing full well I will be using the exact same type across the site
-  1.2. As per GPT-kun's suggestion I decided to use a types.ts where I explicitly declare all types I will be using, at least non-react-state types (types for the useState set-state functions, I can't declare here)
-  1.3. I imagine this as nothing more than a client-side schema, same as what I did with MongoDB+Mongoose on the server-side
-2. Updated App.tsx so that the default route is /accounts, for now, as that's what I'm working on right now
-3. Updated public/manifest.json, removing the image/png declarations, as I removed those files and Chrome is throwing errors because of that
-  3.1. Might revert later, of course, but for now it's just clutter
+Can fetch accounts.csv 
+1. Alright so after some trial and error, the component now fetches accounts.csv data, assigns it to accounts[]
+2. Installed npm papaparse so React can convert CSV to JSON
+3. Apparently. you need to have the data within public/, which sux, but whatever moved it
+  3.1. The eventual step anyways is to get the CSV data from Google Sheets, so we'll get there
+  3.2. Not to mention, we also need it so that the data is fetched not from every PageAccounts() mount, but from every App() mount
+4. For now, on PageAccounts() mount, a useEffect() hook runs, getting the data from the CSV, parsing it to JSON, and then assigning to accounts[]
+5. Oh yeah also updated the Account type declaration

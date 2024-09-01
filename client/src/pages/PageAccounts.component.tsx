@@ -1,5 +1,6 @@
 // * Dependencies
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Papa from 'papaparse';
 import { Account } from '../types';
 
 // * Styling
@@ -7,14 +8,6 @@ import './PageAccounts.component.scss';
 
 // * Components
 import BoxAccountsItem from './BoxAccountsItem.component';
-
-// ! Replace with actual data fetch
-// Dummy data for accounts
-const dummyAccounts = [
-  { id: 1, name: 'Account 1', balance: 1000 },
-  { id: 2, name: 'Account 2', balance: 1500 },
-  { id: 3, name: 'Account 3', balance: 2000 },
-];
 
 interface DivAccountsListProps {
   accounts: Account[];
@@ -38,7 +31,25 @@ function DivAccountsList({ accounts }: DivAccountsListProps) {
 }
 
 export default function PageAccounts() {
-  const [accounts, setAccounts] = useState(dummyAccounts);
+  const [accounts, setAccounts] = useState<Account[]>([]);
+
+  // Fetch and parse the CSV data
+  const fetchCSVData = async () => {
+    const response = await fetch('/data/sample/accounts.csv');
+    const csvText = await response.text();
+    const parsedData = Papa.parse(csvText, {
+      header: true,
+      dynamicTyping: true,
+      skipEmptyLines: true,
+    });
+    const accountsData = parsedData.data as Account[];
+
+    setAccounts(accountsData);
+  };
+
+  useEffect(() => {
+    fetchCSVData();
+  }, []);
 
   return (
     <div className="page-accounts">
