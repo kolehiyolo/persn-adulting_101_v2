@@ -1,1 +1,1 @@
-1. I'm annoyed looking at all these compile warnings in bash so Imma go clean up whatever needs cleaning up, which seems to be mostly just unused declarations
+1. Lets do better styling for the list and the items

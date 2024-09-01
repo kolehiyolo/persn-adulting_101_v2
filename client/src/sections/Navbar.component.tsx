@@ -1,6 +1,6 @@
 // * Dependencies
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // * Styling
 import './Navbar.component.scss';

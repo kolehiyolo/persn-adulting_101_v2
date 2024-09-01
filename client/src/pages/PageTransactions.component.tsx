@@ -1,5 +1,5 @@
 // * Dependencies
-import React, { useState } from 'react';
+import React from 'react';
 
 // * Styling
 import './PageTransactions.component.scss';
