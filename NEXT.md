@@ -1,1 +1,2 @@
-1. Better box icon
+Add SVGs to icon/
+Make App header

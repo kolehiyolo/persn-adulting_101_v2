@@ -8,12 +8,10 @@ import './BoxIcon.component.scss';
 // * Type definition
 interface BoxIconProps {
   account: Account;
+  icon_name: string;
 }
 
-export default function BoxIcon({account}: BoxIconProps) {
-  // ! TO REPLACE
-  const dummyIconUrl = 'https://site-assets.fontawesome.com/releases/v6.6.0/svgs/solid/code.svg';
-
+export default function BoxIcon({account, icon_name}: BoxIconProps) {
   return (
     <div
       className={
@@ -26,7 +24,7 @@ export default function BoxIcon({account}: BoxIconProps) {
       }}
     >
       <img
-        src={dummyIconUrl}
+        src={`/icons/${icon_name}.svg`}
         alt={account.name}
       />
     </div>

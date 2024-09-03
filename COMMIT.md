@@ -1,5 +1,7 @@
-Python script for onboarding icons
-1. Bruh just like that I had ChatGPT get me a script to create a CSV for my icons data from the folder of icons
-2. I had to be very precise with how it should do it and damn it worked
-3. I had to tweak it to make sure there's at least a 1 millisecond stagger for each row, because the icon IDs are generated dynamically via timestamp of when they were added to the CSV
-4. I wanted to refactor it, but it's 8:54 already, and my sleep time is supposed to be at 9:00, so I'm pushing the refactoring for tomorrow, and for now I wanna focus on the next kinda big thing in the line
+Better box icon
+1. BROOOO alrightalrightalright so now BoxIcon works, but I ran into TypeScript issues when passing props that I had to debug for a while
+2. I actually managed to finish this yesterday, but I didn't wanna commit because I didn't get to refactoring, and I don't want to refactor AFTER committing because I'll have a hard time tracking the changes I made
+3. So now I refactored it, it's looking real good, and it works
+4. For testing, I just have one SVG up in public/, and this SVG's icon.csv ID is what I used as dummy for all accounts.csv
+5. I also set up another type for the icon
+6. Many minute changes across the codebase but over lots of files so yeah this is a doozy to review

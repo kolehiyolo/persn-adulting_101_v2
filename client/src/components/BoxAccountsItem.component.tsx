@@ -13,9 +13,10 @@ import './BoxAccountsItem.component.scss';
 // * Type definition
 interface BoxAccountsItemProps {
   account: Account;
+  icon_name: string;
 }
 
-export default function BoxAccountsItem({ account }: BoxAccountsItemProps) {
+export default function BoxAccountsItem({ account, icon_name }: BoxAccountsItemProps) {
   return (
     <li 
       key={account.id}
@@ -24,6 +25,7 @@ export default function BoxAccountsItem({ account }: BoxAccountsItemProps) {
       <div className='left'>
         <BoxIcon 
           account={account}
+          icon_name={icon_name}
         />
       </div>
       <div className='right'>
@@ -53,7 +55,7 @@ export default function BoxAccountsItem({ account }: BoxAccountsItemProps) {
             </p>
           )}
         </div>
-        {account.goal != 'N/A' && (
+        {account.goal !== 'N/A' && (
           <DivCircularProgress
             percentage={
               Math.round((Number(account.balance) / Number(account.goal)) * 100)

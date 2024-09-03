@@ -14,3 +14,13 @@ export interface Account {
   icon_id: string;
   color: string;
 }
+
+export interface Icon {
+  id: string;
+  date: string;
+  time: string;
+  name: string;
+  src: string;
+  type: string;
+  group: string;
+}

@@ -1,4 +1,4 @@
-ID,DATE,TIME,NAME,SRC,TYPE,GROUP
+id,date,time,name,src,type,group
 20240903091701582,20240903,091701582,cat,./input/icons\cat.svg,,
 20240903091701583,20240903,091701583,check-check,./input/icons\check-check.svg,,
 20240903091701584,20240903,091701584,check-circle-2,./input/icons\check-circle-2.svg,,
