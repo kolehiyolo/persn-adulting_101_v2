@@ -1,4 +1,4 @@
-Create dynamically changing HeaderTabsMenu
-1. BETBETBET alright just like that I now have working HeaderTabsMenu
-2. It's very much not pretty yet but it's working, changing states and stuff
-3. Now onto making it pretty
+Header & HeaderTabsMenu prettier, also did dummy HeaderFilters content
+1. Alrightalrightalright so yeah the Header looks way more presentable, and I also did some dummy content for HeaderFilters
+2. I updated classNames in the .tsx and also coded up just a quick little HeaderFilters content
+3. Then went the styling breezily

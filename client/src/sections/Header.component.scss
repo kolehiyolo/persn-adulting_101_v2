@@ -1,1 +1,57 @@
 @import '../styles/utils/variables';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-color: $color-bg-nav;
+  
+  .header-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    &-left {
+
+    }
+
+    &-right {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+
+  .header-tabs-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+
+    &-item {
+      flex-grow: 1;
+      max-width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      &.active {
+        background-color: $color-bg-nav-selected;
+        color: $color-text-primary;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 15px;
+        text-decoration: none;
+        text-align: center;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

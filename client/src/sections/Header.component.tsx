@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // * Styling
-import './Navbar.component.scss';
+import './Header.component.scss';
 
 // * Interfaces
 interface HeaderProps {
@@ -20,25 +20,45 @@ function HeaderTabsMenu({ activeTab, activeSubTab, setActiveSubTab, activeSubTab
     const updatedActiveSubTab = { ...activeSubTab, [activeTab]: subTab };
     setActiveSubTab(updatedActiveSubTab);
   }
-  
+
   return (
-    <ul>
+    <ul className="header-tabs-menu">
       {
         activeSubTabOptions && activeSubTabOptions[activeTab] &&
         activeSubTabOptions[activeTab].map(
           (subTab) => (
             <li 
               key={subTab} 
-              className={activeSubTab[activeTab] === subTab ? 'active' : ''}
+              className={
+                [
+                  `header-tabs-menu-item`,
+                  activeSubTab[activeTab] === subTab ? 'active' : '',
+                ].join(' ')
+              }
             >
               <button onClick={() => onSubTabClick(subTab)}>
-                {subTab}
+                {subTab.replace('/', '')}
               </button>
             </li>
           )
         )
       }
     </ul>
+  );
+}
+
+function HeaderFilters() {
+  return (
+    <div className="header-filters">
+      <div className="header-filters-left">
+        <p>All accounts:</p>
+        <p>PHP 12345678</p>
+      </div>
+      <div className="header-filters-right">
+        <p>Thu, Aug 01, 2024</p>
+        <p>Thu, Aug 01, 2024</p>
+      </div>
+    </div>
   );
 }
 
@@ -51,9 +71,7 @@ export default function Header({ activeTab, activeSubTab, setActiveSubTab }: Hea
 
   return (
     <header className="header">
-      <h1>Header</h1>
-      <p>activeTab: {activeTab}</p>
-      <p>activeSubTab: {activeSubTab[activeTab]}</p>
+      <HeaderFilters />
       <HeaderTabsMenu 
         activeTab={activeTab} 
         activeSubTab={activeSubTab}
