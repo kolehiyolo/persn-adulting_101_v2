@@ -63,7 +63,7 @@ function HeaderFilters() {
 }
 
 export default function Header({ activeTab, activeSubTab, setActiveSubTab }: HeaderProps) {
-  const [activeSubTabOptions, setActiveSubTabOptions] = useState({
+  const [activeSubTabOptions] = useState({
     '/accounts': ['/regular', '/debts', '/funds'],
     '/categories': ['/expense', '/income'],
     '/transactions': ['/daily', '/weekly', '/monthly'],

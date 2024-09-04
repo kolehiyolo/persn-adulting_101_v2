@@ -1,2 +1,3 @@
-Make App header
-Accounts tabs
+Split debts
+CRUD accounts
+Draggable accounts

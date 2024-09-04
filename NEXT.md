@@ -1,1 +1,1 @@
-IDUNNO CHILL FOR NOW
+Split debts

@@ -31,6 +31,8 @@
     padding: 0px 100px;
     
     .page {
+      flex-grow: 1;
+      align-self: stretch;
       max-width: $max-width-desktop;
     }
   }

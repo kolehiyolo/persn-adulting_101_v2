@@ -20,6 +20,7 @@ export default function App() {
   const [icons, setIcons] = useState<Icon[]>([]);
   const [activeTab, setActiveTab] = useState('');
   const [activeSubTab, setActiveSubTab] = useState({});
+  const [defaultCurrency] = useState('PHP');
 
   const fetchAccountsCSVData = async () => {
     const response = await fetch('/data/sample/accounts.csv');
@@ -83,6 +84,7 @@ export default function App() {
                   accounts={accounts}
                   icons={icons}
                   activeSubTab={activeSubTab}
+                  defaultCurrency={defaultCurrency}
                 />
               } 
             />
