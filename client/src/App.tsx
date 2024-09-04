@@ -18,7 +18,8 @@ import './styles/App.scss';
 export default function App() {
   const [accounts, setAccounts] = useState<Account[]>([]);
   const [icons, setIcons] = useState<Icon[]>([]);
-  const [activeTab, setActiveTab] = useState('/accounts');
+  const [activeTab, setActiveTab] = useState('');
+  const [activeSubTab, setActiveSubTab] = useState({});
 
   const fetchAccountsCSVData = async () => {
     const response = await fetch('/data/sample/accounts.csv');
@@ -46,9 +47,22 @@ export default function App() {
     setIcons(iconsData);
   };
 
+  const initializeActiveTabs = () => {
+    const defaultActiveTab = '/accounts';
+    const defaultActiveSubTab = {
+      '/accounts': '/regular',
+      '/categories': '/expense',
+      '/transactions': '/daily',
+    };
+
+    setActiveTab(defaultActiveTab);
+    setActiveSubTab(defaultActiveSubTab);
+  }
+
   useEffect(() => {
     fetchAccountsCSVData();
     fetchIconsCSVData();
+    initializeActiveTabs();
   }, []);
 
   return (
@@ -56,6 +70,8 @@ export default function App() {
       <div className="App">
         <Header 
           activeTab={activeTab}
+          activeSubTab={activeSubTab}
+          setActiveSubTab={setActiveSubTab}
         />
         <main className="main">
           <Routes>
