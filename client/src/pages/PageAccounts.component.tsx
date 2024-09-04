@@ -17,12 +17,60 @@ interface PageAccountsProps {
   defaultCurrency: string;
 }
 
-interface DivAccountsListProps {
+interface DivAccountsListContainerProps {
   filteredAccounts: Account[];
   icons: Icon[];
+  activeSubTab: { [key: string]: string };
 }
 
-function DivAccountsList({ filteredAccounts, icons }: DivAccountsListProps) {
+interface DivAccountsListProps {
+  filteredAccounts: Account[];
+  findIconName: (icon_id: string) => string;
+}
+
+function DivAccountsListRegular({ filteredAccounts, findIconName }: DivAccountsListProps) {
+  return (
+    <ul className="accounts-list-regular">
+      {filteredAccounts.map(account => (
+        <BoxAccountsItem 
+          key={account.id}
+          account={account}
+          icon_name={findIconName(account.icon_id)}
+        />
+      ))}
+    </ul>
+  );
+}
+
+function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsListProps) {
+  return (
+    <ul className="accounts-list-debts">
+      {filteredAccounts.map(account => (
+        <BoxAccountsItem 
+          key={account.id}
+          account={account}
+          icon_name={findIconName(account.icon_id)}
+        />
+      ))}
+    </ul>
+  );
+}
+
+function DivAccountsListFunds({ filteredAccounts, findIconName }: DivAccountsListProps) {
+  return (
+    <ul className="accounts-list-funds">
+      {filteredAccounts.map(account => (
+        <BoxAccountsItem 
+          key={account.id}
+          account={account}
+          icon_name={findIconName(account.icon_id)}
+        />
+      ))}
+    </ul>
+  );
+}
+
+function DivAccountsListContainer({ filteredAccounts, icons, activeSubTab }: DivAccountsListContainerProps) {
   const findIconName = (icon_id: string) => {
     const icon = icons.find(icon => {
       return icon.id === icon_id;
@@ -32,15 +80,27 @@ function DivAccountsList({ filteredAccounts, icons }: DivAccountsListProps) {
 
   return (
     <div className="accounts-list">
-      <ul>
-        {filteredAccounts.map(account => (
-          <BoxAccountsItem 
-            key={account.id}
-            account={account}
-            icon_name={findIconName(account.icon_id)}
-          />
-        ))}
-      </ul>
+      {
+        activeSubTab['/accounts'] === '/regular' &&
+        <DivAccountsListRegular 
+          filteredAccounts={filteredAccounts} 
+          findIconName={findIconName}
+        />
+      }
+      {
+        activeSubTab['/accounts'] === '/debts' &&
+        <DivAccountsListDebts 
+          filteredAccounts={filteredAccounts} 
+          findIconName={findIconName}
+        />
+      }
+      {
+        activeSubTab['/accounts'] === '/funds' &&
+        <DivAccountsListFunds 
+          filteredAccounts={filteredAccounts} 
+          findIconName={findIconName}
+        />
+      }
     </div>
   );
 }
@@ -82,9 +142,10 @@ export default function PageAccounts({ accounts, icons, activeSubTab, defaultCur
           currency={defaultCurrency}
         />
       </div>
-      <DivAccountsList 
+      <DivAccountsListContainer 
         filteredAccounts={filteredAccounts} 
         icons={icons}
+        activeSubTab={activeSubTab}
       />
     </div>
   );
