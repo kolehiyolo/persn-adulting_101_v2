@@ -1,1 +1,1 @@
-Create dynamically changing HeaderTabsMenu
+Prettier Header & HeaderTabsMenu
