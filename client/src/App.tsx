@@ -7,6 +7,7 @@ import { Icon } from './types';
 
 // * Components
 import Navbar from './sections/Navbar.component';
+import Header from './sections/Header.component';
 import PageAccounts from './pages/PageAccounts.component';
 import PageCategories from './pages/PageCategories.component';
 import PageTransactions from './pages/PageTransactions.component';
@@ -17,6 +18,7 @@ import './styles/App.scss';
 export default function App() {
   const [accounts, setAccounts] = useState<Account[]>([]);
   const [icons, setIcons] = useState<Icon[]>([]);
+  const [activeTab, setActiveTab] = useState('/accounts');
 
   const fetchAccountsCSVData = async () => {
     const response = await fetch('/data/sample/accounts.csv');
@@ -52,6 +54,9 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        <Header 
+          activeTab={activeTab}
+        />
         <main className="main">
           <Routes>
             <Route path="/" element={<Navigate to="/accounts" />} />
@@ -68,7 +73,10 @@ export default function App() {
             <Route path="/transactions" element={<PageTransactions />} />
           </Routes>
         </main>
-        <Navbar />
+        <Navbar 
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
       </div>
     </Router>
   );

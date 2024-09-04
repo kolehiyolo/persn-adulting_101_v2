@@ -1,14 +1,17 @@
 // * Dependencies
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 // * Styling
 import './Navbar.component.scss';
 
-export default function Navbar() {
-  const location = useLocation();  // To get the current route
-  const [activeTab, setActiveTab] = useState(location.pathname);
+// * Interfaces
+interface NavbarProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
 
+export default function Navbar({activeTab, setActiveTab}: NavbarProps) {
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
