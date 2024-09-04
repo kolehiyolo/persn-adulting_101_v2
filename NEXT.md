@@ -1,1 +1,1 @@
-Refactor split debts
+Prettify Split debts
