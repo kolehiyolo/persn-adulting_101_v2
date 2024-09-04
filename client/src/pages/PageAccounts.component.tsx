@@ -43,15 +43,100 @@ function DivAccountsListRegular({ filteredAccounts, findIconName }: DivAccountsL
 }
 
 function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsListProps) {
+  const [debtsIOwe, setDebtsIOwe] = useState<Account[]>([]);
+  const [debtsOwedToMe, setDebtsOwedToMe] = useState<Account[]>([]);
+  const [debtsSettled, setDebtsSettled] = useState<Account[]>([]);
+
+  const findDebts = useCallback(() => {
+    let debtsIOwe: Account[] = [];
+    let debtsOwedToMe: Account[] = [];
+    let debtsSettled: Account[] = [];
+
+    filteredAccounts.map(account => {
+      if (account.balance < 0) {
+        debtsIOwe.push(account);
+      } else if (account.balance > 0) {
+        debtsOwedToMe.push(account);
+      } else {
+        debtsSettled.push(account);
+      }
+    });
+
+    setDebtsIOwe(debtsIOwe);
+    setDebtsOwedToMe(debtsOwedToMe);
+    setDebtsSettled(debtsSettled);
+  }, [filteredAccounts]);
+
+  useEffect(() => {
+    findDebts();
+  }, [findDebts]);
+
   return (
     <ul className="accounts-list-debts">
-      {filteredAccounts.map(account => (
-        <BoxAccountsItem 
-          key={account.id}
-          account={account}
-          icon_name={findIconName(account.icon_id)}
-        />
-      ))}
+      {
+        debtsIOwe.length !== 0 &&
+        <li>
+          <div>
+            <h3>I owe</h3>
+            <DivAmount 
+              amount={debtsIOwe.reduce((total, account) => total + account.balance, 0)}
+              currency={debtsIOwe[0].currency}
+            />
+          </div>
+          <ul>
+            {debtsIOwe.map(account => (
+              <BoxAccountsItem 
+                key={account.id}
+                account={account}
+                icon_name={findIconName(account.icon_id)}
+              />
+            ))}
+          </ul>
+        </li>
+      }
+      {
+        debtsOwedToMe.length !== 0 &&
+        <li>
+          <div>
+            <h3>Owed to me</h3>
+            <DivAmount 
+              amount={debtsOwedToMe.reduce((total, account) => total + account.balance, 0)}
+              currency={debtsOwedToMe[0].currency}
+            />
+          </div>
+          <ul>
+            {debtsOwedToMe.map(account => (
+              <BoxAccountsItem 
+                key={account.id}
+                account={account}
+                icon_name={findIconName(account.icon_id)}
+              />
+            ))}
+          </ul>
+        </li>
+      }
+      {
+        debtsSettled.length !== 0 &&
+        <li>
+          <div>
+            <h3>Settled</h3>
+            <DivAmount 
+              amount={debtsSettled.reduce((total, account) => total + account.balance, 0)}
+              currency={debtsSettled[0].currency}
+            />
+          </div>
+          <ul>
+            {debtsSettled.map(account => (
+              <BoxAccountsItem 
+                key={account.id}
+                account={account}
+                icon_name={findIconName(account.icon_id)}
+              />
+            ))}
+          </ul>
+        </li>
+      }
+
     </ul>
   );
 }

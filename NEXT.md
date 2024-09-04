@@ -1,1 +1,1 @@
-Split debts
+Refactor split debts

@@ -1,4 +1,4 @@
-Split each list type into own component
-1. Alright so it might seem overkill, but I feel like eventually the layouts for each tab will be too different that they require their own components
-2. Right now, thee debts tab is a little different already to other two, so I decided to split them, and then customize the debts tab a bit more
-3. Next step is actually doing the customization
+Split debts into own lists, but sloppy
+1. Yey so that's working now, but I've committed the gravest of sins of repeating myself a lil too much
+2. So many code that clearly is redundant, and I'm itching to get it all refactored
+3. I'm just committing now so if all goes south, I can revert at least
