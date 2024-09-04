@@ -82,6 +82,7 @@ export default function App() {
                 <PageAccounts 
                   accounts={accounts}
                   icons={icons}
+                  activeSubTab={activeSubTab}
                 />
               } 
             />

@@ -1,4 +1,4 @@
-Header & HeaderTabsMenu prettier, also did dummy HeaderFilters content
-1. Alrightalrightalright so yeah the Header looks way more presentable, and I also did some dummy content for HeaderFilters
-2. I updated classNames in the .tsx and also coded up just a quick little HeaderFilters content
-3. Then went the styling breezily
+Make Accounts tabs work
+1. AWESOMEEEE so yeah sosososo quick to implement but damn there ya go
+2. The accounts are now split across the three tabs yey
+3. Great great milestone for today, and tomorrow we possibly proceed to a much bigger challenge, CRUD for the accounts

@@ -1,5 +1,5 @@
 // * Dependencies
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Account } from '../types';
 import { Icon } from '../types';
 
@@ -12,9 +12,19 @@ import BoxAccountsItem from '../components/BoxAccountsItem.component';
 interface PageAccountsProps {
   accounts: Account[];
   icons: Icon[];
+  activeSubTab: { [key: string]: string };
 }
 
-function DivAccountsList({ accounts, icons }: PageAccountsProps) {
+function DivAccountsList({ accounts, icons, activeSubTab }: PageAccountsProps) {
+  const [filteredAccounts, setFilteredAccounts] = useState<Account[]>([]);
+
+  useEffect(() => {
+    const filteredAccounts = accounts.filter(account => {
+      return account.type === activeSubTab['/accounts'].replace('/', '');
+    });
+    setFilteredAccounts(filteredAccounts);
+  }, [accounts, activeSubTab]);
+  
   const findIconName = (icon_id: string) => {
     const icon = icons.find(icon => {
       return icon.id === icon_id;
@@ -24,9 +34,8 @@ function DivAccountsList({ accounts, icons }: PageAccountsProps) {
 
   return (
     <div className="accounts-list">
-      <h1>Accounts:</h1>
       <ul>
-        {accounts.map(account => (
+        {filteredAccounts.map(account => (
           <BoxAccountsItem 
             key={account.id}
             account={account}
@@ -38,7 +47,7 @@ function DivAccountsList({ accounts, icons }: PageAccountsProps) {
   );
 }
 
-export default function PageAccounts({ accounts, icons }: PageAccountsProps) {
+export default function PageAccounts({ accounts, icons, activeSubTab}: PageAccountsProps) {
   return (
     <div 
       className={
@@ -51,6 +60,7 @@ export default function PageAccounts({ accounts, icons }: PageAccountsProps) {
       <DivAccountsList 
         accounts={accounts} 
         icons={icons}
+        activeSubTab={activeSubTab}
       />
     </div>
   );
