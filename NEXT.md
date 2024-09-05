@@ -1,1 +1,1 @@
-CRUD accounts > Adding new account
+Show form modal on Add Account click

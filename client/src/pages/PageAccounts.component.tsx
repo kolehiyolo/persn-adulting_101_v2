@@ -21,6 +21,7 @@ interface DivAccountsListContainerProps {
   filteredAccounts: Account[];
   icons: Icon[];
   activeSubTab: { [key: string]: string };
+  handleButtonAddClick: () => void;
 }
 
 interface DivAccountsListProps {
@@ -140,7 +141,7 @@ function DivAccountsListFunds({ filteredAccounts, findIconName }: DivAccountsLis
   );
 }
 
-function DivAccountsListContainer({ filteredAccounts, icons, activeSubTab }: DivAccountsListContainerProps) {
+function DivAccountsListContainer({ filteredAccounts, icons, activeSubTab, handleButtonAddClick }: DivAccountsListContainerProps) {
   const findIconName = (icon_id: string) => {
     const icon = icons.find(icon => {
       return icon.id === icon_id;
@@ -171,6 +172,21 @@ function DivAccountsListContainer({ filteredAccounts, icons, activeSubTab }: Div
           findIconName={findIconName}
         />
       }
+      <div
+        className="account-buttons"
+      >
+        <button
+          className="account-button-add"
+          onClick={handleButtonAddClick}
+        >
+          Add Account
+        </button>
+        <button
+          className="account-button-archived"
+        >
+          Show Archived
+        </button>
+      </div>
     </div>
   );
 }
@@ -196,6 +212,10 @@ export default function PageAccounts({ accounts, icons, activeSubTab, defaultCur
     findFilteredAccounts();
   }, [findFilteredAccounts]);
 
+  const handleButtonAddClick = () => {
+    console.log('Add Account button clicked');
+  };
+
   return (
     <div 
       className={
@@ -216,6 +236,7 @@ export default function PageAccounts({ accounts, icons, activeSubTab, defaultCur
         filteredAccounts={filteredAccounts} 
         icons={icons}
         activeSubTab={activeSubTab}
+        handleButtonAddClick={handleButtonAddClick}
       />
     </div>
   );
