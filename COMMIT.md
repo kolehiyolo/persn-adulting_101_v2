@@ -1,4 +1,5 @@
-Added subdirectories to components/
-1. Yeah okay so on the way to creating a modal component, I realized I don't know where I would put it, so I decided to add subdirectories to components/ to properly group them
-2. Of course, upon moving, I had to fix some paths in the codebase
-3. I also already installed react-modal
+ModalAddAccount files ready
+1. Alright so yeah it's past my bedtime already, so I'll leave it at this
+2. ChatGPT's code example for the modal doesn't fit what I have, particularly for how it handles the actual data manip
+3. All I want the modal to do is serve the form UI, and then on submit, it triggers addAccount() (which I am yet to set up) at the PageAccounts() level
+4. Oh also fixed a lil error where apparently, you also need to install the types that come with react-modal
