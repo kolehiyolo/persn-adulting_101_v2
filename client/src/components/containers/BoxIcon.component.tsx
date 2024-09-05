@@ -1,6 +1,6 @@
 // * Dependencies
 import React from 'react';
-import { Account } from '../types';
+import { Account } from '../../types';
 
 // * Styling
 import './BoxIcon.component.scss';

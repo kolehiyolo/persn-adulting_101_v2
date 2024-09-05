@@ -7,8 +7,8 @@ import { Icon } from '../types';
 import './PageAccounts.component.scss';
 
 // * Components
-import BoxAccountsItem from '../components/BoxAccountsItem.component';
-import DivAmount from '../components/DivAmount.component';
+import BoxAccountsItem from '../components/containers/BoxAccountsItem.component';
+import DivAmount from '../components/containers/DivAmount.component';
 
 interface PageAccountsProps {
   accounts: Account[];
