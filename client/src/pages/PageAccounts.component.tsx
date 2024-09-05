@@ -36,7 +36,7 @@ interface DebtData {
 
 function DivAccountsListRegular({ filteredAccounts, findIconName }: DivAccountsListProps) {
   return (
-    <ul className="accounts-list-regular">
+    <ul className="accounts-list accounts-list-regular">
       {filteredAccounts.map(account => (
         <BoxAccountsItem 
           key={account.id}
@@ -59,8 +59,8 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
         items: [],
       },
       {
-        title: 'Owed to me',
-        className: 'owed-to-me',
+        title: 'I am owed',
+        className: 'i-am-owed',
         items: [],
       },
       {
@@ -73,7 +73,7 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
     filteredAccounts.forEach(account => {
       const titleToFind = 
         account.balance < 0 ? 'I owe'
-        : account.balance > 0 ? 'Owed to me' 
+        : account.balance > 0 ? 'I am owed' 
         : 'Settled';
       
       newDebtsData.find(
@@ -88,9 +88,8 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
     findDebts();
   }, [findDebts]);
 
-
   return (
-    <ul className="accounts-list-debts">
+    <ul className="accounts-list accounts-list-debts">
       {
         debtsData.map(debtsDataItem => (
           debtsDataItem.items.length !== 0 &&
@@ -102,10 +101,14 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
               className={`debt-header`}
             >
               <h3>{debtsDataItem.title}</h3>
-              <DivAmount 
-                amount={debtsDataItem.items.reduce((total, account) => total + account.balance, 0)}
-                currency={debtsDataItem.items[0].currency}
-              />
+              {
+                debtsDataItem.title !== 'Settled' &&
+                <DivAmount 
+                  amount={debtsDataItem.items.reduce((total, account) => total + account.balance, 0)}
+                  currency={debtsDataItem.items[0].currency}
+                />
+              }
+              
             </div>
             <ul>
               {debtsDataItem.items.map(account => (
@@ -125,7 +128,7 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
 
 function DivAccountsListFunds({ filteredAccounts, findIconName }: DivAccountsListProps) {
   return (
-    <ul className="accounts-list-funds">
+    <ul className="accounts-list accounts-list-funds">
       {filteredAccounts.map(account => (
         <BoxAccountsItem 
           key={account.id}
@@ -146,7 +149,7 @@ function DivAccountsListContainer({ filteredAccounts, icons, activeSubTab }: Div
   }
 
   return (
-    <div className="accounts-list">
+    <div className="div-accounts-list-container">
       {
         activeSubTab['/accounts'] === '/regular' &&
         <DivAccountsListRegular 

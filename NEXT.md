@@ -1,1 +1,1 @@
-Prettify Split debts
+CRUD accounts > Adding new account

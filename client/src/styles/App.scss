@@ -33,7 +33,8 @@
     .page {
       flex-grow: 1;
       align-self: stretch;
-      max-width: $max-width-desktop;
+      // max-width: $max-width-desktop;
+      max-width: 600px;
     }
   }
 
