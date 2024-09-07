@@ -1,5 +1,4 @@
-ModalAddAccount files ready
-1. Alright so yeah it's past my bedtime already, so I'll leave it at this
-2. ChatGPT's code example for the modal doesn't fit what I have, particularly for how it handles the actual data manip
-3. All I want the modal to do is serve the form UI, and then on submit, it triggers addAccount() (which I am yet to set up) at the PageAccounts() level
-4. Oh also fixed a lil error where apparently, you also need to install the types that come with react-modal
+ModalAddAccount scripted but not using yet
+1. Alright so for starters, I decided to just try writing ModalAddAccount first, and then trying to mount it to PageAccounts later
+2. I think right now I'm very unsure of how I want to have it within PageAccounts, in that the isOpen state and the addAccount() function should be in PageAccounts, but in doing so, because the button is in DivAccountsListContainer, it's kinda requiring too many levels of passing props
+3. With that in mind, I'm thinking of moving the buttons to PageAccounts instead of DivAccountsListContainer, but I'm not sure how that's gonna go style-wise
