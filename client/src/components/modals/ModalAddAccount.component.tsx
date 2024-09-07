@@ -9,6 +9,7 @@ import { ChangeEvent, FormEvent } from 'react';
 import './ModalAddAccount.component.scss';
 
 // * Components
+import BoxIcon from '../containers/BoxIcon.component';
 
 // * Interfaces
 interface ModalAddAccountProps {
@@ -53,7 +54,16 @@ export default function ModalAddAccount(
       color: '071abc',
     }
   );
+  const [iconName, setIconName] = useState<string>('');
 
+  useEffect(() => {
+    const findIconName = (icon_id: string) => {
+      const icon = icons.find(icon => icon.id === icon_id);
+      return icon ? icon.name : '';
+    }
+    setIconName(findIconName(accountData.icon_id));
+  }, [accountData.icon_id, icons]);
+  
   useEffect(() => {
     setAccountData(
       {
@@ -121,6 +131,10 @@ export default function ModalAddAccount(
       contentLabel="Add Account"
     >
       <form onSubmit={handleSubmit}>
+        <BoxIcon
+          color={accountData.color}
+          icon_name={iconName}
+        />
         <label htmlFor="name">
           <p>Account Name</p>
         <input
