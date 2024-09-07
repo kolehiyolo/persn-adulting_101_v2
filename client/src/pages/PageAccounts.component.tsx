@@ -17,9 +17,18 @@ interface PageAccountsProps {
   icons: Icon[];
   activeSubTab: { [key: string]: string };
   defaultCurrency: string;
+  setAccounts: (accounts: Account[]) => void;
 }
 
-export default function PageAccounts({ accounts, icons, activeSubTab, defaultCurrency}: PageAccountsProps) {
+export default function PageAccounts(
+  { 
+    accounts,
+    icons,
+    activeSubTab,
+    defaultCurrency,
+    setAccounts
+  }: PageAccountsProps) 
+{
   const [filteredAccounts, setFilteredAccounts] = useState<Account[]>([]);
   const [modalAddAccountIsOpen, setModalAddAccountIsOpen] = useState(false);
   
@@ -53,6 +62,7 @@ export default function PageAccounts({ accounts, icons, activeSubTab, defaultCur
 
   const addAccount = (account: Account) => {
     console.log('Account added:', account);
+    setAccounts([...accounts, account]);
   }
 
   return (

@@ -1,7 +1,7 @@
-Set default values for ModalAddAccount > accountData
-1. YOOOO alright so now, ModalAddAccount sets default values for the accountData properties, which, at the minimum, will pass all the type requirements that the lists need to properly show an account
-2. It also accepts changes to the name and balances via the GUI form, so that's a cool little unintentional thing I didn't really plan on but came with GPT's sample code for using react-modal
-3. I am having quite the trouble, though, with setting the default value, in that I'm not sure if the code knows when I want the accountData to be reset, which is for every opening of ModalAddAccount
-  3.1. The problem stems from the fact that ModalAddAccount is mounted at App load, not when isOpen is triggered
-  3.2. That of course introduces stupid issues, such as the fact that it sometimes breaks when some props are not yet ready at mount, such as defaultCurrency or activeSubTab
-  3.3. I will have to refactor this, and I'm adding it to the TODO so I don't forget
+Add accountData to account on submit
+1. YOYOYOYO alright so the new account is being added now on submit, and it even shows on whatever sub-tab it should show on
+2. It even shows on the debts sub-lists, and also adds to the totals correctly
+3. It was a very very straightforward process of implementing, in that I only changed props passing between App and PageAccounts so that PageAccounts has access to setAccounts, and then just have a very very brief line where we just append the new account to accounts
+4. There were some issues, though, with ModalAddAccount, in that the default value for goal was '' if not a funds account, which is wrong as it should either be 'N/A' or a numberical value, but I corrected that now so ez
+5. Also, another assumed big issue was the balance type, in that in the modal, by default, it's being treated as a string and should be, as sometimes the user will input '-', so I can't automatically parse the input value to a number type
+  5.1. I considered doing some extreme conditional where I have a separate handleChange for the balance, and then it will detect whether the value can be parsed into a string for every change, but then I realized, just have it be accepted as a string for every change, BUT, when onSubmit, that's when we convert it to a number

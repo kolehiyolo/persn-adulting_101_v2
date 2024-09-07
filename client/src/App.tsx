@@ -85,6 +85,7 @@ export default function App() {
                   icons={icons}
                   activeSubTab={activeSubTab}
                   defaultCurrency={defaultCurrency}
+                  setAccounts={setAccounts}
                 />
               } 
             />

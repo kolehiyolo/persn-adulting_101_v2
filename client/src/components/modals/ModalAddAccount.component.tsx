@@ -86,7 +86,7 @@ export default function ModalAddAccount(
     // * Generate order, type, and goal
     const order = accounts.length;
     const type = activeSubTab['/accounts'].replace('/', '');
-    const goal = type === 'funds' ? '10000' : '';
+    const goal = type === 'funds' ? '10000' : 'N/A';
 
     // * Generate date, time, and ID
     const now = new Date();
@@ -97,6 +97,9 @@ export default function ModalAddAccount(
       now.getMilliseconds().toString().padStart(3, '0').substring(0, 3);
     const id = date.replace(/-/g, '') + time;
 
+    // * Convert balance to number
+    const balance = parseFloat(accountData.balance.toString());
+
     // * Update accountData
     const updatedAccountData = {
       ...accountData,
@@ -106,6 +109,7 @@ export default function ModalAddAccount(
       date: date,
       time: time,
       id: id,
+      balance: balance,
     };
 
     addAccount(updatedAccountData);
