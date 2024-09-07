@@ -61,7 +61,7 @@ export default function ModalAddAccount(
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // addAccount(accountData);
+    addAccount(accountData);
     onRequestClose(); // Close modal after submit
   };
 

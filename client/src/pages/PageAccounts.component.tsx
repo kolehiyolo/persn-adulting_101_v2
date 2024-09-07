@@ -9,6 +9,7 @@ import './PageAccounts.component.scss';
 // * Components
 import DivAmount from '../components/containers/DivAmount.component';
 import DivAccountsListContainer from '../components/containers/DivAccountsListContainer.component';
+import ModalAddAccount from '../components/modals/ModalAddAccount.component';
 
 // * Interfaces
 interface PageAccountsProps {
@@ -20,6 +21,7 @@ interface PageAccountsProps {
 
 export default function PageAccounts({ accounts, icons, activeSubTab, defaultCurrency}: PageAccountsProps) {
   const [filteredAccounts, setFilteredAccounts] = useState<Account[]>([]);
+  const [modalAddAccountIsOpen, setModalAddAccountIsOpen] = useState(false);
   
   const findSubTabTotal = () => {
     const subTabTotal = filteredAccounts.reduce((total, account) => {
@@ -41,7 +43,17 @@ export default function PageAccounts({ accounts, icons, activeSubTab, defaultCur
 
   const handleButtonAddClick = () => {
     console.log('Add Account button clicked');
+    setModalAddAccountIsOpen(true);
   };
+
+  const handleModalAddAccountClose = () => {
+    console.log('ModalAddAccount closed');
+    setModalAddAccountIsOpen(false);
+  }
+
+  const addAccount = (account: Account) => {
+    console.log('Account added:', account);
+  }
 
   return (
     <div 
@@ -78,6 +90,16 @@ export default function PageAccounts({ accounts, icons, activeSubTab, defaultCur
         >
           Show Archived
         </button>
+
+        <ModalAddAccount
+          isOpen={modalAddAccountIsOpen}
+          onRequestClose={handleModalAddAccountClose}
+          addAccount={addAccount}
+          accounts={accounts}
+          icons={icons}
+          activeSubTab={activeSubTab}
+          defaultCurrency={defaultCurrency}
+        />
       </div>
     </div>
   );

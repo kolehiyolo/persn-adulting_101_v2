@@ -1,4 +1,9 @@
 User can add accounts
+  Set default values for ModalAddAccount > accountData
+  Add accountData to account on submit
+  Build ModalAddAccount forms
+  Style ModalAddAccount
+
 User can delete accounts
 User can edit accounts
 User can toggle view of archived accounts

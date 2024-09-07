@@ -1,1 +1,6 @@
 @import '../../styles/utils/variables';
+
+// ! OVERRIDING JUST TO SEE CONTENT
+.ReactModal__Content * {
+  color: black;
+}
