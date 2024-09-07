@@ -15,43 +15,6 @@ flex-direction: column;
     padding: 15px 0;  
   }
 
-  .div-accounts-list-container {
-    overflow-y: auto;
-
-    .accounts-list {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      
-      &-debts {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        
-        .debt-header {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          gap: 10px;
-          padding: 15px 0;  
-          
-          h3, & .div-amount span {
-            font-weight: 300;
-          }
-        }
-        
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-      }
-    }
-
-  }
-
   .page-buttons {
     display: flex;
     flex-direction: row;

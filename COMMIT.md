@@ -1,4 +1,5 @@
-Move account-buttons to PageAccounts
-1. Simply moved .account-buttons to PageAccounts
-2. Also renamed it to .page-buttons
-3. The more I'm working on this file, the more the length is weighing on me, so I want to go and create a different file for DivAccountsListContainer
+Move DivAccountsListContainer to own file
+1. There we go PageAccounts just got way cleaner
+2. The moving was lots easier than I expected, just literally cut code from one file to another
+3. Of course some modifications had to be made, but mostly just component import and file path fixes
+4. Also, for testing of how well the UI handles overflow, I added more dummy type:regular rows for accounts.csv
