@@ -1,1 +1,1 @@
-ModalAddAccount icon customization
+Fix BoxIcon so it only needs color and icon_id
