@@ -1,17 +1,16 @@
 // * Dependencies
 import React from 'react';
-import { Account } from '../../types';
 
 // * Styling
 import './BoxIcon.component.scss';
 
 // * Type definition
 interface BoxIconProps {
-  account: Account;
+  color: string,
   icon_name: string;
 }
 
-export default function BoxIcon({account, icon_name}: BoxIconProps) {
+export default function BoxIcon({color, icon_name}: BoxIconProps) {
   return (
     <div
       className={
@@ -20,12 +19,12 @@ export default function BoxIcon({account, icon_name}: BoxIconProps) {
         ].join(' ')
       }
       style={{
-        backgroundColor: '#' + account.color,
+        backgroundColor: '#' + color,
       }}
     >
       <img
         src={`/icons/${icon_name}.svg`}
-        alt={account.name}
+        alt={`icon-${icon_name}`}
       />
     </div>
   )

@@ -24,7 +24,7 @@ export default function BoxAccountsItem({ account, icon_name }: BoxAccountsItemP
     >
       <div className='left'>
         <BoxIcon 
-          account={account}
+          color={account.color}
           icon_name={icon_name}
         />
       </div>

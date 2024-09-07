@@ -1,7 +1,6 @@
-ModalCustomizeIcon files ready
-1. Alright so I have a new modal setup, and I already even wrote the code for it, but I can't test it yet so we'll see if it's perfect
-2. It doesn't render the icon and color options yet dynamically, and now I just have 3 predefined values as options just for dummy
-3. It is theoretically working, though, where it expects iconStyle as input, to be passed by its parent, and then it will update the iconStyle properties (icon_id and color) on submit
-  3.1. When I get to mounting this via ModalAddAccount, I have to make sure to create the iconStyle state, which is then what's gonna be passed as input
-4. I want there to be a preview of what the icon looks like while the user is picking the icons and the colors, and when trying to mount BoxIcon, I realized the props dependencies for BoxIcon is trash, in that it expects accountData and icon_name when it should be just icon_id and color
-  4.1. Before everything else, I think should fix this, which will ruffle some feathers for sure
+Fix BoxIcon so it only needs color and icon_name
+1. Alright so now BoxIcon needs color and icon_name, instead of account and icon_name
+  1.1. I said in the previous commit that it should be color and icon_id, and I realized the icon_id is not a good idea since it forces BoxIcon to still find the source file name of the icon via the ID over the iconsData, which is excessive to do per icon
+  1.2. Instead, it will only get the color and the name, and whatever mounts BoxIcon should already have the name ready based on the icon_id
+2. I altered BoxAccountsItem, which is the first to use BoxIcon, and it was a very easy change
+3. I also even went ahead and mounted BoxIcon in ModalCustomizeIcon, and I had to add another state iconName and the function to find it from iconsData to handle the prop dependency of BoxIcon

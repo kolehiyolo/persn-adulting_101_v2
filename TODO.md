@@ -1,6 +1,5 @@
 User can add accounts
   ModalAddAccount icon customization
-    Fix BoxIcon so it only needs color and icon_id
     ModalAddAccount mounts ModalCustomizeIcon
     ModalCustomizIcon should dynamically render selection based on color+icon data
   Style ModalAddAccount

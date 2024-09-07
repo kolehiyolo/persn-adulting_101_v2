@@ -8,6 +8,7 @@ import { ChangeEvent, FormEvent } from 'react';
 import './ModalCustomizeIcon.component.scss';
 
 // * Components
+import BoxIcon from '../containers/BoxIcon.component';
 
 // * Interfaces
 interface IconStyle {
@@ -37,11 +38,17 @@ export default function ModalCustomizeIcon(
 ) {
   const [iconID, setIconID] = useState<string>('20240903091701582');
   const [color, setColor] = useState<string>('202020');
+  const [iconName, setIconName] = useState<string>('');
 
   useEffect(() => {
     setIconID(iconStyle.icon_id);
     setColor(iconStyle.color);
   }, [iconStyle]);
+
+  const findIconName = (icon_id: string) => {
+    const icon = icons.find(icon => icon.id === icon_id);
+    return icon ? icon.name : '';
+  }
 
   const handleChange = (
     e: ChangeEvent<HTMLSelectElement>
@@ -50,6 +57,7 @@ export default function ModalCustomizeIcon(
     switch(name) {
       case 'icon_id':
         setIconID(value);
+        setIconName(findIconName(value));
         break;
       case 'color':
         setColor(value);
@@ -76,6 +84,10 @@ export default function ModalCustomizeIcon(
       contentLabel="Customize Icon"
     >
       <form onSubmit={handleSubmit}>
+        <BoxIcon
+          color={color}
+          icon_name={iconName}
+        />
         {/* ! Render selection dynamically */}
         <label htmlFor="icon_id">
           <p>Icon</p>
