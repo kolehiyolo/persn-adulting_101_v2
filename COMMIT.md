@@ -1,4 +1,5 @@
-Mounted BoxIcon in ModalAddAccount
-1. Okay so before mounting ModalCustomizeIcon, I thought doing BoxIcon first would be best as a preview of the icon to clearly show that ModalCustomizeIcon is working after on submit there
-2. I didn't expect that it will already be a big enough change that I think it warrants a commit
-3. I needed to create a iconName state within ModalAddAccount, which I honestly didn't expect, so I just thought I'll commit now so I can focus solely on the ModalCustomizeIcon mounting in the next commit
+ModalCustomizeIcon working
+1. Alright so I went beyond just ModalAddAccount mounts ModalCustomizeIcon
+2. It's working now, which is awesome, but I had to figure out why submitting ModalCustomizeIcon submits ModalAddAccount too
+3. There were also some mishaps with massing the IconStyle values in ModalCustomizeIcon to ModalAddAccount, and vice versa, and also the fact that ModalCustomizeIcon doesn't reset the values when ModalAddAccount is submitted, although ModalAddAccount's IconStyle are clearly reset
+4. Honestly, my brain is barely working so I'll just commit without explaining exactly what I did, and I even recognize that the code for both files is MESSYYY, so I think I'll do some major refactoring later

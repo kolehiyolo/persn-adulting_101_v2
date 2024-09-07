@@ -1,6 +1,7 @@
 User can add accounts
   ModalAddAccount icon customization
-    ModalAddAccount mounts ModalCustomizeIcon
+    Refactor ModalAddAccount
+    Refactor ModalCustomizeIcon
     ModalCustomizIcon should dynamically render selection based on color+icon data
   Style ModalAddAccount
   Refactor ModalAddAccount

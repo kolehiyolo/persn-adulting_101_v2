@@ -10,6 +10,7 @@ import './ModalAddAccount.component.scss';
 
 // * Components
 import BoxIcon from '../containers/BoxIcon.component';
+import ModalCustomizeIcon from './ModalCustomizeIcon.component';
 
 // * Interfaces
 interface ModalAddAccountProps {
@@ -20,6 +21,11 @@ interface ModalAddAccountProps {
   icons: Icon[];
   activeSubTab: { [key: string]: string };
   defaultCurrency: string;
+}
+
+interface IconStyle {
+  icon_id: string;
+  color: string;
 }
 
 // * Others
@@ -50,11 +56,28 @@ export default function ModalAddAccount(
       description: 'Dummy description',
       tag: '',
       archived: false,
-      icon_id: '20240903091701589',
+      icon_id: '20240903091701588',
       color: '071abc',
     }
   );
   const [iconName, setIconName] = useState<string>('');
+  const [iconStyle, setIconStyle] = useState<IconStyle>({
+    icon_id: accountData.icon_id,
+    color: accountData.color,
+  });
+  const [modalCustomizeIconIsOpen, setModalCustomizeIconIsOpen] = useState(false);
+
+  useEffect(() => {
+    setAccountData(
+      prev => (
+        {
+          ...prev,
+          icon_id: iconStyle.icon_id,
+          color: iconStyle.color
+        }
+      )
+    )
+  }, [iconStyle]);
 
   useEffect(() => {
     const findIconName = (icon_id: string) => {
@@ -79,10 +102,14 @@ export default function ModalAddAccount(
         description: 'Dummy description',
         tag: '',
         archived: false,
-        icon_id: '20240903091701589',
+        icon_id: '20240903091701588',
         color: '071abc',
       }
     );
+    setIconStyle({
+      icon_id: '20240903091701588',
+      color: '071abc',
+    });
   }, [isOpen, defaultCurrency, activeSubTab]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
@@ -124,6 +151,12 @@ export default function ModalAddAccount(
     onRequestClose(); // Close modal after submit
   };
 
+
+  const handleModalCustomizeIconClose = () => {
+    console.log('ModalCustomizeIcon closed');
+    setModalCustomizeIconIsOpen(false);
+  }
+
   return (
     <Modal
       isOpen={isOpen}
@@ -131,9 +164,21 @@ export default function ModalAddAccount(
       contentLabel="Add Account"
     >
       <form onSubmit={handleSubmit}>
-        <BoxIcon
-          color={accountData.color}
-          icon_name={iconName}
+        <button
+          type="button"
+          onClick={() => setModalCustomizeIconIsOpen(true)}
+        >
+          <BoxIcon
+            color={accountData.color}
+            icon_name={iconName}
+          />
+        </button>
+        <ModalCustomizeIcon
+          isOpen={modalCustomizeIconIsOpen}
+          onRequestClose={handleModalCustomizeIconClose}
+          iconStyle={iconStyle}
+          setIconStyle={setIconStyle}
+          icons={icons}
         />
         <label htmlFor="name">
           <p>Account Name</p>

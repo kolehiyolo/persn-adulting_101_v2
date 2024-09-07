@@ -1,8 +1,8 @@
 // * Dependencies
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Modal from 'react-modal';
 import { Icon } from '../../types';
-import { ChangeEvent, FormEvent } from 'react';
+import { ChangeEvent } from 'react';
 
 // * Styling
 import './ModalCustomizeIcon.component.scss';
@@ -40,16 +40,11 @@ export default function ModalCustomizeIcon(
   const [color, setColor] = useState<string>('202020');
   const [iconName, setIconName] = useState<string>('');
 
-  useEffect(() => {
-    setIconID(iconStyle.icon_id);
-    setColor(iconStyle.color);
-  }, [iconStyle]);
-
-  const findIconName = (icon_id: string) => {
+  const findIconName = useCallback((icon_id: string) => {
     const icon = icons.find(icon => icon.id === icon_id);
     return icon ? icon.name : '';
-  }
-
+  }, [icons]);
+  
   const handleChange = (
     e: ChangeEvent<HTMLSelectElement>
   ) => {
@@ -64,10 +59,14 @@ export default function ModalCustomizeIcon(
         break;
     }
   };
+  
+  useEffect(() => {
+    setIconName(findIconName(iconStyle.icon_id));
+    setIconID(iconStyle.icon_id);
+    setColor(iconStyle.color);
+  }, [iconStyle, findIconName]);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
+  const handleSubmitButton = () => {
     // * Update iconStyle
     setIconStyle({
       icon_id: iconID,
@@ -75,7 +74,7 @@ export default function ModalCustomizeIcon(
     });
 
     onRequestClose(); // Close modal after submit
-  };
+  }
 
   return (
     <Modal
@@ -83,7 +82,7 @@ export default function ModalCustomizeIcon(
       onRequestClose={onRequestClose}
       contentLabel="Customize Icon"
     >
-      <form onSubmit={handleSubmit}>
+      <form>
         <BoxIcon
           color={color}
           icon_name={iconName}
@@ -94,7 +93,7 @@ export default function ModalCustomizeIcon(
           <select
             id="icon_id"
             name="icon_id"
-            value={iconStyle.icon_id}
+            value={iconID}
             onChange={handleChange}
           >
             <option value="20240903091701588">chef-hat</option>
@@ -107,7 +106,7 @@ export default function ModalCustomizeIcon(
           <select
             id="color"
             name="color"
-            value={iconStyle.color}
+            value={color}
             onChange={handleChange}
           >
             <option value="854c1d">854c1d</option>
@@ -118,7 +117,12 @@ export default function ModalCustomizeIcon(
         <div
           className="form-buttons"
         >
-          <button type="submit">Set</button>
+          <button
+            type="button"
+            onClick={handleSubmitButton}
+          >
+            Set
+          </button>
           <button onClick={onRequestClose}>Cancel</button>
         </div>
       </form>
