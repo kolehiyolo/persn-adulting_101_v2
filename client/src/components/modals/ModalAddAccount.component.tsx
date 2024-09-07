@@ -65,7 +65,7 @@ export default function ModalAddAccount(
         goal: 'N/A',
         currency: defaultCurrency,
         order: 0,
-        type: 'regular',
+        type: activeSubTab['/accounts'] === undefined ? 'regular' : activeSubTab['/accounts'].replace('/', ''),
         description: 'Dummy description',
         tag: '',
         archived: false,
@@ -73,9 +73,9 @@ export default function ModalAddAccount(
         color: '071abc',
       }
     );
-  }, [isOpen, defaultCurrency]);
+  }, [isOpen, defaultCurrency, activeSubTab]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     setAccountData(prev => ({ ...prev, [name]: value }));
   };
@@ -85,8 +85,7 @@ export default function ModalAddAccount(
 
     // * Generate order, type, and goal
     const order = accounts.length;
-    const type = activeSubTab['/accounts'].replace('/', '');
-    const goal = type === 'funds' ? '10000' : 'N/A';
+    const goal = accountData.type === 'funds' ? accountData.goal : 'N/A';
 
     // * Generate date, time, and ID
     const now = new Date();
@@ -104,7 +103,6 @@ export default function ModalAddAccount(
     const updatedAccountData = {
       ...accountData,
       order: order,
-      type: type,
       goal: goal,
       date: date,
       time: time,
@@ -123,7 +121,8 @@ export default function ModalAddAccount(
       contentLabel="Add Account"
     >
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Account Name</label>
+        <label htmlFor="name">
+          <p>Account Name</p>
         <input
           type="text"
           id="name"
@@ -131,18 +130,64 @@ export default function ModalAddAccount(
           value={accountData.name}
           onChange={handleChange}
         />
+        </label>
+        
+        <label htmlFor="type">
+          <p>Account Type</p>
+          <select
+            id="type"
+            name="type"
+            value={accountData.type}
+            onChange={handleChange}
+          >
+            <option value="regular">Regular</option>
+            <option value="debts">Debt</option>
+            <option value="funds">Funds</option>
+          </select>
+        </label>
 
-        <label htmlFor="balance">Initial Balance</label>
-        <input
-          type="number"
-          id="balance"
-          name="balance"
-          value={accountData.balance}
-          onChange={handleChange}
-        />
+        <label htmlFor="description">
+          <p>Description</p>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            value={accountData.description}
+            onChange={handleChange}
+          />
+        </label>
 
-        <button type="submit">Add Account</button>
-        <button onClick={onRequestClose}>Cancel</button>
+        <label htmlFor="balance">
+          <p>Initial Balance</p>
+          <input
+            type="number"
+            id="balance"
+            name="balance"
+            value={accountData.balance}
+            onChange={handleChange}
+          />
+        </label>
+        
+        {
+          accountData.type === 'funds' &&
+          <label htmlFor="goal">
+            <p>Goal</p>
+            <input
+              type="number"
+              id="goal"
+              name="goal"
+              value={accountData.goal === 'N/A' ? 0 : accountData.goal}
+              onChange={handleChange}
+            />
+          </label>
+        }
+        
+        <div
+          className="form-buttons"
+        >
+          <button type="submit">Add Account</button>
+          <button onClick={onRequestClose}>Cancel</button>
+        </div>
       </form>
     </Modal>
   );

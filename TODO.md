@@ -1,7 +1,5 @@
 User can add accounts
-  Set default values for ModalAddAccount > accountData
-  Add accountData to account on submit
-  Build ModalAddAccount forms
+  ModalAddAccount icon customization
   Style ModalAddAccount
   Refactor ModalAddAccount
 
