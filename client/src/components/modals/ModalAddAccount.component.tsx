@@ -1,5 +1,5 @@
 // * Dependencies
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { Account } from '../../types';
 import { Icon } from '../../types';
@@ -42,17 +42,38 @@ export default function ModalAddAccount(
       time: '',
       name: '',
       balance: 0,
-      goal: '',
-      currency: '',
+      goal: 'N/A',
+      currency: defaultCurrency,
       order: 0,
-      type: '',
-      description: '',
+      type: 'regular',
+      description: 'Dummy description',
       tag: '',
       archived: false,
-      icon_id: '',
-      color: '',
+      icon_id: '20240903091701589',
+      color: '071abc',
     }
   );
+
+  useEffect(() => {
+    setAccountData(
+      {
+        id: '',
+        date: '',
+        time: '',
+        name: '',
+        balance: 0,
+        goal: 'N/A',
+        currency: defaultCurrency,
+        order: 0,
+        type: 'regular',
+        description: 'Dummy description',
+        tag: '',
+        archived: false,
+        icon_id: '20240903091701589',
+        color: '071abc',
+      }
+    );
+  }, [isOpen, defaultCurrency]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -61,7 +82,33 @@ export default function ModalAddAccount(
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addAccount(accountData);
+
+    // * Generate order, type, and goal
+    const order = accounts.length;
+    const type = activeSubTab['/accounts'].replace('/', '');
+    const goal = type === 'funds' ? '10000' : '';
+
+    // * Generate date, time, and ID
+    const now = new Date();
+    const date = now.toISOString().slice(0, 10);
+    const time = now.getHours().toString().padStart(2, '0') +
+      now.getMinutes().toString().padStart(2, '0') +
+      now.getSeconds().toString().padStart(2, '0') +
+      now.getMilliseconds().toString().padStart(3, '0').substring(0, 3);
+    const id = date.replace(/-/g, '') + time;
+
+    // * Update accountData
+    const updatedAccountData = {
+      ...accountData,
+      order: order,
+      type: type,
+      goal: goal,
+      date: date,
+      time: time,
+      id: id,
+    };
+
+    addAccount(updatedAccountData);
     onRequestClose(); // Close modal after submit
   };
 

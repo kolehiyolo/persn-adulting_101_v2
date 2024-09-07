@@ -3,6 +3,7 @@ User can add accounts
   Add accountData to account on submit
   Build ModalAddAccount forms
   Style ModalAddAccount
+  Refactor ModalAddAccount
 
 User can delete accounts
 User can edit accounts
