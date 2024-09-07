@@ -1,4 +1,4 @@
-ModalAddAccount scripted but not using yet
-1. Alright so for starters, I decided to just try writing ModalAddAccount first, and then trying to mount it to PageAccounts later
-2. I think right now I'm very unsure of how I want to have it within PageAccounts, in that the isOpen state and the addAccount() function should be in PageAccounts, but in doing so, because the button is in DivAccountsListContainer, it's kinda requiring too many levels of passing props
-3. With that in mind, I'm thinking of moving the buttons to PageAccounts instead of DivAccountsListContainer, but I'm not sure how that's gonna go style-wise
+Move account-buttons to PageAccounts
+1. Simply moved .account-buttons to PageAccounts
+2. Also renamed it to .page-buttons
+3. The more I'm working on this file, the more the length is weighing on me, so I want to go and create a different file for DivAccountsListContainer
