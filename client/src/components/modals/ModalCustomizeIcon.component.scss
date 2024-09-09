@@ -22,8 +22,13 @@
 
   &-body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
+
+    .div-options-icon,
+    .div-options-color {
+      // width: 50%;
+    }
 
     .div-options-icon {
       display: flex;

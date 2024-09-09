@@ -1,1 +1,1 @@
-Dynamic icon and color options
+Work on color options
