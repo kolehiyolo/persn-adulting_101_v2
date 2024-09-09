@@ -10,3 +10,4 @@ Dynamic icon and color options
   4.4. To test the colors and how the white icon matches, however, I had to use BoxIcon, and BoxIcon only accepts hex colors
   4.5. So, I had a convertHSLToHex() ready to convert the HSL to hex
   4.6. Now, I want to dive deep into sorting the colors via CSV, removing duplicates, colors that are too similar, and colors that don't work with white, and then I will have GPT add more
+5. Recommitting since my last comment didn't have proper descriptions
