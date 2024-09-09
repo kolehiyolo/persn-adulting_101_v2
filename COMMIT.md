@@ -1,5 +1,5 @@
-ModalCustomizeIcon working
-1. Alright so I went beyond just ModalAddAccount mounts ModalCustomizeIcon
-2. It's working now, which is awesome, but I had to figure out why submitting ModalCustomizeIcon submits ModalAddAccount too
-3. There were also some mishaps with massing the IconStyle values in ModalCustomizeIcon to ModalAddAccount, and vice versa, and also the fact that ModalCustomizeIcon doesn't reset the values when ModalAddAccount is submitted, although ModalAddAccount's IconStyle are clearly reset
-4. Honestly, my brain is barely working so I'll just commit without explaining exactly what I did, and I even recognize that the code for both files is MESSYYY, so I think I'll do some major refactoring later
+Refactor ModalAddAccount+ModalCustomizeIcon
+1. With the help of GPT-kun, I refactored the code
+2. Even with his help, I still needed cleaning it to fit my standards and ease-of-use-and-understanding
+3. The functions within the components were getting confusing, so I needed to properly label which parts run on field changes, on modal opens, on submits, etc
+4. I managed to make it quite smooth, DX-wise, and now I'm just itching to do more

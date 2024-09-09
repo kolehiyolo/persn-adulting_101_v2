@@ -1,18 +1,20 @@
 // * Dependencies
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Modal from 'react-modal';
-import { Account } from '../../types';
-import { Icon } from '../../types';
 import { ChangeEvent, FormEvent } from 'react';
-
-// * Styling
-import './ModalAddAccount.component.scss';
 
 // * Components
 import BoxIcon from '../containers/BoxIcon.component';
 import ModalCustomizeIcon from './ModalCustomizeIcon.component';
 
+// * Types
+import { Account, Icon } from '../../types';
+
+// * Styling
+import './ModalAddAccount.component.scss';
+
 // * Interfaces
+// Interface definition for props
 interface ModalAddAccountProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -23,140 +25,116 @@ interface ModalAddAccountProps {
   defaultCurrency: string;
 }
 
+// Custom type for icon style
 interface IconStyle {
   icon_id: string;
   color: string;
 }
 
 // * Others
-Modal.setAppElement('#root'); // This helps with screen readers and accessibility.
+// Set the app element for accessibility with screen readers
+Modal.setAppElement('#root');
 
-export default function ModalAddAccount(
-  { 
-    isOpen, 
-    onRequestClose, 
-    addAccount,
-    accounts,
-    icons,
-    activeSubTab,
-    defaultCurrency
-  }: ModalAddAccountProps
-) {
-  const [accountData, setAccountData] = useState<Account>(
-    {
-      id: '',
-      date: '',
-      time: '',
-      name: '',
-      balance: 0,
-      goal: 'N/A',
-      currency: defaultCurrency,
-      order: 0,
-      type: 'regular',
-      description: 'Dummy description',
-      tag: '',
-      archived: false,
-      icon_id: '20240903091701588',
-      color: '071abc',
-    }
-  );
+// * Default Component
+export default function ModalAddAccount({
+  isOpen, 
+  onRequestClose, 
+  addAccount,
+  accounts,
+  icons,
+  activeSubTab,
+  defaultCurrency
+}: ModalAddAccountProps) {
+  // * States
+  const defaultAccountData = useMemo(() => ({
+    id: '',
+    date: '',
+    time: '',
+    name: '',
+    balance: 0,
+    goal: 'N/A',
+    currency: defaultCurrency,
+    order: accounts.length,
+    type: 'regular',
+    description: 'Dummy description',
+    tag: '',
+    archived: false,
+    icon_id: '20240903091701588',
+    color: '071abc'
+  }), [defaultCurrency, accounts.length]);
+  const [accountData, setAccountData] = useState<Account>(defaultAccountData);
   const [iconName, setIconName] = useState<string>('');
   const [iconStyle, setIconStyle] = useState<IconStyle>({
-    icon_id: accountData.icon_id,
-    color: accountData.color,
+    icon_id: defaultAccountData.icon_id,
+    color: defaultAccountData.color,
   });
+
+  // * Modal states
   const [modalCustomizeIconIsOpen, setModalCustomizeIconIsOpen] = useState(false);
 
-  useEffect(() => {
-    setAccountData(
-      prev => (
-        {
-          ...prev,
-          icon_id: iconStyle.icon_id,
-          color: iconStyle.color
-        }
-      )
-    )
-  }, [iconStyle]);
+  // * Functions
+  const findIconName = useCallback((icon_id: string) => {
+    const icon = icons.find(icon => icon.id === icon_id);
+    return icon ? icon.name : '';
+  }, [icons]);
 
+  // * Get the account type, then set the default values for accountData, iconStyle, and iconName
+  // This only runs when the modal is opened
   useEffect(() => {
-    const findIconName = (icon_id: string) => {
-      const icon = icons.find(icon => icon.id === icon_id);
-      return icon ? icon.name : '';
-    }
-    setIconName(findIconName(accountData.icon_id));
-  }, [accountData.icon_id, icons]);
-  
-  useEffect(() => {
-    setAccountData(
-      {
-        id: '',
-        date: '',
-        time: '',
-        name: '',
-        balance: 0,
-        goal: 'N/A',
-        currency: defaultCurrency,
-        order: 0,
-        type: activeSubTab['/accounts'] === undefined ? 'regular' : activeSubTab['/accounts'].replace('/', ''),
-        description: 'Dummy description',
-        tag: '',
-        archived: false,
-        icon_id: '20240903091701588',
-        color: '071abc',
-      }
-    );
+    const modifiedDefaultAccountData = {
+      ...defaultAccountData,
+      type: activeSubTab['/accounts']?.replace('/', '') || 'regular'
+    };
+    setAccountData(modifiedDefaultAccountData);
     setIconStyle({
-      icon_id: '20240903091701588',
-      color: '071abc',
+      icon_id: modifiedDefaultAccountData.icon_id,
+      color: modifiedDefaultAccountData.color
     });
-  }, [isOpen, defaultCurrency, activeSubTab]);
+    setIconName(findIconName(modifiedDefaultAccountData.icon_id));
+  }, [isOpen, defaultAccountData, findIconName, activeSubTab]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setAccountData(prev => ({ ...prev, [name]: value }));
-  };
+  // * Update icon values when iconStyle is changed, aka when ModalCustomizeIcon is submitted
+  // This is run whenever iconStyle is changed
+  useEffect(() => {
+    setIconName(findIconName(iconStyle.icon_id));
+    setAccountData(prev => ({
+      ...prev,
+      icon_id: iconStyle.icon_id,
+      color: iconStyle.color
+    }));
+  }, [iconStyle, findIconName]);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    // * Generate order, type, and goal
-    const order = accounts.length;
-    const goal = accountData.type === 'funds' ? accountData.goal : 'N/A';
-
-    // * Generate date, time, and ID
-    const now = new Date();
-    const date = now.toISOString().slice(0, 10);
-    const time = now.getHours().toString().padStart(2, '0') +
-      now.getMinutes().toString().padStart(2, '0') +
-      now.getSeconds().toString().padStart(2, '0') +
-      now.getMilliseconds().toString().padStart(3, '0').substring(0, 3);
-    const id = date.replace(/-/g, '') + time;
-
-    // * Convert balance to number
-    const balance = parseFloat(accountData.balance.toString());
-
-    // * Update accountData
-    const updatedAccountData = {
-      ...accountData,
-      order: order,
-      goal: goal,
-      date: date,
-      time: time,
-      id: id,
-      balance: balance,
+  // * When changes to the form fields are made
+  // Run every time a change is made to the form fields
+  const handleChange = 
+    (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => 
+    {
+      const { name, value } = e.target;
+      setAccountData(prev => ({ ...prev, [name]: value }));
     };
 
-    addAccount(updatedAccountData);
-    onRequestClose(); // Close modal after submit
-  };
+  // * When form is submitted
+  // Finalize the values for newAccountData, call addAccount(), and close the modal
+  const handleSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
+    // Compose new account data
+    const now = new Date();
+    const newAccountData = {
+      ...accountData,
+      date: now.toISOString().slice(0, 10),
+      time: `${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}${now.getMilliseconds().toString().padStart(3, '0').substring(0, 3)}`,
+      id: `${now.toISOString().slice(0, 10).replace(/-/g, '')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}${now.getMilliseconds().toString().padStart(3, '0').substring(0, 3)}`,
+      balance: parseFloat(accountData.balance.toString()),
+      order: accounts.length,
+      goal: accountData.type === 'funds' ? accountData.goal : 'N/A'
+    };
 
-  const handleModalCustomizeIconClose = () => {
-    console.log('ModalCustomizeIcon closed');
-    setModalCustomizeIconIsOpen(false);
-  }
+    addAccount(newAccountData);
+    onRequestClose(); 
+  }, [accountData, accounts.length, addAccount, onRequestClose]);
 
+  // Render the component
   return (
     <Modal
       isOpen={isOpen}
@@ -164,18 +142,12 @@ export default function ModalAddAccount(
       contentLabel="Add Account"
     >
       <form onSubmit={handleSubmit}>
-        <button
-          type="button"
-          onClick={() => setModalCustomizeIconIsOpen(true)}
-        >
-          <BoxIcon
-            color={accountData.color}
-            icon_name={iconName}
-          />
+        <button type="button" onClick={() => setModalCustomizeIconIsOpen(true)}>
+          <BoxIcon color={iconStyle.color} icon_name={iconName} />
         </button>
         <ModalCustomizeIcon
           isOpen={modalCustomizeIconIsOpen}
-          onRequestClose={handleModalCustomizeIconClose}
+          onRequestClose={() => setModalCustomizeIconIsOpen(false)}
           iconStyle={iconStyle}
           setIconStyle={setIconStyle}
           icons={icons}
@@ -240,10 +212,7 @@ export default function ModalAddAccount(
             />
           </label>
         }
-        
-        <div
-          className="form-buttons"
-        >
+        <div className="form-buttons">
           <button type="submit">Add Account</button>
           <button onClick={onRequestClose}>Cancel</button>
         </div>
