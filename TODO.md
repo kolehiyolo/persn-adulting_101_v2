@@ -1,10 +1,9 @@
 User can add accounts
   ModalAddAccount icon customization
-    ModalCustomizIcon should dynamically render selection based on color+icon data
+    Styling icon and color options
+    Dynamic icon and color options
+    Style ModalCustomizeIcon
   Style ModalAddAccount
-  Refactor ModalAddAccount
-
-
 
 
 

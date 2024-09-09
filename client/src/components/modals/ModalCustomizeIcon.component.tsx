@@ -25,9 +25,105 @@ interface ModalCustomizeIconProps {
   icons: Icon[];
 }
 
+interface DivOptionsIconProps {
+  iconID: string;
+  icons: Icon[];
+  findIconName: (icon_id: string) => string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+interface DivOptionsColorProps {
+  color: string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
 // * Others
 // Accessibility setup for screen readers
 Modal.setAppElement('#root');
+
+function DivOptionsIcon({
+  iconID,
+  icons,
+  findIconName,
+  handleChange
+}: DivOptionsIconProps) {
+  return (
+    <div>
+      <p>Icon</p>
+      <label>
+        <input
+          type="radio"
+          name="icon_id"
+          value="20240903091701588"
+          checked={iconID === '20240903091701588'}
+          onChange={handleChange}
+        />
+        <p>chef-hat</p>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="icon_id"
+          value="20240903091701608"
+          checked={iconID === '20240903091701608'}
+          onChange={handleChange}
+        />
+        <p>church</p>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="icon_id"
+          value="20240903091701610"
+          checked={iconID === '20240903091701610'}
+          onChange={handleChange}
+        />
+        <p>cigarette</p>
+      </label>
+    </div>
+  )
+}
+
+function DivOptionsColor({
+  color,
+  handleChange
+}: DivOptionsColorProps) {
+  return (
+    <div>
+      <p>Color</p>
+      <label>
+        <input
+          type="radio"
+          name="color"
+          value="854c1d"
+          checked={color === '854c1d'}
+          onChange={handleChange}
+        />
+        <p>854c1d</p>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="color"
+          value="2b593f"
+          checked={color === '2b593f'}
+          onChange={handleChange}
+        />
+        <p>2b593f</p>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="color"
+          value="69314c"
+          checked={color === '69314c'}
+          onChange={handleChange}
+        />
+        <p>69314c</p>
+      </label>
+    </div>
+  )
+}
 
 // * Default Component
 export default function ModalCustomizeIcon({
@@ -58,7 +154,7 @@ export default function ModalCustomizeIcon({
 
   // * When changes to the form fields are made
   // Run every time a change is made to the form fields
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target; 
     switch (name) {
       case 'icon_id':
@@ -89,24 +185,16 @@ export default function ModalCustomizeIcon({
     >
       <form>
         <BoxIcon color={color} icon_name={iconName} />
-        <label htmlFor="icon_id">
-          <p>Icon</p>
-          <select id="icon_id" name="icon_id" value={iconID} onChange={handleChange}>
-            {/* Dynamically render icon options */}
-            <option value="20240903091701588">chef-hat</option>
-            <option value="20240903091701608">church</option>
-            <option value="20240903091701610">cigarette</option>
-          </select>
-        </label>
-        <label htmlFor="color">
-          <p>Color</p>
-          <select id="color" name="color" value={color} onChange={handleChange}>
-            {/* Dynamically render color options */}
-            <option value="854c1d">854c1d</option>
-            <option value="2b593f">2b593f</option>
-            <option value="69314c">69314c</option>
-          </select>
-        </label>
+        <DivOptionsIcon
+          iconID={iconID}
+          icons={icons}
+          findIconName={findIconName}
+          handleChange={handleChange}
+        />
+        <DivOptionsColor
+          color={color}
+          handleChange={handleChange}
+        />
         <div className="form-buttons">
           <button type="button" onClick={handleSubmitButton}>Set</button>
           <button onClick={onRequestClose}>Cancel</button>

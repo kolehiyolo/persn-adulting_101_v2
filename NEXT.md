@@ -1,1 +1,1 @@
-SLEEP NOW
+Styling icon and color options
