@@ -1,1 +1,1 @@
-Work on color options
+Style ModalCustomizeIcon
