@@ -48,38 +48,51 @@ function DivOptionsIcon({
   handleChange
 }: DivOptionsIconProps) {
   return (
-    <div>
-      <p>Icon</p>
-      <label>
-        <input
-          type="radio"
-          name="icon_id"
-          value="20240903091701588"
-          checked={iconID === '20240903091701588'}
-          onChange={handleChange}
-        />
-        <p>chef-hat</p>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="icon_id"
-          value="20240903091701608"
-          checked={iconID === '20240903091701608'}
-          onChange={handleChange}
-        />
-        <p>church</p>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="icon_id"
-          value="20240903091701610"
-          checked={iconID === '20240903091701610'}
-          onChange={handleChange}
-        />
-        <p>cigarette</p>
-      </label>
+    <div className="div-options-icon">
+      <div className="div-options-icon-head">
+        <p>Icon</p>
+      </div>
+      <div className="div-options-icon-body">
+        <label>
+          <input
+            type="radio"
+            name="icon_id"
+            value="20240903091701588"
+            checked={iconID === '20240903091701588'}
+            onChange={handleChange}
+          />
+          <BoxIcon
+            color="1f1f23"
+            icon_name={findIconName('20240903091701588')}
+          />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="icon_id"
+            value="20240903091701608"
+            checked={iconID === '20240903091701608'}
+            onChange={handleChange}
+          />
+          <BoxIcon
+            color="1f1f23"
+            icon_name={findIconName('20240903091701608')}
+          />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="icon_id"
+            value="20240903091701610"
+            checked={iconID === '20240903091701610'}
+            onChange={handleChange}
+          />
+          <BoxIcon
+            color="1f1f23"
+            icon_name={findIconName('20240903091701610')}
+          />
+        </label>
+      </div>
     </div>
   )
 }
@@ -89,38 +102,45 @@ function DivOptionsColor({
   handleChange
 }: DivOptionsColorProps) {
   return (
-    <div>
-      <p>Color</p>
-      <label>
-        <input
-          type="radio"
-          name="color"
-          value="854c1d"
-          checked={color === '854c1d'}
-          onChange={handleChange}
-        />
-        <p>854c1d</p>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="color"
-          value="2b593f"
-          checked={color === '2b593f'}
-          onChange={handleChange}
-        />
-        <p>2b593f</p>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="color"
-          value="69314c"
-          checked={color === '69314c'}
-          onChange={handleChange}
-        />
-        <p>69314c</p>
-      </label>
+    <div className="div-options-color">
+      <div className="div-options-color-head">
+        <p>Color</p>
+      </div>
+      <div className="div-options-color-body">
+        <label
+          style={{ backgroundColor: '#854c1d' }}
+        >
+          <input
+            type="radio"
+            name="color"
+            value="854c1d"
+            checked={color === '854c1d'}
+            onChange={handleChange}
+          />
+        </label>
+        <label
+          style={{ backgroundColor: '#2b593f' }}
+        >
+          <input
+            type="radio"
+            name="color"
+            value="2b593f"
+            checked={color === '2b593f'}
+            onChange={handleChange}
+          />
+        </label>
+        <label
+          style={{ backgroundColor: '#69314c' }}
+        >
+          <input
+            type="radio"
+            name="color"
+            value="69314c"
+            checked={color === '69314c'}
+            onChange={handleChange}
+          />
+        </label>
+      </div>
     </div>
   )
 }
@@ -183,21 +203,27 @@ export default function ModalCustomizeIcon({
       onRequestClose={onRequestClose}
       contentLabel="Customize Icon"
     >
-      <form>
-        <BoxIcon color={color} icon_name={iconName} />
-        <DivOptionsIcon
-          iconID={iconID}
-          icons={icons}
-          findIconName={findIconName}
-          handleChange={handleChange}
-        />
-        <DivOptionsColor
-          color={color}
-          handleChange={handleChange}
-        />
-        <div className="form-buttons">
-          <button type="button" onClick={handleSubmitButton}>Set</button>
-          <button onClick={onRequestClose}>Cancel</button>
+      <form className='modal-form-customize-icon'>
+        <div className='modal-form-customize-icon-head'>
+          <BoxIcon color={color} icon_name={iconName} />
+        </div>
+        <div className='modal-form-customize-icon-body'>
+          <DivOptionsIcon
+            iconID={iconID}
+            icons={icons}
+            findIconName={findIconName}
+            handleChange={handleChange}
+          />
+          <DivOptionsColor
+            color={color}
+            handleChange={handleChange}
+          />
+        </div>
+        <div className='modal-form-customize-icon-foot'>
+          <div className="form-buttons">
+            <button type="button" onClick={handleSubmitButton}>Set</button>
+            <button onClick={onRequestClose}>Cancel</button>
+          </div>
         </div>
       </form>
     </Modal>

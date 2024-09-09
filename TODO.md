@@ -1,6 +1,5 @@
 User can add accounts
   ModalAddAccount icon customization
-    Styling icon and color options
     Dynamic icon and color options
     Style ModalCustomizeIcon
   Style ModalAddAccount

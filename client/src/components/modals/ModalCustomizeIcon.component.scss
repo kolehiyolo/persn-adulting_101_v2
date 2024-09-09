@@ -1,1 +1,103 @@
 @import '../../styles/utils/variables';
+
+.ReactModal__Content {
+  background-color: #1f1f23 !important;
+}
+
+.modal-form-customize-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &-head {
+    .box-icon {
+      width: 100px;
+      height: 100px;
+
+      img {
+        transform: scale(2);
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    .div-options-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-head {
+
+      }
+
+      &-body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+
+        label {
+          position: relative;
+          
+          input {
+            appearance: none;
+            position: absolute;
+          }
+
+          // target the .box-icon sibling of an input that is checked
+          input:checked + .box-icon {
+            background-color: #6e6f74 !important;
+          }
+          
+          .box-icon {
+            border-radius: 100px;
+          }
+        }
+      }
+    }
+
+    .div-options-color {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-head {
+
+      } 
+
+      &-body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        
+        label {
+          width: 50px;
+          height: 50px;
+          border-radius: 100px;
+
+          position: relative;
+
+          input {
+            appearance: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            &:checked {
+              border-radius: 100px;
+              width: 50px;
+              height: 50px;
+              border: solid 5px white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

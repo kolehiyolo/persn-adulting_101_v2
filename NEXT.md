@@ -1,1 +1,1 @@
-Styling icon and color options
+Dynamic icon and color options
