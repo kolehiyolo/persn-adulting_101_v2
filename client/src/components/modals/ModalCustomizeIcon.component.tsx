@@ -164,6 +164,7 @@ export default function ModalCustomizeIcon({
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Customize Icon"
+      className='modal-customize-icon'
     >
       <form className='modal-form-customize-icon'>
         <div className='modal-form-customize-icon-head'>

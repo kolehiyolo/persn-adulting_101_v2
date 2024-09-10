@@ -1,5 +1,4 @@
-Styled ModalCustomizeIcon
-1. LOVE ITTTTTT yeah
-2. So yeah all good now with this Modal, but I want to take it further by modifying the width and height of it so that it's a bit smaller than AddAcccount, so that it's clear that it's another layer of popup with a parent behind it
-3. I combined the modal buttons with the preview since the preview is a bit lonely
-4. Reverted the body orientation to row, with the colors having smaller width than the icons since they're fewer
+Override react-modal classes+styles
+1. YO alright did it for both modals
+2. I was afraid so many styles will be lost, but apparently it's just position:absolute and the inset property
+3. This way, I can set the inset more deliberately, such as ModalAddAccount having 50px, and ModalCustomizeIcon having 100px, so ModalCustomizeIcon is always a tad smaller

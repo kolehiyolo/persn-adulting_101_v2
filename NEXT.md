@@ -1,1 +1,1 @@
-Override react-modal classes+styles
+Style ModalAddAccount

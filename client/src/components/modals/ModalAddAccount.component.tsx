@@ -140,6 +140,7 @@ export default function ModalAddAccount({
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Add Account"
+      className='modal-add-account'
     >
       <form onSubmit={handleSubmit}>
         <button type="button" onClick={() => setModalCustomizeIconIsOpen(true)}>
