@@ -168,24 +168,23 @@ export default function ModalCustomizeIcon({
       <form className='modal-form-customize-icon'>
         <div className='modal-form-customize-icon-head'>
           <BoxIcon color={color} icon_name={iconName} />
+          <div className="form-buttons">
+            <button type="button" onClick={handleSubmitButton}>Set</button>
+            <button onClick={onRequestClose}>Cancel</button>
+          </div>
         </div>
         <div className='modal-form-customize-icon-body'>
-          <DivOptionsColor
-            color={color}
-            handleChange={handleChange}
-          />
           <DivOptionsIcon
             iconID={iconID}
             icons={icons}
             findIconName={findIconName}
             handleChange={handleChange}
           />
-        </div>
-        <div className='modal-form-customize-icon-foot'>
-          <div className="form-buttons">
-            <button type="button" onClick={handleSubmitButton}>Set</button>
-            <button onClick={onRequestClose}>Cancel</button>
-          </div>
+          <DivOptionsColor
+            color={color}
+            handleChange={handleChange}
+          />
+
         </div>
       </form>
     </Modal>

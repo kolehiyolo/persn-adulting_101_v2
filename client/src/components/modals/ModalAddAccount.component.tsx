@@ -59,8 +59,8 @@ export default function ModalAddAccount({
     description: 'Dummy description',
     tag: '',
     archived: false,
-    icon_id: '20240903091701588',
-    color: '071abc'
+    icon_id: '20240903091701612',
+    color: '34495e'
   }), [defaultCurrency, accounts.length]);
   const [accountData, setAccountData] = useState<Account>(defaultAccountData);
   const [iconName, setIconName] = useState<string>('');

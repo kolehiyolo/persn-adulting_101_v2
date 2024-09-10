@@ -1,6 +1,6 @@
 User can add accounts
   ModalAddAccount icon customization
-    Style ModalCustomizeIcon
+    Override react-modal classes+styles
   Style ModalAddAccount
 
 

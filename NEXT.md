@@ -1,1 +1,1 @@
-Style ModalCustomizeIcon
+Override react-modal classes+styles
