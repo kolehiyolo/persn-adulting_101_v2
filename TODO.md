@@ -1,8 +1,6 @@
-User can add accounts
-  Style ModalAddAccount
+addAccount() actually adds to CSV
 
-
-
+Review performance of modals
 User can delete accounts
 User can edit accounts
 User can toggle view of archived accounts

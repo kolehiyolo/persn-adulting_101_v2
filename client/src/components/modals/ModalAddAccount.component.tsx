@@ -142,80 +142,90 @@ export default function ModalAddAccount({
       contentLabel="Add Account"
       className='modal-add-account'
     >
-      <form onSubmit={handleSubmit}>
-        <button type="button" onClick={() => setModalCustomizeIconIsOpen(true)}>
-          <BoxIcon color={iconStyle.color} icon_name={iconName} />
-        </button>
-        <ModalCustomizeIcon
-          isOpen={modalCustomizeIconIsOpen}
-          onRequestClose={() => setModalCustomizeIconIsOpen(false)}
-          iconStyle={iconStyle}
-          setIconStyle={setIconStyle}
-          icons={icons}
-        />
-        <label htmlFor="name">
-          <p>Account Name</p>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={accountData.name}
-          onChange={handleChange}
-        />
-        </label>
-        
-        <label htmlFor="type">
-          <p>Account Type</p>
-          <select
-            id="type"
-            name="type"
-            value={accountData.type}
-            onChange={handleChange}
-          >
-            <option value="regular">Regular</option>
-            <option value="debts">Debt</option>
-            <option value="funds">Funds</option>
-          </select>
-        </label>
+      <form
+        onSubmit={handleSubmit}
+        className='modal-form-add-account'
+      >
+        <div className="modal-form-add-account-head">
+          <div className="modal-form-add-account-head-left">
+            <button type="button" onClick={() => setModalCustomizeIconIsOpen(true)}>
+              <BoxIcon color={iconStyle.color} icon_name={iconName} />
+            </button>
+            <ModalCustomizeIcon
+              isOpen={modalCustomizeIconIsOpen}
+              onRequestClose={() => setModalCustomizeIconIsOpen(false)}
+              iconStyle={iconStyle}
+              setIconStyle={setIconStyle}
+              icons={icons}
+            />
+            <label htmlFor="name">
+              <p>Account Name</p>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={accountData.name}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="modal-form-add-account-head-right">
+            <div className="form-buttons">
+              <button type="submit">Add Account</button>
+              <button onClick={onRequestClose}>Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div className="modal-form-add-account-body">
+          <label htmlFor="type">
+            <p>Account Type</p>
+            <select
+              id="type"
+              name="type"
+              value={accountData.type}
+              onChange={handleChange}
+            >
+              <option value="regular">Regular</option>
+              <option value="debts">Debt</option>
+              <option value="funds">Funds</option>
+            </select>
+          </label>
 
-        <label htmlFor="description">
-          <p>Description</p>
-          <input
-            type="text"
-            id="description"
-            name="description"
-            value={accountData.description}
-            onChange={handleChange}
-          />
-        </label>
-
-        <label htmlFor="balance">
-          <p>Initial Balance</p>
-          <input
-            type="number"
-            id="balance"
-            name="balance"
-            value={accountData.balance}
-            onChange={handleChange}
-          />
-        </label>
-        
-        {
-          accountData.type === 'funds' &&
-          <label htmlFor="goal">
-            <p>Goal</p>
+          <label htmlFor="description">
+            <p>Description</p>
             <input
-              type="number"
-              id="goal"
-              name="goal"
-              value={accountData.goal === 'N/A' ? 0 : accountData.goal}
+              type="text"
+              id="description"
+              name="description"
+              value={accountData.description}
               onChange={handleChange}
             />
           </label>
-        }
-        <div className="form-buttons">
-          <button type="submit">Add Account</button>
-          <button onClick={onRequestClose}>Cancel</button>
+
+          <label htmlFor="balance">
+            <p>Initial Balance</p>
+            <input
+              type="number"
+              id="balance"
+              name="balance"
+              value={accountData.balance}
+              onChange={handleChange}
+            />
+          </label>
+          
+          {
+            accountData.type === 'funds' &&
+            <label htmlFor="goal">
+              <p>Goal</p>
+              <input
+                type="number"
+                id="goal"
+                name="goal"
+                value={accountData.goal === 'N/A' ? 0 : accountData.goal}
+                onChange={handleChange}
+              />
+            </label>
+          }
         </div>
       </form>
     </Modal>
