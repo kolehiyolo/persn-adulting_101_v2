@@ -10,9 +10,10 @@ export interface Account {
   type: string;
   description?: string;
   tag?: string;
-  archived: boolean;
   icon_id: string;
   color: string;
+  archived: boolean;
+  deleted: boolean;
 }
 
 export interface Icon {
