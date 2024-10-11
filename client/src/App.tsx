@@ -23,16 +23,15 @@ export default function App() {
   const [defaultCurrency] = useState('PHP');
 
   const fetchAccountsCSVData = async () => {
-    const response = await fetch('/data/sample/accounts.csv');
-    const csvText = await response.text();
-    const parsedData = Papa.parse(csvText, {
-      header: true,
-      dynamicTyping: true,
-      skipEmptyLines: true,
-    });
-    const accountsData = parsedData.data as Account[];
-
-    setAccounts(accountsData);
+    try {
+      const response = await fetch('http://localhost:5000/account/');
+      if (!response.ok) throw new Error('Failed to fetch accounts data');
+      
+      const accountsData = await response.json();
+      setAccounts(accountsData); // Update the state with fetched data
+    } catch (error) {
+      console.error('Error fetching accounts data:', error);
+    }
   };
 
   const fetchIconsCSVData = async () => {

@@ -63,7 +63,28 @@ export default function PageAccounts(
   const addAccount = (account: Account) => {
     console.log('Account added:', account);
     setAccounts([...accounts, account]);
+    addAccountToCSV(account);
   }
+
+  const addAccountToCSV = async (account: Account) => {
+    try {
+      const response = await fetch('http://localhost:5000/account/new', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(account),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to add account to CSV');
+      }
+      
+      console.log('Account added successfully');
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   return (
     <div 
