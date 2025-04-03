@@ -8,8 +8,8 @@ export interface Account {
   currency: string;
   order: number;
   type: string;
-  description?: string;
-  tag?: string;
+  description: string;
+  tag: string;
   icon_id: string;
   color: string;
   archived: boolean;

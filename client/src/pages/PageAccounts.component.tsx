@@ -1,5 +1,5 @@
 // * Dependencies
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Account } from '../types';
 import { Icon } from '../types';
 
@@ -10,6 +10,7 @@ import './PageAccounts.component.scss';
 import DivAmount from '../components/containers/DivAmount.component';
 import DivAccountsListContainer from '../components/containers/DivAccountsListContainer.component';
 import ModalAddAccount from '../components/modals/ModalAddAccount.component';
+import ModalEditAccount from '../components/modals/ModalEditAccount.component';
 
 // * Interfaces
 interface PageAccountsProps {
@@ -31,6 +32,28 @@ export default function PageAccounts(
 {
   const [filteredAccounts, setFilteredAccounts] = useState<Account[]>([]);
   const [modalAddAccountIsOpen, setModalAddAccountIsOpen] = useState(false);
+  const [modalEditAccountIsOpen, setModalEditAccountIsOpen] = useState(false);
+  
+  // * States
+  const defaultAccountData = useMemo(() => ({
+    id: '',
+    date: '',
+    time: '',
+    name: '',
+    balance: 0,
+    goal: 'N/A',
+    currency: defaultCurrency,
+    order: accounts.length,
+    type: 'regular',
+    description: 'Dummy description',
+    tag: '',
+    icon_id: '20240903091701612',
+    color: '34495e',
+    archived: false,
+    deleted: false,
+  }), [defaultCurrency, accounts.length]);
+
+  const [editingAccount, setEditingAccount] = useState(defaultAccountData);
   
   const findSubTabTotal = () => {
     const subTabTotal = filteredAccounts.reduce((total, account) => {
@@ -60,10 +83,21 @@ export default function PageAccounts(
     setModalAddAccountIsOpen(false);
   }
 
+  const handleModalEditAccountClose = () => {
+    console.log('ModalEditAccount closed');
+    setModalEditAccountIsOpen(false);
+  }
+
   const addAccount = (account: Account) => {
     console.log('Account added:', account);
     setAccounts([...accounts, account]);
     addAccountToCSV(account);
+  }
+  
+  const editAccount = (account: Account) => {
+    console.log('Account edited:', account);
+    // setAccounts([...accounts, account]);
+    // addAccountToCSV(account);
   }
 
   const addAccountToCSV = async (account: Account) => {
@@ -85,6 +119,11 @@ export default function PageAccounts(
       console.error('Error:', error);
     }
   };
+  
+  const handleClickAccountToEdit = (account: Account) => {
+    setEditingAccount(account);
+    setModalEditAccountIsOpen(true);
+  }
 
   return (
     <div 
@@ -106,6 +145,7 @@ export default function PageAccounts(
         filteredAccounts={filteredAccounts} 
         icons={icons}
         activeSubTab={activeSubTab}
+        handleClickAccountToEdit={handleClickAccountToEdit}
       />
       <div
         className="page-buttons"
@@ -130,6 +170,14 @@ export default function PageAccounts(
           icons={icons}
           activeSubTab={activeSubTab}
           defaultCurrency={defaultCurrency}
+        />
+
+        <ModalEditAccount
+          isOpen={modalEditAccountIsOpen}
+          onRequestClose={handleModalEditAccountClose}
+          editAccount={editAccount}
+          editingAccount={editingAccount}
+          icons={icons}
         />
       </div>
     </div>

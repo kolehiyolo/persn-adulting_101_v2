@@ -14,19 +14,22 @@ import './BoxAccountsItem.component.scss';
 interface BoxAccountsItemProps {
   account: Account;
   icon_name: string;
+  handleClickAccountToEdit: (account: Account) => void;
 }
 
-export default function BoxAccountsItem({ account, icon_name }: BoxAccountsItemProps) {
+export default function BoxAccountsItem({ account, icon_name, handleClickAccountToEdit }: BoxAccountsItemProps) {
   return (
     <li 
       key={account.id}
       className="box-accounts-item"
     >
       <div className='left'>
-        <BoxIcon 
-          color={account.color}
-          icon_name={icon_name}
-        />
+        <button onClick={() => handleClickAccountToEdit(account)}>
+          <BoxIcon 
+            color={account.color}
+            icon_name={icon_name}
+          />
+        </button>
       </div>
       <div className='right'>
         <div className='info'>

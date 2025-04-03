@@ -15,11 +15,13 @@ interface DivAccountsListContainerProps {
   filteredAccounts: Account[];
   icons: Icon[];
   activeSubTab: { [key: string]: string };
+  handleClickAccountToEdit: (account: Account) => void;
 }
 
 interface DivAccountsListProps {
   filteredAccounts: Account[];
   findIconName: (icon_id: string) => string;
+  handleClickAccountToEdit: (account: Account) => void;
 }
 
 interface DebtData {
@@ -28,7 +30,7 @@ interface DebtData {
   items: Account[]; // Specify that items will be an array of Account
 }
 
-function DivAccountsListRegular({ filteredAccounts, findIconName }: DivAccountsListProps) {
+function DivAccountsListRegular({ filteredAccounts, findIconName, handleClickAccountToEdit }: DivAccountsListProps) {
   return (
     <ul className="accounts-list accounts-list-regular">
       {filteredAccounts.map(account => (
@@ -36,13 +38,14 @@ function DivAccountsListRegular({ filteredAccounts, findIconName }: DivAccountsL
           key={account.id}
           account={account}
           icon_name={findIconName(account.icon_id)}
+          handleClickAccountToEdit={handleClickAccountToEdit}
         />
       ))}
     </ul>
   );
 }
 
-function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsListProps) {
+function DivAccountsListDebts({ filteredAccounts, findIconName, handleClickAccountToEdit }: DivAccountsListProps) {
   const [debtsData, setDebtsData] = useState<DebtData[]>([]);
 
   const findDebts = useCallback(() => {
@@ -110,6 +113,7 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
                   key={account.id}
                   account={account}
                   icon_name={findIconName(account.icon_id)}
+                  handleClickAccountToEdit={handleClickAccountToEdit}
                 />
               ))}
             </ul>
@@ -120,7 +124,7 @@ function DivAccountsListDebts({ filteredAccounts, findIconName }: DivAccountsLis
   );
 }
 
-function DivAccountsListFunds({ filteredAccounts, findIconName }: DivAccountsListProps) {
+function DivAccountsListFunds({ filteredAccounts, findIconName, handleClickAccountToEdit }: DivAccountsListProps) {
   return (
     <ul className="accounts-list accounts-list-funds">
       {filteredAccounts.map(account => (
@@ -128,6 +132,7 @@ function DivAccountsListFunds({ filteredAccounts, findIconName }: DivAccountsLis
           key={account.id}
           account={account}
           icon_name={findIconName(account.icon_id)}
+          handleClickAccountToEdit={handleClickAccountToEdit}
         />
       ))}
     </ul>
@@ -139,6 +144,7 @@ export default function DivAccountsListContainer(
     filteredAccounts,
     icons,
     activeSubTab,
+    handleClickAccountToEdit,
   }: DivAccountsListContainerProps) {
   const findIconName = (icon_id: string) => {
     const icon = icons.find(icon => {
@@ -154,20 +160,23 @@ export default function DivAccountsListContainer(
         <DivAccountsListRegular 
           filteredAccounts={filteredAccounts} 
           findIconName={findIconName}
-        />
-      }
+          handleClickAccountToEdit={handleClickAccountToEdit}
+          />
+        }
       {
         activeSubTab['/accounts'] === '/debts' &&
         <DivAccountsListDebts 
           filteredAccounts={filteredAccounts} 
           findIconName={findIconName}
-        />
-      }
+          handleClickAccountToEdit={handleClickAccountToEdit}
+          />
+        }
       {
         activeSubTab['/accounts'] === '/funds' &&
         <DivAccountsListFunds 
           filteredAccounts={filteredAccounts} 
           findIconName={findIconName}
+          handleClickAccountToEdit={handleClickAccountToEdit}
         />
       }
     </div>
