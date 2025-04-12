@@ -47,11 +47,11 @@ def get_nth_weekday(year, month, weekday, n):
 
 def generate_transaction_dates(row):
     dates = []
-    title = row["Title"]
-    regularity = row["Regularity"].strip()
-    parameters = parse_parameters(row["Parameters"])
-    start_date = standardize_date(row["Start"])
-    end_date = standardize_date(row["End"])
+    title = row["title"]
+    regularity = row["regularity"].strip()
+    parameters = parse_parameters(row["parameters"])
+    start_date = standardize_date(row["start"])
+    end_date = standardize_date(row["end"])
     current = start_date
 
     try:
@@ -128,23 +128,23 @@ if __name__ == "__main__":
     with open(INPUT_FILE, mode="r", newline='', encoding="utf-8") as infile:
         reader = csv.DictReader(infile)
         for row in reader:
-            title = row["Title"]
-            trans_type = row["Type"]
-            category = row["Category"]
-            amount = float(row["Amount"])
+            title = row["title"]
+            trans_type = row["type"]
+            category = row["category"]
+            amount = float(row["amount"])
             transaction_dates = generate_transaction_dates(row)
 
             for date in transaction_dates:
                 output_rows.append({
-                    "Title": title,
-                    "Type": trans_type,
-                    "Category": category,
-                    "Amount": f"{amount:.2f}",
-                    "Date": iso_date(date)
+                    "title": title,
+                    "type": trans_type,
+                    "category": category,
+                    "amount": f"{amount:.2f}",
+                    "date": iso_date(date)
                 })
 
     with open(OUTPUT_FILE, mode="w", newline='', encoding="utf-8") as outfile:
-        fieldnames = ["Title", "Type", "Category", "Amount", "Date"]
+        fieldnames = ["title", "type", "category", "amount", "date"]
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(output_rows)

@@ -2,7 +2,7 @@ DONE
 create recurringTransaction generator, perhaps in python
 
 DOING
-set types
+type Transaction must have proper property types
 
 TODO
 refactor App

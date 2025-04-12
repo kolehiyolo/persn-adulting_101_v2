@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import TransactionCard from "./TransactionCard.component";
 
+import { Transaction } from '../../types';
+
 interface DateCardProps {
   date: Date;
   isCurrentMonth: boolean;
   selectedDate: Date;
-  transactions: Array<{ Title: string; Type: string; Amount: string; Date: string }>;
+  transactions: Array<Transaction>;
   // runningTotal: number;
   // setRunningTotal: React.Dispatch<React.SetStateAction<number>> 
 }
@@ -14,10 +16,10 @@ const DateCard: React.FC<DateCardProps> = ({ date, isCurrentMonth, selectedDate,
   const isSelected = selectedDate.getDate() === date.getDate() && isCurrentMonth;
 
   const dateTotal = transactions
-    .filter(transaction => new Date(transaction.Date).toDateString() === date.toDateString())
+    .filter(transaction => new Date(transaction.date).toDateString() === date.toDateString())
     .reduce((total, transaction) => {
-      const amount = parseFloat(transaction.Amount);
-      return transaction.Type.toLowerCase() === "expense" ? total - amount : total + amount;
+      const amount = parseFloat(transaction.amount);
+      return transaction.type.toLowerCase() === "expense" ? total - amount : total + amount;
     }, 0);
 
   // console.log(`Date: ${date.toDateString()}, Date Total: ${dateTotal}, Running Total: ${runningTotal}`);

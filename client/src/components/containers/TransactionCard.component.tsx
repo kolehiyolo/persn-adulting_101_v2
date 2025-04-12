@@ -1,11 +1,13 @@
 import React from "react";
 
+import { Transaction } from '../../types';
+
 interface TransactionProps {
-  transaction: { Title: string; Type: string; Amount: string };
+  transaction: Transaction;
 }
 
 const TransactionCard: React.FC<TransactionProps> = ({ transaction }) => {
-  const textColor = transaction.Type === "Expense" ? "red" : "green";
+  const textColor = transaction.type === "Expense" ? "red" : "green";
 
   return (
     <div style={{ 
@@ -21,7 +23,7 @@ const TransactionCard: React.FC<TransactionProps> = ({ transaction }) => {
           }
         }
       >
-        {transaction.Title}
+        {transaction.title}
       </p>
       <p
         style={
@@ -30,7 +32,7 @@ const TransactionCard: React.FC<TransactionProps> = ({ transaction }) => {
           }
         }
       >
-        {transaction.Amount}
+        {transaction.amount}
       </p>
     </div>
   );

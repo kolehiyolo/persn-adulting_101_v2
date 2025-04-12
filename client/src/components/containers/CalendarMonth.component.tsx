@@ -34,11 +34,15 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
   const prevMonthTrailingDates = Array.from({ length: firstDayOfMonth.getDay() }, (_, i) => {
     const dateNum = prevMonthLastDate.getDate() - (firstDayOfMonth.getDay() - i - 1);
     const fullDate = new Date(prevMonth.getFullYear(), prevMonth.getMonth(), dateNum);
-
+    console.log(transactions);
     return {
       date: fullDate,
       isCurrentMonth: false,
-      transactions: transactions.filter(t => new Date(t.Date).toDateString() === fullDate.toDateString())
+      transactions: transactions.filter(t => {
+        let transactionDate = new Date(t.date);
+        let result = transactionDate.toDateString() === fullDate.toDateString();
+        return result;
+      })
     };
   });
 
@@ -49,7 +53,7 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
     return {
       date: fullDate,
       isCurrentMonth: true,
-      transactions: transactions.filter(t => new Date(t.Date).toDateString() === fullDate.toDateString())
+      transactions: transactions.filter(t => new Date(t.date).toDateString() === fullDate.toDateString())
     }
   });
 
@@ -61,7 +65,7 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
     return {
       date: fullDate,
       isCurrentMonth: false,
-      transactions: transactions.filter(t => new Date(t.Date).toDateString() === fullDate.toDateString())
+      transactions: transactions.filter(t => new Date(t.date).toDateString() === fullDate.toDateString())
     }
   });
 
@@ -81,12 +85,12 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
   
     // Calculate total before the calendar month
     const amount = transactions.reduce((total, transaction) => {
-      const transactionDate = new Date(transaction.Date);
+      const transactionDate = new Date(transaction.date);
       
       if (transactionDate < allDates[0].date) {    
-        return total + (transaction.Type.toLowerCase() === "expense" 
-          ? -parseFloat(transaction.Amount) 
-          : parseFloat(transaction.Amount));
+        return total + (transaction.type.toLowerCase() === "expense" 
+          ? -parseFloat(transaction.amount) 
+          : parseFloat(transaction.amount));
       }
       
       return total;

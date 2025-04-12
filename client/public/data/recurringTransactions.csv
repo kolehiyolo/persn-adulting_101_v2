@@ -1,4 +1,4 @@
-Recurring ID,Title,Type,Category,Subcategory,Priority,Account,Amount,Tags,Parameters,Regularity,Start,End,`Weekdays
+recurring_id,title,type,category,subcategory,priority,account,amount,tags,parameters,regularity,start,end,`weekdays
 202407080002,Electricity,Expense,Household,Electricity,Bills,EastWest HPL Game Design Corporation,7000,,"2, Sunday",Monthly (Week+Day),4/13/2024,2025/12/31,"T,T,T,T,T,T,T`"
 202407080006,Laundry,Expense,Clothing,Laundry,Bills,Expected Expense,400,Weekly Resets,"Sunday",Weekly,4/13/2025,2025/12/31,"T,T,T,T,T,T,T`"
 202407080007,Globe Reload,Expense,Household,Mobile Plan,Bills,GCash,101,Weekly Resets,"Sunday",Weekly,4/13/2025,2025/12/31,"T,T,T,T,T,T,T`"
