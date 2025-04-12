@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import DateCard from './DateCard.component';
 
+import { Transaction } from '../../types';
+
 interface CalendarMonthProps {
   selectedDate: Date;
-  transactions: Array<{ Title: string; Type: string; Amount: string; Date: string }>;
+  transactions: Array<Transaction>;
 }
 
 interface DateObject {
   date: Date;
   isCurrentMonth: boolean;
-  transactions: Array<{ Title: string; Type: string; Amount: string; Date: string }>;
+  transactions: Array<Transaction>;
 }
 
 // Function to get the month name

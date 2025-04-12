@@ -25,3 +25,10 @@ export interface Icon {
   type: string;
   group: string;
 }
+
+export interface Transaction {
+  Title: string;
+  Type: string;
+  Amount: string;
+  Date: string;
+}
