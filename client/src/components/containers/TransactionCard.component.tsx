@@ -38,6 +38,7 @@ export default function TransactionCard({
         <p
           className='transactionAmount'
         >
+          {transaction.type === 'Expense' ? '-' : '' }
           {transaction.amount}
         </p>
       </div>

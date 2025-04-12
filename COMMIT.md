@@ -1,4 +1,3 @@
-TransactionCard refactored and styled
-1. this was easier than most, as it's the lowest level component
-2. it's now refactored and styled, even having conditional classNaming
-3. next, DateCard
+TransactionCard negative sign and font size update
+1. forgot about the font size, fixed now
+2. forgot about adding a negative sign when it's an expense, fixed now
