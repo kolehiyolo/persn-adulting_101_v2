@@ -1,7 +1,6 @@
-just fixed type casings
-1. lol this was all about fixing the casing of the Transaction type properties
-2. I updated the CSV column headers to lowercase
-3. I updated the Transaction interface in types.ts
-4. I update generateRecurringTransactions.py
-5. I updated CalendarMonth, DateCard, and TransactionCard to reflect the casing change
-6. that's it lol now I gotta actually change the Transaction type property types, which is gnarly to wrap your head around, but basically make amount and date into actual number and date values
+Transaction.amount now number type
+1. alright so I made it so this property is now properly a number
+2. I had to of course change CalendarMonth and DateCard so they no longer need to parseFloat the string into a float
+3. what I realized, tho, is that App.tsx doesn't parse the generatedTransactions.csv rows properly, fetching all values as strings regardless
+4. this has now been fixed, but I certainly still need to fully refactor App.tsx eventually
+5. now I need Transaction.date to actually be date type

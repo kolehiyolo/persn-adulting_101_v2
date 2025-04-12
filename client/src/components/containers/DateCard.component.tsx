@@ -18,7 +18,7 @@ const DateCard: React.FC<DateCardProps> = ({ date, isCurrentMonth, selectedDate,
   const dateTotal = transactions
     .filter(transaction => new Date(transaction.date).toDateString() === date.toDateString())
     .reduce((total, transaction) => {
-      const amount = parseFloat(transaction.amount);
+      const amount = transaction.amount;
       return transaction.type.toLowerCase() === "expense" ? total - amount : total + amount;
     }, 0);
 

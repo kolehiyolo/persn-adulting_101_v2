@@ -89,8 +89,8 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
       
       if (transactionDate < allDates[0].date) {    
         return total + (transaction.type.toLowerCase() === "expense" 
-          ? -parseFloat(transaction.amount) 
-          : parseFloat(transaction.amount));
+          ? -transaction.amount
+          : transaction.amount);
       }
       
       return total;

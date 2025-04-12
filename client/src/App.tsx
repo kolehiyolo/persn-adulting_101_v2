@@ -14,12 +14,22 @@ export default function App() {
     const fetchTransactions = async () => {
       const response = await fetch("/data/generatedTransactions.csv");
       const csvText = await response.text();
-
-      const parsedData = Papa.parse<Transaction>(csvText, { header: true, skipEmptyLines: true }).data;
+  
+      const parsed = Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+      });
+  
+      const parsedData: Transaction[] = parsed.data.map((row: any) => ({
+        title: row.title,
+        type: row.type,
+        amount: parseFloat(row.amount),
+        date: row.date,
+      }));
+  
       setTransactions(parsedData);
-      console.log(parsedData);
     };
-
+  
     fetchTransactions();
   }, []);
 

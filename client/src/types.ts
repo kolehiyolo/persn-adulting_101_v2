@@ -29,6 +29,6 @@ export interface Icon {
 export interface Transaction {
   title: string;
   type: string;
-  amount: string;
+  amount: number;
   date: string;
 }
