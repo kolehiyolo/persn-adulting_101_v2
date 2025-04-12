@@ -1,41 +1,46 @@
-import React from "react";
+// * Dependencies
+import React, {useEffect, useState} from 'react';
 
+// * Other Components
+
+// * Other Imports
 import { Transaction } from '../../types';
+import './TransactionCard.component.scss';
 
-interface TransactionProps {
+// * Component Props
+interface TransactionCardProps {
   transaction: Transaction;
 }
 
-const TransactionCard: React.FC<TransactionProps> = ({ transaction }) => {
-  const textColor = transaction.type === "Expense" ? "red" : "green";
+// * Component
+export default function TransactionCard({ 
+  transaction 
+}: TransactionCardProps) {
+  const variableClassName='transactionCard' + ' ' + transaction.type.toLowerCase();
 
+  // * Rendering
   return (
-    <div style={{ 
-      color: textColor,
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-    }}>
-      <p
-        style={
-          {
-            margin: '0px'
-          }
-        }
+    <div
+      className={variableClassName}
+    >
+      <div
+        className='transactionCardLeft'
+        >
+        <p
+          className='transactionTitle'
+        >
+          {transaction.title}
+        </p>
+      </div>
+      <div
+        className='transactionCardRight'
       >
-        {transaction.title}
-      </p>
-      <p
-        style={
-          {
-            margin: '0px'
-          }
-        }
-      >
-        {transaction.amount}
-      </p>
+        <p
+          className='transactionAmount'
+        >
+          {transaction.amount}
+        </p>
+      </div>
     </div>
   );
 };
-
-export default TransactionCard;

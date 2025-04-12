@@ -1,0 +1,43 @@
+@import '../../styles/utils/variables';
+
+.transactionCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 7px;
+  border-radius: 5px;
+  border: solid white 1px;
+
+  &Left {
+    overflow: hidden;          // Hides the overflow
+  }
+
+  p {
+    font-weight: bold;
+    white-space: nowrap;       // Prevents text from wrapping
+    overflow: hidden;          // Hides the overflow
+    text-overflow: ellipsis;   // Adds "..." at the end
+  }
+
+  &.expense {
+    border-color: $red-50;
+    background-color: $red-20;
+    
+    p {
+      color: $red-100;
+    }
+  }
+
+  &.income {
+    border-color: $green-50;
+    background-color: $green-20;
+    
+    p {
+      color: $green-100;
+    }
+  }
+
+
+}

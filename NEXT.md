@@ -5,15 +5,15 @@ refactor App
 style App
 style DateMover
 refactor DateMover
-
-DOING
 refactor Transaction
 style Transaction
 
-TODO
+DOING
 refactor DateCard
-refactor CalendarMonth
 style DateCard
+
+TODO
+refactor CalendarMonth
 style CalendarMonth
 make runningTotal work
 refactor generateRecurringTransactions.py
