@@ -34,7 +34,6 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
   const prevMonthTrailingDates = Array.from({ length: firstDayOfMonth.getDay() }, (_, i) => {
     const dateNum = prevMonthLastDate.getDate() - (firstDayOfMonth.getDay() - i - 1);
     const fullDate = new Date(prevMonth.getFullYear(), prevMonth.getMonth(), dateNum);
-    console.log(transactions);
     return {
       date: fullDate,
       isCurrentMonth: false,

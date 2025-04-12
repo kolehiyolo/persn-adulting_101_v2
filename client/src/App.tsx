@@ -23,6 +23,7 @@ export default function App() {
       const parsedData: Transaction[] = parsed.data.map((row: any) => ({
         title: row.title,
         type: row.type,
+        category: row.category,
         amount: parseFloat(row.amount),
         date: row.date,
       }));
