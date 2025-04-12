@@ -3,10 +3,10 @@ create recurringTransaction generator, perhaps in python
 type Transaction must have proper property types
 refactor App
 style App
+style DateMover
 
 DOING
 refactor DateMover
-style DateMover
 
 TODO
 refactor Transaction

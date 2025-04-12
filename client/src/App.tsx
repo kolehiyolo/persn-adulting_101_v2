@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Papa from "papaparse";
 
-// * Components
+// * Other Components
 import DateMover from './components/containers/DateMover.component';
 import CalendarMonth from './components/containers/CalendarMonth.component';
 
@@ -57,10 +57,14 @@ export default function App() {
       <main
         className='main'
       >
-        <DateMover
-          selectedDate={selectedDate}
-          setSelectedDate={setSelectedDate}
-        />
+        <div
+          className='head'
+        >
+          <DateMover
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+          />
+        </div>
         <CalendarMonth
           selectedDate={selectedDate}
           transactions={transactions}

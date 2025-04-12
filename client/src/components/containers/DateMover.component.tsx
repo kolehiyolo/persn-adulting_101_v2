@@ -1,17 +1,30 @@
+// * Dependencies
 import React from 'react';
 
-// Helper function to get the last valid day of a month
+// * Other Components
+import { ReactComponent as ArrowLeft } from '../../assets/icons/icon-left.svg';
+import { ReactComponent as ArrowRight } from '../../assets/icons/icon-right.svg';
+
+// * Other Imports
+import './DateMover.component.scss';
+
+// * Component Props
+interface DateMoverProps {
+  selectedDate: Date,
+  setSelectedDate: React.Dispatch<React.SetStateAction<Date>>
+}
+
+// * Helper Functions
+// Get the last valid day of a month
 const getLastDayOfMonth = (year: number, month: number): number => {
   return new Date(year, month + 1, 0).getDate();
 };
 
+// * Component
 export default function DateMover({ 
   selectedDate, 
   setSelectedDate 
-}: { 
-  selectedDate: Date, 
-  setSelectedDate: React.Dispatch<React.SetStateAction<Date>> 
-}) {
+}: DateMoverProps) {
 
   // Get formatted month and year
   const monthYearString = selectedDate.toLocaleDateString('en-US', {
@@ -77,44 +90,37 @@ export default function DateMover({
     setSelectedDate(newDate);
   };
 
+  // * Rendering
   return (
     <div
-      className="date-mover"
-      style={
-        {
-          display: 'flex',
-          flexDirection: 'row',
-          gap: '10px',
-          alignItems: 'center'
-        }
-      }
+      className='dateMover'
+    >
+      <button 
+        className='button back'
+        onClick={handlePrevious}
       >
-      <button onClick={handlePrevious}>⬅ Back</button>
+        <ArrowLeft />
+      </button>
       <div
-        style={
-          {
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '10px'
-          }
-        }
+        className='selectedDate'
       >
         <h2
-          style={
-            {
-              margin: '0px'
-            }
-          }
-        >{monthYearString}</h2>
+          className='selectedDateValue'
+        >
+          {monthYearString}
+        </h2>
         <p
-          style={
-            {
-              margin: '0px'
-            }
-          }
-        >{durationString}</p>
+          className='selectedDateDuration'
+        >
+          {durationString}
+        </p>
       </div>
-      <button onClick={handleNext}>Next ➡</button>
+      <button
+        className='button next'
+        onClick={handleNext}
+      >
+        <ArrowRight />
+      </button>
     </div>
   );
 }

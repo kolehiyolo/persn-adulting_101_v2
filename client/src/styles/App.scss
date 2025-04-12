@@ -27,5 +27,12 @@
     justify-content: flex-start;
     padding: 25px;
     gap: 25px;
+
+    .head {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      justify-content: space-between;
+    }
   }
 }
