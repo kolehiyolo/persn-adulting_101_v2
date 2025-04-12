@@ -26,14 +26,13 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    overflow-y: auto;
+    overflow-y: auto;     
     scrollbar-gutter: stable both-edges;
     padding: 0px 100px;
     
     .page {
       flex-grow: 1;
       align-self: stretch;
-      // max-width: $max-width-desktop;
       max-width: 600px;
     }
   }

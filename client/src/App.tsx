@@ -1,102 +1,50 @@
-// * Dependencies
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Papa from 'papaparse';
-import { Account } from './types';
-import { Icon } from './types';
+import DateMover from './components/containers/DateMover.component';
+import CalendarMonth from './components/containers/CalendarMonth.component';
+import Papa from "papaparse";
 
-// * Components
-import Navbar from './sections/Navbar.component';
-import Header from './sections/Header.component';
-import PageAccounts from './pages/PageAccounts.component';
-import PageCategories from './pages/PageCategories.component';
-import PageTransactions from './pages/PageTransactions.component';
-
-// * Styling
-import './styles/App.scss';
+interface Transaction {
+  Title: string;
+  Type: string;
+  Amount: string;
+  Date: string;
+}
 
 export default function App() {
-  const [accounts, setAccounts] = useState<Account[]>([]);
-  const [icons, setIcons] = useState<Icon[]>([]);
-  const [activeTab, setActiveTab] = useState('');
-  const [activeSubTab, setActiveSubTab] = useState({});
-  const [defaultCurrency] = useState('PHP');
-
-  const fetchAccountsCSVData = async () => {
-    try {
-      const response = await fetch('http://localhost:5000/account/');
-      if (!response.ok) throw new Error('Failed to fetch accounts data');
-      
-      const accountsData = await response.json();
-      setAccounts(accountsData); // Update the state with fetched data
-    } catch (error) {
-      console.error('Error fetching accounts data:', error);
-    }
-  };
-
-  const fetchIconsCSVData = async () => {
-    const response = await fetch('/data/sample/icons.csv');
-    const csvText = await response.text();
-    const parsedData = Papa.parse(csvText, {
-      header: true,
-      dynamicTyping: true,
-      skipEmptyLines: true,
-    });
-    const iconsData = parsedData.data as Icon[];
-
-    setIcons(iconsData);
-  };
-
-  const initializeActiveTabs = () => {
-    const defaultActiveTab = '/accounts';
-    const defaultActiveSubTab = {
-      '/accounts': '/regular',
-      '/categories': '/expense',
-      '/transactions': '/daily',
-    };
-
-    setActiveTab(defaultActiveTab);
-    setActiveSubTab(defaultActiveSubTab);
-  }
+  const [startDate] = useState(() => new Date());
+  const [selectedDate, setSelectedDate] = useState(startDate);
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   useEffect(() => {
-    fetchAccountsCSVData();
-    fetchIconsCSVData();
-    initializeActiveTabs();
+    const fetchTransactions = async () => {
+      const response = await fetch("/data/transactions.csv");
+      const csvText = await response.text();
+
+      const parsedData = Papa.parse<Transaction>(csvText, { header: true, skipEmptyLines: true }).data;
+      setTransactions(parsedData);
+      // console.log(parsedData);
+    };
+
+    fetchTransactions();
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <Header 
-          activeTab={activeTab}
-          activeSubTab={activeSubTab}
-          setActiveSubTab={setActiveSubTab}
-        />
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<Navigate to="/accounts" />} />
-            <Route 
-              path="/accounts"
-              element={
-                <PageAccounts 
-                  accounts={accounts}
-                  icons={icons}
-                  activeSubTab={activeSubTab}
-                  defaultCurrency={defaultCurrency}
-                  setAccounts={setAccounts}
-                />
-              } 
-            />
-            <Route path="/categories" element={<PageCategories />} />
-            <Route path="/transactions" element={<PageTransactions />} />
-          </Routes>
-        </main>
-        <Navbar 
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
-      </div>
-    </Router>
+    <div
+      className="App"
+      style={
+        {
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px'
+        }
+      }
+    >
+      {/* <h1>Hello World!</h1> */}
+      {/* <h2>startDate: {startDate.toString()}</h2> */}
+      {/* <h2>selectedDate: {selectedDate.toString()}</h2> */}
+      {/* Pass selectedDate and setter function to DateMover */}
+      <DateMover selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+      <CalendarMonth selectedDate={selectedDate} transactions={transactions}/>
+    </div>
   );
 }
