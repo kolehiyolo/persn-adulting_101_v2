@@ -1,4 +1,4 @@
-Transaction.date and Transaction.category
-1. alright so I went and changed the Transaction.date type to Date, but it didn't break anything lol
-  1.1. that means there are tons of refactoring that's needed as there are most likely so many unnecessary parsing of data, which is why it didn't break
-2. with that, I also added the Transaction.category property, which didn't break anything, and then removed the console.log in CalendarMonth
+App refactored and styled
+1. lotso changes for App.tsx, but mostly just refactoring, cleaning up code, formatting to my specific DX, and comment-bombing
+2. besides that, I also properly set up App.scss, and prepared _variables.scss to have some mini-variables I know I'll be using lots
+3. next is DateMover

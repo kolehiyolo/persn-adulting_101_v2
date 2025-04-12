@@ -9,43 +9,23 @@
 
 // * Default font styles
 * {
-  color: $color-txt-white;
-  font-family: "Inter", sans-serif;
+  font-family: $font-family;
+  color: $text-white;
 }
 
 .App {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  height: 100vh;
-  background-color: $color-bg-main;
-
-  .main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    overflow-y: auto;     
-    scrollbar-gutter: stable both-edges;
-    padding: 0px 100px;
-    
-    .page {
-      flex-grow: 1;
-      align-self: stretch;
-      max-width: 600px;
-    }
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px 100px;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: $bg-primary;
+  scrollbar-gutter: stable both-edges;
   
-    ul {
-      flex-grow: 1;
-      max-width: $max-width-desktop;
-    }
+  .main {
+    background-color: $bg-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 25px;
+    gap: 25px;
   }
 }

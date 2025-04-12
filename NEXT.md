@@ -1,18 +1,18 @@
 DONE
 create recurringTransaction generator, perhaps in python
+type Transaction must have proper property types
+refactor App
+style App
 
 DOING
-type Transaction must have proper property types
+refactor DateMover
+style DateMover
 
 TODO
-refactor App
-refactor DateMover
 refactor Transaction
+style Transaction
 refactor DateCard
 refactor CalendarMonth
-style App
-style DateMover
-style Transaction
 style DateCard
 style CalendarMonth
 make runningTotal work
