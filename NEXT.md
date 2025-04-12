@@ -4,13 +4,13 @@ type Transaction must have proper property types
 refactor App
 style App
 style DateMover
-
-DOING
 refactor DateMover
 
-TODO
+DOING
 refactor Transaction
 style Transaction
+
+TODO
 refactor DateCard
 refactor CalendarMonth
 style DateCard

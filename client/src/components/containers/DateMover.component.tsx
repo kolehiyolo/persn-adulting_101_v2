@@ -70,16 +70,22 @@ export default function DateMover({
   setSelectedDateValue(selectedDate);
   setSelectedDateDuration(selectedDate);
 
+  // * Button handling
   const handlePrevious = () => {
     let newYear = selectedDate.getFullYear();
     let newMonth = selectedDate.getMonth() - 1;
 
+    // If newMonth is December
     if (newMonth < 0) {
-      newMonth = 11; // December
+      newMonth = 11;
       newYear -= 1;
     }
 
+    // Check what the lastValidDate of the newMonth is
     const lastValidDate = getLastDayOfMonth(newYear, newMonth);
+
+    // Generate newDate, comparing selectedDate's original date number and lastValidDate
+    // Whatever's lower is what's accepted, so if the original selectedDate was March 31, 2025, newDate is Feb 28, 2025, since 28 is lower than 31
     const newDate = new Date(
       newYear,
       newMonth,
@@ -89,17 +95,20 @@ export default function DateMover({
     setSelectedDate(newDate);
   };
 
-  // Move the date forward by one month
   const handleNext = () => {
     let newYear = selectedDate.getFullYear();
     let newMonth = selectedDate.getMonth() + 1;
 
+    // If newMonth is January
     if (newMonth > 11) {
       newMonth = 0; // January
       newYear += 1;
     }
 
+    // Check what the lastValidDate of the newMonth is
     const lastValidDate = getLastDayOfMonth(newYear, newMonth);
+
+    // Generate newDate, with the same caveats as handleBack()
     const newDate = new Date(
       newYear,
       newMonth,
