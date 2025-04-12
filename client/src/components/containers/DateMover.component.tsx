@@ -1,5 +1,5 @@
 // * Dependencies
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 // * Other Components
 import { ReactComponent as ArrowLeft } from '../../assets/icons/icon-left.svg';
@@ -12,12 +12,6 @@ import './DateMover.component.scss';
 interface DateMoverProps {
   selectedDate: Date,
   setSelectedDate: React.Dispatch<React.SetStateAction<Date>>
-}
-
-// * Helper Functions
-// Get the last valid day of a month
-const getLastDayOfMonth = (year: number, month: number): number => {
-  return new Date(year, month + 1, 0).getDate();
 };
 
 // * Component
@@ -25,32 +19,57 @@ export default function DateMover({
   selectedDate, 
   setSelectedDate 
 }: DateMoverProps) {
+  // * Variables
+  let selectedDateValue = '';
+  let selectedDateDuration = '';
 
-  // Get formatted month and year
-  const monthYearString = selectedDate.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-  });
+  // * Helper Functions
+  // Get the last valid day of a month
+  const getLastDayOfMonth = (year: number, month: number): number => {
+    return new Date(year, month + 1, 0).getDate();
+  };
 
-  // Get the first and last days of the selected month
-  const firstDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
-  const lastDay = new Date(
-    selectedDate.getFullYear(),
-    selectedDate.getMonth(),
-    getLastDayOfMonth(selectedDate.getFullYear(), selectedDate.getMonth())
-  );
+  // * Set variable values
+  const setSelectedDateValue = (selectedDate: Date) => {
+    const result = selectedDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+    });
 
-  const durationString = `${firstDay.toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  })} - ${lastDay.toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  })}`;
+    selectedDateValue = result;
+  };
 
-  // Move the date backward by one month
+  const setSelectedDateDuration = (selectedDate: Date) => {
+    // Get the first day of the selected month
+    const firstDay = new Date(
+      selectedDate.getFullYear(),
+      selectedDate.getMonth(),
+      1
+    );
+    // Get the last day of the selected month
+    const lastDay = new Date(
+      selectedDate.getFullYear(),
+      selectedDate.getMonth(),
+      getLastDayOfMonth(selectedDate.getFullYear(), selectedDate.getMonth())
+    );
+
+    // Generating selectedDateDuration
+    const result = `${firstDay.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    })} - ${lastDay.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    })}`;
+    
+    selectedDateDuration = result;
+  };
+
+  setSelectedDateValue(selectedDate);
+  setSelectedDateDuration(selectedDate);
+
   const handlePrevious = () => {
     let newYear = selectedDate.getFullYear();
     let newMonth = selectedDate.getMonth() - 1;
@@ -107,12 +126,12 @@ export default function DateMover({
         <h2
           className='selectedDateValue'
         >
-          {monthYearString}
+          {selectedDateValue}
         </h2>
         <p
           className='selectedDateDuration'
         >
-          {durationString}
+          {selectedDateDuration}
         </p>
       </div>
       <button
@@ -123,4 +142,4 @@ export default function DateMover({
       </button>
     </div>
   );
-}
+};

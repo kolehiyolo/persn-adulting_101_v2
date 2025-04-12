@@ -1,5 +1,4 @@
-styled DateMover
-1. refactored DateMover rendering
-2. added button icon SVGs
-3. added head to App .main, and moved DateMover within
-4. next step is to dive deep into how DateMover works, refactor massively
+refactored variable processing in DateMover
+1. alright so now the 2 variables being used has been refactored
+2. I don't wanna have to explain it, so just read it, should be self-explanatory at this point
+3. now I need to refactor the button handling
