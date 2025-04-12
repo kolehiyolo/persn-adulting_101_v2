@@ -1,18 +1,27 @@
+// * Dependencies
 import React, { useEffect, useState } from 'react';
+
+// * Other Components
 import TransactionCard from "./TransactionCard.component";
 
+// * Other Imports
 import { Transaction } from '../../types';
 
+// * Component Props
 interface DateCardProps {
   date: Date;
   isCurrentMonth: boolean;
   selectedDate: Date;
   transactions: Array<Transaction>;
-  // runningTotal: number;
-  // setRunningTotal: React.Dispatch<React.SetStateAction<number>> 
 }
 
-const DateCard: React.FC<DateCardProps> = ({ date, isCurrentMonth, selectedDate, transactions }) => {
+// * Component
+export default function DateCard({ 
+  date,
+  isCurrentMonth,
+  selectedDate,
+  transactions
+}: DateCardProps) {
   const isSelected = selectedDate.getDate() === date.getDate() && isCurrentMonth;
 
   const dateTotal = transactions
@@ -21,8 +30,6 @@ const DateCard: React.FC<DateCardProps> = ({ date, isCurrentMonth, selectedDate,
       const amount = transaction.amount;
       return transaction.type.toLowerCase() === "expense" ? total - amount : total + amount;
     }, 0);
-
-  // console.log(`Date: ${date.toDateString()}, Date Total: ${dateTotal}, Running Total: ${runningTotal}`);
   
   return (
     <div 
@@ -99,6 +106,3 @@ const DateCard: React.FC<DateCardProps> = ({ date, isCurrentMonth, selectedDate,
     </div>
   );
 };
-
-
-export default DateCard;
