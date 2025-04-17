@@ -1,1 +1,93 @@
 @import '../../styles/utils/variables';
+
+.dateCard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 5px;
+  width: calc(100% / 7);
+  box-sizing: border-box;
+  border: 1px solid $white-20;
+
+  p {
+    font-size: 14px;
+  }
+
+  &.nonCurrent{
+    background-color: $bg-grey;
+  }
+  
+  &.selected{
+    background-color: $green-10;
+
+    .head {
+      .date {
+        color: $green-100;
+      }
+    }
+  }
+  
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    .left {
+      .date {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .totalRunning {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 0px;
+        border-radius: 5px;
+
+        &.good {
+          color: $green-100;
+        }
+        
+        &.bad {
+          color: $red-100;
+        }
+      }
+
+      .total {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 7px;
+        border-radius: 5px;
+        
+        &.good {
+          background-color: $green-100;
+        }
+        
+        &.bad {
+          background-color: $red-100;
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+}

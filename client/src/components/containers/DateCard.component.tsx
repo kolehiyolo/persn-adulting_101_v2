@@ -6,6 +6,7 @@ import TransactionCard from "./TransactionCard.component";
 
 // * Other Imports
 import { Transaction } from '../../types';
+import './DateCard.component.scss';
 
 // * Component Props
 interface DateCardProps {
@@ -30,74 +31,56 @@ export default function DateCard({
       const amount = transaction.amount;
       return transaction.type.toLowerCase() === "expense" ? total - amount : total + amount;
     }, 0);
+
+  const dateCardVariableClassName= 'dateCard' + ' ' + (
+    !isCurrentMonth ? 'nonCurrent'
+    : isSelected ? 'selected'
+    : ''
+  );
+
+  const totalRunningVariableClassName= 'totalRunning' + ' ' + (
+    dateTotal > 0 ? 'good' : 'bad'
+  );
+
+  const totalVariableClassName= 'total' + ' ' + (
+    dateTotal > 0 ? 'good' : 'bad'
+  );
+
   
+  // * Rendering
   return (
     <div 
-      style={
-        { 
-          border: '1px solid #ccc',
-          // margin: '5px',
-          backgroundColor: 
-            !isCurrentMonth ? '#ddd' :
-            isSelected ? 'lightblue' :
-            'white',
-          width: 'calc(100% / 7)',
-          textAlign: 'center',
-          boxSizing: 'border-box'
-        }
-      }
+      className={dateCardVariableClassName}
     >
       <div
-        className="head"
-        style={
-          { 
-            padding: '10px',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '10px',
-            alignItems: 'center',
-            justifyContent: 'space-between'
-          }
-        }
+        className='head'
       >
         <div
-          className="date-total-running"
-          style= {
-            {
-              padding: '10px',
-              backgroundColor:
-                dateTotal > 0 ? 'green' :
-                dateTotal < 0 ? 'red' :
-                '#ddd'
-            }
-          }
+          className='left'
         >
-          {dateTotal}
+          <p
+            className='date'
+          >
+            {date.getDate().toString().padStart(2, "0")}
+          </p>
         </div>
-        {date.getDate().toString().padStart(2, "0")}
         <div
-          className="date-total"
-          style= {
-            {
-              padding: '10px',
-              backgroundColor:
-                dateTotal > 0 ? 'green' :
-                dateTotal < 0 ? 'red' :
-                '#ddd'
-            }
-          }
+          className='right'
         >
-          {dateTotal}
+          <div
+            className={totalRunningVariableClassName}
+          >
+            {dateTotal}
+          </div>
+          <div
+            className={totalVariableClassName}
+          >
+            {dateTotal}
+          </div>
         </div>
       </div>
       <div
-        className="body"
-        style={
-          {
-            overflowY: 'auto',
-            padding: '0px 10px',
-          }
-        }
+        className='body'
       >
         {transactions.map((transaction, index) => (
           <TransactionCard key={index} transaction={transaction} />

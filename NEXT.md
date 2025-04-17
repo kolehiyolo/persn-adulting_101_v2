@@ -7,13 +7,15 @@ style DateMover
 refactor DateMover
 refactor Transaction
 style Transaction
+style DateCard
 
 DOING
+refactor autofill CalendarMonth + DateCard
 refactor DateCard
-style DateCard
 
 TODO
 refactor CalendarMonth
 style CalendarMonth
 make runningTotal work
 refactor generateRecurringTransactions.py
+settle on a naming convention for componentName+className, ie DateCard or dateCard
