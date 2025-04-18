@@ -6,53 +6,34 @@ import TransactionCard from "./TransactionCard.component";
 
 // * Other Imports
 import { Transaction } from '../../types';
+import { DateData } from '../../types';
 import './DateCard.component.scss';
 
 // * Component Props
 interface DateCardProps {
-  date: Date;
-  isCurrentMonth: boolean;
+  dateData: DateData;
   selectedDate: Date;
-  transactions: Array<Transaction>;
 }
 
 // * Component
 export default function DateCard({ 
-  date,
-  isCurrentMonth,
+  dateData,
   selectedDate,
-  transactions
 }: DateCardProps) {
-  const isSelected = selectedDate.getDate() === date.getDate() && isCurrentMonth;
-
-  // Calculate the total amount for a specific date by summing income and subtracting expenses
-  const dateTotal = transactions
-    .filter(transaction => 
-      // Step 1: Filter transactions to include only those that match the specific `date`
-      new Date(transaction.date).toDateString() === date.toDateString()
-    )
-    .reduce((total, transaction) => {
-      // Step 2: Reduce the filtered transactions into a single total amount
-      // If the transaction is an expense, subtract the amount from total
-      // Otherwise, assume it's income and add the amount to total
-      return transaction.type.toLowerCase() === "expense"
-        ? total - transaction.amount
-        : total + transaction.amount;
-    }
-  , 0); // Step 3: Start with a total of 0
+  const isSelected = selectedDate.getDate() === dateData.date.getDate() && dateData.isCurrentMonth;
 
   const dateCardClassName= 'dateCard' + ' ' + (
-    !isCurrentMonth ? 'nonCurrent'
+    !dateData.isCurrentMonth ? 'nonCurrent'
     : isSelected ? 'selected'
     : ''
   );
 
   const dateRunningTotalClassName = 'dateRunningTotal' + ' ' + (
-    dateTotal > 0 ? 'good' : 'bad'
+    dateData.totalRunning > 0 ? 'good' : 'bad'
   );
 
   const dateTotalClassName= 'dateTotal' + ' ' + (
-    dateTotal > 0 ? 'good' : 'bad'
+    dateData.total > 0 ? 'good' : 'bad'
   );
 
   
@@ -70,7 +51,7 @@ export default function DateCard({
           <p
             className='date'
           >
-            {date.getDate().toString().padStart(2, "0")}
+            {dateData.date.getDate().toString().padStart(2, "0")}
           </p>
         </div>
         <div
@@ -79,19 +60,19 @@ export default function DateCard({
           <div
             className={dateTotalClassName}
           >
-            {dateTotal >= 0 ? '+' : ''}{dateTotal.toLocaleString()}
+            {dateData.total >= 0 ? '+' : ''}{dateData.total.toLocaleString()}
           </div>
           <div
             className={dateRunningTotalClassName}
           >
-            {dateTotal.toLocaleString()}
+            {dateData.totalRunning.toLocaleString()}
           </div>
         </div>
       </div>
       <div
         className='body scrollable'
       >
-        {transactions.map((transaction, index) => (
+        {dateData.transactions.map((transaction, index) => (
           <TransactionCard key={index} transaction={transaction} />
         ))}
       </div>

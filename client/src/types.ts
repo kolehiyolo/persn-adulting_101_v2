@@ -38,4 +38,6 @@ export interface DateData {
   date: Date;
   isCurrentMonth: boolean;
   transactions: Array<Transaction>;
+  total: number;
+  totalRunning: number;
 }

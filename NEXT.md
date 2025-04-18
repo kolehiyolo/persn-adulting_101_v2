@@ -14,10 +14,10 @@ style scrollbars to look better
 add commas to numbers
 
 DOING
+make runningTotal work
 refactor CalendarMonth rendering
 refactor CalendarMonth processing
 style CalendarMonth
-make runningTotal work
 
 TODO
 refactor generateRecurringTransactions.py
