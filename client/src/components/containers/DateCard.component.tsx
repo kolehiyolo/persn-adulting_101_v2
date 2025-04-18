@@ -89,7 +89,7 @@ export default function DateCard({
         </div>
       </div>
       <div
-        className='body'
+        className='body scrollable'
       >
         {transactions.map((transaction, index) => (
           <TransactionCard key={index} transaction={transaction} />

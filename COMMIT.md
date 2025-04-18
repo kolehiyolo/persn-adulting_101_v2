@@ -1,4 +1,4 @@
-DateCard fully refactored
-1. aight so did a buncha stuff to just understand DateCard a lot better
-2. one major thing I needed to fully understand was the dateCardTotal and how it's calculated, which I get now
-3. besides that, I just renamed the classNames, and dazit
+scrollbars now almost better
+1. scrollbars now look better, and I just got GPT to give me code to emulate its native scrollbar look
+2. my only issue now is, I can't get the scrollbar to show with padding to the left, so the left-side content doesn't directly touch it
+3. another problem for another day, I suppose
