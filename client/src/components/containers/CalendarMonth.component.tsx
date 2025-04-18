@@ -1,34 +1,37 @@
+// * Dependencies
 import React, { useState, useEffect } from 'react';
+
+// * Other Components
 import DateCard from './DateCard.component';
 
+// * Other Imports
 import { Transaction } from '../../types';
-
+import { DateData } from '../../types';
 import './CalendarMonth.component.scss';
 
+// * Component Props
 interface CalendarMonthProps {
   selectedDate: Date;
   transactions: Array<Transaction>;
 }
 
-interface DateObject {
-  date: Date;
-  isCurrentMonth: boolean;
-  transactions: Array<Transaction>;
-}
-
-// Function to get the month name
-const getMonthName = (monthIndex: number) => {
-  const months = [
-    'January', 'February', 'March', 'April', 'May', 'June', 
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ];
-  return months[monthIndex];
-};
-
-const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transactions }) => {
+// * Component
+export default function CalendarMonth({
+  selectedDate,
+  transactions
+}: CalendarMonthProps) {
   // Get the first and last date of the month
   const firstDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
   const lastDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
+
+  // Function to get the month name
+  const getMonthName = (monthIndex: number) => {
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June', 
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    return months[monthIndex];
+  };
 
   // Get the previous month's trailing dates
   const prevMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, 1);
@@ -70,20 +73,20 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
     }
   });
 
-  const allDates: DateObject[] = [...prevMonthTrailingDates, ...currentMonthDates, ...nextMonthLeadingDates];
+  const allDates: DateData[] = [...prevMonthTrailingDates, ...currentMonthDates, ...nextMonthLeadingDates];
 
   const dayLabels = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
   // now I want a formula that gets runningTotalBeforeMonth, which calculates ALL transactions before the earliest date in the month
   // that value is then passed to the DateCard property, which adds the dateTotal to runningTotalBeforeMonth, 
 
-  
+
   const [runningTotalBeforeCalendarMonth, setRunningTotalBeforeCalendarMonth] = useState(0);
   const [runningTotalArray, setRunningTotalArray] = useState<number[]>([]); // Holds cumulative totals for each date
-  
+
   useEffect(() => {
     if (transactions.length === 0 || allDates.length === 0) return; // Avoid running on empty data
-  
+
     // Calculate total before the calendar month
     const amount = transactions.reduce((total, transaction) => {
       const transactionDate = new Date(transaction.date);
@@ -96,10 +99,10 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
       
       return total;
     }, 0);
-  
+
     setRunningTotalBeforeCalendarMonth(amount);
   }, [transactions, allDates]); 
-  
+
   // useEffect(() => {
   //   // Calculate running total for each date
   //   const runningTotals = allDates.reduce((acc, date, index) => {
@@ -115,11 +118,11 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
   //     acc.push(lastTotal + dateTotal);
   //     return acc;
   //   }, []);
-  
+
   //   setRunningTotalArray(runningTotals);
   // }, [transactions, allDates, runningTotalBeforeCalendarMonth]); // Ensure recalculation when dependencies change
-  
 
+  // * Rendering
   return (
     <div
       className='calendarMonth'
@@ -158,5 +161,3 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
     </div>
   );
 };
-
-export default CalendarMonth;

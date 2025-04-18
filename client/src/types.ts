@@ -33,3 +33,9 @@ export interface Transaction {
   amount: number;
   date: Date;
 }
+
+export interface DateData {
+  date: Date;
+  isCurrentMonth: boolean;
+  transactions: Array<Transaction>;
+}
