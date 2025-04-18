@@ -3,6 +3,8 @@ import DateCard from './DateCard.component';
 
 import { Transaction } from '../../types';
 
+import './CalendarMonth.component.scss';
+
 interface CalendarMonthProps {
   selectedDate: Date;
   transactions: Array<Transaction>;
@@ -119,37 +121,39 @@ const CalendarMonth: React.FC<CalendarMonthProps> = ({ selectedDate, transaction
   
 
   return (
-    <div>
+    <div
+      className='calendarMonth'
+    >
       {/* <h2>{getMonthName(selectedDate.getMonth())} {selectedDate.getFullYear()}</h2> */}
-      <div>
-        <div style={{ display: 'flex' }}>
-          {dayLabels.map(day => <div key={day} style={{ flex: 1, textAlign: 'center' }}>{day}</div>)}
-        </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'stretch', alignContent: 'stretch'}}>
-          {allDates.map((dateObj, index) => (
-            // <div key={index} style={{ width: '14%', textAlign: 'center' }}>
-              <DateCard 
-                date={dateObj.date} 
-                isCurrentMonth={dateObj.isCurrentMonth} 
-                selectedDate={selectedDate} 
-                transactions={dateObj.transactions}
-                key={index}
-                // runningTotal={runningTotal}
-                // setRunningTotal={setRunningTotal}
-              />
-            // </div>
-          ))}
-          {/* {allDates.map((date, index) => (
-            <DateCard 
-              key={date.date.toISOString()} 
-              date={date.date} 
-              isCurrentMonth={date.isCurrentMonth} 
-              transactions={transactions}
-              selectedDate={selectedDate} 
-              runningTotal={runningTotalArray[index] || 0} // Pass precomputed running total
-            />
-          ))} */}
-        </div>
+      <div style={{ display: 'flex' }}>
+        {dayLabels.map(day => <div key={day} style={{ flex: 1, textAlign: 'center' }}>{day}</div>)}
+      </div>
+      <div 
+        className='body'
+      >
+        {
+          Array.from({ length: 6 }, (_, rowIndex) => {
+            const start = rowIndex * 7;
+            const end = start + 7;
+            const rowDates = allDates.slice(start, end);
+
+            return (
+              <div className="row" key={rowIndex}>
+                {
+                  rowDates.map((dateObj, index) => (
+                    <DateCard 
+                      date={dateObj.date} 
+                      isCurrentMonth={dateObj.isCurrentMonth} 
+                      selectedDate={selectedDate} 
+                      transactions={dateObj.transactions}
+                      key={index}
+                    />
+                  ))
+                }
+              </div>
+            );
+          })
+        }
       </div>
     </div>
   );

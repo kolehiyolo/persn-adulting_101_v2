@@ -14,6 +14,7 @@ refactor autofill CalendarMonth + DateCard
 refactor DateCard
 
 TODO
+style scrollbars to look better
 refactor CalendarMonth
 style CalendarMonth
 make runningTotal work

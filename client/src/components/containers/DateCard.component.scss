@@ -8,6 +8,7 @@
   width: calc(100% / 7);
   box-sizing: border-box;
   border: 1px solid $white-20;
+  flex-grow: 1;
 
   p {
     font-size: 14px;
@@ -89,5 +90,6 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
+    overflow-y: auto;
   }
 }
