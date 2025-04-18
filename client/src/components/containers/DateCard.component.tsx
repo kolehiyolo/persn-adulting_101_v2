@@ -77,14 +77,14 @@ export default function DateCard({
           className='right'
         >
           <div
-            className={dateRunningTotalClassName}
-          >
-            {dateTotal}
-          </div>
-          <div
             className={dateTotalClassName}
           >
-            {dateTotal}
+            {dateTotal >= 0 ? '+' : ''}{dateTotal.toLocaleString()}
+          </div>
+          <div
+            className={dateRunningTotalClassName}
+          >
+            {dateTotal.toLocaleString()}
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ export default function TransactionCard({
           className='transactionAmount'
         >
           {transaction.type === 'Expense' ? '-' : '' }
-          {transaction.amount}
+          {transaction.amount.toLocaleString()}
         </p>
       </div>
     </div>
