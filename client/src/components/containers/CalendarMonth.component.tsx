@@ -127,9 +127,19 @@ export default function CalendarMonth({
     <div
       className='calendarMonth'
     >
-      {/* <h2>{getMonthName(selectedDate.getMonth())} {selectedDate.getFullYear()}</h2> */}
-      <div style={{ display: 'flex' }}>
-        {dayLabels.map(day => <div key={day} style={{ flex: 1, textAlign: 'center' }}>{day}</div>)}
+      <div 
+        className='head'
+      >
+        {
+          dayLabels.map(day => 
+            <div
+              className='dayLabel'
+              key={day}
+            >
+              {day}
+            </div>
+          )
+        }
       </div>
       <div 
         className='body'
