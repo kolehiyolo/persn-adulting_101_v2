@@ -1,5 +1,10 @@
-runningTotal works!!!!
-1. yo so i somehow stumbled onto making it work
-2. i don't wanna have to explain it all, but involved refactoring CalendarMonth to have 2 processes, one getting the dates to show, and one preparing each dateData based on the dates
-3. this also involved simplifying DateCard significantly as the processing mostly comes from the CalendarMonth side now
-4. now I just want the data to be, well, accurate, cuz right now it sure as hell ain't
+transactions data more accurate now
+1. alright so I put in my actual recurring transactions, as far as I can tell
+2. there are some things that need fixing though to make it way more accurate
+  . my april isn't done properly
+  . my CC payments isn't perfectly planned
+  . no debt to ate
+  . no dental plan
+  . no 2025 back to school plan
+  . no optical plan
+3. first thing, I gotta plan out the one time transactions, and have a python script that I execute and generates a total transactions csv

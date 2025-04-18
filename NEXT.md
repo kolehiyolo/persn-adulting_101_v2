@@ -12,14 +12,15 @@ refactor autofill CalendarMonth + DateCard
 refactor DateCard
 style scrollbars to look better
 add commas to numbers
+make runningTotal work
 
 DOING
-make runningTotal work
+make transactions accurate
+
+TODO
 refactor CalendarMonth rendering
 refactor CalendarMonth processing
 style CalendarMonth
-
-TODO
 refactor generateRecurringTransactions.py
 settle on a naming convention for componentName+className, ie DateCard or dateCard
 scrollbars should not touch content

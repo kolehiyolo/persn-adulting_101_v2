@@ -6,8 +6,8 @@ import calendar
 import os
 
 # === CONFIG ===
-INPUT_FILE = "recurringTransactions.csv"
-OUTPUT_FILE = "generatedTransactions.csv"
+INPUT_FILE = "transactionsRecurring.csv"
+OUTPUT_FILE = "transactionsRecurringOutput.csv"
 
 # === HELPERS ===
 
@@ -131,6 +131,7 @@ if __name__ == "__main__":
             title = row["title"]
             trans_type = row["type"]
             category = row["category"]
+            tags = row["tags"]
             amount = float(row["amount"])
             transaction_dates = generate_transaction_dates(row)
 
@@ -139,12 +140,13 @@ if __name__ == "__main__":
                     "title": title,
                     "type": trans_type,
                     "category": category,
+                    "tags": tags,
                     "amount": f"{amount:.2f}",
                     "date": iso_date(date)
                 })
 
     with open(OUTPUT_FILE, mode="w", newline='', encoding="utf-8") as outfile:
-        fieldnames = ["title", "type", "category", "amount", "date"]
+        fieldnames = ["title", "type", "category", "tags", "amount", "date"]
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(output_rows)

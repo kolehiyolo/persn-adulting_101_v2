@@ -21,7 +21,7 @@ export default function App() {
   useEffect(() => {
     const fetchTransactions = async () => {
       // * Step 1: Fetch the CSV file from the public folder
-      const response = await fetch("/data/generatedTransactions.csv");
+      const response = await fetch("/data/transactionsRecurringOutput.csv");
 
       // * Step 2: Read the response as plain text
       const csvText = await response.text();
