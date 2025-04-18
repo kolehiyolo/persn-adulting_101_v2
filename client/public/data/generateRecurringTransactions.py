@@ -119,36 +119,67 @@ def generate_transaction_dates(row):
 # === MAIN ===
 
 if __name__ == "__main__":
-    if not os.path.exists(INPUT_FILE):
-        print(f"[Error] File not found: {INPUT_FILE}")
-        exit(1)
+  if not os.path.exists(INPUT_FILE):
+    print(f"[Error] File not found: {INPUT_FILE}")
+    exit(1)
 
-    output_rows = []
+  output_rows = []
 
-    with open(INPUT_FILE, mode="r", newline='', encoding="utf-8") as infile:
-        reader = csv.DictReader(infile)
-        for row in reader:
-            title = row["title"]
-            trans_type = row["type"]
-            category = row["category"]
-            tags = row["tags"]
-            amount = float(row["amount"])
-            transaction_dates = generate_transaction_dates(row)
+  with open(INPUT_FILE, mode="r", newline='', encoding="utf-8") as infile:
+    reader = csv.DictReader(infile)
+    for row in reader:
+      title = row["title"]
+      trans_type = row["type"]
+      category = row["category"]
+      tags = row["tags"]
+      amount = float(row["amount"])
+      transaction_dates = generate_transaction_dates(row)
 
-            for date in transaction_dates:
-                output_rows.append({
-                    "title": title,
-                    "type": trans_type,
-                    "category": category,
-                    "tags": tags,
-                    "amount": f"{amount:.2f}",
-                    "date": iso_date(date)
-                })
+      for date in transaction_dates:
+        output_rows.append({
+          "title": title,
+          "type": trans_type,
+          "category": category,
+          "tags": tags,
+          "amount": f"{amount:.2f}",
+          "date": iso_date(date)
+        })
 
-    with open(OUTPUT_FILE, mode="w", newline='', encoding="utf-8") as outfile:
-        fieldnames = ["title", "type", "category", "tags", "amount", "date"]
-        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(output_rows)
+  with open(OUTPUT_FILE, mode="w", newline='', encoding="utf-8") as outfile:
+    fieldnames = ["title", "type", "category", "tags", "amount", "date"]
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(output_rows)
 
-    print(f"[Success] Wrote {len(output_rows)} transactions to {OUTPUT_FILE}")
+  print(f"[Success] Wrote {len(output_rows)} transactions to {OUTPUT_FILE}")
+
+  # Paths to input and output files
+  file1 = 'transactionsOneTime.csv'
+  file2 = OUTPUT_FILE
+  output = 'transactionsAll.csv'
+
+  # Read both CSVs
+  with open(file1, 'r', newline='', encoding='utf-8') as f1, \
+    open(file2, 'r', newline='', encoding='utf-8') as f2:
+    
+    reader1 = csv.DictReader(f1)
+    reader2 = csv.DictReader(f2)
+
+    # Combine all unique headers
+    all_fieldnames = list(set(reader1.fieldnames + reader2.fieldnames))
+
+    # Read all rows from both files
+    rows1 = list(reader1)
+    rows2 = list(reader2)
+
+  # Write the merged CSV
+  with open(output, 'w', newline='', encoding='utf-8') as out_file:
+    writer = csv.DictWriter(out_file, fieldnames=all_fieldnames)
+    writer.writeheader()
+
+    for row in rows1 + rows2:
+      # Ensure missing keys are filled with empty strings
+      normalized_row = {field: row.get(field, '') for field in all_fieldnames}
+      writer.writerow(normalized_row)
+
+  print(f"Merged CSV written to {output}")

@@ -13,9 +13,13 @@ refactor DateCard
 style scrollbars to look better
 add commas to numbers
 make runningTotal work
+my april isn't done properly
+no debt to ate
+no dental plan
+make transactions accurate
 
 DOING
-make transactions accurate
+apply better styling for better data viz
 
 TODO
 refactor CalendarMonth rendering
@@ -24,3 +28,7 @@ style CalendarMonth
 refactor generateRecurringTransactions.py
 settle on a naming convention for componentName+className, ie DateCard or dateCard
 scrollbars should not touch content
+
+my CC payments isn't perfectly planned
+no 2025 back to school plan
+no optical plan
