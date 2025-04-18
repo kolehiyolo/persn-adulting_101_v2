@@ -8,9 +8,9 @@ refactor DateMover
 refactor Transaction
 style Transaction
 style DateCard
+refactor autofill CalendarMonth + DateCard
 
 DOING
-refactor autofill CalendarMonth + DateCard
 refactor DateCard
 
 TODO

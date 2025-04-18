@@ -25,24 +25,33 @@ export default function DateCard({
 }: DateCardProps) {
   const isSelected = selectedDate.getDate() === date.getDate() && isCurrentMonth;
 
+  // Calculate the total amount for a specific date by summing income and subtracting expenses
   const dateTotal = transactions
-    .filter(transaction => new Date(transaction.date).toDateString() === date.toDateString())
+    .filter(transaction => 
+      // Step 1: Filter transactions to include only those that match the specific `date`
+      new Date(transaction.date).toDateString() === date.toDateString()
+    )
     .reduce((total, transaction) => {
-      const amount = transaction.amount;
-      return transaction.type.toLowerCase() === "expense" ? total - amount : total + amount;
-    }, 0);
+      // Step 2: Reduce the filtered transactions into a single total amount
+      // If the transaction is an expense, subtract the amount from total
+      // Otherwise, assume it's income and add the amount to total
+      return transaction.type.toLowerCase() === "expense"
+        ? total - transaction.amount
+        : total + transaction.amount;
+    }
+  , 0); // Step 3: Start with a total of 0
 
-  const dateCardVariableClassName= 'dateCard' + ' ' + (
+  const dateCardClassName= 'dateCard' + ' ' + (
     !isCurrentMonth ? 'nonCurrent'
     : isSelected ? 'selected'
     : ''
   );
 
-  const totalRunningVariableClassName= 'totalRunning' + ' ' + (
+  const dateRunningTotalClassName = 'dateRunningTotal' + ' ' + (
     dateTotal > 0 ? 'good' : 'bad'
   );
 
-  const totalVariableClassName= 'total' + ' ' + (
+  const dateTotalClassName= 'dateTotal' + ' ' + (
     dateTotal > 0 ? 'good' : 'bad'
   );
 
@@ -50,7 +59,7 @@ export default function DateCard({
   // * Rendering
   return (
     <div 
-      className={dateCardVariableClassName}
+      className={dateCardClassName}
     >
       <div
         className='head'
@@ -68,12 +77,12 @@ export default function DateCard({
           className='right'
         >
           <div
-            className={totalRunningVariableClassName}
+            className={dateRunningTotalClassName}
           >
             {dateTotal}
           </div>
           <div
-            className={totalVariableClassName}
+            className={dateTotalClassName}
           >
             {dateTotal}
           </div>
