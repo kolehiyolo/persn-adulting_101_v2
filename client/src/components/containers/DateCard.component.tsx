@@ -29,11 +29,19 @@ export default function DateCard({
   );
 
   const dateRunningTotalClassName = 'dateRunningTotal' + ' ' + (
-    dateData.totalRunning > 0 ? 'good' : 'bad'
+    dateData.totalRunning > 500000 ? 'best'
+    : dateData.totalRunning > 250000 ? 'chill'
+    : dateData.totalRunning > 100000 ? 'safe'
+    : dateData.totalRunning > 50000 ? 'good'
+    : dateData.totalRunning > 10000 ? 'breathing'
+    : dateData.totalRunning > 0 ? 'struggling'
+    : 'bad'
   );
 
   const dateTotalClassName= 'dateTotal' + ' ' + (
-    dateData.total > 0 ? 'good' : 'bad'
+    dateData.total > 0 ? 'good'
+    : dateData.total === 0 ? 'neutral'
+    : 'bad'
   );
 
   

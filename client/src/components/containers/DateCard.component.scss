@@ -60,6 +60,10 @@
 
         &.good {
           color: $green-100;
+        }        
+
+        &.neutral {
+          color: $white-50;
         }
         
         &.bad {
@@ -75,13 +79,13 @@
         padding: 3px 7px;
         border-radius: 5px;
         
-        &.good {
-          background-color: $green-100;
-        }
-        
-        &.bad {
-          background-color: $red-100;
-        }
+        &.best { background-color: $running-best;}
+        &.chill { background-color: $running-chill;}
+        &.safe { background-color: $running-safe;}
+        &.good { background-color: $running-good;}
+        &.breathing { background-color: $running-breathing;}
+        &.struggling { background-color: $running-struggling;}
+        &.bad { background-color: $running-bad;}
       }
     }
   }

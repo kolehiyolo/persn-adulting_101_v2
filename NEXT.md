@@ -17,11 +17,13 @@ my april isn't done properly
 no debt to ate
 no dental plan
 make transactions accurate
+dateRunningTotal colors proper
 
 DOING
-apply better styling for better data viz
+transactionCard colors proper
 
 TODO
+apply better styling for better data viz
 refactor CalendarMonth rendering
 refactor CalendarMonth processing
 style CalendarMonth
