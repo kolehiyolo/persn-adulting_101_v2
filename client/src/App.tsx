@@ -16,6 +16,13 @@ export default function App() {
   const [startDate] = useState(() => new Date());
   const [selectedDate, setSelectedDate] = useState(startDate);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [calendarView, setCalendarView] = useState('month');
+
+  const [calendarTotalRunning, setCalendarTotalRunning] = useState('3,056.15');
+  const [calendarChange, setCalendarChange] = useState('+1,158.76');
+  const [calendarMax, setCalendarMax] = useState('51,864.92');
+  const [calendarMin, setCalendarMin] = useState('458.76');
+
 
   // * Fetching transactions from CSV
   useEffect(() => {
@@ -61,15 +68,64 @@ export default function App() {
         <div
           className='head'
         >
-          <DateMover
+          <div
+            className='left'
+          >
+            <DateMover
+              selectedDate={selectedDate}
+              setSelectedDate={setSelectedDate}
+            />
+            {
+              calendarView === 'month' ?
+              <div
+                className='calendarHeadData'
+              >
+                <div
+                  className='left'
+                >
+                  <p
+                    className='calendarTotalRunning'
+                  >
+                    {calendarTotalRunning}
+                  </p>
+                  <p
+                    className='calendarChange'
+                    >
+                    {calendarChange}
+                  </p>
+                </div>
+                <div
+                  className='right'
+                >
+                  <p
+                    className='calendarMax'
+                  >
+                    {calendarMax}
+                  </p>
+                  <p
+                    className='calendarMin'
+                    >
+                    {calendarMin}
+                  </p>
+                </div>
+              </div>
+              : <></>
+            }
+          </div>
+          <div
+            className='right'
+          >
+
+          </div>
+        </div>
+        <div
+          className='body'
+        >
+          <CalendarMonth
             selectedDate={selectedDate}
-            setSelectedDate={setSelectedDate}
+            transactions={transactions}
           />
         </div>
-        <CalendarMonth
-          selectedDate={selectedDate}
-          transactions={transactions}
-        />
       </main>
     </div>
   );

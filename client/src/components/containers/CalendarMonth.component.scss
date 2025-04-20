@@ -19,12 +19,13 @@
     }
   }
   
-  .body {
+  & .body {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     flex-grow: 1;
+    gap: 0px !important;
     
     .row {
       flex-grow: 1;
