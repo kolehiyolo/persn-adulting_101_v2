@@ -5,6 +5,7 @@ import Papa from "papaparse";
 // * Other Components
 import DateMover from './components/containers/DateMover.component';
 import CalendarMonth from './components/containers/CalendarMonth.component';
+import CalendarHeadData from './components/containers/CalendarHeadData.component';
 
 // * Other Imports
 import { Transaction } from './types';
@@ -18,10 +19,10 @@ export default function App() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [calendarView, setCalendarView] = useState('month');
 
-  const [calendarTotalRunning, setCalendarTotalRunning] = useState('3,056.15');
-  const [calendarChange, setCalendarChange] = useState('+1,158.76');
-  const [calendarMax, setCalendarMax] = useState('51,864.92');
-  const [calendarMin, setCalendarMin] = useState('458.76');
+  const [calendarTotalRunning, setCalendarTotalRunning] = useState(3056.15);
+  const [calendarChange, setCalendarChange] = useState(1158.76);
+  const [calendarMax, setCalendarMax] = useState(51864.92);
+  const [calendarMin, setCalendarMin] = useState(458.76);
 
 
   // * Fetching transactions from CSV
@@ -77,38 +78,12 @@ export default function App() {
             />
             {
               calendarView === 'month' ?
-              <div
-                className='calendarHeadData'
-              >
-                <div
-                  className='left'
-                >
-                  <p
-                    className='calendarTotalRunning'
-                  >
-                    {calendarTotalRunning}
-                  </p>
-                  <p
-                    className='calendarChange'
-                    >
-                    {calendarChange}
-                  </p>
-                </div>
-                <div
-                  className='right'
-                >
-                  <p
-                    className='calendarMax'
-                  >
-                    {calendarMax}
-                  </p>
-                  <p
-                    className='calendarMin'
-                    >
-                    {calendarMin}
-                  </p>
-                </div>
-              </div>
+              <CalendarHeadData
+                calendarTotalRunning={calendarTotalRunning}
+                calendarChange={calendarChange}
+                calendarMax={calendarMax}
+                calendarMin={calendarMin}
+              />
               : <></>
             }
           </div>

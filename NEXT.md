@@ -20,9 +20,9 @@ make transactions accurate
 dateRunningTotal colors proper
 transactionCard colors proper
 app head with calendarHeadData
+calendarHeadData must be own component
 
 DOING
-calendarHeadData must be own component
 make calendarHeadData work
 
 TODO

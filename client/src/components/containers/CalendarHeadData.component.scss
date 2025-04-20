@@ -1,0 +1,57 @@
+@import '../../styles/utils/variables';
+
+.calendarHeadData {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  
+  .left {
+    display: flex;
+    flex-direction: row;
+    gap: 5px !important;
+    align-items: center;
+
+    .calendarTotalRunning {
+      color: #EEA633;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .calendarChange {
+      color: #71EDAF;
+      font-size: 14px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+    .calendarMax {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 14px;
+      background-color: #1D8752;
+      border-radius: 5px;
+      font-weight: bold;
+      gap: 5px;
+    }
+    
+    .calendarMin {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 14px;
+      background-color: #FF9900;
+      border-radius: 5px;
+      font-weight: bold;
+      gap: 5px;
+    }
+  }
+
+}
