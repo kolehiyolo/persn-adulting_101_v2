@@ -23,6 +23,43 @@ export default function CalendarHeadData({
   calendarMax,
   calendarMin
 }: CalendarHeadDataProps) {
+  const calendarTotalRunningClassName = 'calendarTotalRunning' + ' ' + (
+    calendarTotalRunning > 500000 ? 'best'
+    : calendarTotalRunning > 250000 ? 'chill'
+    : calendarTotalRunning > 100000 ? 'safe'
+    : calendarTotalRunning > 50000 ? 'good'
+    : calendarTotalRunning > 10000 ? 'breathing'
+    : calendarTotalRunning > 0 ? 'struggling'
+    : 'bad'
+  );
+
+  const calendarChangeClassName = 'calendarChange' + ' ' + (
+    calendarChange > 0 ? 'good'
+    : calendarChange === 0 ? 'neutral'
+    : 'bad'
+  );
+
+  const calendarMaxClassName = 'calendarMax' + ' ' + (
+    calendarMax > 500000 ? 'best'
+    : calendarMax > 250000 ? 'chill'
+    : calendarMax > 100000 ? 'safe'
+    : calendarMax > 50000 ? 'good'
+    : calendarMax > 10000 ? 'breathing'
+    : calendarMax > 0 ? 'struggling'
+    : 'bad'
+  );
+
+  const calendarMinClassName = 'calendarMin' + ' ' + (
+    calendarMin > 500000 ? 'best'
+    : calendarMin > 250000 ? 'chill'
+    : calendarMin > 100000 ? 'safe'
+    : calendarMin > 50000 ? 'good'
+    : calendarMin > 10000 ? 'breathing'
+    : calendarMin > 0 ? 'struggling'
+    : 'bad'
+  );
+
+
   // * Rendering
   return (
     <div
@@ -32,12 +69,12 @@ export default function CalendarHeadData({
         className='left'
       >
         <p
-          className='calendarTotalRunning'
+          className={calendarTotalRunningClassName}
         >
           {calendarTotalRunning.toLocaleString()}
         </p>
         <p
-          className='calendarChange'
+          className={calendarChangeClassName}
           >
           {calendarChange >= 0 ? '+' : ''}{calendarChange.toLocaleString()}
         </p>
@@ -46,7 +83,7 @@ export default function CalendarHeadData({
         className='right'
       >
         <p
-          className='calendarMax'
+          className={calendarMaxClassName}
         >
           <CalendarMax />
           <p>
@@ -54,7 +91,7 @@ export default function CalendarHeadData({
           </p>
         </p>
         <p
-          className='calendarMin'
+          className={calendarMinClassName}
         >
           <CalendarMin />
           <p>

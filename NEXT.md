@@ -21,6 +21,7 @@ dateRunningTotal colors proper
 transactionCard colors proper
 app head with calendarHeadData
 calendarHeadData must be own component
+calendarHeadData styling done
 
 DOING
 make calendarHeadData work
