@@ -18,9 +18,10 @@ no debt to ate
 no dental plan
 make transactions accurate
 dateRunningTotal colors proper
+transactionCard colors proper
 
 DOING
-transactionCard colors proper
+add calendarMonth data viz
 
 TODO
 apply better styling for better data viz

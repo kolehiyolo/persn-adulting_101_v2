@@ -23,22 +23,56 @@
   }
 
   &.expense {
-    border-color: $red-50;
-    background-color: $red-20;
+    border-color: rgba($transaction-expense, 0.5);
+    background-color: rgba($transaction-expense, 0.2);
     
     p {
-      color: $red-100;
+      color: rgba($transaction-expense, 1);
     }
   }
 
-  &.income {
-    border-color: $green-50;
-    background-color: $green-20;
+  &.salary {
+    border-color: rgba($transaction-salary, 0.5);
+    background-color: rgba($transaction-salary, 0.2);
     
     p {
-      color: $green-100;
+      color: rgba($transaction-salary, 1);
     }
   }
 
+  &.pets {
+    border-color: rgba($transaction-pets, 0.5);
+    background-color: rgba($transaction-pets, 0.2);
+    
+    p {
+      color: rgba($transaction-pets, 1);
+    }
+  }
 
+  &.ccBorrow {
+    border-color: rgba($transaction-ccBorrow, 0.5);
+    background-color: rgba($transaction-ccBorrow, 0.2);
+    
+    p {
+      color: rgba($transaction-ccBorrow, 1);
+    }
+  }
+
+  &.monthly {
+    border-color: rgba($transaction-monthly, 0.5);
+    background-color: rgba($transaction-monthly, 0.2);
+    
+    p {
+      color: rgba($transaction-monthly, 1);
+    }
+  }
+
+  &.weekly {
+    border-color: rgba($transaction-weekly, 0.5);
+    background-color: rgba($transaction-weekly, 0.2);
+    
+    p {
+      color: rgba($transaction-weekly, 1);
+    }
+  }
 }

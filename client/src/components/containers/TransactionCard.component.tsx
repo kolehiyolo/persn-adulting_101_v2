@@ -16,7 +16,23 @@ interface TransactionCardProps {
 export default function TransactionCard({ 
   transaction 
 }: TransactionCardProps) {
-  const variableClassName='transactionCard' + ' ' + transaction.type.toLowerCase();
+  const variableClassName='transactionCard' + ' '
+    + 
+    (
+      transaction.tags.includes('salary') ? 'salary'
+      : transaction.tags.includes('pets') ? 'pets'
+      : transaction.tags.includes('cc borrow') ? 'ccBorrow'
+      : transaction.tags.includes('monthly') ? 'monthly'
+      : transaction.tags.includes('weekly') ? 'weekly'
+      : 'expense'
+    );
+
+  console.log(transaction.tags.includes('salary') ? 'salary'
+  : transaction.tags.includes('pets') ? 'pets'
+  : transaction.tags.includes('cc borrow') ? 'ccBorrow'
+  : transaction.tags.includes('monthly') ? 'monthly'
+  : transaction.tags.includes('weekly') ? 'weekly'
+  : 'expense');
 
   // * Rendering
   return (

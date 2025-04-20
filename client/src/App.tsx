@@ -36,6 +36,7 @@ export default function App() {
       const parsedData: Transaction[] = parsed.data.map((row: any) => ({
         title: row.title,                       // Get the transaction title
         type: row.type,                         // Get the transaction type (Expense or Income)
+        tags: row.tags,
         category: row.category,                 // Get the category
         amount: parseFloat(row.amount),         // Parse the amount string into a number
         date: row.date,                         // Leave the date as-is (should already be in standardized format)
