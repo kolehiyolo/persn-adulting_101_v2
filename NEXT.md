@@ -22,9 +22,10 @@ transactionCard colors proper
 app head with calendarHeadData
 calendarHeadData must be own component
 calendarHeadData styling done
+make calendarHeadData work
 
 DOING
-make calendarHeadData work
+migrate to better stack
 
 TODO
 apply better styling for better data viz

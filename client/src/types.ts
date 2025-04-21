@@ -42,3 +42,10 @@ export interface DateData {
   total: number;
   totalRunning: number;
 }
+
+export interface CalendarHeadDataObj {
+  totalRunning: number;
+  change: number;
+  max: number;
+  min: number;
+}

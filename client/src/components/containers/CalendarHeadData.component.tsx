@@ -82,22 +82,22 @@ export default function CalendarHeadData({
       <div
         className='right'
       >
-        <p
+        <div
           className={calendarMaxClassName}
         >
           <CalendarMax />
           <p>
             {calendarMax.toLocaleString()}
           </p>
-        </p>
-        <p
+        </div>
+        <div
           className={calendarMinClassName}
         >
           <CalendarMin />
           <p>
             {calendarMin.toLocaleString()}
           </p>
-        </p>
+        </div>
       </div>
     </div>
   );

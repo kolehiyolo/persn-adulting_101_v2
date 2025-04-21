@@ -6,6 +6,7 @@ import DateCard from './DateCard.component';
 
 // * Other Imports
 import { Transaction } from '../../types';
+import { CalendarHeadDataObj } from '../../types';
 import { DateData } from '../../types';
 import './CalendarMonth.component.scss';
 
@@ -13,12 +14,14 @@ import './CalendarMonth.component.scss';
 interface CalendarMonthProps {
   selectedDate: Date;
   transactions: Array<Transaction>;
+  setCalendarChangeDataObj: React.Dispatch<React.SetStateAction<CalendarHeadDataObj>>,
 }
 
 // * Component
 export default function CalendarMonth({
   selectedDate,
-  transactions
+  transactions,
+  setCalendarChangeDataObj
 }: CalendarMonthProps) {
   // First, get all dates and put into calendarDates
   // Then, process each calendarDates and add to calendarDatesData
@@ -37,10 +40,9 @@ export default function CalendarMonth({
       return fullDate;
     });
 
-    // * Current Dates
+    // * Current Month Dates
     const currentMonthDates = Array.from({ length: lastDayOfMonth.getDate() }, (_, i) => {
       const fullDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), i + 1);
-
       return fullDate;
     });
 
@@ -99,6 +101,31 @@ export default function CalendarMonth({
   const calendarDates: Date[] = getCalendarDates();
   const calendarDatesData: DateData[] = getCalendarDatesData(calendarDates, transactions);
 
+  // * Change thing
+  useEffect(()=>{
+    const currentMonthData = calendarDatesData
+      .filter(dateData => 
+        new Date(dateData.date).getMonth() === selectedDate.getMonth()
+      );
+    const totalRunning = currentMonthData[currentMonthData.length - 1].totalRunning;
+    const change = currentMonthData
+      .reduce((totalMonthChange, dateData) => {
+        return totalMonthChange + dateData.total;
+      }
+    , 0);
+    const max = Math.max(...currentMonthData.map(item => item.totalRunning));
+    const min = Math.min(...currentMonthData.map(item => item.totalRunning));
+
+    setCalendarChangeDataObj(
+      {
+        totalRunning: totalRunning,
+        change: change,
+        max: max,
+        min: min
+      }
+    );
+  }, [calendarDatesData]);
+  
   const dayLabels = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
   // * Rendering

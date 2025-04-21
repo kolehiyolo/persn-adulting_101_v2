@@ -9,6 +9,7 @@ import CalendarHeadData from './components/containers/CalendarHeadData.component
 
 // * Other Imports
 import { Transaction } from './types';
+import { CalendarHeadDataObj } from './types';
 import './styles/App.scss';
 
 // * Component
@@ -19,11 +20,12 @@ export default function App() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [calendarView, setCalendarView] = useState('month');
 
-  const [calendarTotalRunning, setCalendarTotalRunning] = useState(3056.15);
-  const [calendarChange, setCalendarChange] = useState(1158.76);
-  const [calendarMax, setCalendarMax] = useState(51864.92);
-  const [calendarMin, setCalendarMin] = useState(458.76);
-
+  const[calendarHeadDataObj, setCalendarChangeDataObj] = useState<CalendarHeadDataObj>({
+    totalRunning: 3056.15,
+    change: 1158.76,
+    max: 51864.92,
+    min: 458.76,
+  });
 
   // * Fetching transactions from CSV
   useEffect(() => {
@@ -79,10 +81,10 @@ export default function App() {
             {
               calendarView === 'month' ?
               <CalendarHeadData
-                calendarTotalRunning={calendarTotalRunning}
-                calendarChange={calendarChange}
-                calendarMax={calendarMax}
-                calendarMin={calendarMin}
+                calendarTotalRunning={calendarHeadDataObj.totalRunning}
+                calendarChange={calendarHeadDataObj.change}
+                calendarMax={calendarHeadDataObj.max}
+                calendarMin={calendarHeadDataObj.min}
               />
               : <></>
             }
@@ -99,6 +101,7 @@ export default function App() {
           <CalendarMonth
             selectedDate={selectedDate}
             transactions={transactions}
+            setCalendarChangeDataObj={setCalendarChangeDataObj}
           />
         </div>
       </main>
