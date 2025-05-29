@@ -28,7 +28,6 @@ organize 0004-tristan
 create master generateTransactionsData.py
 
 <!-- ? DOING -->
-users can click on a button in the GUI that then processes the CSVs into desired outputs
 
 <!-- NEXT -->
 separate income and expenses
@@ -36,6 +35,7 @@ separate income and expenses
 <!-- TODOS EZ -->
 
 <!-- ! TODOS HEAVY -->
+users can click on a button in the GUI that then processes the CSVs into desired outputs
 users can select which sets to show
 users can CRUD recurring expenses on CSV
 users can CRUD one time expenses on CSV
