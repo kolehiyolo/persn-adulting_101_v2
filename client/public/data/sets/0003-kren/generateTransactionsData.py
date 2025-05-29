@@ -6,8 +6,8 @@ import calendar
 import os
 
 # === CONFIG ===
-INPUT_FILE = "input/transactionsRecurring.csv"
-OUTPUT_FILE = "middle/transactionsRecurringOutput.csv"
+INPUT_FILE = "input/transactions-recurring.csv"
+OUTPUT_FILE = "middle/transactions-recurring_all.csv"
 
 # === HELPERS ===
 
@@ -154,9 +154,9 @@ if __name__ == "__main__":
   print(f"[Success] Wrote {len(output_rows)} transactions to {OUTPUT_FILE}")
 
   # Paths to input and output files
-  file1 = 'input/transactionsOneTime.csv'
+  file1 = 'input/transactions-one_time.csv'
   file2 = OUTPUT_FILE
-  output = 'output/transactionsAll.csv'
+  output = 'output/transactions-all.csv'
 
   # Read both CSVs
   with open(file1, 'r', newline='', encoding='utf-8') as f1, \

@@ -23,10 +23,13 @@ app head with calendarHeadData
 calendarHeadData must be own component
 calendarHeadData styling done
 make calendarHeadData work
+organize directories for generateTransactionsData.py
 
 <!-- ? DOING -->
+organize 0004-tristan
 
 <!-- NEXT -->
+create master generateTransactionsData.py
 users can click on a button in the GUI that then processes the CSVs into desired outputs
 
 <!-- TODOS EZ -->

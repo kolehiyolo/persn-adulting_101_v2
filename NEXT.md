@@ -1,1 +1,1 @@
-Organize directories for generateTransactionsData.py
+Next step is to do the same for 0004-tristan
