@@ -36,6 +36,7 @@ separate income and expenses
 <!-- TODOS EZ -->
 
 <!-- ! TODOS HEAVY -->
+users can select which sets to show
 users can CRUD recurring expenses on CSV
 users can CRUD one time expenses on CSV
 users can CRUD savings goals on CSV

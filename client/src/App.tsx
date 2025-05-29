@@ -6,6 +6,7 @@ import Papa from "papaparse";
 import DateMover from './components/containers/DateMover.component';
 import CalendarMonth from './components/containers/CalendarMonth.component';
 import CalendarHeadData from './components/containers/CalendarHeadData.component';
+import DataControls from './components/containers/DataControls.component';
 
 // * Other Imports
 import { Transaction } from './types';
@@ -29,38 +30,43 @@ export default function App() {
     min: 458.76,
   });
 
+  const fetchTransactions = async () => {
+    // * Step 1: Fetch the CSV file from the public folder
+    const response = await fetch(`/data/sets/${dataSet}/output/transactions-all.csv`);
+
+    // * Step 2: Read the response as plain text
+    const csvText = await response.text();
+
+    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
+    const parsed = Papa.parse(csvText, {
+      header: true,           // Treat the first row as column headers
+      skipEmptyLines: true,   // Ignore empty lines in the CSV
+    });
+
+    // * Step 4: Transform parsed data into Transaction objects
+    const parsedData: Transaction[] = parsed.data.map((row: any) => ({
+      title: row.title,                       // Get the transaction title
+      type: row.type,                         // Get the transaction type (Expense or Income)
+      tags: row.tags,
+      category: row.category,                 // Get the category
+      amount: parseFloat(row.amount),         // Parse the amount string into a number
+      date: row.date,                         // Leave the date as-is (should already be in standardized format)
+    }));
+
+    // * Step 5: Set the transformed data into state
+    setTransactions(parsedData);
+  };
+
   // * Fetching transactions from CSV
   useEffect(() => {
-    const fetchTransactions = async () => {
-      // * Step 1: Fetch the CSV file from the public folder
-      const response = await fetch(`/data/sets/${dataSet}/output/transactions-all.csv`);
-
-      // * Step 2: Read the response as plain text
-      const csvText = await response.text();
-
-      // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
-      const parsed = Papa.parse(csvText, {
-        header: true,           // Treat the first row as column headers
-        skipEmptyLines: true,   // Ignore empty lines in the CSV
-      });
-
-      // * Step 4: Transform parsed data into Transaction objects
-      const parsedData: Transaction[] = parsed.data.map((row: any) => ({
-        title: row.title,                       // Get the transaction title
-        type: row.type,                         // Get the transaction type (Expense or Income)
-        tags: row.tags,
-        category: row.category,                 // Get the category
-        amount: parseFloat(row.amount),         // Parse the amount string into a number
-        date: row.date,                         // Leave the date as-is (should already be in standardized format)
-      }));
-
-      // * Step 5: Set the transformed data into state
-      setTransactions(parsedData);
-    };
-
     // * Execute the fetch logic once on component mount
     fetchTransactions();
   }, []);
+
+  const handleClickGenerateData = async () => {
+    console.log(`Trigger handleClickGenerateData()`);
+    fetchTransactions();
+  };
 
   // * Rendering
   return (
@@ -80,6 +86,13 @@ export default function App() {
               selectedDate={selectedDate}
               setSelectedDate={setSelectedDate}
             />
+            <DataControls
+              handleClickGenerateData={handleClickGenerateData}
+            />
+          </div>
+          <div
+            className='right'
+          >
             {
               calendarView === 'month' ?
               <CalendarHeadData
@@ -90,11 +103,6 @@ export default function App() {
               />
               : <></>
             }
-          </div>
-          <div
-            className='right'
-          >
-
           </div>
         </div>
         <div

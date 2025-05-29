@@ -1,0 +1,14 @@
+@import '../../styles/utils/variables';
+
+.dataControls {
+
+  .button {
+    padding: 10px 15px;
+    border: $white-50 solid 1px;
+    background-color: $bg-transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+}

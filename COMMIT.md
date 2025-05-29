@@ -1,3 +1,4 @@
-Create master generateTransactionsData.py
-1. generateTransactionsData.py now can be run just once to generate all data for all sets
-2. some refactoring is definitely needed as I just straight copy-pasted from GPT, but we can maybe do that later
+Generate button ready
+1. created DataControls.component.tsx, housing the Generate button for now
+  1.1. eventually this should house controls for choosing which set to show
+2. next is to make this actually work, triggering the python script via a javascript event, which I don't know how to do
