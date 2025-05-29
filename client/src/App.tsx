@@ -19,7 +19,8 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState(startDate);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [calendarView, setCalendarView] = useState('month');
-  const [dataSet, setDataSet] = useState(`0003-kren`);
+  // const [dataSet, setDataSet] = useState(`0003-kren`);
+  const [dataSet, setDataSet] = useState(`0004-tristan`);
 
   const[calendarHeadDataObj, setCalendarChangeDataObj] = useState<CalendarHeadDataObj>({
     totalRunning: 3056.15,

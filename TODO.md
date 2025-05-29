@@ -24,12 +24,13 @@ calendarHeadData must be own component
 calendarHeadData styling done
 make calendarHeadData work
 organize directories for generateTransactionsData.py
-
-<!-- ? DOING -->
 organize 0004-tristan
 
-<!-- NEXT -->
+<!-- ? DOING -->
 create master generateTransactionsData.py
+
+<!-- NEXT -->
+separate income and expenses
 users can click on a button in the GUI that then processes the CSVs into desired outputs
 
 <!-- TODOS EZ -->

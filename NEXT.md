@@ -1,1 +1,1 @@
-Next step is to do the same for 0004-tristan
+Next step is to make a master generateTransactionsData.py that goes processes the data for all sets in the sets directory
