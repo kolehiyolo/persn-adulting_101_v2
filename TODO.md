@@ -25,13 +25,13 @@ calendarHeadData styling done
 make calendarHeadData work
 organize directories for generateTransactionsData.py
 organize 0004-tristan
+create master generateTransactionsData.py
 
 <!-- ? DOING -->
-create master generateTransactionsData.py
+users can click on a button in the GUI that then processes the CSVs into desired outputs
 
 <!-- NEXT -->
 separate income and expenses
-users can click on a button in the GUI that then processes the CSVs into desired outputs
 
 <!-- TODOS EZ -->
 

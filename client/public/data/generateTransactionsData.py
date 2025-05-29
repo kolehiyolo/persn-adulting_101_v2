@@ -1,13 +1,9 @@
-# File: data/generateRecurringTransactions.py
+# File: data/generateTransactionsData.py
 
 import csv
+import os
 from datetime import datetime, timedelta
 import calendar
-import os
-
-# === CONFIG ===
-INPUT_FILE = "input/transactionsRecurring.csv"
-OUTPUT_FILE = "middle/transactionsRecurringOutput.csv"
 
 # === HELPERS ===
 
@@ -15,7 +11,6 @@ def parse_parameters(param_str):
     return [p.strip() for p in param_str.strip('"').split(',')]
 
 def standardize_date(date_str):
-    # Support multiple date formats
     for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y/%m/%d"):
         try:
             return datetime.strptime(date_str.strip(), fmt)
@@ -35,7 +30,7 @@ def get_nth_weekday(year, month, weekday, n):
                 count += 1
                 if count == n:
                     return d
-    else:  # Negative nth (last, second to last, etc.)
+    else:
         count = 0
         for day in range(calendar.monthrange(year, month)[1], 0, -1):
             d = datetime(year, month, day)
@@ -56,17 +51,16 @@ def generate_transaction_dates(row):
 
     try:
         if regularity == "Annual":
-            month_str, day_str = parameters
-            month = datetime.strptime(month_str.strip(), "%B").month
-            day = int(day_str)
+            month = datetime.strptime(parameters[0], "%B").month
+            day = int(parameters[1])
             for year in range(start_date.year, end_date.year + 1):
                 try:
                     date = datetime(year, month, day)
                     if start_date <= date <= end_date:
                         dates.append(date)
-                except ValueError:
-                    print(f"[Warning] Skipping invalid date for {title}: {month_str} {day_str} in {year}")
-        
+                except:
+                    continue
+
         elif regularity == "Monthly (Date)":
             day = int(parameters[0])
             while current <= end_date:
@@ -74,112 +68,96 @@ def generate_transaction_dates(row):
                     date = datetime(current.year, current.month, day)
                     if start_date <= date <= end_date:
                         dates.append(date)
-                except ValueError:
-                    print(f"[Warning] Skipping invalid date {current.year}-{current.month}-{day} for {title}")
-                # Move to next month
-                if current.month == 12:
-                    current = datetime(current.year + 1, 1, 1)
-                else:
-                    current = datetime(current.year, current.month + 1, 1)
-        
+                except:
+                    pass
+                current = current.replace(day=1)
+                current += timedelta(days=32)
+                current = current.replace(day=1)
+
         elif regularity == "Monthly (Week+Day)":
             n = int(parameters[0])
-            weekday_name = parameters[1].strip().lower()
-            weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].index(weekday_name.lower())
-
+            weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].index(parameters[1].lower())
             while current <= end_date:
-                try:
-                    date = get_nth_weekday(current.year, current.month, weekday, n)
-                    if date and start_date <= date <= end_date:
-                        dates.append(date)
-                except Exception as e:
-                    print(f"[Warning] Failed to calculate date for {title}: {e}")
-                # Move to next month
-                if current.month == 12:
-                    current = datetime(current.year + 1, 1, 1)
-                else:
-                    current = datetime(current.year, current.month + 1, 1)
+                date = get_nth_weekday(current.year, current.month, weekday, n)
+                if date and start_date <= date <= end_date:
+                    dates.append(date)
+                current = current.replace(day=1)
+                current += timedelta(days=32)
+                current = current.replace(day=1)
 
         elif regularity == "Weekly":
-            weekday_name = parameters[0].strip().lower()
-            weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].index(weekday_name.lower())
-
-            current = start_date
+            weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].index(parameters[0].lower())
             while current <= end_date:
                 if current.weekday() == weekday:
                     dates.append(current)
                 current += timedelta(days=1)
-        else:
-            print(f"[Warning] Unknown Regularity '{regularity}' for {title}")
-    except Exception as e:
-        print(f"[Error] Failed processing {title}: {e}")
 
+    except Exception as e:
+        print(f"[Error] {title}: {e}")
     return dates
 
-# === MAIN ===
+
+# === MAIN PROCESS FOR EACH SET ===
+
+def process_set(set_path):
+    input_recurring = os.path.join(set_path, "input/transactions-recurring.csv")
+    input_onetime = os.path.join(set_path, "input/transactions-one_time.csv")
+    output_middle = os.path.join(set_path, "middle/transactions-recurring_all.csv")
+    output_final = os.path.join(set_path, "output/transactions-all.csv")
+
+    if not os.path.exists(input_recurring) or not os.path.exists(input_onetime):
+        print(f"[Skipped] Missing input files in {set_path}")
+        return
+
+    output_rows = []
+
+    # Process recurring transactions
+    with open(input_recurring, newline='', encoding="utf-8") as infile:
+        reader = csv.DictReader(infile)
+        for row in reader:
+            dates = generate_transaction_dates(row)
+            for date in dates:
+                output_rows.append({
+                    "title": row["title"],
+                    "type": row["type"],
+                    "category": row["category"],
+                    "tags": row["tags"],
+                    "amount": f"{float(row['amount']):.2f}",
+                    "date": iso_date(date)
+                })
+
+    os.makedirs(os.path.dirname(output_middle), exist_ok=True)
+    with open(output_middle, "w", newline='', encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["title", "type", "category", "tags", "amount", "date"])
+        writer.writeheader()
+        writer.writerows(output_rows)
+
+    # Merge with one-time transactions
+    with open(input_onetime, newline='', encoding="utf-8") as f1, open(output_middle, newline='', encoding="utf-8") as f2:
+        reader1 = csv.DictReader(f1)
+        reader2 = csv.DictReader(f2)
+        rows1 = list(reader1)
+        rows2 = list(reader2)
+        all_fieldnames = list(set(reader1.fieldnames + reader2.fieldnames))
+
+    os.makedirs(os.path.dirname(output_final), exist_ok=True)
+    with open(output_final, "w", newline='', encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=all_fieldnames)
+        writer.writeheader()
+        for row in rows1 + rows2:
+            normalized = {field: row.get(field, "") for field in all_fieldnames}
+            writer.writerow(normalized)
+
+    print(f"[Done] Processed {set_path}")
+
+
+# === LOOP THROUGH ALL SETS ===
 
 if __name__ == "__main__":
-  if not os.path.exists(INPUT_FILE):
-    print(f"[Error] File not found: {INPUT_FILE}")
-    exit(1)
+    sets_dir = os.path.join(os.path.dirname(__file__), "sets")
+    set_folders = [os.path.join(sets_dir, name) for name in os.listdir(sets_dir) if os.path.isdir(os.path.join(sets_dir, name))]
 
-  output_rows = []
+    for folder in set_folders:
+        process_set(folder)
 
-  with open(INPUT_FILE, mode="r", newline='', encoding="utf-8") as infile:
-    reader = csv.DictReader(infile)
-    for row in reader:
-      title = row["title"]
-      trans_type = row["type"]
-      category = row["category"]
-      tags = row["tags"]
-      amount = float(row["amount"])
-      transaction_dates = generate_transaction_dates(row)
-
-      for date in transaction_dates:
-        output_rows.append({
-          "title": title,
-          "type": trans_type,
-          "category": category,
-          "tags": tags,
-          "amount": f"{amount:.2f}",
-          "date": iso_date(date)
-        })
-
-  with open(OUTPUT_FILE, mode="w", newline='', encoding="utf-8") as outfile:
-    fieldnames = ["title", "type", "category", "tags", "amount", "date"]
-    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(output_rows)
-
-  print(f"[Success] Wrote {len(output_rows)} transactions to {OUTPUT_FILE}")
-
-  # Paths to input and output files
-  file1 = 'input/transactionsOneTime.csv'
-  file2 = OUTPUT_FILE
-  output = 'output/transactionsAll.csv'
-
-  # Read both CSVs
-  with open(file1, 'r', newline='', encoding='utf-8') as f1, \
-    open(file2, 'r', newline='', encoding='utf-8') as f2:
-    
-    reader1 = csv.DictReader(f1)
-    reader2 = csv.DictReader(f2)
-
-    # Combine all unique headers
-    all_fieldnames = list(set(reader1.fieldnames + reader2.fieldnames))
-
-    # Read all rows from both files
-    rows1 = list(reader1)
-    rows2 = list(reader2)
-
-  # Write the merged CSV
-  with open(output, 'w', newline='', encoding='utf-8') as out_file:
-    writer = csv.DictWriter(out_file, fieldnames=all_fieldnames)
-    writer.writeheader()
-
-    for row in rows1 + rows2:
-      # Ensure missing keys are filled with empty strings
-      normalized_row = {field: row.get(field, '') for field in all_fieldnames}
-      writer.writerow(normalized_row)
-
-  print(f"Merged CSV written to {output}")
+    print("[Success] All sets processed.")
