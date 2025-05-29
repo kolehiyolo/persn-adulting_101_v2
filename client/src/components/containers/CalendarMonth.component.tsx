@@ -116,6 +116,8 @@ export default function CalendarMonth({
     const max = Math.max(...currentMonthData.map(item => item.totalRunning));
     const min = Math.min(...currentMonthData.map(item => item.totalRunning));
 
+    console.log(calendarDatesData);
+
     setCalendarChangeDataObj(
       {
         totalRunning: totalRunning,

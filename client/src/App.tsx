@@ -19,6 +19,7 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState(startDate);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [calendarView, setCalendarView] = useState('month');
+  const [dataSet, setDataSet] = useState(`0004`);
 
   const[calendarHeadDataObj, setCalendarChangeDataObj] = useState<CalendarHeadDataObj>({
     totalRunning: 3056.15,
@@ -31,7 +32,7 @@ export default function App() {
   useEffect(() => {
     const fetchTransactions = async () => {
       // * Step 1: Fetch the CSV file from the public folder
-      const response = await fetch("/data/transactionsAll.csv");
+      const response = await fetch(`/data/sets/${dataSet}/output/transactionsAll.csv`);
 
       // * Step 2: Read the response as plain text
       const csvText = await response.text();

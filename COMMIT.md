@@ -1,7 +1,10 @@
-calendarHeadData working now
-1. eyyyy okay so calendarHeadData is now working all well and good no problemos
-2. well there is a problemo, in that the render is starting to CRAAAAWL, pace-wise
-3. I very much need to upgrade the stack to make it faster, and I also need to rethink entirely the system
-4. I am now on the way to upgrade to Next.js, DaisyUI, Zustand, and maybe Jest
-5. another consideration is maybe the app can be faster once I actually use a proper DB/backend
-6. whatever the case, I know I need this upgrade, and better now than later
+Data sets MVP
+1. alright so it's been a while that I visited this, but the need to finish this to the MVP I'm imagining is looming close
+2. there's no need to make it fully working, CRUD-wise, as I can just make edits needed on the CSVs straight
+3. BUT, I need this already to be working in the ff aspects:
+  3.1. CSV CRUD for Monthly Income
+  3.2. CSV CRUD for Recurring Expenses, One Time Expenses
+  3.3. CSV CRUD for Settling Debts
+  3.4. CSV CRUD for Adding to Savings
+  3.5. Data sets separate and together
+4. First thing, let's simplify the generating process for Python
