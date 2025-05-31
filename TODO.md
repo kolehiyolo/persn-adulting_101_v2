@@ -30,9 +30,10 @@ create master generateTransactionsData.py
 <!-- ? DOING -->
 
 <!-- NEXT -->
-separate income and expenses
 
 <!-- TODOS EZ -->
+generate date CSV
+separate income and expenses
 
 <!-- ! TODOS HEAVY -->
 users can click on a button in the GUI that then processes the CSVs into desired outputs

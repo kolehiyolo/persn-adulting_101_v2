@@ -1,3 +1,4 @@
-ROADBLOCK - Need to setup a server so JS button can trigger Py script
-1. yeah this seems like a lot of work and I don't wanna have to do this for now
-2. a little inconvenient, but I can live with running py script in the command line for now
+generateCalendarDates.py working but broken
+1. man I'm distracted as hell so yeah maybe i'm not prompting GPT well
+2. it's close, very close, just that it's missing some crucial steps
+3. i think it's time that I sit down and refactor this
