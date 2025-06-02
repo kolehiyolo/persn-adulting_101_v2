@@ -1,4 +1,4 @@
-generateCalendarDates.py working but broken
-1. man I'm distracted as hell so yeah maybe i'm not prompting GPT well
-2. it's close, very close, just that it's missing some crucial steps
-3. i think it's time that I sit down and refactor this
+generateCalendarDates fully working now
+1. I had to do so much handholding so GPT can get it, and now it's working
+2. basically, I had to divide each process into their own functions that input and output specific things that inevitably lead to the desired data
+3. now it's working fully

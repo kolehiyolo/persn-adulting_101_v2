@@ -26,13 +26,15 @@ make calendarHeadData work
 organize directories for generateTransactionsData.py
 organize 0004-tristan
 create master generateTransactionsData.py
+generate date CSV
 
 <!-- ? DOING -->
+combine py scripts into one
 
 <!-- NEXT -->
+make py scripts recursive across all sets
 
 <!-- TODOS EZ -->
-generate date CSV
 separate income and expenses
 
 <!-- ! TODOS HEAVY -->
