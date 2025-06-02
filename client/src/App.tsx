@@ -21,9 +21,9 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState(startDate);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [calendarView, setCalendarView] = useState('month');
-  const [calendarDatesData, setsCalendarDatesData] = useState<CalendarDateData[]>([]);
+  const [calendarDatesData, setCalendarDatesData] = useState<CalendarDateData[]>([]);
+  const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalendarDateData[]>([]);
 
-  
   // const [dataSet, setDataSet] = useState(`0003-kren`);
   const [dataSet, setDataSet] = useState(`0004-tristan`);
 
@@ -54,7 +54,7 @@ export default function App() {
       tags: row.tags,
       category: row.category,                 // Get the category
       amount: parseFloat(row.amount),         // Parse the amount string into a number
-      date: row.date,                         // Leave the date as-is (should already be in standardized format)
+      date: new Date(row.date),                         // Leave the date as-is (should already be in standardized format)
     }));
 
     // * Step 5: Set the transformed data into state
@@ -82,14 +82,67 @@ export default function App() {
       date_positive: parseFloat(row.date_positive),
       date_negative: parseFloat(row.date_negative),
       date_change: parseFloat(row.date_change),
-      date_total_running: parseFloat(row.date_total_running)
+      date_total_running: parseFloat(row.date_total_running),
+      transactions: []
     }));
 
     console.log(parsedData);
 
     // * Step 5: Set the transformed data into state
-    setsCalendarDatesData(parsedData);
+    setCalendarDatesData(parsedData);
   };
+
+  const fetchSelectedDateCalendarDatesData = (
+    selectedDate: Date,
+    calendarDatesData: CalendarDateData[],
+    transactions: Transaction[]
+  ) => {
+    // 1. Filter by selected calendar month
+    const filteredDates = calendarDatesData.filter(item => 
+      item.calendar_month.getFullYear() === selectedDate.getFullYear() &&
+      item.calendar_month.getMonth() === selectedDate.getMonth()
+    );
+  
+    if (filteredDates.length === 0) {
+      setSelectedCalendarDatesData([]);
+      return;
+    };
+  
+    // 2. Get first and last date in the filtered calendar dates
+    const firstDate = new Date(
+      Math.min(...filteredDates.map(d => d.date.getTime()))
+    ).toISOString().split('T')[0];
+    const lastDate = new Date(
+      Math.max(...filteredDates.map(d => d.date.getTime()))
+    ).toISOString().split('T')[0];
+  
+    // 3. Filter transactions that fall within the date range
+    const filteredTransactions = transactions.filter((txn) =>
+      {
+        const txnDateOnly = txn.date.toISOString().split('T')[0];
+        return txnDateOnly >= firstDate && txnDateOnly <= lastDate
+      }
+    );
+  
+    // 4. Attach transactions to each date
+    const result = filteredDates.map(dateItem => {
+      const dateOnly = dateItem.date.toISOString().split('T')[0];
+  
+      const matchingTransactions = filteredTransactions.filter((txn) => {
+        return txn.date.toISOString().split('T')[0] === dateOnly;
+      }
+      );
+  
+      return {
+        ...dateItem,
+        transactions: matchingTransactions
+      };
+    });
+  
+    // 5. Set result
+    console.log(result);
+    setSelectedCalendarDatesData(result);
+  };  
 
   // * Fetching transactions from CSV
   useEffect(() => {
@@ -97,6 +150,10 @@ export default function App() {
     fetchTransactions();
     fetchCalendarDatesData();
   }, []);
+
+  useEffect(() => {
+    fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions)
+  }, [selectedDate, calendarDatesData, transactions]);
 
   const handleClickGenerateData = async () => {
     console.log(`Trigger handleClickGenerateData()`);

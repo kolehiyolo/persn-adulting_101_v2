@@ -29,9 +29,11 @@ create master generateTransactionsData.py
 generate date CSV
 make py scripts recursive across all sets
 App.tsx should fetch calendar-dates-dava.csv
+App.tsx already filters selectedMonth and transactions
 
 <!-- ? DOING -->
-App.tsx already filters selectedMonth and transactions
+CalendarMonth uses selectedCalendarDatesData
+
 <!-- NEXT -->
 
 <!-- TODOS EZ -->
