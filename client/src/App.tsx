@@ -142,6 +142,30 @@ export default function App() {
     // 5. Set result
     console.log(result);
     setSelectedCalendarDatesData(result);
+
+    const currentMonthData = result
+      .filter(dateData => 
+        new Date(dateData.date).getMonth() === selectedDate.getMonth()
+      );
+    const totalRunning = currentMonthData[currentMonthData.length - 1].date_total_running;
+    const change = currentMonthData
+      .reduce((totalMonthChange, dateData) => {
+        return totalMonthChange + dateData.date_change;
+      }
+    , 0);
+    const max = Math.max(...currentMonthData.map(item => item.date_total_running));
+    const min = Math.min(...currentMonthData.map(item => item.date_total_running));
+
+    const newCalendarChangeDataObj = {
+      totalRunning: totalRunning,
+      change: change,
+      max: max,
+      min: min
+    }
+
+    console.log(newCalendarChangeDataObj);
+
+    setCalendarChangeDataObj(newCalendarChangeDataObj);
   };  
 
   // * Fetching transactions from CSV
@@ -202,8 +226,7 @@ export default function App() {
         >
           <CalendarMonth
             selectedDate={selectedDate}
-            transactions={transactions}
-            setCalendarChangeDataObj={setCalendarChangeDataObj}
+            selectedCalendarDatesData={selectedCalendarDatesData}
           />
         </div>
       </main>

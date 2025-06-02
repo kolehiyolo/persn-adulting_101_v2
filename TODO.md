@@ -30,9 +30,10 @@ generate date CSV
 make py scripts recursive across all sets
 App.tsx should fetch calendar-dates-dava.csv
 App.tsx already filters selectedMonth and transactions
+CalendarMonth uses selectedCalendarDatesData
 
 <!-- ? DOING -->
-CalendarMonth uses selectedCalendarDatesData
+calendar-dates-data run from 1900 to 2100
 
 <!-- NEXT -->
 
