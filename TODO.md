@@ -29,15 +29,16 @@ create master generateTransactionsData.py
 generate date CSV
 
 <!-- ? DOING -->
-combine py scripts into one
+make py scripts recursive across all sets
 
 <!-- NEXT -->
-make py scripts recursive across all sets
 
 <!-- TODOS EZ -->
 separate income and expenses
 
 <!-- ! TODOS HEAVY -->
+calendar-month CSV should only be ever run once
+combine py scripts into one
 users can click on a button in the GUI that then processes the CSVs into desired outputs
 users can select which sets to show
 users can CRUD recurring expenses on CSV

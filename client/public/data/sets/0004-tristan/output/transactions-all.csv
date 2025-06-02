@@ -1,1271 +1,1271 @@
-type,title,date,amount,tags,category
-Income,Reset,2025-06-01,6919.72,reset,Household
-Expense,Rent,2025-06-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2025-07-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2025-08-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2025-09-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2025-10-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2025-11-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2025-12-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-01-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-02-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-03-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-04-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-05-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-06-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-07-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-08-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-09-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-10-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-11-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2026-12-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-01-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-02-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-03-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-04-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-05-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-06-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-07-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-08-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-09-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-10-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-11-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Rent,2027-12-06T00:00:00.000Z,8500.00,"monthly, bills",Household
-Expense,Electricity,2025-06-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2025-07-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2025-08-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2025-09-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2025-10-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2025-11-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2025-12-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-01-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-02-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-03-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-04-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-05-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-06-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-07-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-08-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-09-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-10-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-11-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2026-12-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-01-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-02-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-03-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-04-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-05-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-06-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-07-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-08-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-09-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-10-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-11-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Electricity,2027-12-06T00:00:00.000Z,4000.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-06-07T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-07-05T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-08-02T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-09-06T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-10-04T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-11-01T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2025-12-06T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-01-03T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-02-07T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-03-07T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-04-04T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-05-02T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-06-06T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-07-04T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-08-01T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-09-05T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-10-03T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-11-07T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2026-12-05T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-01-02T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-02-06T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-03-06T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-04-03T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-05-01T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-06-05T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-07-03T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-08-07T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-09-04T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-10-02T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-11-06T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,Grocery Monthly,2027-12-04T00:00:00.000Z,1500.00,"monthly, bills",Household
-Expense,WiFi,2025-06-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2025-07-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2025-08-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2025-09-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2025-10-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2025-11-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2025-12-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-01-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-02-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-03-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-04-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-05-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-06-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-07-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-08-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-09-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-10-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-11-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2026-12-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-01-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-02-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-03-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-04-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-05-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-06-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-07-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-08-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-09-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-10-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-11-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,WiFi,2027-12-06T00:00:00.000Z,750.00,"monthly, bills",Household
-Expense,Gas,2025-06-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2025-07-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2025-08-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2025-09-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2025-10-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2025-11-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2025-12-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-01-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-02-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-03-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-04-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-05-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-06-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-07-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-08-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-09-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-10-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-11-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2026-12-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-01-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-02-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-03-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-04-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-05-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-06-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-07-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-08-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-09-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-10-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-11-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gas,2027-12-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-06-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-07-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-08-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-09-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-10-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-11-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2025-12-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-01-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-02-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-03-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-04-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-05-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-06-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-07-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-08-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-09-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-10-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-11-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2026-12-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-01-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-02-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-03-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-04-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-05-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-06-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-07-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-08-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-09-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-10-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-11-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Water Bill,2027-12-06T00:00:00.000Z,500.00,"monthly, bills",Household
-Expense,Gym,2025-06-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2025-07-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2025-08-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2025-09-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2025-10-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2025-11-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2025-12-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-01-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-02-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-03-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-04-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-05-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-06-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-07-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-08-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-09-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-10-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-11-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2026-12-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-01-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-02-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-03-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-04-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-05-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-06-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-07-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-08-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-09-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-10-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-11-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Gym,2027-12-01T00:00:00.000Z,2000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-06-01T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-07-06T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-08-03T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-09-07T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-10-05T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-11-02T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2025-12-07T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-01-04T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-02-01T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-03-01T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-04-05T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-05-03T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-06-07T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-07-05T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-08-02T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-09-06T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-10-04T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-11-01T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2026-12-06T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-01-03T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-02-07T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-03-07T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-04-04T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-05-02T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-06-06T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-07-04T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-08-01T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-09-05T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-10-03T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-11-07T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 1,2027-12-05T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-06-15T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-07-20T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-08-17T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-09-21T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-10-19T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-11-16T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2025-12-21T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-01-18T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-02-15T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-03-15T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-04-19T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-05-17T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-06-21T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-07-19T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-08-16T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-09-20T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-10-18T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-11-15T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2026-12-20T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-01-17T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-02-21T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-03-21T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-04-18T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-05-16T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-06-20T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-07-18T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-08-15T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-09-19T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-10-17T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-11-21T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Spa Day 2,2027-12-19T00:00:00.000Z,1000.00,"monthly, luxury",Health
-Expense,Sleeping pills,2025-06-07T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2025-07-05T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2025-08-02T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2025-09-06T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2025-10-04T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2025-11-01T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2025-12-06T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-01-03T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-02-07T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-03-07T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-04-04T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-05-02T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-06-06T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-07-04T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-08-01T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-09-05T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-10-03T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-11-07T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2026-12-05T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-01-02T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-02-06T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-03-06T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-04-03T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-05-01T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-06-05T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-07-03T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-08-07T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-09-04T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-10-02T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-11-06T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Sleeping pills,2027-12-04T00:00:00.000Z,1000.00,"monthly, luxury",Household
-Expense,Pet Monthly,2025-06-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2025-07-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2025-08-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2025-09-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2025-10-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2025-11-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2025-12-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-01-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-02-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-03-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-04-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-05-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-06-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-07-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-08-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-09-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-10-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-11-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2026-12-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-01-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-02-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-03-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-04-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-05-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-06-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-07-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-08-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-09-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-10-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-11-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Pet Monthly,2027-12-06T00:00:00.000Z,2500.00,"monthly, pets",Pets
-Expense,Groom pets,2025-06-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2025-07-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2025-08-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2025-09-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2025-10-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2025-11-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2025-12-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-01-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-02-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-03-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-04-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-05-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-06-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-07-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-08-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-09-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-10-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-11-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2026-12-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-01-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-02-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-03-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-04-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-05-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-06-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-07-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-08-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-09-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-10-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-11-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,Groom pets,2027-12-06T00:00:00.000Z,1250.00,"monthly, pets",Pets
-Expense,minimalist phone,2025-06-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2025-07-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2025-08-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2025-09-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2025-10-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2025-11-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2025-12-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-01-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-02-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-03-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-04-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-05-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-06-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-07-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-08-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-09-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-10-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-11-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2026-12-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-01-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-02-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-03-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-04-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-05-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-06-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-07-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-08-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-09-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-10-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-11-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,minimalist phone,2027-12-07T00:00:00.000Z,180.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-06-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-07-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-08-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-09-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-10-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-11-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2025-12-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-01-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-02-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-03-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-04-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-05-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-06-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-07-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-08-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-09-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-10-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-11-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2026-12-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-01-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-02-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-03-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-04-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-05-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-06-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-07-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-08-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-09-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-10-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-11-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Expense,YouTube Premium,2027-12-14T00:00:00.000Z,159.00,"monthly, subscription",Software
-Income,Tr Scale Up,2025-06-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2025-07-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2025-08-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2025-09-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2025-10-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2025-11-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2025-12-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-01-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-02-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-03-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-04-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-05-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-06-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-07-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-08-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-09-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-10-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-11-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2026-12-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-01-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-02-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-03-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-04-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-05-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-06-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-07-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-08-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-09-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-10-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-11-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Income,Tr Scale Up,2027-12-05T00:00:00.000Z,65000.00,salary,Scale Up Salary
-Expense,Grocery,2025-06-07T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-06-14T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-06-21T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-06-28T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-07-05T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-07-12T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-07-19T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-07-26T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-08-02T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-08-09T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-08-16T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-08-23T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-08-30T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-09-06T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-09-13T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-09-20T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-09-27T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-10-04T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-10-11T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-10-18T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-10-25T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-11-01T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-11-08T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-11-15T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-11-22T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-11-29T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-12-06T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-12-13T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-12-20T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2025-12-27T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-01-03T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-01-10T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-01-17T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-01-24T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-01-31T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-02-07T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-02-14T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-02-21T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-02-28T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-03-07T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-03-14T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-03-21T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-03-28T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-04-04T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-04-11T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-04-18T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-04-25T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-05-02T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-05-09T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-05-16T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-05-23T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-05-30T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-06-06T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-06-13T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-06-20T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-06-27T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-07-04T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-07-11T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-07-18T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-07-25T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-08-01T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-08-08T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-08-15T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-08-22T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-08-29T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-09-05T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-09-12T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-09-19T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-09-26T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-10-03T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-10-10T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-10-17T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-10-24T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-10-31T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-11-07T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-11-14T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-11-21T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-11-28T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-12-05T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-12-12T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-12-19T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2026-12-26T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-01-02T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-01-09T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-01-16T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-01-23T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-01-30T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-02-06T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-02-13T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-02-20T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-02-27T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-03-06T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-03-13T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-03-20T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-03-27T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-04-03T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-04-10T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-04-17T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-04-24T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-05-01T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-05-08T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-05-15T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-05-22T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-05-29T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-06-05T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-06-12T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-06-19T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-06-26T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-07-03T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-07-10T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-07-17T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-07-24T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-07-31T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-08-07T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-08-14T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-08-21T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-08-28T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-09-04T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-09-11T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-09-18T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-09-25T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-10-02T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-10-09T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-10-16T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-10-23T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-10-30T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-11-06T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-11-13T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-11-20T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-11-27T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-12-04T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-12-11T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-12-18T00:00:00.000Z,1000.00,weekly,Household
-Expense,Grocery,2027-12-25T00:00:00.000Z,1000.00,weekly,Household
-Expense,Lee,2025-06-07T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-06-14T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-06-21T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-06-28T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-07-05T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-07-12T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-07-19T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-07-26T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-08-02T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-08-09T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-08-16T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-08-23T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-08-30T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-09-06T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-09-13T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-09-20T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-09-27T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-10-04T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-10-11T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-10-18T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-10-25T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-11-01T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-11-08T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-11-15T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-11-22T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-11-29T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-12-06T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-12-13T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-12-20T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2025-12-27T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-01-03T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-01-10T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-01-17T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-01-24T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-01-31T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-02-07T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-02-14T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-02-21T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-02-28T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-03-07T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-03-14T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-03-21T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-03-28T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-04-04T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-04-11T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-04-18T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-04-25T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-05-02T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-05-09T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-05-16T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-05-23T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-05-30T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-06-06T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-06-13T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-06-20T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-06-27T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-07-04T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-07-11T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-07-18T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-07-25T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-08-01T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-08-08T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-08-15T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-08-22T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-08-29T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-09-05T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-09-12T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-09-19T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-09-26T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-10-03T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-10-10T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-10-17T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-10-24T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-10-31T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-11-07T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-11-14T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-11-21T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-11-28T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-12-05T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-12-12T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-12-19T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2026-12-26T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-01-02T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-01-09T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-01-16T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-01-23T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-01-30T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-02-06T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-02-13T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-02-20T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-02-27T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-03-06T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-03-13T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-03-20T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-03-27T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-04-03T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-04-10T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-04-17T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-04-24T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-05-01T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-05-08T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-05-15T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-05-22T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-05-29T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-06-05T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-06-12T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-06-19T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-06-26T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-07-03T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-07-10T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-07-17T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-07-24T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-07-31T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-08-07T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-08-14T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-08-21T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-08-28T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-09-04T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-09-11T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-09-18T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-09-25T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-10-02T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-10-09T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-10-16T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-10-23T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-10-30T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-11-06T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-11-13T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-11-20T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-11-27T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-12-04T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-12-11T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-12-18T00:00:00.000Z,250.00,weekly,Pets
-Expense,Lee,2027-12-25T00:00:00.000Z,250.00,weekly,Pets
-Expense,Laundry,2025-06-07T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-06-14T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-06-21T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-06-28T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-07-05T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-07-12T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-07-19T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-07-26T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-08-02T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-08-09T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-08-16T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-08-23T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-08-30T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-09-06T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-09-13T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-09-20T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-09-27T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-10-04T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-10-11T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-10-18T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-10-25T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-11-01T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-11-08T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-11-15T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-11-22T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-11-29T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-12-06T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-12-13T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-12-20T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2025-12-27T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-01-03T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-01-10T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-01-17T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-01-24T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-01-31T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-02-07T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-02-14T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-02-21T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-02-28T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-03-07T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-03-14T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-03-21T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-03-28T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-04-04T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-04-11T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-04-18T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-04-25T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-05-02T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-05-09T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-05-16T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-05-23T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-05-30T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-06-06T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-06-13T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-06-20T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-06-27T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-07-04T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-07-11T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-07-18T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-07-25T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-08-01T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-08-08T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-08-15T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-08-22T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-08-29T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-09-05T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-09-12T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-09-19T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-09-26T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-10-03T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-10-10T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-10-17T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-10-24T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-10-31T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-11-07T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-11-14T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-11-21T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-11-28T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-12-05T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-12-12T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-12-19T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2026-12-26T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-01-02T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-01-09T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-01-16T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-01-23T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-01-30T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-02-06T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-02-13T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-02-20T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-02-27T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-03-06T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-03-13T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-03-20T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-03-27T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-04-03T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-04-10T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-04-17T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-04-24T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-05-01T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-05-08T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-05-15T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-05-22T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-05-29T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-06-05T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-06-12T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-06-19T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-06-26T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-07-03T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-07-10T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-07-17T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-07-24T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-07-31T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-08-07T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-08-14T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-08-21T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-08-28T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-09-04T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-09-11T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-09-18T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-09-25T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-10-02T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-10-09T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-10-16T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-10-23T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-10-30T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-11-06T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-11-13T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-11-20T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-11-27T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-12-04T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-12-11T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-12-18T00:00:00.000Z,200.00,weekly,Household
-Expense,Laundry,2027-12-25T00:00:00.000Z,200.00,weekly,Household
-Expense,Transportation,2025-06-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-06-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-06-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-06-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-07-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-07-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-07-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-07-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-08-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-08-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-08-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-08-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-08-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-09-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-09-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-09-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-09-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-10-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-10-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-10-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-10-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-11-01T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-11-08T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-11-15T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-11-22T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-11-29T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-12-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-12-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-12-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2025-12-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-01-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-01-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-01-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-01-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-01-31T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-02-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-02-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-02-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-02-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-03-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-03-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-03-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-03-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-04-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-04-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-04-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-04-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-05-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-05-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-05-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-05-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-05-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-06-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-06-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-06-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-06-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-07-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-07-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-07-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-07-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-08-01T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-08-08T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-08-15T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-08-22T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-08-29T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-09-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-09-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-09-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-09-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-10-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-10-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-10-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-10-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-10-31T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-11-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-11-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-11-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-11-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-12-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-12-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-12-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2026-12-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-01-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-01-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-01-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-01-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-01-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-02-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-02-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-02-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-02-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-03-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-03-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-03-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-03-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-04-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-04-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-04-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-04-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-05-01T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-05-08T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-05-15T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-05-22T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-05-29T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-06-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-06-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-06-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-06-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-07-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-07-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-07-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-07-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-07-31T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-08-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-08-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-08-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-08-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-09-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-09-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-09-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-09-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-10-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-10-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-10-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-10-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-10-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-11-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-11-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-11-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-11-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-12-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-12-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-12-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Transportation,2027-12-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-06-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-06-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-06-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-06-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-07-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-07-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-07-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-07-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-08-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-08-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-08-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-08-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-08-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-09-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-09-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-09-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-09-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-10-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-10-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-10-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-10-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-11-01T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-11-08T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-11-15T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-11-22T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-11-29T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-12-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-12-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-12-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2025-12-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-01-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-01-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-01-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-01-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-01-31T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-02-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-02-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-02-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-02-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-03-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-03-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-03-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-03-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-04-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-04-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-04-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-04-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-05-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-05-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-05-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-05-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-05-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-06-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-06-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-06-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-06-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-07-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-07-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-07-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-07-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-08-01T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-08-08T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-08-15T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-08-22T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-08-29T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-09-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-09-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-09-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-09-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-10-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-10-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-10-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-10-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-10-31T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-11-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-11-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-11-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-11-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-12-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-12-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-12-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2026-12-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-01-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-01-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-01-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-01-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-01-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-02-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-02-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-02-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-02-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-03-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-03-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-03-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-03-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-04-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-04-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-04-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-04-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-05-01T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-05-08T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-05-15T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-05-22T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-05-29T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-06-05T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-06-12T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-06-19T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-06-26T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-07-03T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-07-10T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-07-17T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-07-24T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-07-31T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-08-07T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-08-14T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-08-21T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-08-28T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-09-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-09-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-09-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-09-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-10-02T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-10-09T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-10-16T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-10-23T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-10-30T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-11-06T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-11-13T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-11-20T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-11-27T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-12-04T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-12-11T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-12-18T00:00:00.000Z,100.00,weekly,Household
-Expense,Globe Load,2027-12-25T00:00:00.000Z,100.00,weekly,Household
-Expense,Drinking Water,2025-06-07T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-06-14T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-06-21T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-06-28T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-07-05T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-07-12T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-07-19T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-07-26T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-08-02T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-08-09T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-08-16T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-08-23T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-08-30T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-09-06T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-09-13T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-09-20T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-09-27T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-10-04T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-10-11T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-10-18T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-10-25T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-11-01T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-11-08T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-11-15T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-11-22T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-11-29T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-12-06T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-12-13T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-12-20T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2025-12-27T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-01-03T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-01-10T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-01-17T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-01-24T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-01-31T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-02-07T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-02-14T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-02-21T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-02-28T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-03-07T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-03-14T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-03-21T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-03-28T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-04-04T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-04-11T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-04-18T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-04-25T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-05-02T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-05-09T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-05-16T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-05-23T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-05-30T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-06-06T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-06-13T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-06-20T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-06-27T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-07-04T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-07-11T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-07-18T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-07-25T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-08-01T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-08-08T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-08-15T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-08-22T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-08-29T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-09-05T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-09-12T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-09-19T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-09-26T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-10-03T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-10-10T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-10-17T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-10-24T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-10-31T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-11-07T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-11-14T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-11-21T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-11-28T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-12-05T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-12-12T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-12-19T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2026-12-26T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-01-02T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-01-09T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-01-16T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-01-23T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-01-30T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-02-06T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-02-13T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-02-20T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-02-27T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-03-06T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-03-13T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-03-20T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-03-27T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-04-03T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-04-10T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-04-17T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-04-24T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-05-01T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-05-08T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-05-15T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-05-22T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-05-29T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-06-05T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-06-12T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-06-19T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-06-26T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-07-03T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-07-10T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-07-17T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-07-24T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-07-31T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-08-07T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-08-14T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-08-21T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-08-28T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-09-04T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-09-11T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-09-18T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-09-25T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-10-02T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-10-09T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-10-16T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-10-23T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-10-30T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-11-06T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-11-13T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-11-20T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-11-27T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-12-04T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-12-11T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-12-18T00:00:00.000Z,50.00,weekly,Household
-Expense,Drinking Water,2027-12-25T00:00:00.000Z,50.00,weekly,Household
+tags,category,type,title,amount,date
+reset,Household,Income,Reset,6919.72,2025-06-01
+"monthly, bills",Household,Expense,Rent,8500.00,2025-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2025-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2025-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2025-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2025-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2025-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2025-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2026-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Rent,8500.00,2027-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2025-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2026-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Electricity,4000.00,2027-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-06-07T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-07-05T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-08-02T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-10-04T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-11-01T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2025-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-01-03T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-02-07T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-03-07T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-04-04T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-05-02T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-07-04T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-08-01T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-09-05T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-10-03T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-11-07T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2026-12-05T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-01-02T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-04-03T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-05-01T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-06-05T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-07-03T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-08-07T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-09-04T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-10-02T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Grocery Monthly,1500.00,2027-12-04T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2025-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2026-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,WiFi,750.00,2027-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2025-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2026-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Gas,500.00,2027-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2025-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2026-12-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-01-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-02-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-03-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-04-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-05-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-06-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-07-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-08-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-09-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-10-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-11-06T00:00:00.000Z
+"monthly, bills",Household,Expense,Water Bill,500.00,2027-12-06T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-06-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-07-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-08-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-09-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-10-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-11-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2025-12-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-01-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-02-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-03-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-04-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-05-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-06-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-07-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-08-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-09-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-10-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-11-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2026-12-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-01-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-02-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-03-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-04-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-05-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-06-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-07-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-08-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-09-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-10-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-11-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Gym,2000.00,2027-12-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-06-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-07-06T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-08-03T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-09-07T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-10-05T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-11-02T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2025-12-07T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-01-04T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-02-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-03-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-04-05T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-05-03T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-06-07T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-07-05T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-08-02T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-09-06T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-10-04T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-11-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2026-12-06T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-01-03T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-02-07T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-03-07T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-04-04T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-05-02T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-06-06T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-07-04T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-08-01T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-09-05T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-10-03T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-11-07T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 1,1000.00,2027-12-05T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-06-15T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-07-20T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-08-17T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-09-21T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-10-19T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-11-16T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2025-12-21T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-01-18T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-02-15T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-03-15T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-04-19T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-05-17T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-06-21T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-07-19T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-08-16T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-09-20T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-10-18T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-11-15T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2026-12-20T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-01-17T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-02-21T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-03-21T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-04-18T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-05-16T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-06-20T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-07-18T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-08-15T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-09-19T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-10-17T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-11-21T00:00:00.000Z
+"monthly, luxury",Health,Expense,Spa Day 2,1000.00,2027-12-19T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-06-07T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-07-05T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-08-02T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-09-06T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-10-04T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-11-01T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2025-12-06T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-01-03T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-02-07T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-03-07T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-04-04T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-05-02T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-06-06T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-07-04T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-08-01T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-09-05T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-10-03T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-11-07T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2026-12-05T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-01-02T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-02-06T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-03-06T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-04-03T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-05-01T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-06-05T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-07-03T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-08-07T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-09-04T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-10-02T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-11-06T00:00:00.000Z
+"monthly, luxury",Household,Expense,Sleeping pills,1000.00,2027-12-04T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-06-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-07-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-08-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-09-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-10-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-11-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2025-12-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-01-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-02-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-03-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-04-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-05-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-06-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-07-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-08-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-09-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-10-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-11-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2026-12-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-01-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-02-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-03-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-04-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-05-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-06-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-07-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-08-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-09-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-10-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-11-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Pet Monthly,2500.00,2027-12-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-06-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-07-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-08-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-09-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-10-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-11-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2025-12-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-01-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-02-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-03-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-04-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-05-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-06-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-07-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-08-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-09-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-10-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-11-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2026-12-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-01-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-02-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-03-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-04-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-05-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-06-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-07-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-08-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-09-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-10-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-11-06T00:00:00.000Z
+"monthly, pets",Pets,Expense,Groom pets,1250.00,2027-12-06T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-06-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-07-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-08-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-09-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-10-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-11-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2025-12-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-01-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-02-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-03-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-04-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-05-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-06-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-07-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-08-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-09-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-10-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-11-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2026-12-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-01-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-02-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-03-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-04-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-05-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-06-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-07-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-08-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-09-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-10-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-11-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,minimalist phone,180.00,2027-12-07T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-06-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-07-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-08-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-09-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-10-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-11-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2025-12-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-01-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-02-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-03-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-04-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-05-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-06-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-07-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-08-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-09-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-10-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-11-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2026-12-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-01-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-02-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-03-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-04-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-05-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-06-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-07-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-08-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-09-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-10-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-11-14T00:00:00.000Z
+"monthly, subscription",Software,Expense,YouTube Premium,159.00,2027-12-14T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-06-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-07-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-08-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-09-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-10-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-11-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2025-12-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-01-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-02-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-03-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-04-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-05-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-06-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-07-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-08-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-09-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-10-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-11-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2026-12-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-01-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-02-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-03-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-04-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-05-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-06-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-07-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-08-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-09-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-10-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-11-05T00:00:00.000Z
+salary,Scale Up Salary,Income,Tr Scale Up,65000.00,2027-12-05T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-06-07T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-06-14T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-06-21T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-06-28T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-07-05T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-07-12T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-07-19T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-07-26T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-08-02T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-08-09T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-08-16T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-08-23T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-08-30T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-09-06T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-09-13T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-09-20T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-09-27T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-10-04T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-10-11T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-10-18T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-10-25T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-11-01T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-11-08T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-11-15T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-11-22T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-11-29T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-12-06T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-12-13T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-12-20T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2025-12-27T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-01-03T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-01-10T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-01-17T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-01-24T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-01-31T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-02-07T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-02-14T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-02-21T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-02-28T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-03-07T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-03-14T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-03-21T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-03-28T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-04-04T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-04-11T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-04-18T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-04-25T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-05-02T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-05-09T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-05-16T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-05-23T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-05-30T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-06-06T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-06-13T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-06-20T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-06-27T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-07-04T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-07-11T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-07-18T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-07-25T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-08-01T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-08-08T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-08-15T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-08-22T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-08-29T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-09-05T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-09-12T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-09-19T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-09-26T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-10-03T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-10-10T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-10-17T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-10-24T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-10-31T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-11-07T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-11-14T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-11-21T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-11-28T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-12-05T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-12-12T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-12-19T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2026-12-26T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-01-02T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-01-09T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-01-16T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-01-23T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-01-30T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-02-06T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-02-13T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-02-20T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-02-27T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-03-06T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-03-13T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-03-20T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-03-27T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-04-03T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-04-10T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-04-17T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-04-24T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-05-01T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-05-08T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-05-15T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-05-22T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-05-29T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-06-05T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-06-12T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-06-19T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-06-26T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-07-03T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-07-10T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-07-17T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-07-24T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-07-31T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-08-07T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-08-14T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-08-21T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-08-28T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-09-04T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-09-11T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-09-18T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-09-25T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-10-02T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-10-09T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-10-16T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-10-23T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-10-30T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-11-06T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-11-13T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-11-20T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-11-27T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-12-04T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-12-11T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-12-18T00:00:00.000Z
+weekly,Household,Expense,Grocery,1000.00,2027-12-25T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-06-07T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-06-14T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-06-21T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-06-28T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-07-05T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-07-12T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-07-19T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-07-26T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-08-02T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-08-09T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-08-16T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-08-23T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-08-30T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-09-06T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-09-13T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-09-20T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-09-27T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-10-04T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-10-11T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-10-18T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-10-25T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-11-01T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-11-08T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-11-15T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-11-22T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-11-29T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-12-06T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-12-13T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-12-20T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2025-12-27T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-01-03T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-01-10T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-01-17T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-01-24T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-01-31T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-02-07T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-02-14T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-02-21T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-02-28T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-03-07T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-03-14T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-03-21T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-03-28T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-04-04T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-04-11T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-04-18T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-04-25T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-05-02T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-05-09T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-05-16T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-05-23T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-05-30T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-06-06T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-06-13T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-06-20T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-06-27T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-07-04T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-07-11T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-07-18T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-07-25T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-08-01T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-08-08T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-08-15T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-08-22T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-08-29T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-09-05T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-09-12T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-09-19T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-09-26T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-10-03T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-10-10T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-10-17T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-10-24T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-10-31T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-11-07T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-11-14T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-11-21T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-11-28T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-12-05T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-12-12T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-12-19T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2026-12-26T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-01-02T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-01-09T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-01-16T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-01-23T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-01-30T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-02-06T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-02-13T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-02-20T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-02-27T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-03-06T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-03-13T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-03-20T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-03-27T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-04-03T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-04-10T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-04-17T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-04-24T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-05-01T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-05-08T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-05-15T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-05-22T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-05-29T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-06-05T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-06-12T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-06-19T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-06-26T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-07-03T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-07-10T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-07-17T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-07-24T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-07-31T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-08-07T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-08-14T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-08-21T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-08-28T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-09-04T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-09-11T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-09-18T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-09-25T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-10-02T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-10-09T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-10-16T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-10-23T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-10-30T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-11-06T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-11-13T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-11-20T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-11-27T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-12-04T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-12-11T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-12-18T00:00:00.000Z
+weekly,Pets,Expense,Lee,250.00,2027-12-25T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-06-07T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-06-14T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-06-21T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-06-28T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-07-05T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-07-12T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-07-19T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-07-26T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-08-02T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-08-09T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-08-16T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-08-23T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-08-30T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-09-06T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-09-13T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-09-20T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-09-27T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-10-04T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-10-11T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-10-18T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-10-25T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-11-01T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-11-08T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-11-15T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-11-22T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-11-29T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-12-06T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-12-13T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-12-20T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2025-12-27T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-01-03T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-01-10T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-01-17T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-01-24T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-01-31T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-02-07T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-02-14T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-02-21T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-02-28T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-03-07T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-03-14T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-03-21T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-03-28T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-04-04T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-04-11T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-04-18T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-04-25T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-05-02T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-05-09T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-05-16T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-05-23T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-05-30T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-06-06T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-06-13T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-06-20T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-06-27T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-07-04T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-07-11T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-07-18T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-07-25T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-08-01T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-08-08T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-08-15T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-08-22T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-08-29T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-09-05T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-09-12T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-09-19T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-09-26T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-10-03T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-10-10T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-10-17T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-10-24T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-10-31T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-11-07T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-11-14T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-11-21T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-11-28T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-12-05T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-12-12T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-12-19T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2026-12-26T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-01-02T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-01-09T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-01-16T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-01-23T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-01-30T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-02-06T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-02-13T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-02-20T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-02-27T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-03-06T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-03-13T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-03-20T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-03-27T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-04-03T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-04-10T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-04-17T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-04-24T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-05-01T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-05-08T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-05-15T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-05-22T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-05-29T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-06-05T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-06-12T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-06-19T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-06-26T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-07-03T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-07-10T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-07-17T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-07-24T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-07-31T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-08-07T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-08-14T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-08-21T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-08-28T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-09-04T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-09-11T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-09-18T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-09-25T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-10-02T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-10-09T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-10-16T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-10-23T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-10-30T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-11-06T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-11-13T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-11-20T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-11-27T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-12-04T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-12-11T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-12-18T00:00:00.000Z
+weekly,Household,Expense,Laundry,200.00,2027-12-25T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-06-07T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-06-14T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-06-21T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-06-28T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-07-05T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-07-12T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-07-19T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-07-26T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-08-02T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-08-09T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-08-16T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-08-23T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-08-30T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-09-06T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-09-13T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-09-20T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-09-27T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-10-04T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-10-11T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-10-18T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-10-25T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-11-01T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-11-08T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-11-15T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-11-22T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-11-29T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-12-06T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-12-13T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-12-20T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2025-12-27T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-01-03T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-01-10T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-01-17T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-01-24T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-01-31T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-02-07T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-02-14T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-02-21T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-02-28T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-03-07T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-03-14T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-03-21T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-03-28T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-04-04T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-04-11T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-04-18T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-04-25T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-05-02T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-05-09T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-05-16T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-05-23T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-05-30T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-06-06T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-06-13T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-06-20T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-06-27T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-07-04T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-07-11T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-07-18T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-07-25T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-08-01T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-08-08T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-08-15T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-08-22T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-08-29T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-09-05T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-09-12T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-09-19T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-09-26T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-10-03T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-10-10T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-10-17T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-10-24T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-10-31T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-11-07T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-11-14T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-11-21T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-11-28T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-12-05T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-12-12T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-12-19T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2026-12-26T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-01-02T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-01-09T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-01-16T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-01-23T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-01-30T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-02-06T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-02-13T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-02-20T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-02-27T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-03-06T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-03-13T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-03-20T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-03-27T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-04-03T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-04-10T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-04-17T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-04-24T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-05-01T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-05-08T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-05-15T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-05-22T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-05-29T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-06-05T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-06-12T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-06-19T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-06-26T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-07-03T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-07-10T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-07-17T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-07-24T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-07-31T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-08-07T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-08-14T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-08-21T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-08-28T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-09-04T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-09-11T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-09-18T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-09-25T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-10-02T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-10-09T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-10-16T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-10-23T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-10-30T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-11-06T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-11-13T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-11-20T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-11-27T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-12-04T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-12-11T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-12-18T00:00:00.000Z
+weekly,Household,Expense,Transportation,100.00,2027-12-25T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-06-07T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-06-14T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-06-21T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-06-28T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-07-05T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-07-12T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-07-19T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-07-26T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-08-02T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-08-09T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-08-16T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-08-23T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-08-30T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-09-06T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-09-13T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-09-20T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-09-27T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-10-04T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-10-11T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-10-18T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-10-25T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-11-01T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-11-08T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-11-15T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-11-22T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-11-29T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-12-06T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-12-13T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-12-20T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2025-12-27T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-01-03T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-01-10T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-01-17T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-01-24T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-01-31T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-02-07T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-02-14T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-02-21T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-02-28T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-03-07T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-03-14T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-03-21T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-03-28T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-04-04T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-04-11T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-04-18T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-04-25T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-05-02T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-05-09T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-05-16T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-05-23T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-05-30T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-06-06T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-06-13T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-06-20T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-06-27T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-07-04T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-07-11T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-07-18T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-07-25T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-08-01T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-08-08T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-08-15T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-08-22T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-08-29T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-09-05T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-09-12T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-09-19T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-09-26T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-10-03T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-10-10T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-10-17T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-10-24T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-10-31T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-11-07T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-11-14T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-11-21T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-11-28T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-12-05T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-12-12T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-12-19T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2026-12-26T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-01-02T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-01-09T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-01-16T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-01-23T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-01-30T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-02-06T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-02-13T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-02-20T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-02-27T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-03-06T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-03-13T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-03-20T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-03-27T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-04-03T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-04-10T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-04-17T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-04-24T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-05-01T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-05-08T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-05-15T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-05-22T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-05-29T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-06-05T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-06-12T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-06-19T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-06-26T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-07-03T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-07-10T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-07-17T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-07-24T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-07-31T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-08-07T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-08-14T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-08-21T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-08-28T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-09-04T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-09-11T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-09-18T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-09-25T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-10-02T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-10-09T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-10-16T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-10-23T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-10-30T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-11-06T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-11-13T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-11-20T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-11-27T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-12-04T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-12-11T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-12-18T00:00:00.000Z
+weekly,Household,Expense,Globe Load,100.00,2027-12-25T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-06-07T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-06-14T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-06-21T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-06-28T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-07-05T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-07-12T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-07-19T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-07-26T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-08-02T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-08-09T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-08-16T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-08-23T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-08-30T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-09-06T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-09-13T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-09-20T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-09-27T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-10-04T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-10-11T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-10-18T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-10-25T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-11-01T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-11-08T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-11-15T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-11-22T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-11-29T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-12-06T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-12-13T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-12-20T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2025-12-27T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-01-03T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-01-10T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-01-17T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-01-24T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-01-31T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-02-07T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-02-14T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-02-21T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-02-28T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-03-07T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-03-14T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-03-21T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-03-28T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-04-04T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-04-11T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-04-18T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-04-25T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-05-02T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-05-09T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-05-16T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-05-23T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-05-30T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-06-06T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-06-13T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-06-20T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-06-27T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-07-04T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-07-11T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-07-18T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-07-25T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-08-01T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-08-08T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-08-15T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-08-22T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-08-29T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-09-05T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-09-12T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-09-19T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-09-26T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-10-03T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-10-10T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-10-17T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-10-24T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-10-31T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-11-07T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-11-14T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-11-21T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-11-28T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-12-05T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-12-12T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-12-19T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2026-12-26T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-01-02T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-01-09T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-01-16T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-01-23T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-01-30T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-02-06T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-02-13T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-02-20T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-02-27T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-03-06T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-03-13T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-03-20T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-03-27T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-04-03T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-04-10T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-04-17T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-04-24T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-05-01T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-05-08T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-05-15T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-05-22T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-05-29T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-06-05T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-06-12T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-06-19T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-06-26T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-07-03T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-07-10T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-07-17T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-07-24T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-07-31T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-08-07T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-08-14T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-08-21T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-08-28T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-09-04T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-09-11T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-09-18T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-09-25T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-10-02T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-10-09T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-10-16T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-10-23T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-10-30T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-11-06T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-11-13T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-11-20T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-11-27T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-12-04T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-12-11T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-12-18T00:00:00.000Z
+weekly,Household,Expense,Drinking Water,50.00,2027-12-25T00:00:00.000Z
