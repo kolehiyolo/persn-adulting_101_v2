@@ -63,7 +63,7 @@ export default function App() {
 
   const fetchCalendarDatesData = async () => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets/${dataSet}/output/calendar-dates-data.csv`);
+    const response = await fetch(`/data/sets/${dataSet}/output/calendar-dates-w-transactions.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();

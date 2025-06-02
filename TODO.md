@@ -33,9 +33,11 @@ App.tsx already filters selectedMonth and transactions
 CalendarMonth uses selectedCalendarDatesData
 
 <!-- ? DOING -->
-calendar-dates-data run from 1900 to 2100
+calendar-dates-data run from 2000 to 2100
 
 <!-- NEXT -->
+user can select the set
+users can "search for goal" on UI, which allows them to see the 
 
 <!-- TODOS EZ -->
 separate income and expenses
