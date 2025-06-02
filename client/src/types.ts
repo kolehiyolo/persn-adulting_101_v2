@@ -49,3 +49,13 @@ export interface CalendarHeadDataObj {
   max: number;
   min: number;
 }
+
+export interface CalendarDateData {
+  calendar_month: Date;
+  date: Date;
+  date_is_not_trailing_or_leading: boolean;
+  date_positive: number;
+  date_negative: number;
+  date_change: number;
+  date_total_running: number;
+}

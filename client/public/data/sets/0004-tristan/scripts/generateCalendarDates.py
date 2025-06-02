@@ -146,20 +146,6 @@ def load_transactions_from_csv(csv_file_path):
 import csv
 
 def export_calendar_data_to_csv(file_path, calendar_data):
-  # Flatten the structure and prepare rows
-  rows = []
-  for month in calendar_data:
-    for date_entry in calendar_data:
-      row = {
-        "calendar_month": date_entry["calendar_month"],
-        "date": date_entry["date"],
-        "date_positive": date_entry["date_positive"],
-        "date_negative": date_entry["date_negative"],
-        "date_change": date_entry["date_change"],
-        "date_total_running": date_entry.get("date_total_running", "")  # optional
-      }
-      rows.append(row)
-
   # Define the CSV column headers
   fieldnames = [
     "calendar_month",
@@ -171,11 +157,22 @@ def export_calendar_data_to_csv(file_path, calendar_data):
     "date_total_running"
   ]
 
-  # Write to CSV
+  # Write to CSV (overwrite mode)
   with open(file_path, mode='w', newline='', encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
-    writer.writerows(rows)
+
+    for entry in calendar_data:
+      row = {
+        "calendar_month": entry["calendar_month"],
+        "date": entry["date"],
+        "date_is_not_trailing_or_leading": (entry["date"][:7] == entry["calendar_month"][:7]),
+        "date_positive": entry["date_positive"],
+        "date_negative": entry["date_negative"],
+        "date_change": entry["date_change"],
+        "date_total_running": entry["date_total_running"]
+      }
+      writer.writerow(row)
 
 
 # * RUNNING

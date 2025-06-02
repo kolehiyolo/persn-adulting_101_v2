@@ -10,6 +10,7 @@ import DataControls from './components/containers/DataControls.component';
 
 // * Other Imports
 import { Transaction } from './types';
+import { CalendarDateData } from './types';
 import { CalendarHeadDataObj } from './types';
 import './styles/App.scss';
 
@@ -20,6 +21,9 @@ export default function App() {
   const [selectedDate, setSelectedDate] = useState(startDate);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [calendarView, setCalendarView] = useState('month');
+  const [calendarDatesData, setsCalendarDatesData] = useState<CalendarDateData[]>([]);
+
+  
   // const [dataSet, setDataSet] = useState(`0003-kren`);
   const [dataSet, setDataSet] = useState(`0004-tristan`);
 
@@ -57,10 +61,41 @@ export default function App() {
     setTransactions(parsedData);
   };
 
+  const fetchCalendarDatesData = async () => {
+    // * Step 1: Fetch the CSV file from the public folder
+    const response = await fetch(`/data/sets/${dataSet}/output/calendar-dates-data.csv`);
+
+    // * Step 2: Read the response as plain text
+    const csvText = await response.text();
+
+    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
+    const parsed = Papa.parse(csvText, {
+      header: true,           // Treat the first row as column headers
+      skipEmptyLines: true,   // Ignore empty lines in the CSV
+    });
+
+    // * Step 4: Transform parsed data into Transaction objects
+    const parsedData = parsed.data.map((row: any) => ({
+      calendar_month: new Date(row.calendar_month),
+      date: new Date(row.date),
+      date_is_not_trailing_or_leading: row.date_is_not_trailing_or_leading.toLowerCase() === "true",
+      date_positive: parseFloat(row.date_positive),
+      date_negative: parseFloat(row.date_negative),
+      date_change: parseFloat(row.date_change),
+      date_total_running: parseFloat(row.date_total_running)
+    }));
+
+    console.log(parsedData);
+
+    // * Step 5: Set the transformed data into state
+    setsCalendarDatesData(parsedData);
+  };
+
   // * Fetching transactions from CSV
   useEffect(() => {
     // * Execute the fetch logic once on component mount
     fetchTransactions();
+    fetchCalendarDatesData();
   }, []);
 
   const handleClickGenerateData = async () => {
