@@ -12,6 +12,7 @@ import DataControls from './components/containers/DataControls.component';
 import { Transaction } from './types';
 import { CalendarDateData } from './types';
 import { CalendarHeadDataObj } from './types';
+import { DataSet } from './types';
 import './styles/App.scss';
 
 // * Component
@@ -25,8 +26,8 @@ export default function App() {
   const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalendarDateData[]>([]);
 
   // const [dataSet, setDataSet] = useState(`0003-kren`);
-  const [dataSet, setDataSet] = useState(`0004-tristan`);
-
+  const [selectedDataSet, setSelectedDataSet] = useState(`0004-tristan`);
+  const [dataSets, setDataSets] = useState<DataSet[]>([]);
   const[calendarHeadDataObj, setCalendarChangeDataObj] = useState<CalendarHeadDataObj>({
     totalRunning: 3056.15,
     change: 1158.76,
@@ -34,9 +35,37 @@ export default function App() {
     min: 458.76,
   });
 
+  const fetchDataSets = async () => {
+    // * Step 1: Fetch the CSV file from the public folder
+    const response = await fetch(`/data/sets.csv`);
+
+    // * Step 2: Read the response as plain text
+    const csvText = await response.text();
+
+    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
+    const parsed = Papa.parse(csvText, {
+      header: true,           // Treat the first row as column headers
+      skipEmptyLines: true,   // Ignore empty lines in the CSV
+    });
+
+    // * Step 4: Transform parsed data into Transaction objects
+    const parsedData: DataSet[] = parsed.data.map((row: any) => ({
+      id: row.id,
+      name: row.name,
+      household_id: row.household_id,
+      household_name: row.household_name,
+    }));
+
+    setDataSets(parsedData)
+
+    const selectedDataSetName = (`${parsedData[0].id}-${parsedData[0].name.replace(/\s+/g, "_") }`)
+
+    setSelectedDataSet(selectedDataSetName);
+  }
+
   const fetchTransactions = async () => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets/${dataSet}/output/transactions-all.csv`);
+    const response = await fetch(`/data/sets/${selectedDataSet}/output/transactions-all.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();
@@ -63,7 +92,7 @@ export default function App() {
 
   const fetchCalendarDatesData = async () => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets/${dataSet}/output/calendar-dates-w-transactions.csv`);
+    const response = await fetch(`/data/sets/${selectedDataSet}/output/calendar-dates-w-transactions.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();
@@ -171,9 +200,17 @@ export default function App() {
   // * Fetching transactions from CSV
   useEffect(() => {
     // * Execute the fetch logic once on component mount
+    fetchDataSets();
     fetchTransactions();
     fetchCalendarDatesData();
   }, []);
+
+  // // * Fetching transactions from CSV
+  // useEffect(() => {
+  //   // * Execute the fetch logic once on component mount
+  //   fetchTransactions();
+  //   fetchCalendarDatesData();
+  // }, [selectedDataSet]);
 
   useEffect(() => {
     fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions)
@@ -204,6 +241,8 @@ export default function App() {
             />
             <DataControls
               handleClickGenerateData={handleClickGenerateData}
+              dataSets={dataSets}
+              setSelectedDataSet={setSelectedDataSet}
             />
           </div>
           <div

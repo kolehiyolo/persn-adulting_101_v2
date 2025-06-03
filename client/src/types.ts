@@ -70,3 +70,10 @@ export interface CalendarDateData {
   date_change: number;
   date_total_running: number;
 }
+
+export interface DataSet {
+  id: string;
+  name: string;
+  household_id: string;
+  household_name: string;
+}

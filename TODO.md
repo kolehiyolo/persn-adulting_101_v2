@@ -31,13 +31,14 @@ make py scripts recursive across all sets
 App.tsx should fetch calendar-dates-dava.csv
 App.tsx already filters selectedMonth and transactions
 CalendarMonth uses selectedCalendarDatesData
+calendar-dates-data run from 2000 to 2100
+user can select the set
 
 <!-- ? DOING -->
-calendar-dates-data run from 2000 to 2100
+users can "search for goal" on UI, which allows them to see the 
 
 <!-- NEXT -->
-user can select the set
-users can "search for goal" on UI, which allows them to see the 
+user set selection actually works
 
 <!-- TODOS EZ -->
 separate income and expenses

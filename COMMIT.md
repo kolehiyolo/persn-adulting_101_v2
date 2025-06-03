@@ -1,5 +1,5 @@
-calendar-dates-data run from 2000 to 2100
-1. okay so I did a lot more than expected
-2. I had to separate the 42-dates-per-calendar-month-processing cuz it was HEAVY
-3. the individual generateCalendarDates.py scripts just borrow the "template"-ish calendar-dates.csv and fills in the appropriate missing properties that require transactions insight
-4. exciting stuff, now onto NEW FEATUUUUURES
+user can select the set, not working yet
+1. so it's in the GUI, and the state is even already changing
+2. but the actual fetching of the sets and applying to the shown data is NOT yet functional
+3. I tried it so that it just runs the fetches again after selectedDataSet changes, but that throws errors and I don't have the patience to try fixing it
+4. I'll just make it so the fetches fetch all sets, may be inefficient but who cares lol
