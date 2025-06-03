@@ -70,7 +70,9 @@ export default function DataControls({
       <select
         className='select'
         value={selectedIndex}
-        onChange={(e) => handleDataSetChange(Number(e.target.value))}
+        onChange={(e) => {
+          handleDataSetChange(Number(e.target.value))
+        }}
       >
         {dataSets.map((dataSet, index) => (
           <option key={dataSet.id} value={index}>
@@ -95,13 +97,6 @@ export default function DataControls({
           Search
         </button>
       </div>
-      {/* <button 
-        className='button'
-        onClick={handleClickGenerateData}
-      >
-        Generate
-      </button> */}
-
     </div>
   );
 };
