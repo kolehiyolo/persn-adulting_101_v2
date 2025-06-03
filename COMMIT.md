@@ -1,5 +1,4 @@
-user can select the set, not working yet
-1. so it's in the GUI, and the state is even already changing
-2. but the actual fetching of the sets and applying to the shown data is NOT yet functional
-3. I tried it so that it just runs the fetches again after selectedDataSet changes, but that throws errors and I don't have the patience to try fixing it
-4. I'll just make it so the fetches fetch all sets, may be inefficient but who cares lol
+user set selection actually works, also fixed wrong py runningTotal adding
+1. yo so user set selection now works!, although the solution is jank with forced wait for the renders
+2. also I noticed the runningTotal processing is bust in that each row just adds the date_change with the previous date_total_running
+3. fixed both

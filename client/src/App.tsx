@@ -24,15 +24,13 @@ export default function App() {
   const [calendarView, setCalendarView] = useState('month');
   const [calendarDatesData, setCalendarDatesData] = useState<CalendarDateData[]>([]);
   const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalendarDateData[]>([]);
-
-  // const [dataSet, setDataSet] = useState(`0003-kren`);
-  const [selectedDataSet, setSelectedDataSet] = useState(`0004-tristan`);
+  const [selectedDataSet, setSelectedDataSet] = useState('');
   const [dataSets, setDataSets] = useState<DataSet[]>([]);
   const[calendarHeadDataObj, setCalendarChangeDataObj] = useState<CalendarHeadDataObj>({
-    totalRunning: 3056.15,
-    change: 1158.76,
-    max: 51864.92,
-    min: 458.76,
+    totalRunning: 0,
+    change: 0,
+    max: 0,
+    min: 0,
   });
 
   const fetchDataSets = async () => {
@@ -59,6 +57,8 @@ export default function App() {
     setDataSets(parsedData)
 
     const selectedDataSetName = (`${parsedData[0].id}-${parsedData[0].name.replace(/\s+/g, "_") }`)
+
+    console.log(`dataSets is ready`);
 
     setSelectedDataSet(selectedDataSetName);
   }
@@ -201,16 +201,18 @@ export default function App() {
   useEffect(() => {
     // * Execute the fetch logic once on component mount
     fetchDataSets();
-    fetchTransactions();
-    fetchCalendarDatesData();
   }, []);
 
-  // // * Fetching transactions from CSV
-  // useEffect(() => {
-  //   // * Execute the fetch logic once on component mount
-  //   fetchTransactions();
-  //   fetchCalendarDatesData();
-  // }, [selectedDataSet]);
+  // * Fetching transactions from CSV
+  useEffect(() => {
+    // * Execute the fetch logic once on component mount
+    console.log(`run if dataSets is ready`);
+    if (dataSets[0] !=undefined) {
+      fetchTransactions();
+      fetchCalendarDatesData();
+      fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions);
+    }
+  }, [dataSets]);
 
   useEffect(() => {
     fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions)
@@ -219,7 +221,14 @@ export default function App() {
   const handleClickGenerateData = async () => {
     console.log(`Trigger handleClickGenerateData()`);
     fetchTransactions();
+    fetchCalendarDatesData();
   };
+
+  const handleTotalSearch = () => {
+    console.log(`Trigger handleTotalSearch()`);
+
+
+  }
 
   // * Rendering
   return (
@@ -243,19 +252,24 @@ export default function App() {
               handleClickGenerateData={handleClickGenerateData}
               dataSets={dataSets}
               setSelectedDataSet={setSelectedDataSet}
+              setSelectedDate={setSelectedDate}
             />
           </div>
           <div
             className='right'
           >
             {
-              calendarView === 'month' ?
-              <CalendarHeadData
-                calendarTotalRunning={calendarHeadDataObj.totalRunning}
-                calendarChange={calendarHeadDataObj.change}
-                calendarMax={calendarHeadDataObj.max}
-                calendarMin={calendarHeadDataObj.min}
-              />
+              transactions[0] != undefined ?
+                (
+                  calendarView === 'month' ?
+                  <CalendarHeadData
+                    calendarTotalRunning={calendarHeadDataObj.totalRunning}
+                    calendarChange={calendarHeadDataObj.change}
+                    calendarMax={calendarHeadDataObj.max}
+                    calendarMin={calendarHeadDataObj.min}
+                  />
+                  : <></>
+                )
               : <></>
             }
           </div>
@@ -263,10 +277,16 @@ export default function App() {
         <div
           className='body'
         >
-          <CalendarMonth
-            selectedDate={selectedDate}
-            selectedCalendarDatesData={selectedCalendarDatesData}
-          />
+          {
+            transactions[0] != undefined ?
+              (
+                <CalendarMonth
+                selectedDate={selectedDate}
+                selectedCalendarDatesData={selectedCalendarDatesData}
+              />
+              )
+            : <></>
+          }
         </div>
       </main>
     </div>

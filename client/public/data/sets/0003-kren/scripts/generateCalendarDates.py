@@ -25,7 +25,7 @@ def generate_calendar_month_w_dates_w_data(calendar_dates, transactions):
     first_txn_date = parsed_transactions[0]["date"]
     last_txn_date = parsed_transactions[-1]["date"]
 
-  # Step 2: Build a map of transactions grouped by date
+  # Step 2: Group transactions by date
   from collections import defaultdict
 
   transactions_by_date = defaultdict(list)
@@ -34,6 +34,8 @@ def generate_calendar_month_w_dates_w_data(calendar_dates, transactions):
 
   result = []
   running_total = 0
+  processed_dates = set()
+  date_to_running_total = {}
 
   for date_obj in calendar_dates:
     date_str = date_obj["date"]
@@ -67,30 +69,39 @@ def generate_calendar_month_w_dates_w_data(calendar_dates, transactions):
       continue
 
     # Case 3: Within transaction range
-    date_transactions = transactions_by_date.get(date, [])
+    if date in date_to_running_total:
+      date_positive = sum(txn["amount"] for txn in transactions_by_date.get(date, []) if txn["type"] == "income")
+      date_negative = sum(txn["amount"] for txn in transactions_by_date.get(date, []) if txn["type"] == "expense")
+      date_change = date_positive - date_negative
+      calendar_date_data = {
+        "calendar_month": calendar_month,
+        "date": date_str,
+        "date_is_not_trailing_or_leading": date_obj["date_is_not_trailing_or_leading"],
+        "date_positive": date_positive,
+        "date_negative": date_negative,
+        "date_change": date_change,
+        "date_total_running": date_to_running_total[date]
+      }
+    else:
+      date_transactions = transactions_by_date.get(date, [])
+      date_positive = sum(txn["amount"] for txn in date_transactions if txn["type"] == "income")
+      date_negative = sum(txn["amount"] for txn in date_transactions if txn["type"] == "expense")
+      date_change = date_positive - date_negative
+      running_total += date_change
+      processed_dates.add(date)
+      date_to_running_total[date] = running_total
+      calendar_date_data = {
+        "calendar_month": calendar_month,
+        "date": date_str,
+        "date_is_not_trailing_or_leading": date_obj["date_is_not_trailing_or_leading"],
+        "date_positive": date_positive,
+        "date_negative": date_negative,
+        "date_change": date_change,
+        "date_total_running": running_total
+      }
 
-    date_positive = sum(
-      txn["amount"] for txn in date_transactions if txn["type"] == "income"
-    )
-    date_negative = sum(
-      txn["amount"] for txn in date_transactions if txn["type"] == "expense"
-    )
-    date_change = date_positive - date_negative
-    running_total += date_change
-    
-    calendar_date_data = {
-      "calendar_month": calendar_month,
-      "date": date_str,
-      "date_is_not_trailing_or_leading": date_obj["date_is_not_trailing_or_leading"],
-      "date_positive": date_positive,
-      "date_negative": date_negative,
-      "date_change": date_change,
-      "date_total_running": running_total
-    }
-
-    pprint(calendar_date_data)
     result.append(calendar_date_data)
-    
+
   return result
 
 
