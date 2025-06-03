@@ -25,6 +25,39 @@
     }
   }
 
+  .total-search {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+    padding: 10px 15px;
+    border: $white-50 solid 1px;
+    background-color: $bg-transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    .input {
+      background-color: $bg-transparent;
+      border: none;
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .submit {
+      // padding: 10px 15px;
+      border: none;
+      background-color: $bg-transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+    }
+  }
+
   .button {
     padding: 10px 15px;
     border: $white-50 solid 1px;

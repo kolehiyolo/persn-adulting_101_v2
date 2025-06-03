@@ -224,9 +224,8 @@ export default function App() {
     fetchCalendarDatesData();
   };
 
-  const handleTotalSearch = () => {
-    console.log(`Trigger handleTotalSearch()`);
-
+  const handleTotalSearch = (inputTotalSearch: number) => {
+    console.log(`Trigger handleTotalSearch(${inputTotalSearch})`);
 
   }
 
@@ -252,7 +251,7 @@ export default function App() {
               handleClickGenerateData={handleClickGenerateData}
               dataSets={dataSets}
               setSelectedDataSet={setSelectedDataSet}
-              setSelectedDate={setSelectedDate}
+              handleTotalSearch={handleTotalSearch}
             />
           </div>
           <div

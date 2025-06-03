@@ -1,4 +1,3 @@
-user set selection actually works, also fixed wrong py runningTotal adding
-1. yo so user set selection now works!, although the solution is jank with forced wait for the renders
-2. also I noticed the runningTotal processing is bust in that each row just adds the date_change with the previous date_total_running
-3. fixed both
+users can "search for goal" on UI, but not working yet
+1. this one was a little overkill in that the code is too big so a comma appears for every 3rd digit automatically
+2. whatever, refactor later, for now, MVP

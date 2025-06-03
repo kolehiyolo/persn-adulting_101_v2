@@ -10,8 +10,9 @@ import { DataSet } from '../../types';
 // * Component Props
 interface DataControlsProps {
   handleClickGenerateData: () => void,
-  dataSets: Array<DataSet>
-  setSelectedDataSet: React.Dispatch<React.SetStateAction<string>>
+  dataSets: Array<DataSet>,
+  setSelectedDataSet: React.Dispatch<React.SetStateAction<string>>,
+  handleTotalSearch: (inputTotalSearch: number) => void,
 };
 
 // * Component
@@ -19,8 +20,11 @@ export default function DataControls({
   handleClickGenerateData,
   dataSets,
   setSelectedDataSet,
+  handleTotalSearch,
 }: DataControlsProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [inputTotalSearch, setInputTotalSearch] = useState(0);
+  const [inputDisplay, setInputDisplay] = useState("");
 
   useEffect(() => {
     if (dataSets.length > 0) {
@@ -33,6 +37,29 @@ export default function DataControls({
     const selectedDataSetName = `${selectedDataSet.id}-${selectedDataSet.name.replace(/\s+/g, "_")}`;
     setSelectedDataSet(selectedDataSetName);
     setSelectedIndex(index);
+  };
+
+  function formatWithCommas(value: string) {
+    const number = parseFloat(value.replace(/,/g, ''));
+    if (isNaN(number)) return '';
+    return number.toLocaleString('en-US');
+  }
+  
+  function parseFormatted(value: string) {
+    return value.replace(/,/g, '');
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = parseFormatted(e.target.value);
+    if (!/^\d*\.?\d*$/.test(rawValue)) return; // prevent invalid input
+    setInputDisplay(formatWithCommas(rawValue));
+  };
+
+  const handleSubmit = () => {
+    const numericValue = parseFloat(parseFormatted(inputDisplay));
+    if (!isNaN(numericValue)) {
+      handleTotalSearch(numericValue);
+    }
   };
 
   // * Rendering
@@ -51,12 +78,29 @@ export default function DataControls({
           </option>
         ))}
       </select>
-      <button 
+      <div
+        className='total-search'
+      >
+        <input
+          type="text"
+          inputMode="decimal"
+          value={inputDisplay}
+          onChange={handleChange}
+          className="input"
+          placeholder="Search total"
+        />
+        <button
+        onClick={handleSubmit} className="submit"
+        >
+          Search
+        </button>
+      </div>
+      {/* <button 
         className='button'
         onClick={handleClickGenerateData}
       >
         Generate
-      </button>
+      </button> */}
 
     </div>
   );
