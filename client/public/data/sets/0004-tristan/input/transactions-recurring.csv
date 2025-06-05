@@ -13,7 +13,7 @@ recurring_id,type,category,subcategory,priority,account,title,amount,tags,parame
 ,Expense,Pets,,Pets,,Groom pets,1250,"monthly, pets",6,Monthly (Date),06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"
 ,Expense,Software,,Wants,,minimalist phone,180,"monthly, subscription",7,Monthly (Date),06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"
 ,Expense,Software,,Wants,,YouTube Premium,159,"monthly, subscription",14,Monthly (Date),06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"
-,Income,Scale Up Salary,,Income,,Tr Scale Up,65000,salary,5,Monthly (Date),06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"
+,Income,Scale Up Salary,,Income,,Tr Scale Up,65000,salary,5,Monthly (Date),06/01/2025,12/31/2048,"T,T,T,T,T,T,T`"
 ,Expense,Household,,Bills,,Grocery,1000,weekly,Saturday,Weekly,06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"
 ,Expense,Pets,,Pets,,Lee,250,weekly,Saturday,Weekly,06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"
 ,Expense,Household,,Bills,,Laundry,200,weekly,Saturday,Weekly,06/01/2025,12/31/2088,"T,T,T,T,T,T,T`"

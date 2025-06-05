@@ -7,7 +7,7 @@ from datetime import datetime
 def generate_calendar_month_w_dates_w_data(calendar_dates, transactions):
   def parse_iso_date(iso_str):
     return datetime.fromisoformat(iso_str.replace("Z", "+00:00")).date()
-
+  
   # Step 1: Preprocess transactions
   parsed_transactions = [
     {

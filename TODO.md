@@ -35,11 +35,12 @@ calendar-dates-data run from 2000 to 2100
 user can select the set
 users can "search for goal" on UI, which allows them to see the 
 user set selection actually works
+user can select the date to show via DateMover
 
 <!-- ? DOING -->
 
 <!-- NEXT -->
-user can select the date to show via DateMover
+FIX generate scripts
 
 <!-- TODOS EZ -->
 separate income and expenses

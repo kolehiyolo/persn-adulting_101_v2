@@ -1,6 +1,6 @@
-users can "search for total"
-1. AWESOOOOOME
-2. so now the search for total functionality works like a charm!
-3. so easy to implement, mostly because the integration and setup prior is just well done enough, not to pat myself too much on the back
-4. sosososooo proud, and so excited to continue the rest
-5. for now, it's bed time
+user can date pick via DateMover
+1. alright so this now works, awesome
+2. I noticed a bug though after trying the PY scripts, I adjusted the income to stop at 2058, and yes the transactions no longer show beyond that, but the calendarDates still show that date_change is positive, not good
+  3. I tried running the individual script, which is generateCalendarDates.py, and it works
+  4. definitely need to refactor these scripts soon
+5. I also began a new ChatGPT thread cuz the original one is now CRAWLING

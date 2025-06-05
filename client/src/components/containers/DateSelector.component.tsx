@@ -1,5 +1,3 @@
-here's the code right now
-
 // * Dependencies
 import React, {useEffect, useState} from 'react';
 import DatePicker from "react-datepicker";
@@ -29,16 +27,16 @@ export default function DateSelector({
   return (
     <DatePicker
       selected={selectedDate}
-      onChange={(date) => setSelectedDate(date)} // ERROR HERE
-      dateFormat="MMMM d, yyyy"
-      className="border px-2 py-1 rounded text-sm cursor-pointer"
+      onChange={(date) => {
+        if (date) setSelectedDate(date);
+      }}
+      dateFormat="MMMM yyyy"
+      className="datePicker"
       popperPlacement="bottom"
       showPopperArrow={false}
+      showMonthDropdown
+      showYearDropdown
+      // dropdownMode="select"
     />
   );
 };
-
-
-all good, except the part with // ERROR HERE. setSelectedDate(date) isn't working because of the ff error:
-Argument of type 'Date | null' is not assignable to parameter of type 'SetStateAction<Date>'.
-  Type 'null' is not assignable to type 'SetStateAction<Date>'.ts(2345)

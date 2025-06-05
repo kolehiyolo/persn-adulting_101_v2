@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 // * Other Components
 import { ReactComponent as ArrowLeft } from '../../assets/icons/icon-left.svg';
 import { ReactComponent as ArrowRight } from '../../assets/icons/icon-right.svg';
+import DateSelector from './DateSelector.component';
 
 // * Other Imports
 import './DateMover.component.scss';
@@ -132,11 +133,10 @@ export default function DateMover({
       <div
         className='selectedDate'
       >
-        <h2
-          className='selectedDateValue'
-        >
-          {selectedDateValue}
-        </h2>
+        <DateSelector 
+          selectedDate={selectedDate} 
+          setSelectedDate={setSelectedDate}
+        />
         <p
           className='selectedDateDuration'
         >

@@ -1,0 +1,20 @@
+@import '../../styles/utils/variables';
+
+.datePicker {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: $bg-transparent;
+  padding: 0px;
+  border: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.react-datepicker__month-read-view--selected-month,
+.react-datepicker__year-read-view--selected-year,
+.react-datepicker__month-option,
+.react-datepicker__year-option {
+  color: $bg-primary !important;
+}
