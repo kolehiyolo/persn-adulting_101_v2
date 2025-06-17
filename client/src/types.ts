@@ -74,6 +74,7 @@ export interface CalendarDateData {
 export interface DataSet {
   id: string;
   name: string;
+  folder_name: string;
   household_id: string;
   household_name: string;
 }

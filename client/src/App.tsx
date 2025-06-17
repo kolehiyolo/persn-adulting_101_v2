@@ -51,13 +51,14 @@ export default function App() {
     const parsedData: DataSet[] = parsed.data.map((row: any) => ({
       id: row.id,
       name: row.name,
+      folder_name: row.folder_name,
       household_id: row.household_id,
       household_name: row.household_name,
     }));
 
     setDataSets(parsedData)
 
-    const selectedDataSetName = (`${parsedData[0].id}-${parsedData[0].name.replace(/\s+/g, "_") }`)
+    const selectedDataSetName = parsedData[0].folder_name;
 
     console.log(`dataSets is ready`);
 
@@ -219,12 +220,6 @@ export default function App() {
     fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions)
   }, [selectedDate, calendarDatesData, transactions]);
 
-  const handleClickGenerateData = async () => {
-    console.log(`Trigger handleClickGenerateData()`);
-    fetchTransactions();
-    fetchCalendarDatesData();
-  };
-
   const handleTotalSearch = (inputTotalSearch: number) => {
     console.log(`Trigger handleTotalSearch(${inputTotalSearch})`);
   
@@ -264,8 +259,8 @@ export default function App() {
               setSelectedDate={setSelectedDate}
             />
             <DataControls
-              handleClickGenerateData={handleClickGenerateData}
               dataSets={dataSets}
+              selectedDataSet={selectedDataSet}
               setSelectedDataSet={setSelectedDataSet}
               handleTotalSearch={handleTotalSearch}
             />

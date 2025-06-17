@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react';
 
 // * Other Components
+import SelectDataSet from '../controls/SelectDataSet.component';
 
 // * Other Imports
 import './DataControls.component.scss';
@@ -9,35 +10,20 @@ import { DataSet } from '../../types';
 
 // * Component Props
 interface DataControlsProps {
-  handleClickGenerateData: () => void,
   dataSets: Array<DataSet>,
+  selectedDataSet: string,
   setSelectedDataSet: React.Dispatch<React.SetStateAction<string>>,
   handleTotalSearch: (inputTotalSearch: number) => void,
 };
 
 // * Component
 export default function DataControls({ 
-  handleClickGenerateData,
   dataSets,
+  selectedDataSet,
   setSelectedDataSet,
   handleTotalSearch,
 }: DataControlsProps) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [inputTotalSearch, setInputTotalSearch] = useState(0);
   const [inputDisplay, setInputDisplay] = useState("");
-
-  useEffect(() => {
-    if (dataSets.length > 0) {
-      handleDataSetChange(0); // Set the first one as default
-    }
-  }, [dataSets]);
-
-  const handleDataSetChange = (index: number) => {
-    const selectedDataSet = dataSets[index];
-    const selectedDataSetName = `${selectedDataSet.id}-${selectedDataSet.name.replace(/\s+/g, "_")}`;
-    setSelectedDataSet(selectedDataSetName);
-    setSelectedIndex(index);
-  };
 
   function formatWithCommas(value: string) {
     const number = parseFloat(value.replace(/,/g, ''));
@@ -67,19 +53,11 @@ export default function DataControls({
     <div
       className='dataControls'
     >
-      <select
-        className='select'
-        value={selectedIndex}
-        onChange={(e) => {
-          handleDataSetChange(Number(e.target.value))
-        }}
-      >
-        {dataSets.map((dataSet, index) => (
-          <option key={dataSet.id} value={index}>
-            {dataSet.name} ({dataSet.household_name})
-          </option>
-        ))}
-      </select>
+      <SelectDataSet
+        dataSets={dataSets}
+        selectedDataSet={selectedDataSet}
+        setSelectedDataSet={setSelectedDataSet}
+      />
       <div
         className='total-search'
       >
