@@ -11,12 +11,16 @@ import './DateMover.component.scss';
 
 // * Component Props
 interface DateMoverProps {
+  calendarView: string,
+  setCalendarView: React.Dispatch<React.SetStateAction<string>>
   selectedDate: Date,
   setSelectedDate: React.Dispatch<React.SetStateAction<Date>>
 };
 
 // * Component
 export default function DateMover({ 
+  calendarView,
+  setCalendarView,
   selectedDate, 
   setSelectedDate 
 }: DateMoverProps) {
@@ -119,6 +123,12 @@ export default function DateMover({
     setSelectedDate(newDate);
   };
 
+  const handleViewChange = (index: string) => {
+    console.log(`view change to ${index}`);
+    setCalendarView(index);
+  };
+
+
   // * Rendering
   return (
     <div
@@ -130,6 +140,21 @@ export default function DateMover({
       >
         <ArrowLeft />
       </button>
+      <select
+        className='select'
+        value={calendarView}
+        onChange={(e) => {
+          console.log(`ONCHANGE`);
+          handleViewChange(e.target.value)
+        }}
+      >
+        <option key="month" value="month">
+          Month
+        </option>
+        <option key="year" value="year">
+          Year
+        </option>
+      </select>
       <div
         className='selectedDate'
       >

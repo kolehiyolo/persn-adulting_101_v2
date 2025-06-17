@@ -5,6 +5,7 @@ import Papa from "papaparse";
 // * Other Components
 import DateMover from './components/containers/DateMover.component';
 import CalendarMonth from './components/containers/CalendarMonth.component';
+import CalendarYear from './components/containers/CalendarYear.component';
 import CalendarHeadData from './components/containers/CalendarHeadData.component';
 import DataControls from './components/containers/DataControls.component';
 
@@ -257,6 +258,8 @@ export default function App() {
             className='left'
           >
             <DateMover
+              calendarView={calendarView}
+              setCalendarView={setCalendarView}
               selectedDate={selectedDate}
               setSelectedDate={setSelectedDate}
             />

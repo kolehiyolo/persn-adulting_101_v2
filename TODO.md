@@ -1,45 +1,11 @@
 <!-- * DONE -->
-create recurringTransaction generator, perhaps in python
-type Transaction must have proper property types
-refactor App
-style App
-style DateMover
-refactor DateMover
-refactor Transaction
-style Transaction
-style DateCard
-refactor autofill CalendarMonth + DateCard
-refactor DateCard
-style scrollbars to look better
-add commas to numbers
-make runningTotal work
-my april isn't done properly
-no debt to ate
-no dental plan
-make transactions accurate
-dateRunningTotal colors proper
-transactionCard colors proper
-app head with calendarHeadData
-calendarHeadData must be own component
-calendarHeadData styling done
-make calendarHeadData work
-organize directories for generateTransactionsData.py
-organize 0004-tristan
-create master generateTransactionsData.py
-generate date CSV
-make py scripts recursive across all sets
-App.tsx should fetch calendar-dates-dava.csv
-App.tsx already filters selectedMonth and transactions
-CalendarMonth uses selectedCalendarDatesData
-calendar-dates-data run from 2000 to 2100
-user can select the set
-users can "search for goal" on UI, which allows them to see the 
-user set selection actually works
-user can select the date to show via DateMover
 
 <!-- ? DOING -->
+dataSets should all be fetched once
+calendarMonth should process data fetches on its own
 
 <!-- NEXT -->
+users can switch between Monthly and Yearly view
 FIX generate scripts
 
 <!-- TODOS EZ -->
@@ -49,15 +15,12 @@ separate income and expenses
 calendar-month CSV should only be ever run once
 combine py scripts into one
 users can click on a button in the GUI that then processes the CSVs into desired outputs
-users can select which sets to show
 users can CRUD recurring expenses on CSV
 users can CRUD one time expenses on CSV
 users can CRUD savings goals on CSV
 users can CRUD debts goals on CSV
 users can CRUD snowball expense on CSV
 users can CRUD income on CSV
-users can have multiple data sets that they can switch between
-users can "search for goal" on UI, which allows them to see the 
 users can input all input that's needed, and the program will process it all on its own to show the best path forward while respecting parameters
 
 <!-- @ BONUS -->
