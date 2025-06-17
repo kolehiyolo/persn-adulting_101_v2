@@ -295,10 +295,19 @@ export default function App() {
           {
             transactions[0] != undefined ?
               (
-                <CalendarMonth
-                selectedDate={selectedDate}
-                selectedCalendarDatesData={selectedCalendarDatesData}
-              />
+                calendarView === 'month' ?
+                  <CalendarMonth
+                    selectedDate={selectedDate}
+                    selectedCalendarDatesData={selectedCalendarDatesData}
+                  />
+                :
+                calendarView === 'year' ?
+                  <CalendarYear
+                    selectedDate={selectedDate}
+                    selectedCalendarDatesData={selectedCalendarDatesData}
+                  />
+                :
+                  <></>
               )
             : <></>
           }
