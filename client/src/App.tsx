@@ -57,40 +57,13 @@ export default function App() {
     }));
 
     setDataSets(parsedData)
+    console.log(`dataSets is ready`);
 
     const selectedDataSetName = parsedData[0].folder_name;
 
-    console.log(`dataSets is ready`);
 
     setSelectedDataSet(selectedDataSetName);
   }
-
-  const fetchTransactions = async () => {
-    // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets/${selectedDataSet}/output/transactions-all.csv`);
-
-    // * Step 2: Read the response as plain text
-    const csvText = await response.text();
-
-    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
-    const parsed = Papa.parse(csvText, {
-      header: true,           // Treat the first row as column headers
-      skipEmptyLines: true,   // Ignore empty lines in the CSV
-    });
-
-    // * Step 4: Transform parsed data into Transaction objects
-    const parsedData: Transaction[] = parsed.data.map((row: any) => ({
-      title: row.title,                       // Get the transaction title
-      type: row.type,                         // Get the transaction type (Expense or Income)
-      tags: row.tags,
-      category: row.category,                 // Get the category
-      amount: parseFloat(row.amount),         // Parse the amount string into a number
-      date: new Date(row.date),                         // Leave the date as-is (should already be in standardized format)
-    }));
-
-    // * Step 5: Set the transformed data into state
-    setTransactions(parsedData);
-  };
 
   const fetchCalendarDatesData = async () => {
     // * Step 1: Fetch the CSV file from the public folder
@@ -121,6 +94,33 @@ export default function App() {
 
     // * Step 5: Set the transformed data into state
     setCalendarDatesData(parsedData);
+  };
+
+  const fetchTransactions = async () => {
+    // * Step 1: Fetch the CSV file from the public folder
+    const response = await fetch(`/data/sets/${selectedDataSet}/output/transactions-all.csv`);
+
+    // * Step 2: Read the response as plain text
+    const csvText = await response.text();
+
+    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
+    const parsed = Papa.parse(csvText, {
+      header: true,           // Treat the first row as column headers
+      skipEmptyLines: true,   // Ignore empty lines in the CSV
+    });
+
+    // * Step 4: Transform parsed data into Transaction objects
+    const parsedData: Transaction[] = parsed.data.map((row: any) => ({
+      title: row.title,                       // Get the transaction title
+      type: row.type,                         // Get the transaction type (Expense or Income)
+      tags: row.tags,
+      category: row.category,                 // Get the category
+      amount: parseFloat(row.amount),         // Parse the amount string into a number
+      date: new Date(row.date),                         // Leave the date as-is (should already be in standardized format)
+    }));
+
+    // * Step 5: Set the transformed data into state
+    setTransactions(parsedData);
   };
 
   const fetchSelectedDateCalendarDatesData = (
@@ -155,7 +155,7 @@ export default function App() {
       }
     );
   
-    // 4. Attach transactions to each date
+    // 4. Attach transactions to each date 
     const result = filteredDates.map(dateItem => {
       const dateOnly = dateItem.date.toISOString().split('T')[0];
   
@@ -197,28 +197,36 @@ export default function App() {
     console.log(newCalendarChangeDataObj);
 
     setCalendarChangeDataObj(newCalendarChangeDataObj);
-  };  
+  }; 
 
-  // * Fetching transactions from CSV
+  // # ON MOUNT CHAIN
+  // * Fetch the meta data for the sets from sets.csv
+  // After, selectedDataSet is set
+  // This should only be run once when App is mounted
   useEffect(() => {
-    // * Execute the fetch logic once on component mount
+    console.log('fetchDataSets()');
     fetchDataSets();
   }, []);
 
-  // * Fetching transactions from CSV
+  // * When selectedDataSet is set, fetch the transactions and calendarDatesData
   useEffect(() => {
-    // * Execute the fetch logic once on component mount
-    console.log(`run if dataSets is ready`);
-    if (dataSets[0] !=undefined) {
+    if (selectedDataSet != '') {
+      console.log(`run if dataSets is ready`);
       fetchTransactions();
       fetchCalendarDatesData();
+    }
+  }, [selectedDataSet]);
+
+  // * We run this based on the ff conditions:
+    // * When transactions & calendarDatesData have been fetched due to selectedDataSet changing
+    // * When selectedDate is changed
+  // We calculate the data for the selected date based on the transactions and the dates
+  useEffect(() => {
+    if (transactions[0] !=undefined && calendarDatesData[0] !=undefined) {
+      console.log(`run if transactions & calendarDatesData are ready`);
       fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions);
     }
-  }, [dataSets, selectedDataSet]);
-
-  useEffect(() => {
-    fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions)
-  }, [selectedDate, calendarDatesData, transactions]);
+  }, [selectedDate, transactions, calendarDatesData]);
 
   // * Rendering
   return (

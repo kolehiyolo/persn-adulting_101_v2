@@ -1,3 +1,3 @@
-FormTotalSearch should be own component
-1. there I went and did this one first just so it's one less thing to think about
-2. I even made it so that this component also handles the actual calculations to find the date that matches the input running total
+refactored on mount chain and useEffect triggers in App
+1. yeah before I even attempt to reengineer the fetches, I needed to get a better grasp of how the useEffects work and chain together
+2. I believe I've trimmed it now and added the right docs to make it more readable and possibly more performant too
