@@ -10,14 +10,14 @@ import './DateSelector.component.scss';
 
 // * Component Props
 interface DateSelectorProps {
-  selectedDate: Date,
-  setSelectedDate: React.Dispatch<React.SetStateAction<Date>>
+  activeDate: Date,
+  setActiveDate: React.Dispatch<React.SetStateAction<Date>>
 };
 
 // * Component
 export default function DateSelector({ 
-  selectedDate, 
-  setSelectedDate 
+  activeDate, 
+  setActiveDate 
 }: DateSelectorProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [inputTotalSearch, setInputTotalSearch] = useState(0);
@@ -26,9 +26,9 @@ export default function DateSelector({
   // * Rendering
   return (
     <DatePicker
-      selected={selectedDate}
+      selected={activeDate}
       onChange={(date) => {
-        if (date) setSelectedDate(date);
+        if (date) setActiveDate(date);
       }}
       dateFormat="MMMM yyyy"
       className="datePicker"

@@ -10,13 +10,13 @@ import './CalendarMonth.component.scss';
 
 // * Component Props
 interface CalendarMonthProps {
-  selectedDate: Date;
+  activeDate: Date;
   selectedCalendarDatesData: Array<CalendarDateData>;
 }
 
 // * Component
 export default function CalendarMonth({
-  selectedDate,
+  activeDate,
   selectedCalendarDatesData
 }: CalendarMonthProps) {
   const dayLabels = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
@@ -55,7 +55,7 @@ export default function CalendarMonth({
                   rowDates.map((dateData, index) => (
                     <DateCard 
                       dateData={dateData}
-                      selectedDate={selectedDate} 
+                      activeDate={activeDate} 
                       key={index}
                     />
                   ))

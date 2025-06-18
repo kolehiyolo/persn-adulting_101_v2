@@ -13,30 +13,41 @@ import DataControls from './components/containers/DataControls.component';
 import { Transaction } from './types';
 import { CalendarDateData } from './types';
 import { CalendarHeadDataObj } from './types';
-import { DataSet } from './types';
+import { User } from './types';
+import { UserData } from './types';
 import './styles/App.scss';
 
 // * Component
 export default function App() {
-  // * States
-  const [startDate] = useState(() => new Date());
-  const [selectedDate, setSelectedDate] = useState(startDate);
+  // # States
+  // * Constant On Mount
+  // Prefix = const
+  const [constStartDate] = useState(() => new Date());
+  const [constUsers, setConstUsers] = useState<User[]>([]);
+  const [constUsersData, setConstUsersData] = useState<UserData[]>([]);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [calendarView, setCalendarView] = useState('month');
   const [calendarDatesData, setCalendarDatesData] = useState<CalendarDateData[]>([]);
-  const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalendarDateData[]>([]);
-  const [selectedDataSet, setSelectedDataSet] = useState('');
-  const [dataSets, setDataSets] = useState<DataSet[]>([]);
-  const[calendarHeadDataObj, setCalendarChangeDataObj] = useState<CalendarHeadDataObj>({
-    totalRunning: 0,
-    change: 0,
-    max: 0,
-    min: 0,
-  });
 
-  const fetchDataSets = async () => {
+  // * Variable by Processes
+  // Prefix = prcsd
+  const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalendarDateData[]>([]);
+  const [calendarHeadDataObj, setCalendarChangeDataObj] =
+    useState<CalendarHeadDataObj>({
+      totalRunning: 0,
+      change: 0,
+      max: 0,
+      min: 0,
+    });
+
+  // * Variable by User
+  // Prefix = active
+  const [activeDate, setActiveDate] = useState(constStartDate);
+  const [activeUser, setActiveUser] = useState('');
+  const [activeView, setActiveView] = useState('month');
+
+  const fetchconstUsers = async () => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets.csv`);
+    const response = await fetch(`/data/users.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();
@@ -48,7 +59,7 @@ export default function App() {
     });
 
     // * Step 4: Transform parsed data into Transaction objects
-    const parsedData: DataSet[] = parsed.data.map((row: any) => ({
+    const parsedData: User[] = parsed.data.map((row: any) => ({
       id: row.id,
       name: row.name,
       folder_name: row.folder_name,
@@ -56,18 +67,18 @@ export default function App() {
       household_name: row.household_name,
     }));
 
-    setDataSets(parsedData)
-    console.log(`dataSets is ready`);
+    setConstUsers(parsedData)
+    console.log(`constUsers is ready`);
 
-    const selectedDataSetName = parsedData[0].folder_name;
+    const activeUserName = parsedData[0].folder_name;
 
 
-    setSelectedDataSet(selectedDataSetName);
+    setActiveUser(activeUserName);
   }
 
   const fetchCalendarDatesData = async () => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets/${selectedDataSet}/output/calendar-dates-w-transactions.csv`);
+    const response = await fetch(`/data/users/${activeUser}/output/calendar-dates-w-transactions.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();
@@ -98,7 +109,7 @@ export default function App() {
 
   const fetchTransactions = async () => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/sets/${selectedDataSet}/output/transactions-all.csv`);
+    const response = await fetch(`/data/users/${activeUser}/output/transactions-all.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();
@@ -123,15 +134,15 @@ export default function App() {
     setTransactions(parsedData);
   };
 
-  const fetchSelectedDateCalendarDatesData = (
-    selectedDate: Date,
+  const fetchactiveDateCalendarDatesData = (
+    activeDate: Date,
     calendarDatesData: CalendarDateData[],
     transactions: Transaction[]
   ) => {
     // 1. Filter by selected calendar month
     const filteredDates = calendarDatesData.filter(item => 
-      item.calendar_month.getFullYear() === selectedDate.getFullYear() &&
-      item.calendar_month.getMonth() === selectedDate.getMonth()
+      item.calendar_month.getFullYear() === activeDate.getFullYear() &&
+      item.calendar_month.getMonth() === activeDate.getMonth()
     );
   
     if (filteredDates.length === 0) {
@@ -176,7 +187,7 @@ export default function App() {
 
     const currentMonthData = result
       .filter(dateData => 
-        new Date(dateData.date).getMonth() === selectedDate.getMonth()
+        new Date(dateData.date).getMonth() === activeDate.getMonth()
       );
     const totalRunning = currentMonthData[currentMonthData.length - 1].date_total_running;
     const change = currentMonthData
@@ -200,33 +211,33 @@ export default function App() {
   }; 
 
   // # ON MOUNT CHAIN
-  // * Fetch the meta data for the sets from sets.csv
-  // After, selectedDataSet is set
-  // This should only be run once when App is mounted
   useEffect(() => {
-    console.log('fetchDataSets()');
-    fetchDataSets();
+    // * Fetch the meta data for the sets from sets.csv
+    // After, activeUser is set
+    // This should only be run once when App is mounted
+    console.log('fetchconstUsers()');
+    fetchconstUsers();
   }, []);
 
-  // * When selectedDataSet is set, fetch the transactions and calendarDatesData
   useEffect(() => {
-    if (selectedDataSet != '') {
-      console.log(`run if dataSets is ready`);
+    // * When activeUser is set, fetch the transactions and calendarDatesData
+    if (activeUser != '') {
+      console.log(`run if constUsers is ready`);
       fetchTransactions();
       fetchCalendarDatesData();
     }
-  }, [selectedDataSet]);
+  }, [activeUser]);
 
-  // * We run this based on the ff conditions:
-    // * When transactions & calendarDatesData have been fetched due to selectedDataSet changing
-    // * When selectedDate is changed
-  // We calculate the data for the selected date based on the transactions and the dates
   useEffect(() => {
+      // * We run this based on the ff conditions:
+        // * When transactions & calendarDatesData have been fetched due to activeUser changing
+        // * When activeDate is changed
+      // We calculate the data for the selected date based on the transactions and the dates
     if (transactions[0] !=undefined && calendarDatesData[0] !=undefined) {
       console.log(`run if transactions & calendarDatesData are ready`);
-      fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions);
+      fetchactiveDateCalendarDatesData(activeDate, calendarDatesData, transactions);
     }
-  }, [selectedDate, transactions, calendarDatesData]);
+  }, [activeDate, transactions, calendarDatesData]);
 
   // * Rendering
   return (
@@ -243,17 +254,17 @@ export default function App() {
             className='left'
           >
             <DateMover
-              calendarView={calendarView}
-              setCalendarView={setCalendarView}
-              selectedDate={selectedDate}
-              setSelectedDate={setSelectedDate}
+              activeView={activeView}
+              setActiveView={setActiveView}
+              activeDate={activeDate}
+              setActiveDate={setActiveDate}
             />
             <DataControls
-              dataSets={dataSets}
-              selectedDataSet={selectedDataSet}
-              setSelectedDataSet={setSelectedDataSet}
+              constUsers={constUsers}
+              activeUser={activeUser}
+              setActiveUser={setActiveUser}
               calendarDatesData={calendarDatesData}
-              setSelectedDate={setSelectedDate}
+              setActiveDate={setActiveDate}
             />
           </div>
           <div
@@ -262,7 +273,7 @@ export default function App() {
             {
               transactions[0] != undefined ?
                 (
-                  calendarView === 'month' ?
+                  activeView === 'month' ?
                   <CalendarHeadData
                     calendarTotalRunning={calendarHeadDataObj.totalRunning}
                     calendarChange={calendarHeadDataObj.change}
@@ -281,15 +292,15 @@ export default function App() {
           {
             transactions[0] != undefined ?
               (
-                calendarView === 'month' ?
+                activeView === 'month' ?
                   <CalendarMonth
-                    selectedDate={selectedDate}
+                    activeDate={activeDate}
                     selectedCalendarDatesData={selectedCalendarDatesData}
                   />
                 :
-                calendarView === 'year' ?
+                activeView === 'year' ?
                   <CalendarYear
-                    selectedDate={selectedDate}
+                    activeDate={activeDate}
                     selectedCalendarDatesData={selectedCalendarDatesData}
                   />
                 :

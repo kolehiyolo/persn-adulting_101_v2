@@ -11,22 +11,22 @@ import './DateMover.component.scss';
 
 // * Component Props
 interface DateMoverProps {
-  calendarView: string,
-  setCalendarView: React.Dispatch<React.SetStateAction<string>>
-  selectedDate: Date,
-  setSelectedDate: React.Dispatch<React.SetStateAction<Date>>
+  activeView: string,
+  setActiveView: React.Dispatch<React.SetStateAction<string>>
+  activeDate: Date,
+  setActiveDate: React.Dispatch<React.SetStateAction<Date>>
 };
 
 // * Component
 export default function DateMover({ 
-  calendarView,
-  setCalendarView,
-  selectedDate, 
-  setSelectedDate 
+  activeView,
+  setActiveView,
+  activeDate, 
+  setActiveDate 
 }: DateMoverProps) {
   // * Variables
-  let selectedDateValue = '';
-  let selectedDateDuration = '';
+  let activeDateValue = '';
+  let activeDateDuration = '';
 
   // * Helper Functions
   // Get the last valid day of a month
@@ -35,30 +35,30 @@ export default function DateMover({
   };
 
   // * Set variable values
-  const setSelectedDateValue = (selectedDate: Date) => {
-    const result = selectedDate.toLocaleDateString('en-US', {
+  const setActiveDateValue = (activeDate: Date) => {
+    const result = activeDate.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
     });
 
-    selectedDateValue = result;
+    activeDateValue = result;
   };
 
-  const setSelectedDateDuration = (selectedDate: Date) => {
+  const setActiveDateDuration = (activeDate: Date) => {
     // Get the first day of the selected month
     const firstDay = new Date(
-      selectedDate.getFullYear(),
-      selectedDate.getMonth(),
+      activeDate.getFullYear(),
+      activeDate.getMonth(),
       1
     );
     // Get the last day of the selected month
     const lastDay = new Date(
-      selectedDate.getFullYear(),
-      selectedDate.getMonth(),
-      getLastDayOfMonth(selectedDate.getFullYear(), selectedDate.getMonth())
+      activeDate.getFullYear(),
+      activeDate.getMonth(),
+      getLastDayOfMonth(activeDate.getFullYear(), activeDate.getMonth())
     );
 
-    // Generating selectedDateDuration
+    // Generating activeDateDuration
     const result = `${firstDay.toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
@@ -69,16 +69,16 @@ export default function DateMover({
       year: 'numeric',
     })}`;
     
-    selectedDateDuration = result;
+    activeDateDuration = result;
   };
 
-  setSelectedDateValue(selectedDate);
-  setSelectedDateDuration(selectedDate);
+  setActiveDateValue(activeDate);
+  setActiveDateDuration(activeDate);
 
   // * Button handling
   const handlePrevious = () => {
-    let newYear = selectedDate.getFullYear();
-    let newMonth = selectedDate.getMonth() - 1;
+    let newYear = activeDate.getFullYear();
+    let newMonth = activeDate.getMonth() - 1;
 
     // If newMonth is December
     if (newMonth < 0) {
@@ -89,20 +89,20 @@ export default function DateMover({
     // Check what the lastValidDate of the newMonth is
     const lastValidDate = getLastDayOfMonth(newYear, newMonth);
 
-    // Generate newDate, comparing selectedDate's original date number and lastValidDate
-    // Whatever's lower is what's accepted, so if the original selectedDate was March 31, 2025, newDate is Feb 28, 2025, since 28 is lower than 31
+    // Generate newDate, comparing activeDate's original date number and lastValidDate
+    // Whatever's lower is what's accepted, so if the original activeDate was March 31, 2025, newDate is Feb 28, 2025, since 28 is lower than 31
     const newDate = new Date(
       newYear,
       newMonth,
-      Math.min(selectedDate.getDate(), lastValidDate)
+      Math.min(activeDate.getDate(), lastValidDate)
     );
 
-    setSelectedDate(newDate);
+    setActiveDate(newDate);
   };
 
   const handleNext = () => {
-    let newYear = selectedDate.getFullYear();
-    let newMonth = selectedDate.getMonth() + 1;
+    let newYear = activeDate.getFullYear();
+    let newMonth = activeDate.getMonth() + 1;
 
     // If newMonth is January
     if (newMonth > 11) {
@@ -117,15 +117,15 @@ export default function DateMover({
     const newDate = new Date(
       newYear,
       newMonth,
-      Math.min(selectedDate.getDate(), lastValidDate)
+      Math.min(activeDate.getDate(), lastValidDate)
     );
 
-    setSelectedDate(newDate);
+    setActiveDate(newDate);
   };
 
   const handleViewChange = (index: string) => {
     console.log(`view change to ${index}`);
-    setCalendarView(index);
+    setActiveView(index);
   };
 
 
@@ -142,7 +142,7 @@ export default function DateMover({
       </button>
       <select
         className='select'
-        value={calendarView}
+        value={activeView}
         onChange={(e) => {
           console.log(`ONCHANGE`);
           handleViewChange(e.target.value)
@@ -156,16 +156,16 @@ export default function DateMover({
         </option>
       </select>
       <div
-        className='selectedDate'
+        className='activeDate'
       >
         <DateSelector 
-          selectedDate={selectedDate} 
-          setSelectedDate={setSelectedDate}
+          activeDate={activeDate} 
+          setActiveDate={setActiveDate}
         />
         <p
-          className='selectedDateDuration'
+          className='activeDateDuration'
         >
-          {selectedDateDuration}
+          {activeDateDuration}
         </p>
       </div>
       <button

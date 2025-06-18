@@ -12,15 +12,15 @@ import './DateCard.component.scss';
 // * Component Props
 interface DateCardProps {
   dateData: CalendarDateData;
-  selectedDate: Date;
+  activeDate: Date;
 }
 
 // * Component
 export default function DateCard({ 
   dateData,
-  selectedDate,
+  activeDate,
 }: DateCardProps) {
-  const isSelected = selectedDate.getDate() === dateData.date.getDate() && dateData.date_is_not_trailing_or_leading;
+  const isSelected = activeDate.getDate() === dateData.date.getDate() && dateData.date_is_not_trailing_or_leading;
 
   const dateCardClassName= 'dateCard' + ' ' + (
     !dateData.date_is_not_trailing_or_leading ? 'nonCurrent'

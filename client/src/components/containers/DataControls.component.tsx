@@ -2,44 +2,44 @@
 import React, {useEffect, useState} from 'react';
 
 // * Other Components
-import SelectDataSet from '../controls/SelectDataSet.component';
+import SelectUser from '../controls/SelectUser.component';
 import FormSearchTotal from '../controls/FormSearchTotal.component';
 
 // * Other Imports
 import './DataControls.component.scss';
-import { DataSet } from '../../types';
+import { User } from '../../types';
 import { CalendarDateData } from '../../types';
 
 // * Component Props
 interface DataControlsProps {
-  dataSets: Array<DataSet>,
-  selectedDataSet: string,
-  setSelectedDataSet: React.Dispatch<React.SetStateAction<string>>,
+  constUsers: Array<User>,
+  activeUser: string,
+  setActiveUser: React.Dispatch<React.SetStateAction<string>>,
   calendarDatesData: Array<CalendarDateData>,
-  setSelectedDate: React.Dispatch<React.SetStateAction<Date>>,
+  setActiveDate: React.Dispatch<React.SetStateAction<Date>>,
 };
 
 // * Component
 export default function DataControls({ 
-  dataSets,
-  selectedDataSet,
-  setSelectedDataSet,
+  constUsers,
+  activeUser,
+  setActiveUser,
   calendarDatesData,
-  setSelectedDate,
+  setActiveDate,
 }: DataControlsProps) {
   // * Rendering
   return (
     <div
       className='dataControls'
     >
-      <SelectDataSet
-        dataSets={dataSets}
-        selectedDataSet={selectedDataSet}
-        setSelectedDataSet={setSelectedDataSet}
+      <SelectUser
+        constUsers={constUsers}
+        activeUser={activeUser}
+        setActiveUser={setActiveUser}
       />
       <FormSearchTotal
         calendarDatesData={calendarDatesData}
-        setSelectedDate={setSelectedDate}
+        setActiveDate={setActiveDate}
       />
     </div>
   );

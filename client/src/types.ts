@@ -71,10 +71,16 @@ export interface CalendarDateData {
   date_total_running: number;
 }
 
-export interface DataSet {
+export interface User {
   id: string;
   name: string;
   folder_name: string;
   household_id: string;
   household_name: string;
+}
+
+export interface UserData {
+  id: string;
+  transactions: Array<Transaction>;
+  dates: Array<CalendarDateData>;
 }

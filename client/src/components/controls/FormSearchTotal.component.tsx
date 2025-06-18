@@ -10,13 +10,13 @@ import { CalendarDateData } from '../../types';
 // * Component Props
 interface FormSearchTotalProps {
   calendarDatesData: Array<CalendarDateData>,
-  setSelectedDate: React.Dispatch<React.SetStateAction<Date>>,
+  setActiveDate: React.Dispatch<React.SetStateAction<Date>>,
 };
 
 // * Component
 export default function FormSearchTotal({ 
   calendarDatesData,
-  setSelectedDate,
+  setActiveDate,
 }: FormSearchTotalProps) {
   const [inputDisplay, setInputDisplay] = useState("");
 
@@ -54,7 +54,7 @@ export default function FormSearchTotal({
   
     if (earliestMatch) {
       console.log("Earliest match:", earliestMatch);
-      setSelectedDate(earliestMatch.date);
+      setActiveDate(earliestMatch.date);
       // Optionally do something else with earliestMatch
     } else {
       console.log("No match found with date_total_running > inputTotalSearch");

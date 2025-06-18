@@ -10,13 +10,13 @@ import './CalendarYear.component.scss';
 
 // * Component Props
 interface CalendarYearProps {
-  selectedDate: Date;
+  activeDate: Date;
   selectedCalendarDatesData: Array<CalendarDateData>;
 }
 
 // * Component
 export default function CalendarYear ({
-  selectedDate,
+  activeDate,
   selectedCalendarDatesData
 }: CalendarYearProps) {
 

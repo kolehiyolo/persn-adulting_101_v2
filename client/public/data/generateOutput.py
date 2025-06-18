@@ -1,15 +1,15 @@
 import os
 import subprocess
 
-SETS_DIR = os.path.join(os.path.dirname(__file__), "sets")
+USERS_DIR = os.path.join(os.path.dirname(__file__), "users")
 
-for set_name in os.listdir(SETS_DIR):
-  set_path = os.path.join(SETS_DIR, set_name)
+for user_name in os.listdir(USERS_DIR):
+  user_path = os.path.join(USERS_DIR, user_name)
 
-  if os.path.isdir(set_path):
-    scripts_path = os.path.join(set_path, "scripts")
+  if os.path.isdir(user_path):
+    scripts_path = os.path.join(user_path, "scripts")
 
-    # print(f"\n🔄 Running scripts for set: {set_name}")
+    # print(f"\n🔄 Running scripts for user: {user_name}")
 
     # These are filenames, not full paths anymore
     calendar_script = "generateCalendarDates.py"
