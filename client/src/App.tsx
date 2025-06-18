@@ -220,24 +220,6 @@ export default function App() {
     fetchSelectedDateCalendarDatesData(selectedDate, calendarDatesData, transactions)
   }, [selectedDate, calendarDatesData, transactions]);
 
-  const handleTotalSearch = (inputTotalSearch: number) => {
-    console.log(`Trigger handleTotalSearch(${inputTotalSearch})`);
-  
-    const matching = calendarDatesData
-      .filter(item => item.date_total_running > inputTotalSearch)
-      .sort((a, b) => a.date.getTime() - b.date.getTime());
-  
-    const earliestMatch = matching[0];
-  
-    if (earliestMatch) {
-      console.log("Earliest match:", earliestMatch);
-      setSelectedDate(earliestMatch.date);
-      // Optionally do something else with earliestMatch
-    } else {
-      console.log("No match found with date_total_running > inputTotalSearch");
-    }
-  };
-
   // * Rendering
   return (
     <div
@@ -262,7 +244,8 @@ export default function App() {
               dataSets={dataSets}
               selectedDataSet={selectedDataSet}
               setSelectedDataSet={setSelectedDataSet}
-              handleTotalSearch={handleTotalSearch}
+              calendarDatesData={calendarDatesData}
+              setSelectedDate={setSelectedDate}
             />
           </div>
           <div

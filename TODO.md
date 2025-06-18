@@ -1,11 +1,12 @@
 <!-- * DONE -->
 SelectDataSet own component
+FormTotalSearch should be own component
 
 <!-- ? DOING -->
-dataSets should all be fetched once
-calendarMonth should process data fetches on its own
 
 <!-- NEXT -->
+dataSets should all be fetched once
+calendarMonth should process data fetches on its own
 users can switch between Monthly and Yearly view
 FIX generate scripts
 

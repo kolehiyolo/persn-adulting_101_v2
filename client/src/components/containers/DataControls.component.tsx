@@ -3,17 +3,20 @@ import React, {useEffect, useState} from 'react';
 
 // * Other Components
 import SelectDataSet from '../controls/SelectDataSet.component';
+import FormSearchTotal from '../controls/FormSearchTotal.component';
 
 // * Other Imports
 import './DataControls.component.scss';
 import { DataSet } from '../../types';
+import { CalendarDateData } from '../../types';
 
 // * Component Props
 interface DataControlsProps {
   dataSets: Array<DataSet>,
   selectedDataSet: string,
   setSelectedDataSet: React.Dispatch<React.SetStateAction<string>>,
-  handleTotalSearch: (inputTotalSearch: number) => void,
+  calendarDatesData: Array<CalendarDateData>,
+  setSelectedDate: React.Dispatch<React.SetStateAction<Date>>,
 };
 
 // * Component
@@ -21,33 +24,9 @@ export default function DataControls({
   dataSets,
   selectedDataSet,
   setSelectedDataSet,
-  handleTotalSearch,
+  calendarDatesData,
+  setSelectedDate,
 }: DataControlsProps) {
-  const [inputDisplay, setInputDisplay] = useState("");
-
-  function formatWithCommas(value: string) {
-    const number = parseFloat(value.replace(/,/g, ''));
-    if (isNaN(number)) return '';
-    return number.toLocaleString('en-US');
-  }
-  
-  function parseFormatted(value: string) {
-    return value.replace(/,/g, '');
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawValue = parseFormatted(e.target.value);
-    if (!/^\d*\.?\d*$/.test(rawValue)) return; // prevent invalid input
-    setInputDisplay(formatWithCommas(rawValue));
-  };
-
-  const handleSubmit = () => {
-    const numericValue = parseFloat(parseFormatted(inputDisplay));
-    if (!isNaN(numericValue)) {
-      handleTotalSearch(numericValue);
-    }
-  };
-
   // * Rendering
   return (
     <div
@@ -58,23 +37,10 @@ export default function DataControls({
         selectedDataSet={selectedDataSet}
         setSelectedDataSet={setSelectedDataSet}
       />
-      <div
-        className='total-search'
-      >
-        <input
-          type="text"
-          inputMode="decimal"
-          value={inputDisplay}
-          onChange={handleChange}
-          className="input"
-          placeholder="Search total"
-        />
-        <button
-        onClick={handleSubmit} className="submit"
-        >
-          Search
-        </button>
-      </div>
+      <FormSearchTotal
+        calendarDatesData={calendarDatesData}
+        setSelectedDate={setSelectedDate}
+      />
     </div>
   );
 };
