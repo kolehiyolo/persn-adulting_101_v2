@@ -1,3 +1,3 @@
-separate prcsdCalHead processing
-1. I noticed that fetchActiveDateCalendarDatesData is also processing prcsdCalHead, so I just split processing prcsdCalHead into its own function
-2. committing now before I attempt contUsers fetching refactor
+on mount useEffect updated
+1. alright so I've disrupted the on-mount chain now and am overhauling the fetch functions
+2. I decided to commit here as I'm about to change how activeUser works, which could cause a ripple effect across all the functions and even the lower components
