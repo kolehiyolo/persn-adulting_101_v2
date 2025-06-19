@@ -11,28 +11,26 @@ import DataControls from './components/containers/DataControls.component';
 
 // * Other Imports
 import { Transaction } from './types';
-import { CalendarDateData } from './types';
-import { CalendarHeadDataObj } from './types';
+import { CalDate } from './types';
+import { CalHead } from './types';
 import { User } from './types';
-import { UserData } from './types';
 import './styles/App.scss';
 
 // * Component
 export default function App() {
-  // # States
+  // # STATES
   // * Constant On Mount
   // Prefix = const
   const [constStartDate] = useState(() => new Date());
   const [constUsers, setConstUsers] = useState<User[]>([]);
-  const [constUsersData, setConstUsersData] = useState<UserData[]>([]);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [calendarDatesData, setCalendarDatesData] = useState<CalendarDateData[]>([]);
+  const [calendarDatesData, setCalendarDatesData] = useState<CalDate[]>([]);
 
   // * Variable by Processes
   // Prefix = prcsd
-  const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalendarDateData[]>([]);
-  const [calendarHeadDataObj, setCalendarChangeDataObj] =
-    useState<CalendarHeadDataObj>({
+  const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalDate[]>([]);
+  const [prcsdCalHead, setPrcsdCalHead] =
+    useState<CalHead>({
       totalRunning: 0,
       change: 0,
       max: 0,
@@ -65,6 +63,8 @@ export default function App() {
       folder_name: row.folder_name,
       household_id: row.household_id,
       household_name: row.household_name,
+      transactions: [],
+      dates: [],
     }));
 
     setConstUsers(parsedData)
@@ -122,12 +122,12 @@ export default function App() {
 
     // * Step 4: Transform parsed data into Transaction objects
     const parsedData: Transaction[] = parsed.data.map((row: any) => ({
-      title: row.title,                       // Get the transaction title
-      type: row.type,                         // Get the transaction type (Expense or Income)
+      title: row.title,
+      type: row.type,
       tags: row.tags,
-      category: row.category,                 // Get the category
-      amount: parseFloat(row.amount),         // Parse the amount string into a number
-      date: new Date(row.date),                         // Leave the date as-is (should already be in standardized format)
+      category: row.category,
+      amount: parseFloat(row.amount),
+      date: new Date(row.date),
     }));
 
     // * Step 5: Set the transformed data into state
@@ -136,7 +136,7 @@ export default function App() {
 
   const fetchactiveDateCalendarDatesData = (
     activeDate: Date,
-    calendarDatesData: CalendarDateData[],
+    calendarDatesData: CalDate[],
     transactions: Transaction[]
   ) => {
     // 1. Filter by selected calendar month
@@ -207,7 +207,7 @@ export default function App() {
 
     console.log(newCalendarChangeDataObj);
 
-    setCalendarChangeDataObj(newCalendarChangeDataObj);
+    setPrcsdCalHead(newCalendarChangeDataObj);
   }; 
 
   // # ON MOUNT CHAIN
@@ -229,17 +229,17 @@ export default function App() {
   }, [activeUser]);
 
   useEffect(() => {
-      // * We run this based on the ff conditions:
-        // * When transactions & calendarDatesData have been fetched due to activeUser changing
-        // * When activeDate is changed
-      // We calculate the data for the selected date based on the transactions and the dates
+    // * We run this based on the ff conditions:
+      // * When transactions & calendarDatesData have been fetched due to activeUser changing
+      // * When activeDate is changed
+    // We calculate the data for the selected date based on the transactions and the dates
     if (transactions[0] !=undefined && calendarDatesData[0] !=undefined) {
       console.log(`run if transactions & calendarDatesData are ready`);
       fetchactiveDateCalendarDatesData(activeDate, calendarDatesData, transactions);
     }
   }, [activeDate, transactions, calendarDatesData]);
 
-  // * Rendering
+  // # RENDERING
   return (
     <div
       className='App'
@@ -275,10 +275,10 @@ export default function App() {
                 (
                   activeView === 'month' ?
                   <CalendarHeadData
-                    calendarTotalRunning={calendarHeadDataObj.totalRunning}
-                    calendarChange={calendarHeadDataObj.change}
-                    calendarMax={calendarHeadDataObj.max}
-                    calendarMin={calendarHeadDataObj.min}
+                    calendarTotalRunning={prcsdCalHead.totalRunning}
+                    calendarChange={prcsdCalHead.change}
+                    calendarMax={prcsdCalHead.max}
+                    calendarMin={prcsdCalHead.min}
                   />
                   : <></>
                 )

@@ -5,11 +5,11 @@ import React, {useEffect, useState} from 'react';
 
 // * Other Imports
 import './FormSearchTotal.component.scss';
-import { CalendarDateData } from '../../types';
+import { CalDate } from '../../types';
 
 // * Component Props
 interface FormSearchTotalProps {
-  calendarDatesData: Array<CalendarDateData>,
+  calendarDatesData: Array<CalDate>,
   setActiveDate: React.Dispatch<React.SetStateAction<Date>>,
 };
 

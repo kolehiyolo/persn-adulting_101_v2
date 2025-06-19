@@ -1,3 +1,4 @@
+// ! NOT IN USE
 export interface Account {
   id: string;
   date: string;
@@ -25,7 +26,9 @@ export interface Icon {
   type: string;
   group: string;
 }
+// ! NOT IN USE
 
+// # ACTIVE
 export interface Transaction {
   title: string;
   type: string;
@@ -35,22 +38,14 @@ export interface Transaction {
   date: Date;
 }
 
-export interface DateData {
-  date: Date;
-  isCurrentMonth: boolean;
-  transactions: Array<Transaction>;
-  total: number;
-  totalRunning: number;
-}
-
-export interface CalendarHeadDataObj {
+export interface CalHead {
   totalRunning: number;
   change: number;
   max: number;
   min: number;
 }
 
-export interface CalendarDateData {
+export interface CalDate {
   calendar_month: Date;
   date: Date;
   date_is_not_trailing_or_leading: boolean;
@@ -59,16 +54,6 @@ export interface CalendarDateData {
   date_change: number;
   date_total_running: number;
   transactions: Array<Transaction>;
-}
-
-export interface CalendarDateData {
-  calendar_month: Date;
-  date: Date;
-  date_is_not_trailing_or_leading: boolean;
-  date_positive: number;
-  date_negative: number;
-  date_change: number;
-  date_total_running: number;
 }
 
 export interface User {
@@ -79,8 +64,4 @@ export interface User {
   household_name: string;
 }
 
-export interface UserData {
-  id: string;
-  transactions: Array<Transaction>;
-  dates: Array<CalendarDateData>;
-}
+// # ACTIVE

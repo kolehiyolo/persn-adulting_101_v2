@@ -3,12 +3,15 @@ SelectUser own component
 FormTotalSearch should be own component
 
 <!-- ? DOING -->
-constUsers should all be fetched once
+finalize types
 
 <!-- NEXT -->
+rename App states
+constUsers should all be fetched once
 calendarMonth should process data fetches on its own
 users can switch between Monthly and Yearly view
 FIX generate scripts
+refactor CalHead
 
 <!-- TODOS EZ -->
 separate income and expenses

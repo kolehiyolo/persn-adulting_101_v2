@@ -5,13 +5,13 @@ import React, { useState, useEffect } from 'react';
 import DateCard from './DateCard.component';
 
 // * Other Imports
-import { CalendarDateData } from '../../types';
+import { CalDate } from '../../types';
 import './CalendarMonth.component.scss';
 
 // * Component Props
 interface CalendarMonthProps {
   activeDate: Date;
-  selectedCalendarDatesData: Array<CalendarDateData>;
+  selectedCalendarDatesData: Array<CalDate>;
 }
 
 // * Component

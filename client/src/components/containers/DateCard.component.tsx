@@ -6,12 +6,12 @@ import TransactionCard from "./TransactionCard.component";
 
 // * Other Imports
 import { Transaction } from '../../types';
-import { CalendarDateData } from '../../types';
+import { CalDate } from '../../types';
 import './DateCard.component.scss';
 
 // * Component Props
 interface DateCardProps {
-  dateData: CalendarDateData;
+  dateData: CalDate;
   activeDate: Date;
 }
 
