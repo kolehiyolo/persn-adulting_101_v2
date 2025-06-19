@@ -62,6 +62,8 @@ export interface User {
   folder_name: string;
   household_id: string;
   household_name: string;
+  cal_date: Array<CalDate>;
+  transactions: Array<Transaction>;
 }
 
 // # ACTIVE

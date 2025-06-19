@@ -1,2 +1,3 @@
-finalize types
-1. types are as clean as possible for now, but will probably need to refactor again later
+separate prcsdCalHead processing
+1. I noticed that fetchActiveDateCalendarDatesData is also processing prcsdCalHead, so I just split processing prcsdCalHead into its own function
+2. committing now before I attempt contUsers fetching refactor

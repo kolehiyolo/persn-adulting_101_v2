@@ -63,8 +63,8 @@ export default function App() {
       folder_name: row.folder_name,
       household_id: row.household_id,
       household_name: row.household_name,
+      cal_date: [],
       transactions: [],
-      dates: [],
     }));
 
     setConstUsers(parsedData)
@@ -72,13 +72,12 @@ export default function App() {
 
     const activeUserName = parsedData[0].folder_name;
 
-
     setActiveUser(activeUserName);
   }
 
-  const fetchCalendarDatesData = async () => {
+  const fetchCalendarDatesData = async (user: string) => {
     // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/users/${activeUser}/output/calendar-dates-w-transactions.csv`);
+    const response = await fetch(`/data/users/${user}/output/calendar-dates-w-transactions.csv`);
 
     // * Step 2: Read the response as plain text
     const csvText = await response.text();
@@ -134,7 +133,7 @@ export default function App() {
     setTransactions(parsedData);
   };
 
-  const fetchactiveDateCalendarDatesData = (
+  const fetchActiveDateCalendarDatesData = (
     activeDate: Date,
     calendarDatesData: CalDate[],
     transactions: Transaction[]
@@ -184,8 +183,10 @@ export default function App() {
     // 5. Set result
     console.log(result);
     setSelectedCalendarDatesData(result);
+  }; 
 
-    const currentMonthData = result
+  const fetchCalHead = (selectedCalendarDatesData: CalDate[]) => {
+    const currentMonthData = selectedCalendarDatesData
       .filter(dateData => 
         new Date(dateData.date).getMonth() === activeDate.getMonth()
       );
@@ -208,7 +209,7 @@ export default function App() {
     console.log(newCalendarChangeDataObj);
 
     setPrcsdCalHead(newCalendarChangeDataObj);
-  }; 
+  };
 
   // # ON MOUNT CHAIN
   useEffect(() => {
@@ -224,7 +225,7 @@ export default function App() {
     if (activeUser != '') {
       console.log(`run if constUsers is ready`);
       fetchTransactions();
-      fetchCalendarDatesData();
+      fetchCalendarDatesData(activeUser);
     }
   }, [activeUser]);
 
@@ -235,9 +236,20 @@ export default function App() {
     // We calculate the data for the selected date based on the transactions and the dates
     if (transactions[0] !=undefined && calendarDatesData[0] !=undefined) {
       console.log(`run if transactions & calendarDatesData are ready`);
-      fetchactiveDateCalendarDatesData(activeDate, calendarDatesData, transactions);
+      fetchActiveDateCalendarDatesData(activeDate, calendarDatesData, transactions);
     }
   }, [activeDate, transactions, calendarDatesData]);
+
+  useEffect(() => {
+    // * We run this based on the ff conditions:
+      // * When transactions & calendarDatesData have been fetched due to activeUser changing
+      // * When activeDate is changed
+    // We calculate the data for the selected date based on the transactions and the dates
+    if (selectedCalendarDatesData[0] !=undefined) {
+      console.log(`run if selectedCalendarDatesData are ready`);
+      fetchCalHead(selectedCalendarDatesData);
+    }
+  }, [selectedCalendarDatesData]);
 
   // # RENDERING
   return (

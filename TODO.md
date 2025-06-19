@@ -1,13 +1,14 @@
 <!-- * DONE -->
 SelectUser own component
 FormTotalSearch should be own component
+finalize types
+separate prcsdCalHead processing
 
 <!-- ? DOING -->
-finalize types
+constUsers should all be fetched once
 
 <!-- NEXT -->
 rename App states
-constUsers should all be fetched once
 calendarMonth should process data fetches on its own
 users can switch between Monthly and Yearly view
 FIX generate scripts
