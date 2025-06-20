@@ -41,33 +41,8 @@ export default function App() {
   const [activeUser, setActiveUser] = useState<User>();
   const [activeView, setActiveView] = useState('month');
 
-  const fetchCalHead = (selectedCalendarDatesData: CalDate[]) => {
-    const currentMonthData = selectedCalendarDatesData
-      .filter(dateData => 
-        new Date(dateData.date).getMonth() === activeDate.getMonth()
-      );
-    const totalRunning = currentMonthData[currentMonthData.length - 1].date_total_running;
-    const change = currentMonthData
-      .reduce((totalMonthChange, dateData) => {
-        return totalMonthChange + dateData.date_change;
-      }
-    , 0);
-    const max = Math.max(...currentMonthData.map(item => item.date_total_running));
-    const min = Math.min(...currentMonthData.map(item => item.date_total_running));
-
-    const newCalendarChangeDataObj = {
-      totalRunning: totalRunning,
-      change: change,
-      max: max,
-      min: min
-    }
-
-    // console.log(newCalendarChangeDataObj);
-
-    setPrcsdCalHead(newCalendarChangeDataObj);
-  };
-
-  // # ON MOUNT CHAIN
+  // # triggerOnMount
+  // Trigger when App is mounted
   useEffect(() => {
     // * Fetch the meta data for the users from users.csv
     // After, activeUser is set
@@ -189,6 +164,8 @@ export default function App() {
     fetchConstUsers();
   }, []);
 
+  // # triggerOnUserChangingActiveDateOrActiveUser
+  // Trigger if user changes activeDate or activeUser
   useEffect(() => {
     // * We run this based on the ff conditions:
       // * When transactions & calendarDatesData have been fetched due to activeUser changing
@@ -256,16 +233,43 @@ export default function App() {
     }
   }, [activeDate, activeUser]);
 
-  // useEffect(() => {
-  //   // * We run this based on the ff conditions:
-  //     // * When transactions & calendarDatesData have been fetched due to activeUser changing
-  //     // * When activeDate is changed
-  //   // We calculate the data for the selected date based on the transactions and the dates
-  //   if (selectedCalendarDatesData[0] !=undefined) {
-  //     console.log(`run if selectedCalendarDatesData are ready`);
-  //     fetchCalHead(selectedCalendarDatesData);
-  //   }
-  // }, [selectedCalendarDatesData]);
+  // # triggerOnUpdateOfSelectedCalendarDatesData
+  // When triggerOnUserChangingActiveDateOrActiveUser happens, this is what should happen next
+  useEffect(() => {
+    // * We run this based on the ff conditions:
+      // * When transactions & calendarDatesData have been fetched due to activeUser changing
+      // * When activeDate is changed
+    // We calculate the data for the selected date based on the transactions and the dates
+    if (selectedCalendarDatesData[0] !=undefined) {
+      console.log(`run if selectedCalendarDatesData are ready`);
+      const fetchCalHead = (selectedCalendarDatesData: CalDate[]) => {
+        const currentMonthData = selectedCalendarDatesData
+          .filter(dateData => 
+            new Date(dateData.date).getMonth() === activeDate.getMonth()
+          );
+        const totalRunning = currentMonthData[currentMonthData.length - 1].date_total_running;
+        const change = currentMonthData
+          .reduce((totalMonthChange, dateData) => {
+            return totalMonthChange + dateData.date_change;
+          }
+        , 0);
+        const max = Math.max(...currentMonthData.map(item => item.date_total_running));
+        const min = Math.min(...currentMonthData.map(item => item.date_total_running));
+
+        const newCalendarChangeDataObj = {
+          totalRunning: totalRunning,
+          change: change,
+          max: max,
+          min: min
+        }
+
+        // console.log(newCalendarChangeDataObj);
+
+        setPrcsdCalHead(newCalendarChangeDataObj);
+      };
+      fetchCalHead(selectedCalendarDatesData);
+    }
+  }, [selectedCalendarDatesData]);
 
   // # RENDERING
   return (
@@ -295,11 +299,14 @@ export default function App() {
               setActiveDate={setActiveDate}
             /> */}
           </div>
-          {/* <div
+          <div
             className='right'
           >
             {
-              transactions[0] != undefined ?
+                activeUser != undefined &&
+                activeUser.transactions != undefined &&
+                activeUser.cal_date != undefined
+              ?                
                 (
                   activeView === 'month' ?
                   <CalendarHeadData
@@ -312,7 +319,7 @@ export default function App() {
                 )
               : <></>
             }
-          </div> */}
+          </div>
         </div>
         <div
           className='body'

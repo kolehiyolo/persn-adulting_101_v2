@@ -4,14 +4,17 @@ FormTotalSearch should be own component
 finalize types
 separate prcsdCalHead processing
 on mount useEffect updated
+activeUser must be object, not string
+refactor CalendarHeadData
 
 <!-- ? DOING -->
-activeUser must be object, not string
-in JS, all underscore_case must be camelCase instead
-organize into FEATURE-CREEP.md
-constUsers should all be fetched once
+refactor <DataControls>
 
 <!-- NEXT -->
+constUsers should all be fetched once
+refactor selectedCalendarDatesData
+in JS, all underscore_case must be camelCase instead
+organize into FEATURE-CREEP.md
 rename App states
 calendarMonth should process data fetches on its own
 users can switch between Monthly and Yearly view
