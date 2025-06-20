@@ -1,4 +1,3 @@
-refactor CalendarHeadData
-1. moved fetchCalHead() to triggerOnUpdateOfSelectedCalendarDatesData
-2. uncommented <CalendarHeadData>
-3. looks like there's not much needed doing here
+refactor <DataControls>
+1. that was surprisingly very easy
+2. I believe it's because I compartmentalized really well

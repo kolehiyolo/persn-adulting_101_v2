@@ -13,8 +13,8 @@ import { CalDate } from '../../types';
 // * Component Props
 interface DataControlsProps {
   constUsers: Array<User>,
-  activeUser: string,
-  setActiveUser: React.Dispatch<React.SetStateAction<string>>,
+  activeUser: User,
+  setActiveUser: React.Dispatch<React.SetStateAction<User | undefined>>,
   calendarDatesData: Array<CalDate>,
   setActiveDate: React.Dispatch<React.SetStateAction<Date>>,
 };

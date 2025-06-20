@@ -10,8 +10,8 @@ import { User } from '../../types';
 // * Component Props
 interface SelectUserProps {
   constUsers: Array<User>,
-  activeUser: string,
-  setActiveUser: React.Dispatch<React.SetStateAction<string>>,
+  activeUser: User,
+  setActiveUser: React.Dispatch<React.SetStateAction<User | undefined>>,
 };
 
 // * Component
@@ -22,14 +22,15 @@ export default function SelectUser({
 }: SelectUserProps) {
   const handleSelectChange = (value: string) => {
     console.log(`selectUser(${value})`);
-    setActiveUser(value);
+    const result = constUsers.find(user => user.folder_name === value);
+    setActiveUser(result);
   };
 
   // * Rendering
   return (
     <select
       className='select'
-      value={activeUser}
+      value={activeUser.folder_name}
       onChange={(e) => {
         handleSelectChange(e.target.value)
       }}

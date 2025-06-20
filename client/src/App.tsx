@@ -291,13 +291,22 @@ export default function App() {
               activeDate={activeDate}
               setActiveDate={setActiveDate}
             />
-            {/* <DataControls
-              constUsers={constUsers}
-              activeUser={activeUser}
-              setActiveUser={setActiveUser}
-              calendarDatesData={calendarDatesData}
-              setActiveDate={setActiveDate}
-            /> */}
+            {
+                activeUser != undefined &&
+                activeUser.transactions != undefined &&
+                activeUser.cal_date != undefined
+              ?                
+                (
+                  <DataControls
+                    constUsers={constUsers}
+                    activeUser={activeUser}
+                    setActiveUser={setActiveUser}
+                    calendarDatesData={activeUser.cal_date}
+                    setActiveDate={setActiveDate}
+                  />
+                )
+              : <></>
+            }
           </div>
           <div
             className='right'

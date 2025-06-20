@@ -6,12 +6,12 @@ separate prcsdCalHead processing
 on mount useEffect updated
 activeUser must be object, not string
 refactor CalendarHeadData
-
-<!-- ? DOING -->
 refactor <DataControls>
 
-<!-- NEXT -->
+<!-- ? DOING -->
 constUsers should all be fetched once
+
+<!-- NEXT -->
 refactor selectedCalendarDatesData
 in JS, all underscore_case must be camelCase instead
 organize into FEATURE-CREEP.md
