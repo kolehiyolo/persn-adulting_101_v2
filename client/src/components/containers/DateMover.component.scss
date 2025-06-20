@@ -1,0 +1,64 @@
+@import '../../styles/utils/variables';
+
+.dateMover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+
+  .button {
+    width: 25px;
+    height: 25px;
+    border: $white-50 solid 1px;
+    background-color: $bg-transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.back {
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    &.next {
+      border-radius:  0px 5px 5px 0px;
+    }
+  }
+
+  .activeDate {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 160px;
+
+    &Value {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    &Duration {
+      font-weight: bold;
+      font-size: 14px;
+      color: $text-grey;
+    }
+  }
+
+  .select {
+    padding: 10px 15px;
+    border: $white-50 solid 1px;
+    background-color: $bg-transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  
+    & option {
+      padding: 10px 15px;
+      border: $white-50 solid 1px;
+      background-color: $bg-primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+    }
+  }
+}

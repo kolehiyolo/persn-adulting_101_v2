@@ -1,0 +1,86 @@
+@import '../../styles/utils/variables';
+
+.calendarHeadData {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+
+  .calendarTotalRunning {
+    &.best { color: $running-best;}
+    &.chill { color: $running-chill;}
+    &.safe { color: $running-safe;}
+    &.good { color: $running-good;}
+    &.breathing { color: $running-breathing;}
+    &.struggling { color: $running-struggling;}
+    &.bad { color: $running-bad;}
+  }
+
+  .calendarMax,
+  .calendarMin {
+    &.best { background-color: $running-best;}
+    &.chill { background-color: $running-chill;}
+    &.safe { background-color: $running-safe;}
+    &.good { background-color: $running-good;}
+    &.breathing { background-color: $running-breathing;}
+    &.struggling { background-color: $running-struggling;}
+    &.bad { background-color: $running-bad;}  
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    gap: 5px !important;
+    align-items: center;
+
+    .calendarTotalRunning {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .calendarChange {
+      font-size: 14px;
+
+      &.good {
+        color: $green-100;
+      }        
+
+      &.neutral {
+        color: $white-50;
+      }
+      
+      &.bad {
+        color: $red-100;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+    .calendarMax {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      gap: 5px;
+    }
+    
+    .calendarMin {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      gap: 5px;
+    }
+  }
+
+}

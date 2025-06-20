@@ -1,1 +1,1 @@
-SLEEP FOR NOW
+users can click on a button in the GUI that then processes the CSVs into desired outputs

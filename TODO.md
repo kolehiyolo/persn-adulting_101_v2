@@ -1,10 +1,17 @@
-User can edit accounts
-  Edit modal ready
-User can delete accounts
+<!-- * DONE -->
+rename App states
+calendar-month CSV should only be ever run once
+style CalendarMonth
+organize into FEATURE-CREEP.md
 
-Review performance of modals
-User can toggle view of archived accounts
-User can archive accounts
-Accounts are draggable in order
+<!-- ? DOING -->
+<!-- sanity refactoring -->
+in JS, all underscore_case must be camelCase instead
 
-Create resetDB.js
+<!-- NEXT -->
+
+<!-- TODOS EZ -->
+
+<!-- ! TODOS HEAVY -->
+
+<!-- @ BONUS -->

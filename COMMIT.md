@@ -1,9 +1,8 @@
-addAccount() actually adds to CSV
-1. Yooo so it's been a while since I touched this project, and we got a banger commit here
-2. So finally, addAccount() actually adds to the CSV
-3. Some changes have to be done to overhaul the existing non-permanent adding system
-  3.1. First off, apparently there's no way to update a CSV straight from the client and only one-way get requests can be done, so I had to set up a bare-bones Node.js+Express server
-    3.1.1. Created server.js, a data folder copy of the one in client/public/, and of course account.route.js, which for now only handles two requests, the fetch all and add one routes
-  3.2. Changed the type interface for Account in types.ts to reflect the newly added deleted property, and updated the default values for the newAccount in ModalAddAccount() 
-  3.3. Created addAccountToCSV() in PageAccounts() triggered on the highest-level form submit
-4. Now since the updating of the CSV is done on the server-side, which means the CSV must be in the server, it only made sense that the CSV within the folder should be what the client is fetching and displaying, so I made it so that App.tsx calls the server route instead of fetching the client version of the CSV
+organize into FEATURE-CREEP.md
+1. heyyyy this commit is all about organizing my todos
+2. after completing "constUsers should all be fetched once", I kinda felt a tad lost lol in a sense of "what now???"
+3. I took a quick glance at my TODO.md and felt a sense of dread lol especially at how massive it is now
+4. so I decided to sit down and just organize them into groups, so I know which are needed NOW, which are next features to build, which are to be done for better DX and sanity, and which are just bonuses
+5. this helps in giving me a bird's eye view of priorities, dependencies, and so I know to chip away at all of them in an organized and unboring way
+  5.1. what I mean by unboring is that if I'm feeling too braindead as I'm doing too much backend/under-the-hood stuff that has marginal impact on the UX overall (stuff like massive refactoring or optimization), I can pause or just finish the subtask, and then move on to a more UX focused todo just to keep morale high
+6. in keeping with this DX improvement, I am now continuing by refactoring all underscore_case naming in JS and turning them to camelCase
