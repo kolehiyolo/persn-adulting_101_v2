@@ -6,6 +6,9 @@ separate prcsdCalHead processing
 on mount useEffect updated
 
 <!-- ? DOING -->
+activeUser must be object, not string
+in JS, all underscore_case must be camelCase instead
+organize into FEATURE-CREEP.md
 constUsers should all be fetched once
 
 <!-- NEXT -->
@@ -14,6 +17,7 @@ calendarMonth should process data fetches on its own
 users can switch between Monthly and Yearly view
 FIX generate scripts
 refactor CalHead
+fetch the default user data first
 
 <!-- TODOS EZ -->
 separate income and expenses

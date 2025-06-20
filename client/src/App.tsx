@@ -23,8 +23,6 @@ export default function App() {
   // Prefix = const
   const [constStartDate] = useState(() => new Date());
   const [constUsers, setConstUsers] = useState<User[]>([]);
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [calendarDatesData, setCalendarDatesData] = useState<CalDate[]>([]);
 
   // * Variable by Processes
   // Prefix = prcsd
@@ -40,118 +38,8 @@ export default function App() {
   // * Variable by User
   // Prefix = active
   const [activeDate, setActiveDate] = useState(constStartDate);
-  const [activeUser, setActiveUser] = useState('');
+  const [activeUser, setActiveUser] = useState<User>();
   const [activeView, setActiveView] = useState('month');
-
-  const fetchCalendarDatesData = async (user: string) => {
-    // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/users/${user}/output/calendar-dates-w-transactions.csv`);
-
-    // * Step 2: Read the response as plain text
-    const csvText = await response.text();
-
-    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
-    const parsed = Papa.parse(csvText, {
-      header: true,           // Treat the first row as column headers
-      skipEmptyLines: true,   // Ignore empty lines in the CSV
-    });
-
-    // * Step 4: Transform parsed data into Transaction objects
-    const parsedData = parsed.data.map((row: any) => ({
-      calendar_month: new Date(row.calendar_month),
-      date: new Date(row.date),
-      date_is_not_trailing_or_leading: row.date_is_not_trailing_or_leading.toLowerCase() === "true",
-      date_positive: parseFloat(row.date_positive),
-      date_negative: parseFloat(row.date_negative),
-      date_change: parseFloat(row.date_change),
-      date_total_running: parseFloat(row.date_total_running),
-      transactions: []
-    }));
-
-    // console.log(parsedData);
-
-    // * Step 5: Set the transformed data into state
-    setCalendarDatesData(parsedData);
-  };
-
-  const fetchTransactionsOld = async (user: string) => {
-    // * Step 1: Fetch the CSV file from the public folder
-    const response = await fetch(`/data/users/${user}/output/transactions-all.csv`);
-
-    // * Step 2: Read the response as plain text
-    const csvText = await response.text();
-
-    // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
-    const parsed = Papa.parse(csvText, {
-      header: true,           // Treat the first row as column headers
-      skipEmptyLines: true,   // Ignore empty lines in the CSV
-    });
-
-    // * Step 4: Transform parsed data into Transaction objects
-    const parsedData: Transaction[] = parsed.data.map((row: any) => ({
-      title: row.title,
-      type: row.type,
-      tags: row.tags,
-      category: row.category,
-      amount: parseFloat(row.amount),
-      date: new Date(row.date),
-    }));
-
-    // * Step 5: Set the transformed data into state
-    setTransactions(parsedData);
-  };
-
-  const fetchActiveDateCalendarDatesData = (
-    activeDate: Date,
-    calendarDatesData: CalDate[],
-    transactions: Transaction[]
-  ) => {
-    // 1. Filter by selected calendar month
-    const filteredDates = calendarDatesData.filter(item => 
-      item.calendar_month.getFullYear() === activeDate.getFullYear() &&
-      item.calendar_month.getMonth() === activeDate.getMonth()
-    );
-  
-    if (filteredDates.length === 0) {
-      setSelectedCalendarDatesData([]);
-      return;
-    };
-  
-    // 2. Get first and last date in the filtered calendar dates
-    const firstDate = new Date(
-      Math.min(...filteredDates.map(d => d.date.getTime()))
-    ).toISOString().split('T')[0];
-    const lastDate = new Date(
-      Math.max(...filteredDates.map(d => d.date.getTime()))
-    ).toISOString().split('T')[0];
-  
-    // 3. Filter transactions that fall within the date range
-    const filteredTransactions = transactions.filter((txn) =>
-      {
-        const txnDateOnly = txn.date.toISOString().split('T')[0];
-        return txnDateOnly >= firstDate && txnDateOnly <= lastDate
-      }
-    );
-  
-    // 4. Attach transactions to each date 
-    const result = filteredDates.map(dateItem => {
-      const dateOnly = dateItem.date.toISOString().split('T')[0];
-  
-      const matchingTransactions = filteredTransactions.filter((txn) => {
-        return txn.date.toISOString().split('T')[0] === dateOnly;
-      }
-      );
-  
-      return {
-        ...dateItem,
-        transactions: matchingTransactions
-      };
-    });
-  
-    // 5. Set result
-    // console.log(result);
-    setSelectedCalendarDatesData(result);
-  }; 
 
   const fetchCalHead = (selectedCalendarDatesData: CalDate[]) => {
     const currentMonthData = selectedCalendarDatesData
@@ -236,8 +124,7 @@ export default function App() {
       console.log(usersWithTransactions);
 
       // * Picking active user
-      const activeUserName = usersWithTransactions[0].folder_name;
-      setActiveUser(activeUserName);
+      setActiveUser(usersWithTransactions[0]);
     };
 
     const fetchCalDates = async (user: string) => {
@@ -303,35 +190,82 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    // * When activeUser is set and changed, fetch the transactions and calendarDatesData
-    if (activeUser != '') {
-      console.log(`run if constUsers is ready`);
-      fetchTransactionsOld(activeUser);
-      fetchCalendarDatesData(activeUser);
-    }
-  }, [activeUser]);
-
-  useEffect(() => {
     // * We run this based on the ff conditions:
       // * When transactions & calendarDatesData have been fetched due to activeUser changing
       // * When activeDate is changed
     // We calculate the data for the selected date based on the transactions and the dates
-    if (transactions[0] !=undefined && calendarDatesData[0] !=undefined) {
+    if (
+      activeUser != undefined &&
+      activeUser.transactions != undefined &&
+      activeUser.cal_date != undefined
+    ) {
       console.log(`run if transactions & calendarDatesData are ready`);
-      fetchActiveDateCalendarDatesData(activeDate, calendarDatesData, transactions);
-    }
-  }, [activeDate, transactions, calendarDatesData]);
+      const fetchActiveDateCalendarDatesData = (
+        activeDate: Date,
+        calendarDatesData: CalDate[],
+        transactions: Transaction[]
+      ) => {
+        // 1. Filter by selected calendar month
+        const filteredDates = calendarDatesData.filter(item => 
+          item.calendar_month.getFullYear() === activeDate.getFullYear() &&
+          item.calendar_month.getMonth() === activeDate.getMonth()
+        );
+      
+        if (filteredDates.length === 0) {
+          setSelectedCalendarDatesData([]);
+          return;
+        };
+      
+        // 2. Get first and last date in the filtered calendar dates
+        const firstDate = new Date(
+          Math.min(...filteredDates.map(d => d.date.getTime()))
+        ).toISOString().split('T')[0];
+        const lastDate = new Date(
+          Math.max(...filteredDates.map(d => d.date.getTime()))
+        ).toISOString().split('T')[0];
+      
+        // 3. Filter transactions that fall within the date range
+        const filteredTransactions = transactions.filter((txn) =>
+          {
+            const txnDateOnly = txn.date.toISOString().split('T')[0];
+            return txnDateOnly >= firstDate && txnDateOnly <= lastDate
+          }
+        );
+      
+        // 4. Attach transactions to each date 
+        const result = filteredDates.map(dateItem => {
+          const dateOnly = dateItem.date.toISOString().split('T')[0];
+      
+          const matchingTransactions = filteredTransactions.filter((txn) => {
+            return txn.date.toISOString().split('T')[0] === dateOnly;
+          }
+          );
+      
+          return {
+            ...dateItem,
+            transactions: matchingTransactions
+          };
+        });
+      
+        // 5. Set result
+        // console.log(result);
+        setSelectedCalendarDatesData(result);
+      }; 
 
-  useEffect(() => {
-    // * We run this based on the ff conditions:
-      // * When transactions & calendarDatesData have been fetched due to activeUser changing
-      // * When activeDate is changed
-    // We calculate the data for the selected date based on the transactions and the dates
-    if (selectedCalendarDatesData[0] !=undefined) {
-      console.log(`run if selectedCalendarDatesData are ready`);
-      fetchCalHead(selectedCalendarDatesData);
+      fetchActiveDateCalendarDatesData(activeDate, activeUser.cal_date, activeUser.transactions);
     }
-  }, [selectedCalendarDatesData]);
+  }, [activeDate, activeUser]);
+
+  // useEffect(() => {
+  //   // * We run this based on the ff conditions:
+  //     // * When transactions & calendarDatesData have been fetched due to activeUser changing
+  //     // * When activeDate is changed
+  //   // We calculate the data for the selected date based on the transactions and the dates
+  //   if (selectedCalendarDatesData[0] !=undefined) {
+  //     console.log(`run if selectedCalendarDatesData are ready`);
+  //     fetchCalHead(selectedCalendarDatesData);
+  //   }
+  // }, [selectedCalendarDatesData]);
 
   // # RENDERING
   return (
@@ -353,15 +287,15 @@ export default function App() {
               activeDate={activeDate}
               setActiveDate={setActiveDate}
             />
-            <DataControls
+            {/* <DataControls
               constUsers={constUsers}
               activeUser={activeUser}
               setActiveUser={setActiveUser}
               calendarDatesData={calendarDatesData}
               setActiveDate={setActiveDate}
-            />
+            /> */}
           </div>
-          <div
+          {/* <div
             className='right'
           >
             {
@@ -378,13 +312,16 @@ export default function App() {
                 )
               : <></>
             }
-          </div>
+          </div> */}
         </div>
         <div
           className='body'
         >
           {
-            transactions[0] != undefined ?
+              activeUser != undefined &&
+              activeUser.transactions != undefined &&
+              activeUser.cal_date != undefined
+            ?
               (
                 activeView === 'month' ?
                   <CalendarMonth
