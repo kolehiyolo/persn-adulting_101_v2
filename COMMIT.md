@@ -1,3 +1,6 @@
-refactor <DataControls>
-1. that was surprisingly very easy
-2. I believe it's because I compartmentalized really well
+constUsers should all be fetched once
+1. yey that was a lot of work
+2. apparently I put it in work order 3 days ago, and there's just so many little changes that had to be done (as well as some that I felt like doing for destressing)
+3. this now works, so there's no need anymore for the app to fetch the user's data from the CSVs every single time the user switches between sets/users, which I imagine could be a lot, and not to mention would be hell if we make this actually live
+  3.1. let it be said that I know fetching each user's data fresh from the DB will always always always be advisable, because the expectation is that multiple users will share a "household", and user B may make changes to their own data without user A being notified, so it's a good idea for the app to fetch fresh from the overall household DB
+  3.2. but that's a problem for a later day, not to mention the infrastructure I set still holds, we just now need to fetch for the newly selected activeUser's DB, and I'm sure even that there ought a way to just "check" if the stored data is equal to the one in the DB, so that if there's no changes made, just a minor "check for changes" fetches has to be done and no longer an entire "give me all the data" fetch

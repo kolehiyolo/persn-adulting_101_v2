@@ -21,25 +21,26 @@ export default function App() {
   // # STATES
   // * Constant On Mount
   // Prefix = const
-  const [constStartDate] = useState(() => new Date());
+  const [constStartDate] = useState<Date>(() => new Date());
   const [constUsers, setConstUsers] = useState<User[]>([]);
 
   // * Variable by Processes
   // Prefix = prcsd
-  const [selectedCalendarDatesData, setSelectedCalendarDatesData] = useState<CalDate[]>([]);
-  const [prcsdCalHead, setPrcsdCalHead] =
-    useState<CalHead>({
+  const [prcsdCalDates, setPrcsdCalDates] = useState<CalDate[]>([]);
+  const [prcsdCalHead, setPrcsdCalHead] = useState<CalHead>(
+    {
       totalRunning: 0,
       change: 0,
       max: 0,
       min: 0,
-    });
+    }
+  );
 
   // * Variable by User
   // Prefix = active
-  const [activeDate, setActiveDate] = useState(constStartDate);
+  const [activeDate, setActiveDate] = useState<Date>(constStartDate);
   const [activeUser, setActiveUser] = useState<User>();
-  const [activeView, setActiveView] = useState('month');
+  const [activeView, setActiveView] = useState<string>('month');
 
   // # triggerOnMount
   // Trigger when App is mounted
@@ -95,8 +96,6 @@ export default function App() {
 
       // * Step 7: Store in state
       setConstUsers(usersWithTransactions);
-      console.log(`constUsers is ready:`);
-      console.log(usersWithTransactions);
 
       // * Picking active user
       setActiveUser(usersWithTransactions[0]);
@@ -126,8 +125,6 @@ export default function App() {
         date_total_running: parseFloat(row.date_total_running),
         transactions: []
       }));
-
-      // console.log(parsedData);
 
       // * Step 5: Set the transformed data into state
       return(parsedData);
@@ -160,7 +157,7 @@ export default function App() {
       return(parsedData);
     };
 
-    console.log('fetchConstUsers()');
+    console.log('triggerOnMount');
     fetchConstUsers();
   }, []);
 
@@ -176,7 +173,7 @@ export default function App() {
       activeUser.transactions != undefined &&
       activeUser.cal_date != undefined
     ) {
-      console.log(`run if transactions & calendarDatesData are ready`);
+      console.log(`triggerOnUserChangingActiveDateOrActiveUser`);
       const fetchActiveDateCalendarDatesData = (
         activeDate: Date,
         calendarDatesData: CalDate[],
@@ -189,7 +186,7 @@ export default function App() {
         );
       
         if (filteredDates.length === 0) {
-          setSelectedCalendarDatesData([]);
+          setPrcsdCalDates([]);
           return;
         };
       
@@ -225,23 +222,22 @@ export default function App() {
         });
       
         // 5. Set result
-        // console.log(result);
-        setSelectedCalendarDatesData(result);
+        setPrcsdCalDates(result);
       }; 
 
       fetchActiveDateCalendarDatesData(activeDate, activeUser.cal_date, activeUser.transactions);
     }
   }, [activeDate, activeUser]);
 
-  // # triggerOnUpdateOfSelectedCalendarDatesData
+  // # triggerOnUpdateOfSelectedCalendarDatesDataOrActiveUser
   // When triggerOnUserChangingActiveDateOrActiveUser happens, this is what should happen next
   useEffect(() => {
     // * We run this based on the ff conditions:
       // * When transactions & calendarDatesData have been fetched due to activeUser changing
       // * When activeDate is changed
     // We calculate the data for the selected date based on the transactions and the dates
-    if (selectedCalendarDatesData[0] !=undefined) {
-      console.log(`run if selectedCalendarDatesData are ready`);
+    if (prcsdCalDates[0] != undefined) {
+      console.log(`triggerOnUpdateOfSelectedCalendarDatesDataOrActiveUser`);
       const fetchCalHead = (selectedCalendarDatesData: CalDate[]) => {
         const currentMonthData = selectedCalendarDatesData
           .filter(dateData => 
@@ -263,13 +259,11 @@ export default function App() {
           min: min
         }
 
-        // console.log(newCalendarChangeDataObj);
-
         setPrcsdCalHead(newCalendarChangeDataObj);
       };
-      fetchCalHead(selectedCalendarDatesData);
+      fetchCalHead(prcsdCalDates);
     }
-  }, [selectedCalendarDatesData]);
+  }, [activeDate, prcsdCalDates]);
 
   // # RENDERING
   return (
@@ -342,13 +336,13 @@ export default function App() {
                 activeView === 'month' ?
                   <CalendarMonth
                     activeDate={activeDate}
-                    selectedCalendarDatesData={selectedCalendarDatesData}
+                    selectedCalendarDatesData={prcsdCalDates}
                   />
                 :
                 activeView === 'year' ?
                   <CalendarYear
                     activeDate={activeDate}
-                    selectedCalendarDatesData={selectedCalendarDatesData}
+                    selectedCalendarDatesData={prcsdCalDates}
                   />
                 :
                   <></>
