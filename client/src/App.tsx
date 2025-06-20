@@ -21,7 +21,7 @@ export default function App() {
   // # STATES
   // * Constant On Mount
   // Prefix = const
-  const [constStartDate] = useState<Date>(() => new Date());
+  const [constDateStart] = useState<Date>(() => new Date());
   const [constUsers, setConstUsers] = useState<User[]>([]);
 
   // * Variable by Processes
@@ -38,7 +38,7 @@ export default function App() {
 
   // * Variable by User
   // Prefix = active
-  const [activeDate, setActiveDate] = useState<Date>(constStartDate);
+  const [activeDate, setActiveDate] = useState<Date>(constDateStart);
   const [activeUser, setActiveUser] = useState<User>();
   const [activeView, setActiveView] = useState<string>('month');
 

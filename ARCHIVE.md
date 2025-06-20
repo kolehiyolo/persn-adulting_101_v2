@@ -38,3 +38,12 @@ users can select which sets to show
 user can select the date to show via DateMover
 users can have multiple data sets that they can switch between
 users can "search for goal" on UI, which allows them to see the 
+SelectUser own component
+FormTotalSearch should be own component
+finalize types
+separate prcsdCalHead processing
+on mount useEffect updated
+activeUser must be object, not string
+refactor CalendarHeadData
+refactor <DataControls>
+constUsers should all be fetched once
