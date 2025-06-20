@@ -1,8 +1,14 @@
-organize into FEATURE-CREEP.md
-1. heyyyy this commit is all about organizing my todos
-2. after completing "constUsers should all be fetched once", I kinda felt a tad lost lol in a sense of "what now???"
-3. I took a quick glance at my TODO.md and felt a sense of dread lol especially at how massive it is now
-4. so I decided to sit down and just organize them into groups, so I know which are needed NOW, which are next features to build, which are to be done for better DX and sanity, and which are just bonuses
-5. this helps in giving me a bird's eye view of priorities, dependencies, and so I know to chip away at all of them in an organized and unboring way
-  5.1. what I mean by unboring is that if I'm feeling too braindead as I'm doing too much backend/under-the-hood stuff that has marginal impact on the UX overall (stuff like massive refactoring or optimization), I can pause or just finish the subtask, and then move on to a more UX focused todo just to keep morale high
-6. in keeping with this DX improvement, I am now continuing by refactoring all underscore_case naming in JS and turning them to camelCase
+FIXED FormSearchTotal isn't working in some cases
+1. I got sidetracked fixing this instead
+2. I managed to find the bug, and it's caused by the ff:
+  2.1. triggerOnUpdateOfPrcsdCalendarDatesData
+  2.2. this originally was to run AFTER triggerOnUserChangingActiveDateOrActiveUser, which means when the user changes activeDate or activeUser with the GUI, triggerOnUserChangingActiveDateOrActiveUser happens, then this
+  2.3. the problem was, there's this warning showing with that original setup:
+    "React Hook useEffect has a missing dependency: 'activeDate'. Either include it or remove the dependency array.eslintreact-hooks/exhaustive-deps"
+  2.4. so, I added activeDate as dependency, but that's what's breaking this
+  2.5. what happens is the trigger takes in prcsdCalDates and activeDate and then derives "currentMonthData" from that to use, since we just want the data for the actual month, not our 42 day "render "month
+  2.6. that means prcsdCalDates and activeDate must have valid values
+  2.7. but or some reason, whenever activeDate is changed and it trips this trigger, by the time the inner processes run, prcsdCalDates is deemed empty
+  2.8. triggerOnUserChangingActiveDateOrActiveUser is the one responsible for filling in prcsdCalDates with the new data, but since this trigger also runs simultaneous as triggerOnUserChangingActiveDateOrActiveUser does, maybe that's why prcsdCalDates is deemed empty
+  2.9. the solution then is, this trigger should only run AFTER prcsdCalDates is updated, instead of running when activeDate is updated, which is runs the other trigger simultaneous
+3. TLDR, the error is possibly due to bad chaining

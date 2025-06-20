@@ -1,3 +1,6 @@
+<!-- ! BUGS -->
+FormSearchTotal isn't working in some cases
+
 <!-- user can see "year" view -->
 refactor selectedCalendarDatesData
 calendarMonth should process data fetches on its own
@@ -6,6 +9,7 @@ refactor CalendarMonth processing
 
 <!-- sanity refactoring -->
 refactor CalHead
+better console.logs
 settle on a naming convention for componentName+className, ie DateCard or dateCard
 
 <!-- better py scripts -->

@@ -157,6 +157,7 @@ export default function App() {
       return(parsedData);
     };
 
+    console.log(`SUCCESS triggerOnMount`);
     console.log('triggerOnMount');
     fetchConstUsers();
   }, []);
@@ -222,6 +223,7 @@ export default function App() {
         });
       
         // 5. Set result
+        console.log(`SUCCESS triggerOnUserChangingActiveDateOrActiveUser`);
         setPrcsdCalDates(result);
       }; 
 
@@ -229,13 +231,11 @@ export default function App() {
     }
   }, [activeDate, activeUser]);
 
-  // # triggerOnUpdateOfSelectedCalendarDatesDataOrActiveUser
+  // # triggerOnUpdateOfPrcsdCalendarDatesData
   // When triggerOnUserChangingActiveDateOrActiveUser happens, this is what should happen next
   useEffect(() => {
-    // * We run this based on the ff conditions:
-      // * When transactions & calendarDatesData have been fetched due to activeUser changing
-      // * When activeDate is changed
-    // We calculate the data for the selected date based on the transactions and the dates
+    // * We run this if the user changes the date OR changes the selected user
+    // We calculate the data to show at the head of the calendar view mode
     if (prcsdCalDates[0] != undefined) {
       console.log(`triggerOnUpdateOfSelectedCalendarDatesDataOrActiveUser`);
       const fetchCalHead = (selectedCalendarDatesData: CalDate[]) => {
@@ -243,6 +243,7 @@ export default function App() {
           .filter(dateData => 
             new Date(dateData.date).getMonth() === activeDate.getMonth()
           );
+
         const totalRunning = currentMonthData[currentMonthData.length - 1].date_total_running;
         const change = currentMonthData
           .reduce((totalMonthChange, dateData) => {
@@ -260,10 +261,11 @@ export default function App() {
         }
 
         setPrcsdCalHead(newCalendarChangeDataObj);
+        console.log(`SUCCESS triggerOnUpdateOfSelectedCalendarDatesDataOrActiveUser`);
       };
       fetchCalHead(prcsdCalDates);
     }
-  }, [activeDate, prcsdCalDates]);
+  }, [prcsdCalDates]);
 
   // # RENDERING
   return (
