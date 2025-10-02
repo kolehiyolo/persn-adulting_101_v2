@@ -1,20 +1,12 @@
-<!-- * DONE -->
-rename App states
-calendar-month CSV should only be ever run once
-style CalendarMonth
-organize into FEATURE-CREEP.md
-FIXED FormSearchTotal isn't working in some cases
+<!-- # DONE -->
+refactor selectedCalendarDatesData
+calendarMonth should process data fetches on its own
 
 <!-- ? DOING -->
+<!-- user can see "year" view -->
+refactor CalendarMonth rendering
+refactor CalendarMonth processing
 
-<!-- NEXT -->
-<!-- sanity refactoring -->
+<!-- TODOS -->
+<!-- ? sanity refactoring -->
 in JS, all underscore_case must be camelCase instead
-
-<!-- TODOS EZ -->
-
-<!-- ! TODOS HEAVY -->
-
-<!-- @ BONUS -->
-
-1000000
