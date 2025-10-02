@@ -208,14 +208,14 @@ export default function App() {
                 activeUser.cal_date != undefined
               ?                
                 (
-                  activeView === 'month' ?
+                  // activeView === 'month' ?
                   <CalendarHeadData
                     calendarTotalRunning={prcsdCalHead.totalRunning}
                     calendarChange={prcsdCalHead.change}
                     calendarMax={prcsdCalHead.max}
                     calendarMin={prcsdCalHead.min}
                   />
-                  : <></>
+                  // : <></>
                 )
               : <></>
             }
@@ -240,7 +240,8 @@ export default function App() {
                 activeView === 'year' ?
                   <CalendarYear
                     activeDate={activeDate}
-                    selectedCalendarDatesData={prcsdCalDates}
+                    activeUser={activeUser}
+                    setPrcsdCalHead={setPrcsdCalHead}
                   />
                 :
                   <></>
