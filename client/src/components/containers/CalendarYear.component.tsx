@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // * Other Components
-import DateCard from './DateCard.component';
+import CalendarMonthYearly from './CalendarMonthYearly.component';
 
 // * Other Imports
 import { CalDate } from '../../types';
@@ -25,6 +25,7 @@ export default function CalendarYear ({
   setPrcsdCalHead
 }: CalendarYearProps) {
   const [prcsdCalDates, setPrcsdCalDates] = useState<CalDate[]>([]);
+  const [prcsdCalMonths, setPrcsdCalMonths] = useState<CalDate[][]>([]);
 
     // # triggerOnUserChangingActiveDateOrActiveUser
   // Trigger if user changes activeDate or activeUser
@@ -133,12 +134,54 @@ export default function CalendarYear ({
     }
   }, [prcsdCalDates]);
 
+  useEffect(() => {
+    const prcsActiveDateCalendarDatesData = (
+      activeDate: Date,
+      prcsdCalDates: CalDate[],
+    ) => {
+      let result = [];
+
+      // Loop through each month of the year
+      for (let month = 0; month < 12; month++) {
+        // 1. Get first date in the activeDate's year
+        const monthFirstDate = new Date(activeDate.getFullYear(), month, 1);
+
+        const filteredDates = prcsdCalDates.filter(item => 
+          item.calendar_month.getFullYear() === monthFirstDate.getFullYear() &&
+          item.calendar_month.getMonth() === monthFirstDate.getMonth()
+        );
+
+        if (filteredDates.length === 0) {
+          setPrcsdCalMonths([]);
+          return;
+        };
+
+        result.push(filteredDates);
+      }
+
+      setPrcsdCalMonths(result);
+    };
+
+    prcsActiveDateCalendarDatesData(activeDate, prcsdCalDates);
+  }, [prcsdCalDates]);
+
   // * Rendering
   return (
     <div
       className='calendarYear'
     >
-      <p>calendarYear</p>
+      {/* Loop through prcsdCalMonths */}
+      {/* Render CalendarMonthYearly for each */}
+      {/* Pass on each prcsdCalMonths item as prop to the component */}
+      {
+        prcsdCalMonths.map((prcsdCalMonth, index) =>
+          <CalendarMonthYearly
+            key={index}
+            activeDate={activeDate}
+            prcsdCalDates={prcsdCalMonth}
+          />
+        )
+      }
     </div>
   );
 };
