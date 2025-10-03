@@ -6,14 +6,23 @@
   justify-content: stretch;
   align-items: stretch;
   flex-grow: 1;
-  gap: 15px;
+  gap: 10px;
 
   & .head {
+    flex-grow: 1;
 
   }
 
   & .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-grow: 1;
+    gap: 0px !important;
+
     & .head {
+      flex-grow: 0;
       display: flex;
       gap: 0px !important;
       
@@ -38,7 +47,7 @@
         flex-grow: 1;
         display: flex;
         flex-direction: row;
-        gap: 3px;
+        gap: 2px;
       }
     }
   }

@@ -1,0 +1,84 @@
+@import '../../styles/utils/variables';
+
+.calendarMonthYearlyHead {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+
+  .calendarMax,
+  .calendarMin {
+    &.best { background-color: $running-best;}
+    &.chill { background-color: $running-chill;}
+    &.safe { background-color: $running-safe;}
+    &.good { background-color: $running-good;}
+    &.breathing { background-color: $running-breathing;}
+    &.struggling { background-color: $running-struggling;}
+    &.bad { background-color: $running-bad;}  
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px !important;
+
+    .runningAndChange {
+      display: flex;
+      flex-direction: row;
+      gap: 5px !important;
+      align-items: center;
+
+      .calendarTotalRunning {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .calendarChange {
+      font-size: 14px;
+
+      &.good {
+        color: $green-100;
+      }        
+
+      &.neutral {
+        color: $white-50;
+      }
+      
+      &.bad {
+        color: $red-100;
+      }
+    }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+
+    .calendarMax {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      gap: 5px;
+    }
+    
+    .calendarMin {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 3px 7px;
+      font-size: 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      gap: 5px;
+    }
+  }
+
+}
