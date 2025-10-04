@@ -134,12 +134,6 @@ export default function DateMover({
     <div
       className='dateMover'
     >
-      <button 
-        className='button back'
-        onClick={handlePrevious}
-      >
-        <ArrowLeft />
-      </button>
       <select
         className='select'
         value={activeView}
@@ -155,25 +149,31 @@ export default function DateMover({
           Year
         </option>
       </select>
-      <div
-        className='activeDate'
+      <button 
+        className='button back'
+        onClick={handlePrevious}
       >
-        <DateSelector 
-          activeDate={activeDate} 
-          setActiveDate={setActiveDate}
-        />
-        <p
-          className='activeDateDuration'
-        >
-          {activeDateDuration}
-        </p>
-      </div>
+        <ArrowLeft />
+      </button>
       <button
         className='button next'
         onClick={handleNext}
       >
         <ArrowRight />
       </button>
+            <div
+        className='activeDate'
+      >
+      <DateSelector 
+        activeDate={activeDate} 
+        setActiveDate={setActiveDate}
+      />
+        <p
+          className='activeDateDuration'
+        >
+          {activeDateDuration}
+        </p>
+      </div>
     </div>
   );
 };

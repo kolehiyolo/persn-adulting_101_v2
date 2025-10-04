@@ -182,6 +182,10 @@ export default function App() {
               activeDate={activeDate}
               setActiveDate={setActiveDate}
             />
+          </div>
+          <div
+            className='right'
+          >
             {
                 activeUser != undefined &&
                 activeUser.transactions != undefined &&
@@ -198,10 +202,6 @@ export default function App() {
                 )
               : <></>
             }
-          </div>
-          <div
-            className='right'
-          >
             {
                 activeUser != undefined &&
                 activeUser.transactions != undefined &&
