@@ -1,0 +1,48 @@
+@import '../../styles/utils/variables';
+
+.dateCardYearly {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 3px 3px;
+  width: calc(100% / 7);
+  box-sizing: border-box;
+  flex-grow: 1;
+  border-radius: 5px;
+  justify-content: center;
+  
+  p {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  &.best { .color{ background-color: $running-best;}}
+  &.chill { .color{ background-color: $running-chill;}}
+  &.safe { .color{ background-color: $running-safe;}}
+  &.good { .color{ background-color: $running-good;}}
+  &.breathing { .color{ background-color: $running-breathing;}}
+  &.struggling { .color{ background-color: $running-struggling;}}
+  &.bad { .color{ background-color: $running-bad;}}
+  
+  &.selected{
+    &.best { background-color: $running-best;}
+    &.chill { background-color: $running-chill;}
+    &.safe { background-color: $running-safe;}
+    &.good { background-color: $running-good;}
+    &.breathing { background-color: $running-breathing;}
+    &.struggling { background-color: $running-struggling;}
+    &.bad { background-color: $running-bad;}
+
+    .color {
+      background-color: $text-white;
+    }
+  }
+
+  .color {
+    height: 4px;
+    border-radius: 5px;
+  }
+
+  &.nonCurrent { p {color: $bg-grey;} };
+  &.nonCurrent { .color {background-color: $bg-grey;} };
+}

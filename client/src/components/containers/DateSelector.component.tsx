@@ -10,12 +10,14 @@ import './DateSelector.component.scss';
 
 // * Component Props
 interface DateSelectorProps {
+  activeView: string,
   activeDate: Date,
   setActiveDate: React.Dispatch<React.SetStateAction<Date>>
 };
 
 // * Component
 export default function DateSelector({ 
+  activeView,
   activeDate, 
   setActiveDate 
 }: DateSelectorProps) {
@@ -30,7 +32,13 @@ export default function DateSelector({
       onChange={(date) => {
         if (date) setActiveDate(date);
       }}
-      dateFormat="MMMM yyyy"
+      dateFormat={
+        (activeView === 'month')
+          ? "MMMM yyyy"
+        : (activeView === 'year')
+          ? "yyyy"
+        : "MMMM yyyy"
+      }
       className="datePicker"
       popperPlacement="bottom"
       showPopperArrow={false}
@@ -38,5 +46,5 @@ export default function DateSelector({
       showYearDropdown
       // dropdownMode="select"
     />
-  );
+  )
 };

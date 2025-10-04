@@ -1,1 +1,10 @@
 @import '../../styles/utils/variables';
+
+.calendarYear {
+  // make a grid of 4 cols x 3 rows
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px 30px;
+}

@@ -1,0 +1,54 @@
+@import '../../styles/utils/variables';
+
+.calendarMonthYearly {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-grow: 1;
+  gap: 10px;
+
+  & .head {
+    flex-grow: 1;
+
+  }
+
+  & .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-grow: 1;
+    gap: 0px !important;
+
+    & .head {
+      flex-grow: 0;
+      display: flex;
+      gap: 0px !important;
+      
+      .dayLabel {
+        flex: 1;
+        text-align: center;
+        font-size: 10px;
+        // border: 1px solid $white-20;
+        // padding: 5px 15px;
+      }
+    }
+    
+    & .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+      flex-grow: 1;
+      gap: 3px !important;
+      
+      .row {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+      }
+    }
+  }
+}

@@ -1,11 +1,8 @@
-<!-- user can see "year" view -->
-refactor selectedCalendarDatesData
-calendarMonth should process data fetches on its own
-refactor CalendarMonth rendering
-refactor CalendarMonth processing
+<!-- ! BUGS -->
 
-<!-- sanity refactoring -->
+<!-- ? sanity refactoring -->
 refactor CalHead
+better console.logs
 settle on a naming convention for componentName+className, ie DateCard or dateCard
 
 <!-- better py scripts -->
@@ -14,7 +11,7 @@ combine py scripts into one
 users can input all input that's needed, and the program will process it all on its own to show the best path forward while respecting parameters
 refactor generateRecurringTransactions.py
 
-<!-- ! OPTIMIZATION -->
+<!-- ? OPTIMIZATION -->
 <!-- fetch the default user data first -->
 <!-- migrate to better stack -->
 

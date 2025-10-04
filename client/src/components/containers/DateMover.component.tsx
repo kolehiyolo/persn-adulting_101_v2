@@ -25,7 +25,7 @@ export default function DateMover({
   setActiveDate 
 }: DateMoverProps) {
   // * Variables
-  let activeDateValue = '';
+  // let activeDateValue = '';
   let activeDateDuration = '';
 
   // * Helper Functions
@@ -35,92 +35,172 @@ export default function DateMover({
   };
 
   // * Set variable values
-  const setActiveDateValue = (activeDate: Date) => {
-    const result = activeDate.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-    });
+  // const setActiveDateValue = (activeDate: Date, activeView: string) => {
+  //   const result = activeDate.toLocaleDateString('en-US', {
+  //     year: 'numeric',
+  //     month: 'long',
+  //   });
 
-    activeDateValue = result;
-  };
+  //   activeDateValue = result;
+  // };
 
-  const setActiveDateDuration = (activeDate: Date) => {
-    // Get the first day of the selected month
-    const firstDay = new Date(
-      activeDate.getFullYear(),
-      activeDate.getMonth(),
-      1
-    );
-    // Get the last day of the selected month
-    const lastDay = new Date(
-      activeDate.getFullYear(),
-      activeDate.getMonth(),
-      getLastDayOfMonth(activeDate.getFullYear(), activeDate.getMonth())
-    );
+  const setActiveDateDuration = (activeDate: Date, activeView: string) => {
+    let result = '';
+    switch (activeView) {
+      case 'year': {
+        // Get the first day of the selected month
+        const firstDay = new Date(
+          activeDate.getFullYear(),
+          0,
+          1
+        );
+        // Get the last day of the selected month
+        const lastDay = new Date(
+          activeDate.getFullYear(),
+          11,
+          31
+        );
 
-    // Generating activeDateDuration
-    const result = `${firstDay.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    })} - ${lastDay.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    })}`;
-    
+        // Generating activeDateDuration
+        result = `${firstDay.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        })} - ${lastDay.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        })}`;
+        break;
+      }
+      case 'month': {
+        // Get the first day of the selected month
+        const firstDay = new Date(
+          activeDate.getFullYear(),
+          activeDate.getMonth(),
+          1
+        );
+        // Get the last day of the selected month
+        const lastDay = new Date(
+          activeDate.getFullYear(),
+          activeDate.getMonth(),
+          getLastDayOfMonth(activeDate.getFullYear(), activeDate.getMonth())
+        );
+
+        // Generating activeDateDuration
+        result = `${firstDay.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        })} - ${lastDay.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        })}`;
+        break;
+      }
+    }
+
     activeDateDuration = result;
   };
 
-  setActiveDateValue(activeDate);
-  setActiveDateDuration(activeDate);
+  // setActiveDateValue(activeDate, activeView);
+  setActiveDateDuration(activeDate, activeView);
 
   // * Button handling
-  const handlePrevious = () => {
-    let newYear = activeDate.getFullYear();
-    let newMonth = activeDate.getMonth() - 1;
+  const handlePrevious = (activeView: string) => {
+    switch (activeView) {
+      case 'month':
+      {
+        let newYear = activeDate.getFullYear();
+        let newMonth = activeDate.getMonth() - 1;
 
-    // If newMonth is December
-    if (newMonth < 0) {
-      newMonth = 11;
-      newYear -= 1;
+        // If newMonth is December
+        if (newMonth < 0) {
+          newMonth = 11;
+          newYear -= 1;
+        }
+
+        // Check what the lastValidDate of the newMonth is
+        const lastValidDate = getLastDayOfMonth(newYear, newMonth);
+
+        // Generate newDate, comparing activeDate's original date number and lastValidDate
+        // Whatever's lower is what's accepted, so if the original activeDate was March 31, 2025, newDate is Feb 28, 2025, since 28 is lower than 31
+        const newDate = new Date(
+          newYear,
+          newMonth,
+          Math.min(activeDate.getDate(), lastValidDate)
+        );
+
+        setActiveDate(newDate);
+        break;
+      }
+      case 'year':
+      {
+        let newYear = activeDate.getFullYear() - 1;
+        let newMonth = activeDate.getMonth();
+
+        // Check what the lastValidDate of the newMonth is
+        const lastValidDate = getLastDayOfMonth(newYear, newMonth);
+
+        // Generate newDate, with the same caveats as handleBack()
+        const newDate = new Date(
+          newYear,
+          newMonth,
+          Math.min(activeDate.getDate(), lastValidDate)
+        );
+        setActiveDate(newDate);
+
+        break;
+      }
     }
-
-    // Check what the lastValidDate of the newMonth is
-    const lastValidDate = getLastDayOfMonth(newYear, newMonth);
-
-    // Generate newDate, comparing activeDate's original date number and lastValidDate
-    // Whatever's lower is what's accepted, so if the original activeDate was March 31, 2025, newDate is Feb 28, 2025, since 28 is lower than 31
-    const newDate = new Date(
-      newYear,
-      newMonth,
-      Math.min(activeDate.getDate(), lastValidDate)
-    );
-
-    setActiveDate(newDate);
   };
 
-  const handleNext = () => {
-    let newYear = activeDate.getFullYear();
-    let newMonth = activeDate.getMonth() + 1;
+  const handleNext = (activeView: string) => {
+    switch (activeView) {
+      case 'month':
+      {
+        let newYear = activeDate.getFullYear();
+        let newMonth = activeDate.getMonth() + 1;
 
-    // If newMonth is January
-    if (newMonth > 11) {
-      newMonth = 0; // January
-      newYear += 1;
+        // If newMonth is January
+        if (newMonth > 11) {
+          newMonth = 0; // January
+          newYear += 1;
+        }
+
+        // Check what the lastValidDate of the newMonth is
+        const lastValidDate = getLastDayOfMonth(newYear, newMonth);
+
+        // Generate newDate, with the same caveats as handleBack()
+        const newDate = new Date(
+          newYear,
+          newMonth,
+          Math.min(activeDate.getDate(), lastValidDate)
+        );
+
+        setActiveDate(newDate);
+        break;
+      }
+      case 'year':
+      {
+        let newYear = activeDate.getFullYear() + 1;
+        let newMonth = activeDate.getMonth();
+
+        // Check what the lastValidDate of the newMonth is
+        const lastValidDate = getLastDayOfMonth(newYear, newMonth);
+
+        // Generate newDate, with the same caveats as handleBack()
+        const newDate = new Date(
+          newYear,
+          newMonth,
+          Math.min(activeDate.getDate(), lastValidDate)
+        );
+        setActiveDate(newDate);
+
+        break;
+      }
     }
-
-    // Check what the lastValidDate of the newMonth is
-    const lastValidDate = getLastDayOfMonth(newYear, newMonth);
-
-    // Generate newDate, with the same caveats as handleBack()
-    const newDate = new Date(
-      newYear,
-      newMonth,
-      Math.min(activeDate.getDate(), lastValidDate)
-    );
-
-    setActiveDate(newDate);
   };
 
   const handleViewChange = (index: string) => {
@@ -134,12 +214,6 @@ export default function DateMover({
     <div
       className='dateMover'
     >
-      <button 
-        className='button back'
-        onClick={handlePrevious}
-      >
-        <ArrowLeft />
-      </button>
       <select
         className='select'
         value={activeView}
@@ -155,10 +229,23 @@ export default function DateMover({
           Year
         </option>
       </select>
+      <button 
+        className='button back'
+        onClick={() => handlePrevious(activeView)}
+      >
+        <ArrowLeft />
+      </button>
+      <button
+        className='button next'
+        onClick={() => handleNext(activeView)}
+      >
+        <ArrowRight />
+      </button>
       <div
         className='activeDate'
       >
         <DateSelector 
+          activeView={activeView}
           activeDate={activeDate} 
           setActiveDate={setActiveDate}
         />
@@ -168,12 +255,6 @@ export default function DateMover({
           {activeDateDuration}
         </p>
       </div>
-      <button
-        className='button next'
-        onClick={handleNext}
-      >
-        <ArrowRight />
-      </button>
     </div>
   );
 };

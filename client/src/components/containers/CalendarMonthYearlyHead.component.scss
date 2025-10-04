@@ -1,20 +1,11 @@
 @import '../../styles/utils/variables';
 
-.calendarHeadData {
+.calendarMonthYearlyHead {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
+  justify-content: space-between;
   align-items: center;
-
-  .calendarTotalRunning {
-    &.best { color: $running-best;}
-    &.chill { color: $running-chill;}
-    &.safe { color: $running-safe;}
-    &.good { color: $running-good;}
-    &.breathing { color: $running-breathing;}
-    &.struggling { color: $running-struggling;}
-    &.bad { color: $running-bad;}
-  }
 
   .calendarMax,
   .calendarMin {
@@ -29,16 +20,21 @@
 
   .left {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px !important;
-    align-items: center;
 
-    .calendarTotalRunning {
-      font-size: 18px;
-      font-weight: bold;
-    }
-    
-    .calendarChange {
+    .runningAndChange {
+      display: flex;
+      flex-direction: row;
+      gap: 5px !important;
+      align-items: center;
+
+      .calendarTotalRunning {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .calendarChange {
       font-size: 14px;
 
       &.good {
@@ -53,13 +49,15 @@
         color: $red-100;
       }
     }
+    }
   }
 
   .right {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
-    
+    align-items: flex-end;
+
     .calendarMax {
       display: flex;
       flex-direction: row;
