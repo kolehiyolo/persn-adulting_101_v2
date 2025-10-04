@@ -2,10 +2,10 @@
 refactor selectedCalendarDatesData
 calendarMonth should process data fetches on its own
 reorganize control
+controls must allow year movement
+<!-- user can see "year" view -->
 
 <!-- ? DOING -->
-<!-- user can see "year" view -->
-controls must allow year movement
 refactor data processing
 
 <!-- TODOS -->
