@@ -4,7 +4,7 @@
 - Better Data Structure
   - User should be able to CRUD accounts on CSV
   - User should be able to CRUD income categories on CSV
-  - User should be able to CRUD expense categories on CSV
+  - User should be able to CRUD expense c ategories on CSV
   - User should be able to CRUD one-time transactions on CSV
   - User should be able to CRUD recurring transactions on CSV
   - User should be able to CRUD color thresholds for accounts on CSV
