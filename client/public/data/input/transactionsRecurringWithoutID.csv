@@ -1,0 +1,8 @@
+id,name,type,from,to,amount,frequency,startDate,endDate,parameters,recurring,recurring_id
+,Rent,expense,Savings BDO,Household - Rent,8500,monthly-by-date,2025-10-01,2025-12-31,6,TRUE,
+,Electricity,expense,Savings BDO,Household - Electricity,4000,monthly-by-date,2025-10-01,2025-12-31,6,TRUE,
+,Grocery Monthly,expense,Savings BDO,Food - Junk Food,750,monthly-by-week-&-day,2025-10-01,2025-12-31,"1, Saturday",TRUE,
+,Grocery Monthly,expense,Savings BDO,Household - Items,750,monthly-by-week-&-day,2025-10-01,2025-12-31,"1, Saturday",TRUE,
+,Sleeping Pills,expense,Savings BDO,Health - Supplements,500,monthly-by-week-&-day,2025-10-01,2025-12-31,"1, Saturday",TRUE,
+,Laundry,expense,Savings BDO,Clothing - Laundry,400,weekly,2025-10-01,2025-12-31,Saturday,TRUE,
+,Salary,income,Scale Up,Savings BDO,"52,000.00",monthly-by-date,2025-10-01,2025-12-31,5,TRUE,

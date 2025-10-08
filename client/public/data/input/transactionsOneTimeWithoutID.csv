@@ -1,0 +1,4 @@
+id,name,type,from,to,amount,date,recurring,recurring_id
+,1 Week Work,income,Arroyo Digital,Savings BDO,10000,2025-10-08,FALSE,
+,Salary,income,Scale Up,Savings BDO,"52,000.00",2025-10-08,FALSE,
+,Laundry,expense,Savings BDO,Clothing - Laundry,400,2025-10-08,FALSE,

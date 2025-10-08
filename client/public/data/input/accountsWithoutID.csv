@@ -1,0 +1,25 @@
+id,name,type,owner,balance,color,order,include
+,CC EastWest,debt,Kren,0,,,TRUE
+,Tiara,debt,Kren,0,,,TRUE
+,Theolo,debt,Kren,0,,,TRUE
+,Conchita,debt,Kren,0,,,TRUE
+,Traejan,debt,Kren,0,,,FALSE
+,Household BDO,regular,Kren,0,,1,TRUE
+,Household EastWest,regular,Kren,0,,2,TRUE
+,GCash,regular,Kren,0,,3,TRUE
+,Wallet Cash,regular,Kren,0,,4,TRUE
+,Wise,regular,Kren,0,,5,TRUE
+,PayPal,regular,Kren,0,,7,FALSE
+,Savings BDO,savings,Kren,0,,6,TRUE
+,CC EastWest,debt,Tristan,0,,,TRUE
+,Tiara,debt,Tristan,0,,,TRUE
+,Theolo,debt,Tristan,0,,,TRUE
+,Conchita,debt,Tristan,0,,,TRUE
+,Traejan,debt,Tristan,0,,,FALSE
+,Household BDO,regular,Tristan,0,,1,TRUE
+,Household EastWest,regular,Tristan,0,,2,TRUE
+,GCash,regular,Tristan,0,,3,TRUE
+,Wallet Cash,regular,Tristan,0,,4,TRUE
+,Wise,regular,Tristan,0,,5,TRUE
+,MySukli Kiosk,regular,Tristan,0,,7,FALSE
+,Savings BDO,savings,Tristan,0,,6,TRUE

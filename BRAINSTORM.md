@@ -1,18 +1,38 @@
 the overview of the app process is this
 
 - generate data
+  - backend generates IDs for the data in the CSVs
+    - INPUTS
+      - accountsWithoutID.csv
+      - categoriesWithoutID.csv
+      - transactionsRecurringWithoutID.csv
+      - transactionsOneTimeWithoutID.csv
+    - OUTPUTS
+      - accounts.csv
+      - categories.csv
+      - transactionsRecurring.csv
+      - transactionsOneTime.csv
+  - backend matches transaction from-to to account/category ID
+    - INPUTS
+      - accounts.csv
+      - categories.csv
+      - transactionsRecurring.csv
+      - transactionsOneTime.csv
+    - OUTPUTS
+      - transactionsRecurring.csv
+      - transactionsOneTime.csv
   - backend generates transactions.csv
     - INPUTS
       - accounts.csv
+      - categories.csv
       - transactionsRecurring.csv
       - transactionsOneTime.csv
-      - categories.csv
     - OUTPUT
       - transactions.csv
   - backend generates displayDatesEmpty.csv
     - INPUTS
-      - min_date
-      - max_date
+      - min_date: number
+      - max_date: number
     - OUTPUT
       - displayDatesEmpty.csv
   - backend combines transactions.csv and displayDatesEmpty.csv

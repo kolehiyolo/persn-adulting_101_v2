@@ -1,0 +1,50 @@
+id,name,subcategory,type,color,order,include
+,Arroyo Digital,,income,,,TRUE
+,Dev-related,,income,,,FALSE
+,Giveaways,,income,,,TRUE
+,Music-related,,income,,,TRUE
+,Odd Jobs,,income,,,TRUE
+,Scale Up,,income,,,TRUE
+,Unexpected,,income,,,TRUE
+,Clothing,Accessories,expense,,,TRUE
+,Clothing,Apparel,expense,,,TRUE
+,Clothing,Footwear,expense,,,TRUE
+,Clothing,Laundry,expense,,,TRUE
+,Clothing,Luggage,expense,,,TRUE
+,Education,Materials,expense,,,TRUE
+,Food,Junk Food,expense,,,TRUE
+,Food,Packaged Foods,expense,,,TRUE
+,Food,Restaurant,expense,,,TRUE
+,Food,Whole Foods,expense,,,TRUE
+,Gadgets,Accessories,expense,,,TRUE
+,Gadgets,Computer,expense,,,TRUE
+,Gifts,Charity,expense,,,TRUE
+,Gifts,Material,expense,,,TRUE
+,Health,Apparatus,expense,,,TRUE
+,Health,Hygiene,expense,,,TRUE
+,Health,Medicine,expense,,,TRUE
+,Health,Services,expense,,,TRUE
+,Health,Supplements,expense,,,TRUE
+,Household,Electricity,expense,,,TRUE
+,Household,Internet,expense,,,TRUE
+,Household,Items,expense,,,TRUE
+,Household,Rent,expense,,,TRUE
+,Household,Transaction Fees,expense,,,TRUE
+,Household,Unexpected,expense,,,TRUE
+,Household,Water,expense,,,TRUE
+,Leisure,Events,expense,,,TRUE
+,Leisure,Literature,expense,,,TRUE
+,Leisure,Toys,expense,,,TRUE
+,Leisure,Travel,expense,,,TRUE
+,Leisure,Video Games,expense,,,TRUE
+,Pets,Food,expense,,,TRUE
+,Pets,Grooming,expense,,,TRUE
+,Pets,Health,expense,,,TRUE
+,Pets,Hygiene,expense,,,TRUE
+,Software,Subscriptions,expense,,,TRUE
+,Transport,Biking,expense,,,TRUE
+,Transport,Commute,expense,,,TRUE
+,Transport,Gas,expense,,,TRUE
+,Transport,Motorcycle Taxi,expense,,,TRUE
+,Transport,Shipping,expense,,,TRUE
+,Unsorted,,expense,,,TRUE
