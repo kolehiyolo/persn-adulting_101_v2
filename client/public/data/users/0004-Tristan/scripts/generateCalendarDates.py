@@ -104,7 +104,6 @@ def generate_calendar_month_w_dates_w_data(calendar_dates, transactions):
 
   return result
 
-
 def load_transactions_from_csv(csv_file_path):
   transactions = []
   

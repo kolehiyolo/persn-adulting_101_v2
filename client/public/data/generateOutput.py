@@ -15,8 +15,8 @@ for user_name in os.listdir(USERS_DIR):
     calendar_script = "generateCalendarDates.py"
     transactions_script = "generateTransactionsData.py"
 
-    # Run calendar script in its own directory
-    subprocess.run(["python", calendar_script], cwd=scripts_path, check=True)
-
     # Run transactions script in its own directory
     subprocess.run(["python", transactions_script], cwd=scripts_path, check=True)
+    
+    # Run calendar script in its own directory
+    subprocess.run(["python", calendar_script], cwd=scripts_path, check=True)
