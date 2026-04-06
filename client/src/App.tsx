@@ -72,6 +72,7 @@ export default function App() {
         transactions: [],
       }));
 
+      // ! THIS IS WHERE THINGS BREAK
       // * Step 5: Fetch cal_dates for each user (async)
       const usersWithCalDates = await Promise.all(
         users.map(async (user: User) => {
@@ -83,6 +84,7 @@ export default function App() {
         })
       );
 
+      // ! THIS IS WHERE THINGS BREAK
       // * Step 6: Fetch cal_dates for each user (async)
       const usersWithTransactions = await Promise.all(
         usersWithCalDates.map(async (user: User) => {

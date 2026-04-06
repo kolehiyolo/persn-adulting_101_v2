@@ -1,25 +1,46 @@
 woah i have a fucking insane problem
 
-if the trans start at 06, trans start at 05 but calcs start at 04
-
-if the trans start at 07, trans start at 06 but calcs start at 05
-
-if the trans start at 05, trans start at 04 but calcs start at 06
-
-if the trans start at 04, trans start at 03 but calcs start at 04
-
-if the trans start at 03, trans start at 02 but calcs start at 01
-
-rec 06, trans 05, calc 04
-rec 07, trans 06, calc 05
-rec 05, trans 04, calc 06
-rec 04, trans 03, calc 04
-rec 03, trans 02, calc 03
-
 RENDERING ISSUE
 calendar month is being rendered 1 month in advance
-so march data is being shown as feb data
+so april data is being shown as mar data
 
-CALCULATION ISSUE
-calendar-dates-w-transactions is rendering 1 month late
-so march transactions are being calculated april
+
+CalendarMonth
+line 101 prcsActiveDateCalendarDatesData(activeDate, activeUser.cal_date, activeUser.transactions);
+this is already wrong
+activeUser.cal_date has the data behind by 1 in both the calendarmonth and date values
+activeUser.transactions is behind by 1 in the date values
+
+
+i have a problem. i have this script
+
+const fetchTransactions = async (user: string) => {
+  // * Step 1: Fetch the CSV file from the public folder
+  const response = await fetch(`/data/users/${user}/output/transactions-all.csv`);
+
+  // * Step 2: Read the response as plain text
+  const csvText = await response.text();
+
+  // * Step 3: Parse the CSV text using PapaParse, treating the first row as headers
+  const parsed = Papa.parse(csvText, {
+    header: true,           // Treat the first row as column headers
+    skipEmptyLines: true,   // Ignore empty lines in the CSV
+  });
+
+  // * Step 4: Transform parsed data into Transaction objects
+  const parsedData: Transaction[] = parsed.data.map((row: any) => ({
+    title: row.title,
+    type: row.type,
+    tags: row.tags,
+    category: row.category,
+    amount: parseFloat(row.amount),
+    date: new Date(row.date),
+  }));
+
+  // * Step 5: Set the transformed data into state
+  return(parsedData);
+};
+
+the problem is step 4, specifically when we fetch the date data
+what's being returned to each transactions is a date value that is 1 date behind
+what's up with that

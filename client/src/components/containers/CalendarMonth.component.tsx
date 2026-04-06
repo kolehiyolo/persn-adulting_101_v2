@@ -93,6 +93,11 @@ export default function CalendarMonth({
         setPrcsdCalDates(result);
       }; 
 
+      console.log(`prcsActiveDateCalendarDatesData(activeDate, activeUser.cal_date, activeUser.transactions)`);
+      console.log(activeDate);
+      console.log(activeUser.cal_date);
+      console.log(activeUser.transactions);
+
       prcsActiveDateCalendarDatesData(activeDate, activeUser.cal_date, activeUser.transactions);
     }
   }, [activeDate, activeUser]);
@@ -132,6 +137,11 @@ export default function CalendarMonth({
       };
       prcsCalHead(prcsdCalDates);
     }
+  }, [prcsdCalDates]);
+
+  useEffect(() => {
+    console.log(`prcsdCalDates updated: `);
+    console.log(prcsdCalDates);
   }, [prcsdCalDates]);
 
   // * Rendering
