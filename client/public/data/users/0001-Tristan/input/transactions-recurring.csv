@@ -1,0 +1,28 @@
+recurring_id,type,category,subcategory,priority,account,title,amount,tags,parameters,regularity,start,end,`weekdays
+,Income,Scale Up Salary,,Income,,Tr Scale Up,150000,salary,5,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Income,Gruns Salary,,Income,,Tr Gruns,23000,weekly,Friday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Gruns Salary,,Bills,,Gruns chols,5000,weekly,Friday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+
+,Expense,Household,,Bills,,Rent,8500,"monthly, bills",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Electricity,4000,"monthly, bills",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,WiFi,800,"monthly, bills",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Water Bill,250,"monthly, bills",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Gas,500,"monthly, bills",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,S&R,2500,"monthly, bills",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Pets,,Pets,,Pet Monthly,1500,"monthly, pets",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Pets,,Pets,,Groom pets,1000,"monthly, pets",6,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+
+,Expense,Allowance,,Wants,,Tr Allowance,10000,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Health,,Wants,,Gym,3000,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Health,,Wants,,Spa Day,2000,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Sleeping pills,1000,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Health,,Bills,,Chill Pills,2000,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Software,,Wants,,minimalist phone,180,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Software,,Wants,,YouTube Premium,159,"monthly, luxury",7,Monthly (Date),04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+
+,Expense,Household,,Bills,,Laundry,200,weekly,Saturday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Globe Load,110,weekly,Saturday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Transportation,50,weekly,Saturday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Drinking Water,50,weekly,Saturday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Household,,Bills,,Grocery,1250,weekly,Saturday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
+,Expense,Pets,,Pets,,Lee,250,weekly,Saturday,Weekly,04/01/2026,12/31/2050,"T,T,T,T,T,T,T`"
